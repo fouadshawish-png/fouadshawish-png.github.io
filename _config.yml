@@ -1,6 +1,9 @@
 title: "محترف المصاريف"
 description: "مقالات ونصائح مالية — إدارة المصاريف — تتبع الدخل — تحسين السلوك المالي"
+lang: ar
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+sass:
+  sourcemap: never
