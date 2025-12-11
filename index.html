@@ -4,98 +4,249 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>محترف إدارة المصاريف | Expense Manager Pro</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- استخدام خط عربي جذاب وقابل للقراءة -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- الخط -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- أيقونة الموقع -->
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <!-- SEO -->
+    <meta name="description" content="أفضل تطبيق عربي لإدارة المصاريف والدخل وتتبع الميزانية والديون بسهولة. تطبيق محترف إدارة المصاريف يساعدك على التحكم بأموالك وتحقيق أهدافك المالية.">
+    <meta name="keywords" content="إدارة المصاريف, ميزانية, ديون, دخل, ادخار, مصروفات, تطبيق مالي, Expense Manager">
+    <meta name="author" content="Fouad Shawish">
+
+    <!-- مشاركة سوشال ميديا -->
+    <meta property="og:title" content="محترف إدارة المصاريف">
+    <meta property="og:description" content="تطبيق عربي احترافي لإدارة المصاريف والدخل والديون بشكل ذكي وسهل.">
+    <meta property="og:image" content="https://fouadshawish-png.github.io/icon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fouadshawish-png.github.io">
+
+    <!-- CSS -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            background: #f6f8fa;
+            color: #222;
+        }
+
+        /* الهيدر */
+        header {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            width: 42px;
+            margin-left: 10px;
+        }
+        .logo span {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ff7c00;
+        }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+        nav a:hover {
+            color: #ff7c00;
+        }
+
+        /* القسم الرئيسي */
+        .hero {
+            padding: 80px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .hero-text {
+            max-width: 550px;
+            animation: fadeIn 1.2s ease;
+        }
+        .hero h1 {
+            font-size: 38px;
+            font-weight: 700;
+            color: #ff7c00;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        .hero img {
+            width: 340px;
+            border-radius: 22px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            animation: fadeInUp 1.3s ease;
+        }
+
+        /* زر Google Play */
+        .btn-play {
+            display: inline-block;
+            background: #000;
+            padding: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .btn-play img {
+            width: 200px;
+        }
+        .btn-play:hover {
+            opacity: 0.8;
+        }
+
+        /* الأقسام */
+        section {
+            padding: 70px 0;
+        }
+        h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #ff7c00;
+            text-align: center;
+        }
+
+        .section-box {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            max-width: 900px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+
+        /* تواصل معنا */
+        .contact-box a {
+            color: #ff7c00;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* الفوتر */
+        footer {
+            background: #ff7c00;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* أنيميشن */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media(max-width: 768px) {
+            .hero {
+                text-align: center;
+                flex-direction: column-reverse;
+            }
+            .hero img {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <!-- قسم التنقل (Navigation) -->
-    <header class="header">
+    <!-- الهيدر -->
+    <header>
         <div class="container">
             <div class="logo">
-                <!-- شعار التطبيق: رمز محفظة مالية ونص -->
-                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-                    <path d="M21 18H3V6H21V18ZM13 14H11V10H13V14ZM17 14H15V10H17V14ZM10 14H8V10H10V14ZM5 14H7V10H5V14ZM22 4H2V20H22V4Z"/>
-                </svg>
+                <img src="icon.png" alt="App Icon">
                 <span>محترف إدارة المصاريف</span>
             </div>
-            <nav class="nav-links">
-                <a href="#about-app">التطبيق</a>
-                <a href="#developer">المطور</a>
+            <nav>
+                <a href="#about">التطبيق</a>
+                <a href="#dev">المطور</a>
                 <a href="#contact">تواصل</a>
             </nav>
         </div>
     </header>
 
-    <!-- القسم الرئيسي/البطولي (Hero Section) -->
-    <section class="hero" id="about-app">
+    <!-- القسم الرئيسي -->
+    <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>تتبع أموالك بذكاء. عش بحرية مالية.</h1>
-                <p class="description">
-                    تطبيق محترف لإدارة المصاريف والدخل، يساعدك على تتبع ميزانيتك اليومية، ديونك، وأهدافك المالية بسهولة وأمان.
+            <div class="hero-text">
+                <h1>تتبع أموالك بذكاء — وابدأ رحلتك نحو الحرية المالية.</h1>
+                <p>
+                    تطبيق احترافي لإدارة المصاريف والدخل والديون.  
+                    بسيط، سريع، آمن، ويدعم اللغة العربية بالكامل.  
+                    اكتشف قوة التحكم بمدخراتك بسهولة لم تعشها من قبل.
                 </p>
-                
-                <!-- زر التحميل من Google Play -->
-                <a 
-                    href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager" 
-                    target="_blank" 
-                    class="btn-primary"
-                >
-                    <!-- أيقونة Google Play (SVG مبسط) -->
-                    <svg viewBox="0 0 24 24" fill="#fff" width="20" height="20" style="margin-left: 8px;">
-                        <path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm5.176 10.144l-2.738-1.583 1.25-3.327L12 3.5l-3.688 6.556-2.923-1.688 1.053 2.805L4 12l5.442 3.143 2.923 1.688 3.688-6.556 1.25 3.327 2.738-1.583L12 20.5 7.824 10.144l4.176-2.408z"/>
-                    </svg>
-                    حمل الآن من Google Play
+
+                <a href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager" 
+                   target="_blank" class="btn-play">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/ar_badge_web_generic.png">
                 </a>
             </div>
-            
-            <!-- صورة توضيحية (Placeholder) -->
-            <div class="app-mockup">
-                <!-- يمكنك هنا وضع صورة للتطبيق، أو استخدام مكان مخصص حاليًا -->
-                <div class="mockup-placeholder">
-                    
-                </div>
-            </div>
+
+            <img src="icon.png" alt="App Mockup">
         </div>
     </section>
 
-    <!-- قسم عن المطور (About Developer) -->
-    <section class="section developer-section" id="developer">
-        <div class="container">
-            <h2>عن المطور</h2>
-            <div class="developer-info">
-                <p>
-                    تم تطوير التطبيق بواسطة <strong>fouad shawish</strong> — فريق فلسطيني يهدف لتقديم تطبيقات إنتاجية مبتكرة وآمنة للمستخدمين العرب. نحن نؤمن بأن الأدوات المالية يجب أن تكون سهلة الوصول، قوية، ومصممة بعناية لتلبية احتياجاتك اليومية.
-                </p>
-                <a href="mailto:fouad.shawish@gmail.com" class="btn-secondary">تواصل معنا</a>
-            </div>
+    <!-- قسم التطبيق -->
+    <section id="about">
+        <h2>عن التطبيق</h2>
+        <div class="section-box">
+            تطبيق "محترف إدارة المصاريف" يساعدك على تسجيل مصاريفك بسهولة، متابعة دخلك، إدارة ديونك، 
+            وتتبع أهدافك المالية بشكل يومي وشهري.  
+            واجهة عربية بالكامل، تصميم حديث، وذكاء يساعدك تفهم نمط مصاريفك.
         </div>
     </section>
 
-    <!-- قسم التواصل (Contact Section) -->
-    <section class="section contact-section" id="contact">
-        <div class="container">
-            <h2>تواصل معنا</h2>
-            <div class="contact-details">
-                <div class="contact-item">
-                    <strong>البريد الإلكتروني:</strong>
-                    <a href="mailto:fouad.shawish@gmail.com">fouad.shawish@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <strong>واتساب (Whatsapp):</strong>
-                    <a href="https://wa.me/970595129959" target="_blank">+970-595129959</a>
-                </div>
-            </div>
+    <!-- قسم المطور -->
+    <section id="dev">
+        <h2>عن المطور</h2>
+        <div class="section-box">
+            تم تطوير التطبيق بواسطة <strong>Fouad Shawish</strong> —  
+            مطور فلسطيني يسعى لتقديم تطبيقات عربية احترافية ترفع جودة حياة المستخدم.  
+            هدفنا هو تقديم تجربة مالية ذكية وسهلة لكل المستخدمين العرب.
         </div>
     </section>
 
-    <!-- التذييل (Footer) -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 fouad shawish. جميع الحقوق محفوظة.</p>
+    <!-- قسم التواصل -->
+    <section id="contact">
+        <h2>تواصل معنا</h2>
+        <div class="section-box contact-box">
+            <p><strong>البريد الإلكتروني:</strong> <a href="mailto:fouad.shawish@gmail.com">fouad.shawish@gmail.com</a></p>
+            <p><strong>واتساب:</strong> <a href="https://wa.me/970595129959">+970-595129959</a></p>
         </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        &copy; 2025 جميع الحقوق محفوظة — Fouad Shawish
     </footer>
 
 </body>
