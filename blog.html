@@ -5,48 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مقالات ونصائح مالية | محترف المصاريف</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        body { font-family:'Cairo',sans-serif; background:#f6f7f9; margin:0; }
-        .container { width:90%; max-width:1000px; margin:40px auto; }
-        h1 { color:#ff7c00; margin-bottom:20px; text-align:right; }
-        .posts { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
-        .post { background:white; padding:20px; border-radius:14px; box-shadow:0 3px 12px rgba(0,0,0,0.06); }
-        .post h2 { color:#ff7c00; margin-bottom:10px; font-size:20px; }
-        .post p { line-height:1.8; font-size:16px; }
+        body { 
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            background: #f6f7f9;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        h1 {
+            text-align: right;
+            font-size: 32px;
+            color: #ff7c00;
+            margin-bottom: 15px;
+        }
+
+        .intro-text {
+            text-align: right;
+            line-height: 1.9;
+            color: #444;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+            transition: all .25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            color: #ff7c00;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.7;
+            font-size: 16px;
+            color: #555;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px;
+            color: #777;
+        }
     </style>
 </head>
+
 <body>
 
 <div class="container">
-    <h1>مقالات ونصائح في إدارة المال</h1>
 
-    <div class="posts">
-        <div class="post">
-            <h2>كيف تبدأ أول ميزانية شخصية؟</h2>
+    <h1>مقالات ونصائح مالية</h1>
+
+    <p class="intro-text">
+        في هذه الصفحة ستجد مجموعة كبيرة من المقالات المختصرة والمفيدة 
+        التي تساعدك على فهم المال وإدارة مصاريفك بطريقة أفضل، 
+        وتطوير عادات مالية صحية تساعدك على الادخار وتحسين حياتك.
+    </p>
+
+    <div class="grid">
+
+        <!-- 1 -->
+        <div class="card">
+            <h2>كيف تبدأ أول ميزانية في حياتك؟</h2>
             <p>
-                ابدأ بحصر دخلك الشهري، ثم قسّم مصاريفك إلى فئات:
-                أساسية، ثانوية، وترفيهية. سجّل كل شيء في التطبيق
-                لمدة شهر كامل، وستتفاجأ بالنتائج.
+                اكتب دخلك، ثم قسّم مصاريفك إلى فئات: أساسية، ضرورية، وترفيهية.
+                سجّل مصاريفك لمدة شهر كامل وستكتشف أين يذهب المال فعليًا.
             </p>
         </div>
 
-        <div class="post">
-            <h2>أخطاء شائعة في إدارة المصاريف</h2>
+        <!-- 2 -->
+        <div class="card">
+            <h2>أكبر خطأ مالي يرتكبه الناس</h2>
             <p>
-                من أكثر الأخطاء انتشارًا عدم تسجيل المصاريف الصغيرة،
-                مثل القهوة والوجبات السريعة، والتي تشكّل جزءًا كبيرًا من الميزانية دون أن نشعر.
+                تجاهل المصاريف الصغيرة! فهي التي تستنزف الراتب دون أن نشعر،
+                مثل القهوة، الوجبات السريعة، والتسوق العشوائي.
             </p>
         </div>
 
-        <div class="post">
-            <h2>لماذا تحتاج لتتبع ديونك؟</h2>
+        <!-- 3 -->
+        <div class="card">
+            <h2>كيف تتخلص من الديون بسرعة؟</h2>
             <p>
-                تتبع الديون يحميك من النسيان، ويمنع سوء الفهم
-                بينك وبين الآخرين، ويساعدك على ترتيب التزاماتك المالية.
+                ابدأ بسداد أصغر دين أولًا، ثم الأكبر. 
+                طريقة “كرة الثلج” فعّالة جدًا نفسيًا وتشجعك على الاستمرار.
             </p>
         </div>
-    </div>
-</div>
 
-</body>
-</html>
+        <!-- 4 -->
+        <div class="card">
+            <h2>قاعدة 50/30/20 للتحكم بالراتب</h2>
+            <p>
+                50٪ احتياجات – 30٪ رغبات – 20٪ ادخار أو ديون.
+                قاعدة بسيطة لكنها تنظم حياتك المالية بشكل كبير.
+            </p>
+        </div>
+
+        <!-- 5 -->
+        <div class="card">
+            <h2>كيف تقلل مصاريفك دون أن تشعر بالحرمان؟</h2>
+            <p>
+                استبدل عاداتك لا متعتك: قهوة من البيت بدل المقهى،
+                التخطيط للو
