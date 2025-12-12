@@ -1,3 +1,18 @@
-posts.html
-articles.html
-articles-index.html
+---
+layout: default
+title: "المقالات"
+---
+
+<h1 style="color:#ff7c00; text-align:right;">📚 المدونة</h1>
+
+<ul>
+  {% for post in site.posts %}
+  <li style="margin-bottom:15px;">
+    <a href="{{ post.url }}" style="font-size:20px; color:#ff7c00; text-decoration:none;">
+      {{ post.title }}
+    </a>
+    <br>
+    <span style="color:#777;">{{ post.date | date: "%Y-%m-%d" }}</span>
+  </li>
+  {% endfor %}
+</ul>
