@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+
+  <!-- Theme main stylesheet -->
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+
+  <style>
+    body {
+        direction: rtl;
+        font-family: "Cairo", sans-serif;
+        text-align: right;
+        background: #f6f7f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 900px;
+        background: white;
+        margin: 40px auto;
+        padding: 30px;
+        border-radius: 18px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+        line-height: 1.9;
+        font-size: 18px;
+    }
+
+    h1 {
+        color: #ff7c00;
+        margin-bottom: 10px;
+        font-size: 32px;
+    }
+
+    .meta {
+        color: #777;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .comments {
+        margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>{{ page.title }}</h1>
+
+  <div class="meta">
+    نُشر بتاريخ: {{ page.date | date: "%Y-%m-%d" }}
+  </div>
+
+  <article>
+    {{ content }}
+  </article>
+
+  <div class="comments">
+    <h2>💬 التعليقات</h2>
+
+    <!-- Giscus embed -->
+    <script src="https://giscus.app/client.js"
+        data-repo="fouadshawish-png/fouadshawish-png.github.io"
+        data-repo-id="YOUR_REPO_ID"
+        data-category="General"
+        data-category-id="YOUR_CATEGORY_ID"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ar"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+  </div>
+
+</div>
+
+</body>
+</html>
