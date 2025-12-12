@@ -1,0 +1,29 @@
+---
+---
+body {
+    direction: rtl;
+    font-family: "Cairo", sans-serif;
+    background: #f6f7f9;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.container {
+    width: 92%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    color: #ff7c00;
+}
+
+a {
+    text-decoration: none;
+    color: #ff7c00;
+}
+
+a:hover {
+    opacity: 0.8;
+}

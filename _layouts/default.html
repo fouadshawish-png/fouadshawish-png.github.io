@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ site.language | default: 'ar' }}" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | escape }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  {% if page.layout == 'blog' or page.layout == 'post' %}
+  <link rel="stylesheet" href="{{ '/assets/blog.css' | relative_url }}">
+  {% endif %}
+  {%- seo -%}
+</head>
+<body>
+  <header class="container">
+    <nav class="site-nav" style="display:flex;align-items:center;justify-content:space-between;padding:20px 0;">
+      <a href="{{ '/' | relative_url }}" class="logo" style="font-weight:700;font-size:20px;color:#ff7c00;">{{ site.title }}</a>
+      <div class="nav-links" style="display:flex;gap:16px;">
+        <a href="{{ '/blog/' | relative_url }}">المدونة</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    {{ content }}
+  </main>
+
+  <footer class="footer" style="margin-top:40px;padding:20px 0;text-align:center;color:#777;">
+    <div class="container">
+      <p>© {{ site.time | date: '%Y' }} {{ site.title }}</p>
+    </div>
+  </footer>
+</body>
+</html>

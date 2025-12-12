@@ -1,6 +1,15 @@
-title: "محترف المصاريف"
-description: "مقالات ونصائح مالية — إدارة المصاريف — تتبع الدخل — تحسين السلوك المالي"
+title: "محترف المصاريف — المدونة"
+description: "مقالات مالية، نصائح، إدارة المصاريف، تحسين الدخل، التخلص من الديون"
+url: "https://fouadshawish-png.github.io"
+baseurl: ""
 theme: minima
+
+language: "ar"
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+markdown: kramdown
+kramdown:
+  input: GFM

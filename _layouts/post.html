@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<article class="post">
+  <h1>{{ page.title }}</h1>
+  <p class="post-meta" style="color:#777;margin-top:8px;">
+    نُشر في {{ page.date | date: "%Y-%m-%d" }}
+    {% if page.categories and page.categories.size > 0 %}
+    • {{ page.categories | join: '، ' }}
+    {% endif %}
+  </p>
+  <div class="post-content" style="margin-top:20px;line-height:1.8;color:#333;">
+    {{ content }}
+  </div>
+</article>
+
+<section class="comments" style="margin-top:40px;">
+  <h2>التعليقات</h2>
+  <script src="https://giscus.app/client.js"
+    data-repo="fouadshawish-png/fouadshawish-png.github.io"
+    data-repo-id="REPO_ID"
+    data-category="General"
+    data-category-id="CATEGORY_ID"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="light"
+    data-lang="ar"
+    data-dir="rtl"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <noscript>فعّل JavaScript لعرض نظام التعليقات Giscus.</noscript>
+</section>

@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<h1>📚 مقالات المدونة</h1>
+
+{% assign blog_posts = paginator.posts | default: site.posts %}
+<div class="blog-grid">
+  {% for post in blog_posts %}
+  <article class="blog-card">
+    <div class="blog-card-title">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </div>
+    <p class="blog-card-excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
+    <div class="blog-card-meta" style="margin-top:10px;color:#777;font-size:14px;">
+      <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+      {% if post.categories and post.categories.size > 0 %}
+      <span style="margin-right:10px;">• {{ post.categories | join: '، ' }}</span>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>
+
+{% if paginator %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">السابق</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">التالي</a>
+  {% endif %}
+</div>
+{% endif %}
