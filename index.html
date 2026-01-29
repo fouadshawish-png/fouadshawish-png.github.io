@@ -1,80 +1,9 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>محترف المصاريف | الصفحة الرسمية</title>
-
-    <!-- الخط -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icon -->
-    <link rel="icon" type="image/png" href="icon.png">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Canonical -->
-    <link rel="canonical" href="https://fouadshawish-png.github.io/">
-
-    <!-- SEO Meta -->
-    <meta name="description" content="محترف المصاريف هو تطبيق عربي احترافي لتسجيل المصاريف والدخل وإدارة الديون والميزانية بواجهة بسيطة وسريعة.">
-    <meta name="keywords" content="محترف المصاريف, تطبيق مصاريف, ادارة المال, دخل, ديون, ميزانية, ادخار, تطبيق عربي">
-    <meta name="author" content="فؤاد شاويش">
-
-    <!-- OG -->
-    <meta property="og:title" content="محترف المصاريف">
-    <meta property="og:description" content="أفضل تطبيق عربي لتتبع مصاريفك وتنظيم ميزانيتك بسهولة.">
-    <meta property="og:image" content="https://fouadshawish-png.github.io/icon.png">
-    <meta property="og:url" content="https://fouadshawish-png.github.io/">
-    <meta property="og:type" content="website">
-
-    <!-- Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MobileApplication",
-      "name": "محترف المصاريف",
-      "operatingSystem": "Android",
-      "applicationCategory": "FinanceApplication",
-      "description": "تطبيق عربي شامل لتسجيل المصاريف والدخل وإدارة الميزانية والديون.",
-      "image": "https://fouadshawish-png.github.io/icon.png",
-      "url": "https://fouadshawish-png.github.io/",
-      "installUrl": "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager",
-      "publisher": {
-        "@type": "Person",
-        "name": "فؤاد شاويش"
-      }
-    }
-    </script>
-</head>
-
-<body>
-
-<!-- Header -->
-<header>
-    <div class="container header-row">
-        <div class="logo">
-            <img src="icon.png" alt="شعار التطبيق">
-            <span>محترف المصاريف</span>
-        </div>
-
-        <nav>
-            <a href="#about">عن التطبيق</a>
-            <a href="#features">المميزات</a>
-            <a href="#screens">صور التطبيق</a>
-
-            <!-- روابط الصفحات الجديدة -->
-            <a href="guide.html">دليل الاستخدام</a>
-            <a href="features-advanced.html">المميزات المتقدمة</a>
-            <a href="blog.html">مقالات</a>
-
-            <a href="faq.html">الأسئلة الشائعة</a>
-            <a href="support.html">الدعم</a>
-            <a href="download.html">تحميل</a>
-        </nav>
-    </div>
-</header>
+---
+layout: home
+title: "الصفحة الرسمية"
+description: "محترف المصاريف هو تطبيق عربي احترافي لتسجيل المصاريف والدخل وإدارة الديون والميزانية بواجهة بسيطة وسريعة."
+permalink: /
+---
 
 <!-- Hero Section -->
 <section class="hero">
@@ -88,11 +17,11 @@
 
             <a href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager"
                target="_blank" class="btn-play">
-                <img src="https://play.google.com/intl/ar/badges/static/images/badges/ar_badge_web_generic.png">
+                <img src="https://play.google.com/intl/ar/badges/static/images/badges/ar_badge_web_generic.png" alt="حمّل التطبيق من Google Play">
             </a>
         </div>
 
-        <img src="icon.png" class="hero-img" alt="صورة التطبيق">
+        <img src="icon.png" class="hero-img" alt="أيقونة تطبيق محترف المصاريف">
     </div>
 </section>
 
@@ -140,9 +69,21 @@
     <h2>صور من داخل التطبيق</h2>
 
     <div class="screens-grid container">
-        <div class="screen-box">صورة ١</div>
-        <div class="screen-box">صورة ٢</div>
-        <div class="screen-box">صورة ٣</div>
+        <picture>
+            <source srcset="{{ '/assets/images/screens/screen-1.webp' | relative_url }}" type="image/webp">
+            <source srcset="{{ '/assets/images/screens/screen-1.png' | relative_url }}" type="image/png">
+            <img class="screen-img" src="{{ '/assets/images/screens/screen-1.svg' | relative_url }}" alt="لقطة شاشة 1 من التطبيق" loading="lazy">
+        </picture>
+        <picture>
+            <source srcset="{{ '/assets/images/screens/screen-2.webp' | relative_url }}" type="image/webp">
+            <source srcset="{{ '/assets/images/screens/screen-2.png' | relative_url }}" type="image/png">
+            <img class="screen-img" src="{{ '/assets/images/screens/screen-2.svg' | relative_url }}" alt="لقطة شاشة 2 من التطبيق" loading="lazy">
+        </picture>
+        <picture>
+            <source srcset="{{ '/assets/images/screens/screen-3.webp' | relative_url }}" type="image/webp">
+            <source srcset="{{ '/assets/images/screens/screen-3.png' | relative_url }}" type="image/png">
+            <img class="screen-img" src="{{ '/assets/images/screens/screen-3.svg' | relative_url }}" alt="لقطة شاشة 3 من التطبيق" loading="lazy">
+        </picture>
     </div>
 </section>
 
@@ -186,22 +127,4 @@
     </div>
 </section>
 
-<!-- Footer -->
-<footer>
-    <p>© 2025 جميع الحقوق محفوظة — فؤاد شاويش</p>
 
-    <div class="footer-links">
-        <a href="privacy.html">سياسة الخصوصية</a> |
-        <a href="terms.html">شروط الاستخدام</a> |
-        <a href="support.html">الدعم الفني</a> |
-        <a href="faq.html">الأسئلة الشائعة</a> |
-        <a href="guide.html">دليل الاستخدام</a> |
-        <a href="features-advanced.html">المميزات المتقدمة</a> |
-        <a href="blog.html">مقالات</a> |
-        <a href="changelog.html">سجل التحديثات</a> |
-        <a href="download.html">تحميل التطبيق</a>
-    </div>
-</footer>
-
-</body>
-</html>

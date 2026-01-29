@@ -1,9 +1,42 @@
 title: "محترف المصاريف"
-description: "مقالات ونصائح مالية — إدارة المصاريف — تتبع الدخل — تحسين السلوك المالي"
+description: "مقالات ونصائح مالية عن إدارة المصاريف وتتبع الدخل وتحسين السلوك المالي."
 url: "https://fouadshawish-png.github.io"
+baseurl: ""
 lang: "ar"
+locale: "ar"
+timezone: "Asia/Gaza"
+
+author:
+  name: "فؤاد شاويش"
+  email: "fouad.shawish@gmail.com"
+
+logo: "/icon.png"
+default_og_image: "/assets/images/og-image-1200x630.svg"
+theme_color: "#ff7c00"
+
+app:
+  name: "محترف المصاريف"
+  platform: "Android"
+  category: "FinanceApplication"
+  play_store_url: "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager"
+  apk_url: ""
+
+social:
+  name: "فؤاد شاويش"
+  links:
+    - "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager"
+
 theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      og_type: "article"
+      lang: "ar"
 
