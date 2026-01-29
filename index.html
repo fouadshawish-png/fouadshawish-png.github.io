@@ -68,42 +68,34 @@ permalink: /
 <section id="screens">
     <h2>صور من داخل التطبيق</h2>
 
+    {%- assign screens_dir = '/assets/images/screens/' -%}
+    {%- assign screens = site.static_files
+        | where_exp: 'f', 'f.path contains screens_dir'
+        | where_exp: 'f', 'f.extname == ".webp"'
+        | sort: 'name'
+    -%}
+
     <div class="screens-grid container" aria-label="لقطات شاشة من التطبيق" tabindex="0">
-        <figure class="screen-slide" id="screen-1">
-        <picture>
-            <source srcset="{{ '/assets/images/screens/screen-1.webp' | relative_url }}" type="image/webp">
-            <source srcset="{{ '/assets/images/screens/screen-1.png' | relative_url }}" type="image/png">
-            <img class="screen-img" src="{{ '/assets/images/screens/screen-1.svg' | relative_url }}" alt="لقطة شاشة 1 من التطبيق" loading="lazy">
-        </picture>
-        </figure>
+        {%- for f in screens -%}
+            {%- assign prev_idx = forloop.index0 | minus: 1 -%}
+            {%- if prev_idx < 0 -%}{%- assign prev_idx = forloop.length | minus: 1 -%}{%- endif -%}
+            {%- assign next_idx = forloop.index0 | plus: 1 -%}
+            {%- if next_idx >= forloop.length -%}{%- assign next_idx = 0 -%}{%- endif -%}
+            {%- assign prev_num = prev_idx | plus: 1 -%}
+            {%- assign next_num = next_idx | plus: 1 -%}
 
-        <figure class="screen-slide" id="screen-2">
-        <picture>
-            <source srcset="{{ '/assets/images/screens/screen-2.webp' | relative_url }}" type="image/webp">
-            <source srcset="{{ '/assets/images/screens/screen-2.png' | relative_url }}" type="image/png">
-            <img class="screen-img" src="{{ '/assets/images/screens/screen-2.svg' | relative_url }}" alt="لقطة شاشة 2 من التطبيق" loading="lazy">
-        </picture>
-        </figure>
-
-        <figure class="screen-slide" id="screen-3">
-        <picture>
-            <source srcset="{{ '/assets/images/screens/screen-3.webp' | relative_url }}" type="image/webp">
-            <source srcset="{{ '/assets/images/screens/screen-3.png' | relative_url }}" type="image/png">
-            <img class="screen-img" src="{{ '/assets/images/screens/screen-3.svg' | relative_url }}" alt="لقطة شاشة 3 من التطبيق" loading="lazy">
-        </picture>
-        </figure>
+            <figure class="screen-slide" id="screen-{{ forloop.index }}">
+                <a class="screen-arrow-btn screen-prev" href="#screen-{{ prev_num }}" aria-label="الصورة السابقة">‹</a>
+                <a class="screen-arrow-btn screen-next" href="#screen-{{ next_num }}" aria-label="الصورة التالية">›</a>
+                <img class="screen-img" src="{{ f.path | relative_url }}" alt="لقطة شاشة {{ forloop.index }} من التطبيق" loading="lazy">
+            </figure>
+        {%- endfor -%}
     </div>
 
     <div class="screens-controls" aria-label="التنقل بين صور التطبيق">
-        <a class="screen-nav" href="#screen-1" aria-label="عرض الصورة 1"></a>
-        <a class="screen-nav" href="#screen-2" aria-label="عرض الصورة 2"></a>
-        <a class="screen-nav" href="#screen-3" aria-label="عرض الصورة 3"></a>
-    </div>
-
-    <div class="screens-arrows" aria-label="سابق/التالي">
-        <a class="screen-arrow" href="#screen-1">الأولى</a>
-        <a class="screen-arrow" href="#screen-2">التالي</a>
-        <a class="screen-arrow" href="#screen-3">الأخيرة</a>
+        {%- for f in screens -%}
+            <a class="screen-nav" href="#screen-{{ forloop.index }}" aria-label="عرض الصورة {{ forloop.index }}"></a>
+        {%- endfor -%}
     </div>
 </section>
 
