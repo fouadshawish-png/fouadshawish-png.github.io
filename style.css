@@ -242,12 +242,27 @@ nav a:hover {
 
 /* Screens */
 .screens-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding: 8px 0 12px;
 }
 
-.screens-grid picture {
+.screen-slide {
+    flex: 0 0 360px;
+    scroll-snap-align: center;
+    margin: 0;
+}
+
+.screen-slide:target {
+    outline: 3px solid rgba(255,124,0,0.35);
+    border-radius: 14px;
+}
+
+.screen-slide picture {
     display: block;
 }
 
@@ -260,6 +275,50 @@ nav a:hover {
     background: #fff;
     border: 1px solid rgba(0,0,0,0.08);
     padding: 10px;
+}
+
+.screens-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 8px 0 14px;
+}
+
+.screen-nav {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(0,0,0,0.15);
+    display: inline-block;
+    text-decoration: none;
+}
+
+.screen-nav:hover {
+    background: rgba(255,124,0,0.55);
+    border-color: rgba(255,124,0,0.65);
+}
+
+.screens-arrows {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.screen-arrow {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    color: #ff7c00;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.screen-arrow:hover {
+    background: #fff7ec;
 }
 
 .screen-box {
@@ -332,22 +391,8 @@ footer a {
         padding: 20px;
     }
 
-    /* Screens: swipeable without JS */
-    .screens-grid {
-        display: flex;
-        overflow-x: auto;
-        gap: 16px;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 8px;
-    }
-
-    .screens-grid picture {
-        flex: 0 0 78%;
+    .screen-slide {
+        flex: 0 0 82%;
         scroll-snap-align: start;
-    }
-
-    .screen-img {
-        max-height: 560px;
     }
 }
