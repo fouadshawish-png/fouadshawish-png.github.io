@@ -31,6 +31,61 @@ main.page {
     margin: 0 0 20px;
 }
 
+/* Blog */
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+}
+
+.post-item {
+    background: #fff7ec;
+    border-radius: 14px;
+    padding: 16px 18px;
+    border-left: 5px solid #ff7c00;
+}
+
+.post-title {
+    margin: 0 0 8px;
+    font-size: 22px;
+}
+
+.post-title a {
+    color: #ff7c00;
+    text-decoration: none;
+}
+
+.post-title a:hover {
+    text-decoration: underline;
+}
+
+.post-meta {
+    color: #777;
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+.post-excerpt {
+    margin: 0 0 12px;
+    color: #444;
+}
+
+.post-readmore {
+    margin: 0;
+}
+
+.post-link {
+    color: #ff7c00;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.post-link:hover {
+    text-decoration: underline;
+}
+
 /* Header */
 header {
     background: white;
@@ -192,12 +247,19 @@ nav a:hover {
     gap: 20px;
 }
 
+.screens-grid picture {
+    display: block;
+}
+
 .screen-img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
+    height: auto;
+    aspect-ratio: 9 / 19.5;
+    object-fit: contain;
     border-radius: 12px;
-    background: #ddd;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 10px;
 }
 
 .screen-box {
@@ -268,5 +330,24 @@ footer a {
 
     .page-container {
         padding: 20px;
+    }
+
+    /* Screens: swipeable without JS */
+    .screens-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 16px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px;
+    }
+
+    .screens-grid picture {
+        flex: 0 0 78%;
+        scroll-snap-align: start;
+    }
+
+    .screen-img {
+        max-height: 560px;
     }
 }
