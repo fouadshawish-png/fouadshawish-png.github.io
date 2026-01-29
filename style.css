@@ -5,6 +5,28 @@ body {
     color: #222;
 }
 
+a {
+    color: inherit;
+}
+
+main.page {
+    padding: 40px 0;
+}
+
+.page-container {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    line-height: 1.9;
+    font-size: 18px;
+}
+
+.page-title {
+    color: #ff7c00;
+    margin: 0 0 20px;
+}
+
 /* Header */
 header {
     background: white;
@@ -30,6 +52,7 @@ header {
 .logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 .logo img {
@@ -101,6 +124,44 @@ nav a:hover {
     background: white;
 }
 
+/* Inner pages helpers */
+.info-box,
+.step,
+.box,
+.update,
+.contact-card {
+    background: #fff7ec;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border-left: 5px solid #ff7c00;
+}
+
+.faq details {
+    margin: 15px 0;
+    padding: 15px;
+    background: #fff7ec;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.faq summary {
+    font-weight: 700;
+    color: #ff7c00;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    background: #ff7c00;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -165,6 +226,19 @@ footer a {
     text-decoration: underline;
 }
 
+@media (max-width: 900px) {
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    nav a {
+        margin-left: 0;
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .hero-row {
@@ -174,5 +248,13 @@ footer a {
 
     .hero-img {
         margin-bottom: 20px;
+    }
+
+    main.page {
+        padding: 20px 0;
+    }
+
+    .page-container {
+        padding: 20px;
     }
 }
