@@ -70,5 +70,15 @@
 
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
+{% if site.analytics.ga4 %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.ga4 }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.analytics.ga4 }}', { anonymize_ip: true });
+</script>
+{% endif %}
+
 {% include structured-data.html %}
 

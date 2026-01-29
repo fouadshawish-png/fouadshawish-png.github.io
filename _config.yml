@@ -33,6 +33,9 @@ plugins:
 
 excerpt_separator: "<!--more-->"
 
+analytics:
+  ga4: G-PYX5M4Y0JD
+
 defaults:
   - scope:
       path: ""
