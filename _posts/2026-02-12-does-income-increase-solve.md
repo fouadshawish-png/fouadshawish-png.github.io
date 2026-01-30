@@ -1,6 +1,6 @@
 ---
 title: "هل زيادة الدخل وحدها تحل المشكلة المالية؟"
-description: "زيادة الدخل قد لا تكفي إذا بقي نمط الصرف كما هو.",
+description: "زيادة الدخل قد لا تكفي إذا بقي نمط الصرف كما هو."
 date: 2026-02-12 10:00:00 +0200
 image: /assets/images/income-increase-not-solution.jpg
 ---
