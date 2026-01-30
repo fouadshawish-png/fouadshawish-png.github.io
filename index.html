@@ -157,7 +157,7 @@ permalink: /
         {%- for post in site.posts limit:3 -%}
         <article class="latest-post">
             {% if post.image %}
-            <a class="latest-post__thumb" href="{{ post.url | relative_url }}">
+            <a class="post-thumb" href="{{ post.url | relative_url }}">
                 <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
             </a>
             {% endif %}
