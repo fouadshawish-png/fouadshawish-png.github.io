@@ -5,7 +5,14 @@
       <span>محترف المصاريف</span>
     </a>
 
-    <nav aria-label="التنقل الرئيسي">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle__line"></span>
+      <span class="nav-toggle__line"></span>
+      <span class="nav-toggle__line"></span>
+      <span class="sr-only">فتح القائمة</span>
+    </button>
+
+    <nav id="primary-nav" class="nav-links" aria-label="التنقل الرئيسي">
       <a href="{{ '/' | relative_url }}#about">عن التطبيق</a>
       <a href="{{ '/' | relative_url }}#features">المميزات</a>
       <a href="{{ '/' | relative_url }}#screens">صور التطبيق</a>
@@ -21,3 +28,16 @@
     </nav>
   </div>
 </header>
+
+<script>
+  (function () {
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  })();
+</script>

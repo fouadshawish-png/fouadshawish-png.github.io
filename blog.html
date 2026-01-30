@@ -12,14 +12,21 @@ canonical_url: /blog/
 <ul class="post-list">
   {% for post in site.posts %}
   <li class="post-item">
-    <h2 class="post-title">
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </h2>
-    <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
-    {% if post.description %}
-      <p class="post-excerpt">{{ post.description }}</p>
+    {% if post.image %}
+      <a class="post-thumb" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+      </a>
     {% endif %}
-    <p class="post-readmore"><a class="post-link" href="{{ post.url | relative_url }}">اقرأ المقال</a></p>
+    <div class="post-body">
+      <h2 class="post-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+      <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
+      {% if post.description %}
+        <p class="post-excerpt">{{ post.description }}</p>
+      {% endif %}
+      <p class="post-readmore"><a class="post-link" href="{{ post.url | relative_url }}">اقرأ المقال</a></p>
+    </div>
   </li>
   {% endfor %}
 </ul>
