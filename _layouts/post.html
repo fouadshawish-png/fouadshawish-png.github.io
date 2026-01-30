@@ -6,8 +6,8 @@ layout: default
   <h1>{{ page.title }}</h1>
   {{ content }}
   <div class="share-actions" aria-label="مشاركة المقال">
-    <a class="share-button share-facebook" target="_blank" rel="noopener noreferrer"
-       href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url | url_encode }}">
+     <a class="share-button share-facebook" target="_blank" rel="noopener noreferrer"
+       href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}">
       مشاركة على فيسبوك
     </a>
   </div>
