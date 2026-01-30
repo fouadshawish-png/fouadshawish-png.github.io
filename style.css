@@ -31,6 +31,13 @@ main.page {
     margin: 0 0 20px;
 }
 
+.section-title {
+    color: #ff7c00;
+    text-align: center;
+    margin: 0 0 24px;
+    font-size: 28px;
+}
+
 /* Blog */
 .post-list {
     list-style: none;
