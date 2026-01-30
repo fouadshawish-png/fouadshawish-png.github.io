@@ -3,6 +3,7 @@ title: "لماذا يفشل أغلب الناس في إدارة مصاريفهم
 description: "تحليل بسيط للأسباب النفسية والسلوكية التي تجعل إدارة المصاريف صعبة عند كثير من الناس."
 date: 2026-01-15 10:00:00 +0200
 lang: ar
+image: /assets/images/pro-expense-2.webp
 ---
 
 ![تتبع المصاريف في دفتر](/assets/images/pro-expense-2.webp)

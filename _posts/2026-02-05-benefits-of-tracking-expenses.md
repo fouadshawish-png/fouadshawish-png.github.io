@@ -3,6 +3,7 @@ title: "كيف يساعدك تتبع المصاريف على اتخاذ قرار
 description: "شرح عملي لكيفية تحويل تسجيل المصاريف من عبء مزعج إلى أداة وعي وقرار."
 date: 2026-01-20 10:00:00 +0200
 lang: ar
+image: /assets/images/pro-expense.webp
 ---
 
 ![تتبع المصاريف](/assets/images/pro-expense.webp)
