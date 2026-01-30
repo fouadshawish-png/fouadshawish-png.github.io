@@ -3,10 +3,10 @@ title: "كيف يساعدك تتبع المصاريف على اتخاذ قرار
 description: "شرح عملي لكيفية تحويل تسجيل المصاريف من عبء مزعج إلى أداة وعي وقرار."
 date: 2026-01-20 10:00:00 +0200
 lang: ar
-image: /assets/images/pro-expense.webp
+image: /assets/images/benefits-expense-tracking.webp
 ---
 
-![تتبع المصاريف](/assets/images/pro-expense.webp)
+![فوائد تتبع المصاريف](/assets/images/benefits-expense-tracking.webp)
 
 كثيرون يبدأون بتتبع المصاريف بحماس ثم يتوقفون بعد أيام لأنهم يشعرون أنه عمل إضافي مرهق. لكن تتبع المصاريف ليس غاية بحد ذاته؛ هو وسيلة لتقليل الضباب حول المال، وتحويل القرارات من “تخمين” إلى “اختيار واعٍ”.
 
