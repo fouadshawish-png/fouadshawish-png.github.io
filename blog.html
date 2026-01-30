@@ -7,19 +7,19 @@ canonical_url: /blog/
 
 <h1 class="page-title">المدونة</h1>
 
-<p style="color:#777;">الصفحة الأساسية للمدونة: <a href="{{ '/blog/' | relative_url }}">/blog</a></p>
+<p class="post-meta">الصفحة الأساسية للمدونة: <a class="post-link" href="{{ '/blog/' | relative_url }}">/blog</a></p>
 
-<ul>
+<ul class="post-list">
   {% for post in site.posts %}
-  <li style="margin-bottom:15px;">
-    <a href="{{ post.url | relative_url }}" style="font-size:20px; color:#ff7c00; text-decoration:none;">
-      {{ post.title }}
-    </a>
-    <br>
-    <span style="color:#777;">{{ post.date | date: "%Y-%m-%d" }}</span>
+  <li class="post-item">
+    <h2 class="post-title">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </h2>
+    <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
     {% if post.description %}
-      <div style="color:#555; margin-top:6px;">{{ post.description }}</div>
+      <p class="post-excerpt">{{ post.description }}</p>
     {% endif %}
+    <p class="post-readmore"><a class="post-link" href="{{ post.url | relative_url }}">اقرأ المقال</a></p>
   </li>
   {% endfor %}
 </ul>

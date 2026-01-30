@@ -6,7 +6,7 @@ lang: ar
 image: /assets/images/monthly-budget-mistakes.jpg
 ---
 
-![أخطاء إدارة المصروف الشهري](/assets/images/monthly-budget-mistakes.jpg)
+<img class="post-image post-image--wide" src="/assets/images/monthly-budget-mistakes.jpg" alt="أخطاء إدارة المصروف الشهري">
 
 إدارة المصروف الشهري ليست مسألة ذكاء بقدر ما هي مسألة نظام. كثير من الناس لديهم نية صادقة للترتيب، لكنهم يقعون في أخطاء متكررة تجعل الشهر يبدأ بخطة وينتهي بضغط. المشكلة غالبًا ليست في “قلة الدخل” وحدها، بل في تفاصيل صغيرة تُدار بطريقة خاطئة فتسحب الميزانية تدريجيًا.
 

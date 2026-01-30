@@ -85,8 +85,6 @@ permalink: /
             {%- assign next_num = next_idx | plus: 1 -%}
 
             <figure class="screen-slide" id="screen-{{ forloop.index }}">
-                <a class="screen-arrow-btn screen-prev" href="#screen-{{ prev_num }}" aria-label="الصورة السابقة">‹</a>
-                <a class="screen-arrow-btn screen-next" href="#screen-{{ next_num }}" aria-label="الصورة التالية">›</a>
                 <img class="screen-img" src="{{ f.path | relative_url }}" alt="لقطة شاشة {{ forloop.index }} من التطبيق" loading="lazy">
             </figure>
         {%- endfor -%}
