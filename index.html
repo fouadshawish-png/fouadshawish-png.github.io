@@ -149,6 +149,34 @@ permalink: /
     </div>
 </section>
 
+<!-- Latest Posts -->
+<section id="latest-posts">
+    <h2 class="section-title">أحدث المقالات</h2>
+
+    <div class="latest-posts-grid container">
+        {%- for post in site.posts limit:3 -%}
+        <article class="latest-post">
+            {% if post.image %}
+            <a class="latest-post__thumb" href="{{ post.url | relative_url }}">
+                <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+            </a>
+            {% endif %}
+            <div class="latest-post__body">
+                <h3 class="latest-post__title">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h3>
+                {% if post.description %}
+                <p class="latest-post__excerpt">{{ post.description }}</p>
+                {% endif %}
+                <a class="post-link" href="{{ post.url | relative_url }}">اقرأ المقال</a>
+            </div>
+        </article>
+        {%- endfor -%}
+    </div>
+
+    <p class="text-center"><a class="btn" href="{{ '/blog.html' | relative_url }}">عرض كل المقالات</a></p>
+</section>
+
 <!-- About Section -->
 <section id="about">
     <h2 class="section-title">عن التطبيق والمطور</h2>

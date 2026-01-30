@@ -364,6 +364,65 @@ nav a:hover {
     background: white;
 }
 
+/* Latest posts */
+#latest-posts {
+    padding: 70px 0;
+    background: white;
+}
+
+.latest-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-bottom: 26px;
+}
+
+.latest-post {
+    background: #fff7ec;
+    border-radius: 14px;
+    padding: 14px;
+    border-left: 5px solid #ff7c00;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.latest-post__thumb {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    aspect-ratio: 4 / 3;
+}
+
+.latest-post__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.latest-post__title {
+    margin: 0 0 6px;
+    font-size: 20px;
+    color: #ff7c00;
+}
+
+.latest-post__title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.latest-post__title a:hover {
+    text-decoration: underline;
+}
+
+.latest-post__excerpt {
+    margin: 0 0 10px;
+    color: #444;
+    font-size: 16px;
+}
+
 /* Inner pages helpers */
 .info-box,
 .step,
