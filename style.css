@@ -34,12 +34,11 @@ main.page {
 .section-title {
     color: #ff7c00;
     text-align: center;
-    margin: 0 0 24px;
+    margin: 0 auto 24px;
     font-size: 28px;
     position: relative;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
+    display: block;
+    width: fit-content;
     animation: title-fade-up 0.8s ease both;
 }
 
@@ -57,11 +56,11 @@ main.page {
 @keyframes title-fade-up {
     from {
         opacity: 0;
-        transform: translate(-50%, 10px);
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
-        transform: translate(-50%, 0);
+        transform: translateY(0);
     }
 }
 
