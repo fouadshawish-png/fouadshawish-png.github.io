@@ -36,6 +36,44 @@ main.page {
     text-align: center;
     margin: 0 0 24px;
     font-size: 28px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: title-fade-up 0.8s ease both;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    margin: 10px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(255,124,0,0.15), rgba(255,124,0,0.85), rgba(255,124,0,0.15));
+    animation: title-line 1s ease 0.2s both;
+}
+
+@keyframes title-fade-up {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 10px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes title-line {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 70px;
+        opacity: 1;
+    }
 }
 
 /* Blog */
