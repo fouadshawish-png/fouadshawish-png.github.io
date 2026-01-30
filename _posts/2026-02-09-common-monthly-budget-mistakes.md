@@ -1,9 +1,10 @@
 ---
 title: "أخطاء شائعة في إدارة المصروف الشهري يجب أن تتجنبها"
-description: "عرض لأكثر الأخطاء تكرارًا عند تنظيم المصروف الشهري مع بدائل ذكية."
+description: "أخطاء الميزانية الشهرية الشائعة، تنظيم المصروف، وتعديل السلوك المالي بخطوات ذكية."
 date: 2026-01-21 10:00:00 +0200
 lang: ar
 image: /assets/images/monthly-budget-mistakes.jpg
+keywords: "أخطاء الميزانية, المصروف الشهري, تنظيم المصروف, سلوك مالي"
 ---
 
 <img class="post-image post-image--wide" src="/assets/images/monthly-budget-mistakes.jpg" alt="أخطاء إدارة المصروف الشهري">

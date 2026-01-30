@@ -1,8 +1,9 @@
 ---
 title: "هل زيادة الدخل وحدها تحل المشكلة المالية؟"
-description: "زيادة الدخل قد لا تكفي إذا بقي نمط الصرف كما هو."
+description: "زيادة الدخل لا تكفي دون إدارة المصاريف وضبط نمط الصرف والميزانية."
 date: 2026-02-12 10:00:00 +0200
 image: /assets/images/income-increase-not-solution.jpg
+keywords: "زيادة الدخل, نمط الصرف, إدارة المصاريف, الميزانية"
 ---
 
 ![زيادة الدخل دون تغيير السلوك](/assets/images/income-increase-not-solution.jpg)

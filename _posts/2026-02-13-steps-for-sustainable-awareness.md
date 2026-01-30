@@ -1,8 +1,9 @@
 ---
 title: "خطوات بسيطة لبناء وعي مالي مستدام"
-description: "عادات صغيرة واستمرارية هادئة تصنع وعيًا ماليًا طويل المدى."
+description: "خطوات لبناء وعي مالي مستدام عبر عادات تتبع المصاريف والميزانية بانتظام."
 date: 2026-02-13 10:00:00 +0200
 image: /assets/images/sustainable-financial-awareness.jpg
+keywords: "وعي مالي, عادات مالية, تتبع المصاريف, ميزانية مستدامة"
 ---
 
 ![بناء وعي مالي مستدام](/assets/images/sustainable-financial-awareness.jpg)

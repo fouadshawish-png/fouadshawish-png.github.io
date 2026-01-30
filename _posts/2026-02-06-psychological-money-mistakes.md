@@ -1,8 +1,9 @@
 ---
 title: "أخطاء نفسية شائعة في التعامل مع المال"
-description: "التبرير والمقارنة والإنفاق العاطفي أبرز فخاخ السلوك المالي."
+description: "أخطاء نفسية في الإنفاق مثل التبرير والمقارنة وكيف تحمي ميزانيتك من العشوائية."
 date: 2026-02-06 10:00:00 +0200
 image: /assets/images/psychological-money-mistakes.jpg
+keywords: "أخطاء مالية, إنفاق عاطفي, تبرير, مقارنة, ميزانية"
 ---
 
 ![أخطاء نفسية في التعامل مع المال](/assets/images/psychological-money-mistakes.jpg)

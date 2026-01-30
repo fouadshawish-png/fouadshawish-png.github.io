@@ -1,8 +1,9 @@
 ---
 title: "الفرق بين ضبط المصاريف والحرمان من الحياة"
-description: "توازن نفسي عملي بين الوعي المالي والاستمتاع الواعي دون تشدد."
+description: "الفرق بين ضبط المصاريف والحرمان، وتوازن الميزانية والادخار دون ضغط أو تشدد."
 date: 2026-02-01 10:00:00 +0200
 image: /assets/images/balanced-spending-vs-deprivation.jpg
+keywords: "ضبط المصاريف, الحرمان, التوازن المالي, ادخار, ميزانية"
 ---
 
 ![توازن الإنفاق والاستمتاع](/assets/images/balanced-spending-vs-deprivation.jpg)
