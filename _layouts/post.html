@@ -13,6 +13,31 @@ layout: default
   </div>
 </article>
 
+<section class="post-related" aria-label="مقالات أخرى">
+  <h2 class="section-title">مقالات أخرى</h2>
+  <ul class="post-list">
+    {%- assign related = site.posts | where_exp: 'p', 'p.url != page.url' | limit: 3 -%}
+    {%- for post in related -%}
+    <li class="post-item">
+      {%- if post.image -%}
+      <a class="post-thumb" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+      </a>
+      {%- endif -%}
+      <div class="post-body">
+        <h3 class="post-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        {%- if post.description -%}
+        <p class="post-excerpt">{{ post.description }}</p>
+        {%- endif -%}
+        <p class="post-readmore"><a class="post-link" href="{{ post.url | relative_url }}">اقرأ المقال</a></p>
+      </div>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
