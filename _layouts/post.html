@@ -21,7 +21,7 @@ layout: default
     <li class="post-item">
       {%- if post.image -%}
       <a class="post-thumb" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
-        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" width="1200" height="630">
       </a>
       {%- endif -%}
       <div class="post-body">
