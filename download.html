@@ -6,21 +6,34 @@ description: "روابط تحميل تطبيق محترف المصاريف من 
 
 <div class="text-center">
     <h1 class="page-title">تحميل تطبيق محترف المصاريف</h1>
+    <p style="max-width:720px; margin: 10px auto 20px; color:#555;">
+        اختر طريقة التحميل التي تناسبك. ستجد النسخة الرسمية على Google Play،
+        ويمكنك أيضًا تنزيل ملف APK مباشرة عند توفره.
+    </p>
 
-        <p>يمكنك تحميل التطبيق مباشرة بصيغة APK عبر الرابط التالي (إن توفر):</p>
+    <div style="margin: 20px 0;">
+        <p style="margin-bottom:10px;">التحميل من Google Play (النسخة الموصى بها):</p>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager">
+            صفحة Google Play
+        </a>
+    </div>
 
+    <div style="margin: 25px 0;">
+        <p style="margin-bottom:10px;">التحميل المباشر بصيغة APK:</p>
         {% if site.app.apk_url and site.app.apk_url != "" %}
             <a class="btn" href="{{ site.app.apk_url }}">تحميل APK</a>
         {% else %}
-            <p style="color:#777; margin-top:10px;">رابط APK غير متوفر حاليًا.</p>
+            <p style="color:#777;">رابط APK غير متوفر حاليًا.</p>
         {% endif %}
+    </div>
 
-    <p style="margin-top:20px;">أو حمّله من Google Play:</p>
-
-    <a class="btn" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager">
-        صفحة Google Play
-    </a>
-
-title: "تحميل التطبيق"
-description: "تحميل تطبيق محترف المصاريف من Google Play أو عبر ملف APK عند توفره."
+    <div style="max-width:720px; margin: 30px auto 0; color:#666; text-align:right;">
+        <h3 style="margin-bottom:10px;">ملاحظات مهمة</h3>
+        <ul style="line-height:1.9;">
+            <li>نوصي دائمًا بالتحميل من Google Play للحصول على آخر التحديثات.</li>
+            <li>إذا قمت بالتحميل عبر APK، تأكد من تفعيل التثبيت من مصادر موثوقة فقط.</li>
+            <li>لأي مشكلة في التحميل، تواصل معنا عبر صفحة الدعم.</li>
+        </ul>
+    </div>
+</div>
 
