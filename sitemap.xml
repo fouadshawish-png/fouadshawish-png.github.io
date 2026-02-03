@@ -11,12 +11,14 @@ layout: null
 		{%- if page.url == nil -%}{% continue %}{%- endif -%}
 	<url>
 		<loc>{{ page.url | absolute_url }}</loc>
+		<lastmod>{{ page.last_modified_at | default: page.date | default: site.time | date_to_xmlschema }}</lastmod>
 	</url>
 	{%- endfor -%}
 
 	{%- for post in site.posts -%}
 	<url>
 		<loc>{{ post.url | absolute_url }}</loc>
+		<lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
 	</url>
 	{%- endfor -%}
 </urlset>
