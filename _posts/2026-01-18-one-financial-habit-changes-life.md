@@ -4,10 +4,10 @@ title: "تنظيم المصاريف: كيف تبني عادة مالية واح�
 description: "تنظيم المصاريف: كيف تبني عادة مالية واحدة تغيّر حياتك؟. خطوات عملية لتنظيم المصاريف وبناء budget واضح لتحسين إدارة الأموال واتخاذ قرارات مالية أفضل بثقة."
 date: 2026-02-07 10:00:00 +0200
 keywords: ميزانية, تنظيم المصاريف, إدارة الأموال, تتبع المصاريف, budget, how to create a budget, budget spreadsheet, gestion budget
-image: /assets/images/one-financial-habit-changes-life.webp
+image: /assets/images/posts/one-financial-habit-changes-life.webp
 ---
 
-![صورة توضيحية للمقال](/assets/images/one-financial-habit-changes-life.webp)
+![صورة توضيحية للمقال](/assets/images/posts/one-financial-habit-changes-life.webp)
 
 
 

@@ -3,12 +3,12 @@ layout: post
 title: "ميزانية: متى يكون الادخار عبئًا بدل أن يكون أمانًا؟ | خطوات عملية"
 description: "ميزانية: متى يكون الادخار عبئًا بدل أن يكون أمانًا؟. خطوات عملية لتنظيم المصاريف وبناء budget واضح لتحسين إدارة الأموال واتخاذ قرارات مالية أفضل بثقة."
 date: 2026-01-01 10:00:00 +0200
-image: /assets/images/saving-becomes-burden.jpg
+image: /assets/images/posts/when-saving-becomes-burden.webp
 keywords: "الادخار, أمان مالي, ضغط نفسي, توازن الإنفاق"
 ---
 
 
-![ادخار مرهق بدون توازن](/assets/images/saving-becomes-burden.jpg)
+![ادخار مرهق بدون توازن](/assets/images/posts/when-saving-becomes-burden.webp)
 
 الادخار يُنظر إليه غالبًا كعنوان للأمان، لكنه قد يتحول إلى عبء نفسي إذا فقد معناه أو تجاوزه التوازن الطبيعي للحياة.
 

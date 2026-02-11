@@ -5,11 +5,11 @@ description: "ميزانية: كيف تراجع مصاريفك أسبوعيًا 
 keywords: مراجعة أسبوعية للمصاريف, تحليل الإنفاق الأسبوعي, تقارير مالية, تنظيم الميزانية, reports_root
 categories: [تحليل_الإنفاق, الميزانية]
 tags: [مراجعة_أسبوعية, تقارير, قرارات_مالية]
-image: /assets/images/monthly-expense-review.webp
+image: /assets/images/posts/weekly-expense-review-smartly.webp
 ---
 
 
-![كيف تراجع مصاريفك أسبوعيًا بذكاء؟](/assets/images/monthly-expense-review.webp)
+![كيف تراجع مصاريفك أسبوعيًا بذكاء؟](/assets/images/posts/weekly-expense-review-smartly.webp)
 
 المشكلة في الميزانية الشهرية أنها طويلة جدًا إذا انتظرت نهايتها. المراجعة الأسبوعية تختصر الطريق: تكشف الانحراف مبكرًا وتمنحك وقتًا كافيًا للتصحيح قبل أن يتفاقم.
 

@@ -5,11 +5,11 @@ description: "ميزانية: الفرق بين ضبط المصاريف والح
 keywords: ضبط المصاريف, الحرمان المالي, توازن الميزانية, إدارة الإنفاق, reports_root
 categories: [السلوك_المالي, إدارة_المصاريف]
 tags: [توازن_مالي, عادات_مالية, ميزانية]
-image: /assets/images/balanced-spending-vs-deprivation.jpg
+image: /assets/images/posts/spending-control-vs-deprivation.webp
 ---
 
 
-![الفرق بين ضبط المصاريف والحرمان من الحياة](/assets/images/balanced-spending-vs-deprivation.jpg)
+![الفرق بين ضبط المصاريف والحرمان من الحياة](/assets/images/posts/spending-control-vs-deprivation.webp)
 
 أكبر سبب لانهيار أي خطة مالية هو تحويلها إلى عقوبة. عندما تشعر أن الميزانية تسلبك حياتك، ستتوقف عاجلًا أو آجلًا. المطلوب ليس الحرمان، بل ضبط ذكي يوازن بين الحاضر والمستقبل.
 

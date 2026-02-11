@@ -5,11 +5,11 @@ description: "ميزانية: لماذا تفشل معظم الميزانيات 
 keywords: فشل الميزانية الشهرية, أخطاء إدارة المصاريف, التخطيط المالي, ضبط الإنفاق, reports_root
 categories: [الميزانية, السلوك_المالي]
 tags: [أخطاء_مالية, ميزانية_شهرية, استدامة]
-image: /assets/images/budget-fail-after-first-month.webp
+image: /assets/images/posts/why-monthly-budgets-fail.webp
 ---
 
 
-![لماذا تفشل معظم الميزانيات الشهرية؟](/assets/images/budget-fail-after-first-month.webp)
+![لماذا تفشل معظم الميزانيات الشهرية؟](/assets/images/posts/why-monthly-budgets-fail.webp)
 
 فشل الميزانية ليس دليل ضعف شخصي. غالبًا الخلل في التصميم: أهداف مثالية، أرقام غير واقعية، وغياب مراجعة مستمرة. عندما تُبنى الخطة ضد نمط حياتك، ستفشل حتى لو كنت ملتزمًا.
 
