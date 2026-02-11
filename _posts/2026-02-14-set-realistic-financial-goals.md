@@ -5,11 +5,11 @@ description: "ميزانية: كيف تحدد أهداف مالية واقعية
 keywords: أهداف مالية, التخطيط المالي, الالتزام بالادخار, goals_root, إدارة الأموال
 categories: [التخطيط_المالي, الميزانية]
 tags: [أهداف_مالية, ادخار, التزام]
-image: /assets/images/realistic-financial-goals.jpg
+image: /assets/images/financial-awareness-long-term-skill.webp
 ---
 
 
-![كيف تحدد أهداف مالية واقعية وتلتزم بها؟](/assets/images/realistic-financial-goals.jpg)
+![كيف تحدد أهداف مالية واقعية وتلتزم بها؟](/assets/images/financial-awareness-long-term-skill.webp)
 
 الهدف المالي الذي لا يتحول إلى خطة رقمية واضحة يبقى أمنية. كثيرون يكتبون "أريد الادخار" ثم يتوقفون لأن الهدف غير محدد زمنيًا ولا مرتبط بخطوات يومية.
 

@@ -5,11 +5,11 @@ description: "تتبع المصاريف: أخطاء شائعة في تتبع ا�
 keywords: تتبع المصاريف اليومية, أخطاء الميزانية, تنظيم الإنفاق, all_transactions, سجل المصاريف
 categories: [تتبع_المصاريف, إدارة_المصاريف]
 tags: [مصاريف_يومية, تحليل_الإنفاق, تحسين_العادات]
-image: /assets/images/daily-expense-tracking-mistakes.jpg
+image: /assets/images/benefits-expense-tracking.webp
 ---
 
 
-![أخطاء شائعة في تتبع المصاريف اليومية](/assets/images/daily-expense-tracking-mistakes.jpg)
+![أخطاء شائعة في تتبع المصاريف اليومية](/assets/images/benefits-expense-tracking.webp)
 
 تتبع المصاريف اليومية فكرة ممتازة، لكن التنفيذ الخاطئ يجعلها مرهقة وعديمة الفائدة. المشكلة ليست في التتبع نفسه، بل في الطريقة التي نتعامل بها معه: إما تفاصيل مفرطة، أو انقطاع طويل، أو مراجعة بلا قرار.
 
