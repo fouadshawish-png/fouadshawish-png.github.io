@@ -27,6 +27,8 @@ social:
     - "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager"
 
 theme: minima
+include:
+  - .well-known
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -44,4 +46,3 @@ defaults:
       layout: "post"
       og_type: "article"
       lang: "ar"
-
