@@ -245,6 +245,19 @@ faq:
 
 إذا كان هدفك الأساسي هو السرعة والاستمرارية، فالتطبيق غالبًا الخيار الأنسب. وإذا كان هدفك التعمق التحليلي مع وقت متاح، يمكن أن يخدمك النموذج اليدوي أو الهجين. الأهم أن تقيس النتائج كل أسبوع، لا أن تغيّر الأداة عند أول أسبوع صعب.
 
+## اقرأ أيضًا
+
+- [الدليل الشامل لإدارة المصاريف الشخصية في 2026](/ultimate-guide-personal-finance-arabic/)
+- [أفضل طريقة لتتبع المصاريف يوميًا بدون ملل](/how-to-track-expenses-daily-effectively/)
+- [نظام مراجعة الميزانية الأسبوعي الذي يمنع الانهيار المالي](/weekly-budget-review-system/)
+
+## طبّق الآن داخل التطبيق
+
+إذا أردت تطبيق هذه الخطوات عمليًا، يمكنك البدء مباشرة من داخل التطبيق.
+
+- [تحميل التطبيق](/download.html)
+- [ابدأ بتسجيل عملياتك](/?route=all_transactions)
+
 ## English Summary
 
 Manual tracking can work if discipline is high, but app-based tracking usually improves speed, consistency, and weekly decision-making.

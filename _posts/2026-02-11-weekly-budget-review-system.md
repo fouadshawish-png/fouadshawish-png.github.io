@@ -246,6 +246,19 @@ faq:
 - [فتح التقارير](/?route=reports)
 - [فتح الميزانية](/?route=budgets)
 
+## اقرأ أيضًا
+
+- [الدليل الشامل لإدارة المصاريف الشخصية في 2026](/ultimate-guide-personal-finance-arabic/)
+- [أفضل طريقة لتتبع المصاريف يوميًا بدون ملل](/how-to-track-expenses-daily-effectively/)
+- [أخطاء الميزانية التي تجعلك تعيد نفس المشكلة كل شهر](/budgeting-mistakes-people-make/)
+
+## طبّق الآن داخل التطبيق
+
+إذا أردت تطبيق هذه الخطوات عمليًا، يمكنك البدء مباشرة من داخل التطبيق.
+
+- [تحميل التطبيق](/download.html)
+- [افتح التقارير مباشرة](/?route=reports)
+
 ## English Summary
 
 Weekly budget reviews prevent financial collapse by detecting deviations early.

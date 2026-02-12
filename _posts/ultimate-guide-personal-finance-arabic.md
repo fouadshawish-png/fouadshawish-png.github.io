@@ -25,9 +25,10 @@ canonical: https://fouadshawish-png.github.io/ultimate-guide-personal-finance-ar
 7. [ربط الميزانية بالأهداف: كيف تتحول الأرقام إلى إنجاز](#goals-link)
 8. [الإدارة اليدوية مقابل التطبيق: أيهما أنسب لك؟](#manual-vs-app)
 9. [خطة 90 يوم للتحول المالي العملي](#ninety-day-plan)
-10. [English Summary](#english-summary)
-11. [الأسئلة الشائعة (FAQ)](#faq)
-12. [خطوة البدء الآن](#start-now)
+10. [اقرأ الدليل التفصيلي لكل محور](#detailed-cluster-guides)
+11. [English Summary](#english-summary)
+12. [الأسئلة الشائعة (FAQ)](#faq)
+13. [خطوة البدء الآن](#start-now)
 
 ---
 
@@ -565,6 +566,43 @@ canonical: https://fouadshawish-png.github.io/ultimate-guide-personal-finance-ar
 
 ---
 
+## <a id="detailed-cluster-guides"></a>اقرأ الدليل التفصيلي لكل محور
+
+<div class="grid-3">
+  <div class="card">
+    <h3>أفضل طريقة لتتبع المصاريف يوميًا بدون ملل</h3>
+    <p>خطة يومية عملية لتثبيت عادة التتبع وتقليل النسيان والإنفاق غير المرئي.</p>
+    <a href="/how-to-track-expenses-daily-effectively/">اقرأ الدليل</a>
+  </div>
+  <div class="card">
+    <h3>نظام مراجعة الميزانية الأسبوعي الذي يمنع الانهيار المالي</h3>
+    <p>روتين أسبوعي واضح يحول الأرقام إلى قرارات مبكرة قبل نهاية الشهر.</p>
+    <a href="/weekly-budget-review-system/">اقرأ الدليل</a>
+  </div>
+  <div class="card">
+    <h3>استراتيجية عملية لسداد الديون بدون ضغط نفسي</h3>
+    <p>منهج خطوة بخطوة لبناء جرد دين واضح، وجدول سداد قابل للاستمرار.</p>
+    <a href="/how-to-pay-off-debt-strategically/">اقرأ الدليل</a>
+  </div>
+  <div class="card">
+    <h3>كيف تبني صندوق طوارئ خلال 6 أشهر بطريقة واقعية</h3>
+    <p>توزيع شهري مرن لبناء أمان مالي يحمي الخطة من المفاجآت.</p>
+    <a href="/build-emergency-fund-fast/">اقرأ الدليل</a>
+  </div>
+  <div class="card">
+    <h3>أخطاء الميزانية التي تجعلك تعيد نفس المشكلة كل شهر</h3>
+    <p>تشخيص أهم الأخطاء المتكررة مع تصحيحات عملية مبنية على بيانات حقيقية.</p>
+    <a href="/budgeting-mistakes-people-make/">اقرأ الدليل</a>
+  </div>
+  <div class="card">
+    <h3>هل التسجيل اليدوي أفضل أم استخدام تطبيق إدارة مصاريف؟</h3>
+    <p>مقارنة واقعية تساعدك تختار الأداة الأنسب للاستمرار وتحقيق النتائج.</p>
+    <a href="/manual-vs-app-expense-tracking/">اقرأ الدليل</a>
+  </div>
+</div>
+
+---
+
 ## <a id="english-summary"></a>English Summary
 
 This guide explains a practical 2026 framework for personal finance management in Arabic.
@@ -609,6 +647,8 @@ Consistency is more important than perfection.
 1. سجّل مصروفات آخر 7 أيام.
 2. ضع حدًا أسبوعيًا لبند واحد مرتفع.
 3. نفّذ أول مراجعة أسبوعية في موعد ثابت.
+
+إذا أردت تطبيق هذه الخطوات عمليًا، يمكنك البدء مباشرة من داخل التطبيق.
 
 ثم انتقل فورًا للتطبيق العملي عبر:
 

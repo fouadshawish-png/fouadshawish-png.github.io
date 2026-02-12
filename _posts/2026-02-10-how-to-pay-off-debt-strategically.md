@@ -251,6 +251,19 @@ faq:
 
 إذا تحسنت هذه المؤشرات، فأنت على المسار الصحيح حتى لو كانت وتيرة السداد أبطأ من توقعاتك الأولى.
 
+## اقرأ أيضًا
+
+- [الدليل الشامل لإدارة المصاريف الشخصية في 2026](/ultimate-guide-personal-finance-arabic/)
+- [كيف تبني صندوق طوارئ خلال 6 أشهر بطريقة واقعية](/build-emergency-fund-fast/)
+- [نظام مراجعة الميزانية الأسبوعي الذي يمنع الانهيار المالي](/weekly-budget-review-system/)
+
+## طبّق الآن داخل التطبيق
+
+إذا أردت تطبيق هذه الخطوات عمليًا، يمكنك البدء مباشرة من داخل التطبيق.
+
+- [تحميل التطبيق](/download.html)
+- [افتح دفتر الديون الآن](/?route=debt_ledger)
+
 ## English Summary
 
 Debt repayment fails when there is no clear inventory, no stable monthly allocation, and no balance with emergency savings.

@@ -215,6 +215,19 @@ faq:
 
 بعد 14 يوم، تتكوّن قاعدة سلوكية قوية تجعل الاستمرار أسهل بكثير.
 
+## اقرأ أيضًا
+
+- [الدليل الشامل لإدارة المصاريف الشخصية في 2026](/ultimate-guide-personal-finance-arabic/)
+- [نظام مراجعة الميزانية الأسبوعي الذي يمنع الانهيار المالي](/weekly-budget-review-system/)
+- [هل التسجيل اليدوي أفضل أم استخدام تطبيق إدارة مصاريف؟](/manual-vs-app-expense-tracking/)
+
+## طبّق الآن داخل التطبيق
+
+إذا أردت تطبيق هذه الخطوات عمليًا، يمكنك البدء مباشرة من داخل التطبيق.
+
+- [تحميل التطبيق](/download.html)
+- [فتح شاشة العمليات الآن](/?route=all_transactions)
+
 ## English Summary
 
 Daily expense tracking fails for most people because the method is too complex or disconnected from real decisions.
