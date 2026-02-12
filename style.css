@@ -223,6 +223,41 @@ main.page {
     flex-wrap: wrap;
 }
 
+.post-nav {
+    max-width: 900px;
+    margin: 26px auto 0;
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.post-nav__item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: #fff7ec;
+    border-radius: 14px;
+    border-left: 5px solid #ff7c00;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.post-nav__label {
+    color: #9a6a2f;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.post-nav__title {
+    color: #ff7c00;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.post-nav__item:hover .post-nav__title {
+    text-decoration: underline;
+}
+
 .share-button {
     display: inline-flex;
     align-items: center;
