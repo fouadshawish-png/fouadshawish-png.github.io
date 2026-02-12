@@ -2,7 +2,7 @@
 layout: post
 title: "ميزانية: لماذا نفشل في الالتزام بالميزانية بعد أول شهر؟ | خطوات عملية"
 description: "ميزانية: لماذا نفشل في الالتزام بالميزانية بعد أول شهر؟. خطوات عملية لتنظيم المصاريف وبناء budget واضح لتحسين إدارة الأموال واتخاذ قرارات مالية أفضل بثقة."
-date: 2026-02-09 10:00:00 +0200
+date: 2026-01-20 10:00:00 +0200
 keywords: ميزانية, تنظيم المصاريف, إدارة الأموال, تتبع المصاريف, budget, how to create a budget, budget spreadsheet, gestion budget
 image: /assets/images/monthly-budget-mistakes.jpg
 ---

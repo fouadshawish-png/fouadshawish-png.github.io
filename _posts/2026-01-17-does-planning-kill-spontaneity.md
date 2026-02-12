@@ -2,7 +2,7 @@
 layout: post
 title: "تنظيم المصاريف: هل التخطيط المالي يقتل العفوية؟ | خطوات عملية"
 description: "تنظيم المصاريف: هل التخطيط المالي يقتل العفوية؟. خطوات عملية لتنظيم المصاريف وبناء budget واضح لتحسين إدارة الأموال واتخاذ قرارات مالية أفضل بثقة."
-date: 2026-02-06 10:00:00 +0200
+date: 2026-01-17 10:00:00 +0200
 keywords: ميزانية, تنظيم المصاريف, إدارة الأموال, تتبع المصاريف, budget, how to create a budget, budget spreadsheet, gestion budget
 image: /assets/images/budget-templates-flexible.jpg
 ---
