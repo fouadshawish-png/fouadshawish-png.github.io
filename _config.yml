@@ -10,3 +10,6 @@ author:
 logo: "/icon.png"
 locale: "ar_AR"
 timezone: "Asia/Gaza"
+
+plugins:
+  - jekyll-sitemap

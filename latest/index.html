@@ -1,0 +1,15 @@
+---
+layout: default
+title: "أحدث المقالات"
+permalink: /latest/
+---
+
+<h1>أحدث المقالات</h1>
+
+<ul>
+{% for post in site.posts limit:10 %}
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+</ul>

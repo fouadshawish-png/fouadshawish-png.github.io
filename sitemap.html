@@ -1,0 +1,23 @@
+---
+layout: default
+title: "خريطة الموقع"
+permalink: /sitemap/
+---
+
+<h1>خريطة الموقع</h1>
+
+<h2>الصفحات</h2>
+<ul>
+  <li><a href="/">الرئيسية</a></li>
+  <li><a href="/blog/">المقالات</a></li>
+  <li><a href="/about/">عن التطبيق</a></li>
+  <li><a href="/methodology/">منهجية العمل</a></li>
+  <li><a href="/editorial-policy/">سياسة التحرير</a></li>
+</ul>
+
+<h2>المقالات</h2>
+<ul>
+{% for post in site.posts %}
+  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>

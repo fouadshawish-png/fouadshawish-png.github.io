@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
+    <script>
+      (function() {
+        try {
+          var savedTheme = localStorage.getItem("theme");
+          var systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (savedTheme) {
+            document.documentElement.setAttribute("data-theme", savedTheme);
+          } else if (systemPrefersDark) {
+            document.documentElement.setAttribute("data-theme", "dark");
+          } else {
+            document.documentElement.setAttribute("data-theme", "light");
+          }
+        } catch (e) {}
+      })();
+    </script>
     {% include head.html %}
   </head>
 
   <body>
+    {% include app-banner.html %}
     {% include header.html %}
 
     <main class="page" id="content">
@@ -14,8 +30,34 @@
     </main>
 
     {% include footer.html %}
-    <a class="floating-cta" href="expensemanager://open?route=home">
-      فتح التطبيق الآن
+    <a href="/?route=home" class="floating-app-btn">
+      فتح التطبيق
     </a>
+    <script>
+      (function() {
+        var toggle = document.getElementById("themeToggle");
+        if (!toggle) return;
+
+        function currentTheme() {
+          return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        }
+
+        function applyToggleState(theme) {
+          toggle.textContent = theme === "dark" ? "☀️" : "🌙";
+          toggle.setAttribute("aria-pressed", String(theme === "dark"));
+        }
+
+        applyToggleState(currentTheme());
+
+        toggle.addEventListener("click", function() {
+          var nextTheme = currentTheme() === "dark" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", nextTheme);
+          try {
+            localStorage.setItem("theme", nextTheme);
+          } catch (e) {}
+          applyToggleState(nextTheme);
+        });
+      })();
+    </script>
   </body>
 </html>

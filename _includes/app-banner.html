@@ -1,0 +1,14 @@
+<div class="app-banner" id="appBanner">
+  <div class="banner-content">
+    <span>هل تريد تطبيق الميزانية مباشرة؟</span>
+    <a href="{{ '/' | relative_url }}?route=budgets" class="banner-btn">فتح داخل التطبيق</a>
+    <a href="{{ '/download.html' | relative_url }}" class="banner-secondary">تحميل التطبيق</a>
+    <button onclick="closeBanner()" class="banner-close" aria-label="إغلاق الشريط">×</button>
+  </div>
+</div>
+
+<script>
+function closeBanner(){
+  document.getElementById("appBanner").style.display="none";
+}
+</script>
