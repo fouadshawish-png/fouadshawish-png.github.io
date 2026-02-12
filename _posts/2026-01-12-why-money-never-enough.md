@@ -9,8 +9,6 @@ image: /assets/images/psychological-money-mistakes.jpg
 
 ![صورة توضيحية للمقال](/assets/images/psychological-money-mistakes.jpg)
 
-
-
 قد يحصل الإنسان على زيادة في الدخل، ثم يفاجأ بأن الشعور بالضيق لم يتغيّر كثيرًا، بل ربما ازداد قلقه مع اتساع مسؤولياته. هذا الإحساس لا يتعلّق فقط بالأرقام، بل بطريقة نظرنا إلى المال وإلى أنفسنا داخل محيط اجتماعي سريع المقارنة. إذا رغبت بخطوة تطبيقية، فإن تطبيق محترف المصاريف يختصر عليك وقت التنظيم. <!--more-->
 
 ## نمط الحياة حين يتوسّع بصمت
@@ -55,7 +53,6 @@ image: /assets/images/psychological-money-mistakes.jpg
 
 حين نعيد تعريف "الكفاية" وفق احتياجاتنا لا وفق أعين الآخرين، يصبح المال أداة لا عبئًا نفسيًا دائمًا. عندها فقط يصبح السؤال الحقيقي ليس "لماذا لا يكفي المال؟" بل "كيف أُبقي الوعي حاضرًا حتى لا يبتلع المال معناه؟"
 
-
 ## تعزيز SEO للمقال
 
 ### تنظيم المصاريف ضمن خطة يومية قابلة للتنفيذ
@@ -80,8 +77,3 @@ This guide helps you build a practical budget routine and use an expense manager
 
 ### هل أحتاج budget spreadsheet أم يكفي تطبيق expense manager؟
 الاثنان مفيدان، لكن تطبيق expense manager أسهل للاستخدام اليومي، بينما budget spreadsheet مناسب أكثر للتحليل اليدوي التفصيلي.
-
-## مقالات مرتبطة
-- [تتبع المصاريف: خطوات بسيطة لبناء وعي مالي مستدام | خطوات عملية](https://fouadshawish-png.github.io/2026/01/10/steps-for-sustainable-awareness.html)
-- [كيف تتحول المصاريف الصغيرة إلى مشكلة كبيرة؟](https://fouadshawish-png.github.io/2026/01/13/small-expenses-big-problem.html)
-

@@ -7,7 +7,6 @@ image: /assets/images/psychological-money-mistakes.jpg
 keywords: "أخطاء مالية, إنفاق عاطفي, تبرير, مقارنة, ميزانية"
 ---
 
-
 ![أخطاء نفسية في التعامل مع المال](/assets/images/psychological-money-mistakes.jpg)
 
 الأخطاء المالية ليست دائمًا نتيجة نقص المعرفة، بل كثيرًا ما تكون نتيجة أنماط نفسية متكررة. فهم هذه الأنماط يفتح الباب لتغيير حقيقي ومستدام.
@@ -56,7 +55,6 @@ keywords: "أخطاء مالية, إنفاق عاطفي, تبرير, مقارن�
 
 الأخطاء النفسية في المال ليست دليلًا على فشل، بل هي جزء من طبيعة البشر. المهم أن تتعرف عليها وتتعامل معها بهدوء. عندما تفهم دوافعك، يصبح المال أداة تخدمك بدل أن يتحكم بك.
 
-
 ## تعزيز SEO للمقال
 
 ### ميزانية ضمن خطة يومية قابلة للتنفيذ
@@ -81,8 +79,3 @@ This guide helps you build a practical budget routine and use an expense manager
 
 ### هل أحتاج budget spreadsheet أم يكفي تطبيق expense manager؟
 الاثنان مفيدان، لكن تطبيق expense manager أسهل للاستخدام اليومي، بينما budget spreadsheet مناسب أكثر للتحليل اليدوي التفصيلي.
-
-## مقالات مرتبطة
-- [ميزانية: لماذا لا تنجح الميزانيات الجاهزة مع الجميع؟ | خطوات عملية](https://fouadshawish-png.github.io/2025/12/26/budget-templates-not-for-all.html)
-- [متى يكون الادخار عبئًا بدل أن يكون أمانًا؟](https://fouadshawish-png.github.io/2026/01/01/when-saving-becomes-burden.html)
-

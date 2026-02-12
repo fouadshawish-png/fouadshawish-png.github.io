@@ -8,7 +8,6 @@ image: /assets/images/monthly-budget-mistakes.jpg
 keywords: "أخطاء الميزانية, المصروف الشهري, تنظيم المصروف, سلوك مالي"
 ---
 
-
 <img class="post-image post-image--wide" src="/assets/images/monthly-budget-mistakes.jpg" alt="أخطاء إدارة المصروف الشهري" width="1200" height="630">
 
 إدارة المصروف الشهري ليست مسألة ذكاء بقدر ما هي مسألة نظام. كثير من الناس لديهم نية صادقة للترتيب، لكنهم يقعون في أخطاء متكررة تجعل الشهر يبدأ بخطة وينتهي بضغط. المشكلة غالبًا ليست في “قلة الدخل” وحدها، بل في تفاصيل صغيرة تُدار بطريقة خاطئة فتسحب الميزانية تدريجيًا.
@@ -131,7 +130,6 @@ keywords: "أخطاء الميزانية, المصروف الشهري, تنظي�
 
 الهدف في النهاية ليس أن تمنع نفسك من كل متعة، بل أن تجعل اختياراتك واعية ومتوازنة. هذا هو الوعي المالي: أن تعرف أين أنت، ولماذا، وإلى أين تريد أن تصل.
 
-
 ## تعزيز SEO للمقال
 
 ### ميزانية ضمن خطة يومية قابلة للتنفيذ
@@ -156,8 +154,3 @@ This guide helps you build a practical budget routine and use an expense manager
 
 ### هل أحتاج budget spreadsheet أم يكفي تطبيق expense manager؟
 الاثنان مفيدان، لكن تطبيق expense manager أسهل للاستخدام اليومي، بينما budget spreadsheet مناسب أكثر للتحليل اليدوي التفصيلي.
-
-## مقالات مرتبطة
-- [ميزانية: متى يكون الادخار عبئًا بدل أن يكون أمانًا؟ | خطوات عملية](https://fouadshawish-png.github.io/2026/01/01/when-saving-becomes-burden.html)
-- [كيف تراجع مصاريفك الشهرية بدون توتر أو شعور بالذنب؟](https://fouadshawish-png.github.io/2026/01/04/review-expenses-without-guilt.html)
-

@@ -8,7 +8,6 @@ image: /assets/images/expense-management-fails.webp
 keywords: "إدارة المصاريف, فشل الميزانية, سلوكيات الإنفاق, تتبع المصروفات"
 ---
 
-
 ![أسباب فشل إدارة المصاريف](/assets/images/expense-management-fails.webp)
 
 يظن كثيرون أن إدارة المصاريف مسألة «رياضيات» فقط: دخل ناقص مصروف يساوي ادخار. لكن التجربة اليومية تقول شيئًا مختلفًا: المشكلة غالبًا ليست في الحساب، بل في العادات، والانتباه، وطريقة اتخاذ القرار في لحظة الشراء.
@@ -103,7 +102,6 @@ keywords: "إدارة المصاريف, فشل الميزانية, سلوكيا�
 
 الهدف النهائي ليس أن تصبح شديد التقشف، بل أن تعرف لماذا تنفق، وكيف تنفق، وأن تملك قرارك بدل أن تقودك العادة.
 
-
 ## تعزيز SEO للمقال
 
 ### ميزانية ضمن خطة يومية قابلة للتنفيذ
@@ -128,8 +126,3 @@ This guide helps you build a practical budget routine and use an expense manager
 
 ### هل أحتاج budget spreadsheet أم يكفي تطبيق expense manager؟
 الاثنان مفيدان، لكن تطبيق expense manager أسهل للاستخدام اليومي، بينما budget spreadsheet مناسب أكثر للتحليل اليدوي التفصيلي.
-
-## مقالات مرتبطة
-- [تتبع المصاريف: متى يكون الشراء قرارًا نفسيًا لا ماليًا؟ | خطوات عملية](https://fouadshawish-png.github.io/2026/01/15/purchase-psychological-not-financial.html)
-- [أخطاء شائعة عند محاولة تقليل المصاريف](https://fouadshawish-png.github.io/2026/01/16/common-mistakes-reducing-expenses.html)
-

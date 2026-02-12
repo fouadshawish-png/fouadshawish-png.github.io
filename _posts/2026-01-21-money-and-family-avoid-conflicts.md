@@ -9,8 +9,6 @@ image: /assets/images/money-and-family-avoid-conflicts.webp
 
 ![صورة توضيحية للمقال](/assets/images/money-and-family-avoid-conflicts.webp)
 
-
-
 النزاعات المالية داخل العائلة لا تنشأ فقط بسبب قلة المال، بل بسبب غياب الوضوح واختلاف التوقعات. المال موضوع حساس لأنه يرتبط بالأمان والكرامة والمسؤولية، وعندما لا يُدار بالحوار يصبح مصدر توتر دائم. ولكي تتحول الملاحظة إلى خطوات، يساعد تطبيق محترف المصاريف على التنظيم. <!--more-->
 
 ## لماذا تصبح القضايا المالية عاطفية؟
@@ -61,7 +59,6 @@ image: /assets/images/money-and-family-avoid-conflicts.webp
 
 عندما نتعامل مع المال كقضية مشتركة، يصبح من السهل حماية العلاقات الأسرية من التوتر. المال ليس هدفًا في ذاته، بل وسيلة لحياة أكثر استقرارًا وتفاهمًا.
 
-
 ## تعزيز SEO للمقال
 
 ### إدارة الأموال ضمن خطة يومية قابلة للتنفيذ
@@ -86,8 +83,3 @@ This guide helps you build a practical budget routine and use an expense manager
 
 ### هل أحتاج budget spreadsheet أم يكفي تطبيق expense manager؟
 الاثنان مفيدان، لكن تطبيق expense manager أسهل للاستخدام اليومي، بينما budget spreadsheet مناسب أكثر للتحليل اليدوي التفصيلي.
-
-## مقالات مرتبطة
-- [ميزانية: لماذا نفشل في الالتزام بالميزانية بعد أول شهر؟ | خطوات عملية](https://fouadshawish-png.github.io/2026/01/20/budget-fail-after-first-month.html)
-- [الوعي المالي كمهارة حياتية طويلة المدى](https://fouadshawish-png.github.io/2026/01/22/financial-awareness-long-term-skill.html)
-

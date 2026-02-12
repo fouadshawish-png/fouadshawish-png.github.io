@@ -7,7 +7,6 @@ image: /assets/images/sustainable-financial-awareness.jpg
 keywords: "وعي مالي, عادات مالية, تتبع المصاريف, ميزانية مستدامة"
 ---
 
-
 ![بناء وعي مالي مستدام](/assets/images/sustainable-financial-awareness.jpg)
 
 بناء وعي مالي مستدام لا يحتاج إلى تعقيد، بل إلى خطوات صغيرة تتكرر بانتظام. الاستمرارية هنا أهم من المثالية، لأن الوعي يتشكل مع الوقت وليس في يوم واحد.
@@ -56,7 +55,6 @@ keywords: "وعي مالي, عادات مالية, تتبع المصاريف, م
 
 الوعي المالي المستدام لا يأتي من قرارات كبيرة، بل من عادات صغيرة تتكرر بانتظام. ابدأ بخطوة واحدة، وكن صبورًا، وراجع تقدمك بانتظام. مع الوقت ستجد أن علاقتك بالمال أصبحت أكثر وضوحًا وهدوءًا.
 
-
 ## تعزيز SEO للمقال
 
 ### تتبع المصاريف ضمن خطة يومية قابلة للتنفيذ
@@ -81,8 +79,3 @@ This guide helps you build a practical budget routine and use an expense manager
 
 ### هل أحتاج budget spreadsheet أم يكفي تطبيق expense manager؟
 الاثنان مفيدان، لكن تطبيق expense manager أسهل للاستخدام اليومي، بينما budget spreadsheet مناسب أكثر للتحليل اليدوي التفصيلي.
-
-## مقالات مرتبطة
-- [تتبع المصاريف: هل زيادة الدخل وحدها تحل المشكلة المالية؟ | خطوات عملية](https://fouadshawish-png.github.io/2026/01/08/does-income-increase-solve.html)
-- [لماذا نشعر أن المال لا يكفينا مهما كان الدخل؟](https://fouadshawish-png.github.io/2026/01/12/why-money-never-enough.html)
-

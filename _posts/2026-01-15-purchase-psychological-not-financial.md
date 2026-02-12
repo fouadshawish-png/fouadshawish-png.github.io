@@ -9,8 +9,6 @@ image: /assets/images/purchase-psychological-not-financial.webp
 
 ![صورة توضيحية للمقال](/assets/images/purchase-psychological-not-financial.webp)
 
-
-
 ليس كل قرار شراء مرتبطًا بالحاجة أو القيمة؛ أحيانًا يكون الشراء محاولة هادئة للهروب من مزاج ضيق، أو تعويضًا عن إحساس بالنقص، أو استجابة لضغط نفسي متراكم. حينها لا نشتري شيئًا بقدر ما نشتري شعورًا مؤقتًا. ولتحويل الوعي إلى سجل واضح، يمكن الاستفادة من تطبيق محترف المصاريف. <!--more-->
 
 ## المزاج كقائد خفي لقراراتنا
@@ -61,7 +59,6 @@ image: /assets/images/purchase-psychological-not-financial.webp
 
 الهدف ليس أن نمنع أنفسنا من كل مكافأة، بل أن نعرف لماذا نكافئ أنفسنا وكيف. عندها يصبح المال أداة واعية، لا وسيلة سريعة للهروب من شعور مؤقت.
 
-
 ## تعزيز SEO للمقال
 
 ### تتبع المصاريف ضمن خطة يومية قابلة للتنفيذ
@@ -86,8 +83,3 @@ This guide helps you build a practical budget routine and use an expense manager
 
 ### هل أحتاج budget spreadsheet أم يكفي تطبيق expense manager؟
 الاثنان مفيدان، لكن تطبيق expense manager أسهل للاستخدام اليومي، بينما budget spreadsheet مناسب أكثر للتحليل اليدوي التفصيلي.
-
-## مقالات مرتبطة
-- [ميزانية: كيف تتحول المصاريف الصغيرة إلى مشكلة كبيرة؟ | خطوات عملية](https://fouadshawish-png.github.io/2026/01/13/small-expenses-big-problem.html)
-- [لماذا يفشل أغلب الناس في إدارة مصاريفهم؟](https://fouadshawish-png.github.io/2026/01/15/why-expense-management-fails.html)
-

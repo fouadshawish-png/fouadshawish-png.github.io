@@ -8,7 +8,6 @@ tags: [مصاريف_يومية, تحليل_الإنفاق, تحسين_العاد
 image: /assets/images/benefits-expense-tracking.webp
 ---
 
-
 ![أخطاء شائعة في تتبع المصاريف اليومية](/assets/images/benefits-expense-tracking.webp)
 
 تتبع المصاريف اليومية فكرة ممتازة، لكن التنفيذ الخاطئ يجعلها مرهقة وعديمة الفائدة. المشكلة ليست في التتبع نفسه، بل في الطريقة التي نتعامل بها معه: إما تفاصيل مفرطة، أو انقطاع طويل، أو مراجعة بلا قرار.
@@ -61,7 +60,6 @@ image: /assets/images/benefits-expense-tracking.webp
 - [كيف تكتشف أين يضيع راتبك كل شهر؟](https://fouadshawish-png.github.io/2026/02/12/where-salary-goes-monthly.html)
 - [كيف تراجع مصاريفك أسبوعيًا بذكاء؟](https://fouadshawish-png.github.io/2026/02/18/weekly-expense-review-smartly.html)
 
-
 ## تعزيز SEO للمقال
 
 ### تتبع المصاريف ضمن خطة يومية قابلة للتنفيذ
@@ -86,10 +84,6 @@ This guide helps you build a practical budget routine and use an expense manager
 
 ### هل أحتاج budget spreadsheet أم يكفي تطبيق expense manager؟
 الاثنان مفيدان، لكن تطبيق expense manager أسهل للاستخدام اليومي، بينما budget spreadsheet مناسب أكثر للتحليل اليدوي التفصيلي.
-
-## مقالات مرتبطة
-- [ميزانية: كيف تحدد أهداف مالية واقعية وتلتزم بها؟ | خطوات عملية](https://fouadshawish-png.github.io/2026/02/14/set-realistic-financial-goals.html)
-- [كيف تبني صندوق طوارئ خلال 6 أشهر؟](https://fouadshawish-png.github.io/2026/02/16/build-emergency-fund-6-months.html)
 
 <script type="application/ld+json">
 {

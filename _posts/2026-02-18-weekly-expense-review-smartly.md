@@ -8,7 +8,6 @@ tags: [مراجعة_أسبوعية, تقارير, قرارات_مالية]
 image: /assets/images/monthly-expense-review.webp
 ---
 
-
 ![كيف تراجع مصاريفك أسبوعيًا بذكاء؟](/assets/images/monthly-expense-review.webp)
 
 المشكلة في الميزانية الشهرية أنها طويلة جدًا إذا انتظرت نهايتها. المراجعة الأسبوعية تختصر الطريق: تكشف الانحراف مبكرًا وتمنحك وقتًا كافيًا للتصحيح قبل أن يتفاقم.
@@ -51,7 +50,6 @@ image: /assets/images/monthly-expense-review.webp
 - [أخطاء شائعة في تتبع المصاريف اليومية](https://fouadshawish-png.github.io/2026/02/15/daily-expense-tracking-mistakes.html)
 - [لماذا تفشل معظم الميزانيات الشهرية؟](https://fouadshawish-png.github.io/2026/02/19/why-monthly-budgets-fail.html)
 
-
 ## تعزيز SEO للمقال
 
 ### ميزانية ضمن خطة يومية قابلة للتنفيذ
@@ -76,10 +74,6 @@ This guide helps you build a practical budget routine and use an expense manager
 
 ### هل أحتاج budget spreadsheet أم يكفي تطبيق expense manager؟
 الاثنان مفيدان، لكن تطبيق expense manager أسهل للاستخدام اليومي، بينما budget spreadsheet مناسب أكثر للتحليل اليدوي التفصيلي.
-
-## مقالات مرتبطة
-- [ميزانية: الفرق بين ضبط المصاريف والحرمان من الحياة | خطوات عملية](https://fouadshawish-png.github.io/2026/02/17/spending-control-vs-deprivation.html)
-- [لماذا تفشل معظم الميزانيات الشهرية؟](https://fouadshawish-png.github.io/2026/02/19/why-monthly-budgets-fail.html)
 
 <script type="application/ld+json">
 {

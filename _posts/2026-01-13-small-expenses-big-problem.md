@@ -9,8 +9,6 @@ image: /assets/images/small-expenses-big-problem.webp
 
 ![صورة توضيحية للمقال](/assets/images/small-expenses-big-problem.webp)
 
-
-
 عندما نسأل أنفسنا عن سبب ضيق الميزانية، نميل إلى البحث عن بند كبير واضح، بينما تكون المشكلة في الواقع مختبئة داخل عشرات القرارات الصغيرة التي لا نعدّها مؤثرة. المدهش أن المصروف الصغير لا يبدو مزعجًا في لحظته، لكنه يتحول مع الوقت إلى تيار مستمر يستنزف الدخل دون أن يشعر صاحبه. وهذا ما يجعل تطبيق محترف المصاريف خيارًا عمليًا لمن يريد متابعة منتظمة. <!--more-->
 
 ## التراكم: قوة الأرقام الصغيرة
@@ -59,7 +57,6 @@ image: /assets/images/small-expenses-big-problem.webp
 
 الخطوة العملية ليست الحرمان، بل إضاءة الزوايا المعتمة في إنفاقنا. حين نفعل ذلك، تتحول المصاريف الصغيرة من تيار يستنزفنا إلى مساحة اختيار يمكن إدارتها بذكاء وهدوء.
 
-
 ## تعزيز SEO للمقال
 
 ### ميزانية ضمن خطة يومية قابلة للتنفيذ
@@ -84,8 +81,3 @@ This guide helps you build a practical budget routine and use an expense manager
 
 ### هل أحتاج budget spreadsheet أم يكفي تطبيق expense manager؟
 الاثنان مفيدان، لكن تطبيق expense manager أسهل للاستخدام اليومي، بينما budget spreadsheet مناسب أكثر للتحليل اليدوي التفصيلي.
-
-## مقالات مرتبطة
-- [تنظيم المصاريف: لماذا نشعر أن المال لا يكفينا مهما كان الدخل؟ | خطوات عملية](https://fouadshawish-png.github.io/2026/01/12/why-money-never-enough.html)
-- [متى يكون الشراء قرارًا نفسيًا لا ماليًا؟](https://fouadshawish-png.github.io/2026/01/15/purchase-psychological-not-financial.html)
-

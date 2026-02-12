@@ -7,7 +7,6 @@ image: /assets/images/saving-becomes-burden.jpg
 keywords: "الادخار, أمان مالي, ضغط نفسي, توازن الإنفاق"
 ---
 
-
 ![ادخار مرهق بدون توازن](/assets/images/saving-becomes-burden.jpg)
 
 الادخار يُنظر إليه غالبًا كعنوان للأمان، لكنه قد يتحول إلى عبء نفسي إذا فقد معناه أو تجاوزه التوازن الطبيعي للحياة.
@@ -56,7 +55,6 @@ keywords: "الادخار, أمان مالي, ضغط نفسي, توازن الإ
 
 الادخار أداة للأمان، لكنه يفقد قيمته عندما يتحول إلى عبء. ضع هدفًا واضحًا، واترك مساحة للحياة، وراجع خطتك بمرونة. حينها يصبح الادخار دعمًا لك بدل أن يكون قيدًا عليك.
 
-
 ## تعزيز SEO للمقال
 
 ### ميزانية ضمن خطة يومية قابلة للتنفيذ
@@ -81,8 +79,3 @@ This guide helps you build a practical budget routine and use an expense manager
 
 ### هل أحتاج budget spreadsheet أم يكفي تطبيق expense manager؟
 الاثنان مفيدان، لكن تطبيق expense manager أسهل للاستخدام اليومي، بينما budget spreadsheet مناسب أكثر للتحليل اليدوي التفصيلي.
-
-## مقالات مرتبطة
-- [ميزانية: أخطاء نفسية شائعة في التعامل مع المال | خطوات عملية](https://fouadshawish-png.github.io/2025/12/30/psychological-money-mistakes.html)
-- [أخطاء شائعة في إدارة المصروف الشهري يجب أن تتجنبها](https://fouadshawish-png.github.io/2026/01/02/common-monthly-budget-mistakes.html)
-

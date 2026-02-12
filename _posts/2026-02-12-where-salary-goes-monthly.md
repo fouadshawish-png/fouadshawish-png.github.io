@@ -8,7 +8,6 @@ tags: [راتب, تتبع_المعاملات, تنظيم_مالي]
 image: /assets/images/salary-disappears-expense-tracking.jpg
 ---
 
-
 ![كيف تكتشف أين يضيع راتبك كل شهر؟](/assets/images/salary-disappears-expense-tracking.jpg)
 
 كثيرون يشعرون أن الراتب ينتهي بسرعة، لكن الشعور وحده لا يحل المشكلة. ما يحلها هو تحويل الإنفاق إلى بيانات واضحة: ماذا صُرف؟ متى؟ وعلى ماذا؟ عندها فقط ستعرف أين يحدث التسرب الحقيقي.
@@ -55,7 +54,6 @@ image: /assets/images/salary-disappears-expense-tracking.jpg
 - [تنظيم الميزانية الشهرية بطريقة 50/30/20](https://fouadshawish-png.github.io/2026/02/11/budget-50-30-20.html)
 - [أخطاء شائعة في تتبع المصاريف اليومية](https://fouadshawish-png.github.io/2026/02/15/daily-expense-tracking-mistakes.html)
 
-
 ## تعزيز SEO للمقال
 
 ### تتبع المصاريف ضمن خطة يومية قابلة للتنفيذ
@@ -80,10 +78,6 @@ This guide helps you build a practical budget routine and use an expense manager
 
 ### هل أحتاج budget spreadsheet أم يكفي تطبيق expense manager؟
 الاثنان مفيدان، لكن تطبيق expense manager أسهل للاستخدام اليومي، بينما budget spreadsheet مناسب أكثر للتحليل اليدوي التفصيلي.
-
-## مقالات مرتبطة
-- [إدارة الأموال: تنظيم الميزانية الشهرية بطريقة 50/30/20 | خطوات عملية](https://fouadshawish-png.github.io/2026/02/11/budget-50-30-20.html)
-- [أفضل طريقة لإدارة الديون الشخصية](https://fouadshawish-png.github.io/2026/02/13/manage-personal-debt-smartly.html)
 
 <script type="application/ld+json">
 {

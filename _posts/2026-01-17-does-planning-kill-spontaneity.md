@@ -9,8 +9,6 @@ image: /assets/images/budget-templates-flexible.jpg
 
 ![صورة توضيحية للمقال](/assets/images/budget-templates-flexible.jpg)
 
-
-
 يخاف بعض الناس من التخطيط المالي لأنه يبدو كأنه مصادرة للعفوية وتحويل الحياة إلى جدول صارم. لكن هذا الخوف غالبًا مبني على فهم التخطيط باعتباره سيطرة مطلقة، لا باعتباره أداة لتنظيم الحرية. العفوية لا تُقتل بالتخطيط؛ بل قد تتحسن عندما نعرف حدودنا بوضوح. لمن يحب المتابعة الخفيفة، يوفر تطبيق محترف المصاريف طريقة منظمة. <!--more-->
 
 ## التخطيط ليس سجنًا بل خريطة
@@ -55,7 +53,6 @@ image: /assets/images/budget-templates-flexible.jpg
 
 عندما تتوازن بين التنظيم والمرونة، تتحول العفوية من مصدر للتوتر إلى مساحة للفرح. عندها يصبح التخطيط المالي أداة تدعم الحياة بدل أن تضيقها.
 
-
 ## تعزيز SEO للمقال
 
 ### تنظيم المصاريف ضمن خطة يومية قابلة للتنفيذ
@@ -80,8 +77,3 @@ This guide helps you build a practical budget routine and use an expense manager
 
 ### هل أحتاج budget spreadsheet أم يكفي تطبيق expense manager؟
 الاثنان مفيدان، لكن تطبيق expense manager أسهل للاستخدام اليومي، بينما budget spreadsheet مناسب أكثر للتحليل اليدوي التفصيلي.
-
-## مقالات مرتبطة
-- [تنظيم المصاريف: أخطاء شائعة عند محاولة تقليل المصاريف | خطوات عملية](https://fouadshawish-png.github.io/2026/01/16/common-mistakes-reducing-expenses.html)
-- [كيف تبني عادة مالية واحدة تغيّر حياتك؟](https://fouadshawish-png.github.io/2026/01/18/one-financial-habit-changes-life.html)
-

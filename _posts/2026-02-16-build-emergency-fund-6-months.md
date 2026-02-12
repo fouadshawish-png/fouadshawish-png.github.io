@@ -8,7 +8,6 @@ tags: [صندوق_الطوارئ, ادخار, استقرار_مالي]
 image: /assets/images/saving-becomes-burden.jpg
 ---
 
-
 ![كيف تبني صندوق طوارئ خلال 6 أشهر؟](/assets/images/saving-becomes-burden.jpg)
 
 صندوق الطوارئ ليس رفاهية، بل خط الدفاع الأول عندما يحدث ظرف مفاجئ. المشكلة أن كثيرًا من الناس يؤجلون بناءه لأن الهدف يبدو كبيرًا. الحل: خطة صغيرة ثابتة لمدة 6 أشهر.
@@ -55,7 +54,6 @@ image: /assets/images/saving-becomes-burden.jpg
 - [تنظيم الميزانية الشهرية بطريقة 50/30/20](https://fouadshawish-png.github.io/2026/02/11/budget-50-30-20.html)
 - [كيف تحدد أهداف مالية واقعية وتلتزم بها؟](https://fouadshawish-png.github.io/2026/02/14/set-realistic-financial-goals.html)
 
-
 ## تعزيز SEO للمقال
 
 ### ميزانية ضمن خطة يومية قابلة للتنفيذ
@@ -80,10 +78,6 @@ This guide helps you build a practical budget routine and use an expense manager
 
 ### هل أحتاج budget spreadsheet أم يكفي تطبيق expense manager؟
 الاثنان مفيدان، لكن تطبيق expense manager أسهل للاستخدام اليومي، بينما budget spreadsheet مناسب أكثر للتحليل اليدوي التفصيلي.
-
-## مقالات مرتبطة
-- [تتبع المصاريف: أخطاء شائعة في تتبع المصاريف اليومية | خطوات عملية](https://fouadshawish-png.github.io/2026/02/15/daily-expense-tracking-mistakes.html)
-- [الفرق بين ضبط المصاريف والحرمان من الحياة](https://fouadshawish-png.github.io/2026/02/17/spending-control-vs-deprivation.html)
 
 <script type="application/ld+json">
 {

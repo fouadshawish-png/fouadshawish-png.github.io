@@ -9,8 +9,6 @@ image: /assets/images/financial-awareness-long-term-skill.webp
 
 ![صورة توضيحية للمقال](/assets/images/financial-awareness-long-term-skill.webp)
 
-
-
 الوعي المالي ليس قرارًا لحظيًا ولا مجموعة نصائح عابرة، بل مهارة تتكوّن تدريجيًا عبر التجربة والمراجعة والتعلم. مثل أي مهارة حياتية، يحتاج إلى وقت وصبر، ويزداد عمقًا كلما نما الإنسان في فهم ذاته وأهدافه. ومن أجل وضوح أكبر، يمكن لتطبيق محترف المصاريف دعمك في التتبع. <!--more-->
 
 ## الوعي المالي ليس معلومات فقط
@@ -61,7 +59,6 @@ image: /assets/images/financial-awareness-long-term-skill.webp
 
 حين تتعامل مع المال بهذه الروح، يتحول من مصدر قلق إلى مجال لتطوير الذات. يصبح المال أداة تخدم حياتك، لا عبئًا يستهلك طاقتك. هذا هو جوهر الوعي المالي طويل المدى.
 
-
 ## تعزيز SEO للمقال
 
 ### تتبع المصاريف ضمن خطة يومية قابلة للتنفيذ
@@ -86,8 +83,3 @@ This guide helps you build a practical budget routine and use an expense manager
 
 ### هل أحتاج budget spreadsheet أم يكفي تطبيق expense manager؟
 الاثنان مفيدان، لكن تطبيق expense manager أسهل للاستخدام اليومي، بينما budget spreadsheet مناسب أكثر للتحليل اليدوي التفصيلي.
-
-## مقالات مرتبطة
-- [إدارة الأموال: المال والعائلة: كيف تتجنب النزاعات المالية؟ | خطوات عملية](https://fouadshawish-png.github.io/2026/01/21/money-and-family-avoid-conflicts.html)
-- [لماذا يعاني أغلب الناس من ضياع الراتب قبل نهاية الشهر؟](https://fouadshawish-png.github.io/2026/01/30/why-salary-disappears-early.html)
-

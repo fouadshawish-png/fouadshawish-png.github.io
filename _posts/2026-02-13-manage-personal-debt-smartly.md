@@ -8,7 +8,6 @@ tags: [ديون, سداد, خطة_مالية]
 image: /assets/images/monthly-expense-review.webp
 ---
 
-
 ![أفضل طريقة لإدارة الديون الشخصية](/assets/images/monthly-expense-review.webp)
 
 الديون ليست مجرد أرقام في ورقة، بل عبء يومي يؤثر على قراراتك كلها. الحل ليس الدفع العشوائي، بل نظام واضح يحدد: ماذا تسدد أولًا؟ وكم تدفع؟ ومتى تراجع التقدم؟
@@ -58,7 +57,6 @@ image: /assets/images/monthly-expense-review.webp
 - [كيف تحدد أهداف مالية واقعية وتلتزم بها؟](https://fouadshawish-png.github.io/2026/02/14/set-realistic-financial-goals.html)
 - [كيف تبني صندوق طوارئ خلال 6 أشهر؟](https://fouadshawish-png.github.io/2026/02/16/build-emergency-fund-6-months.html)
 
-
 ## تعزيز SEO للمقال
 
 ### إدارة الأموال ضمن خطة يومية قابلة للتنفيذ
@@ -83,10 +81,6 @@ This guide helps you build a practical budget routine and use an expense manager
 
 ### هل أحتاج budget spreadsheet أم يكفي تطبيق expense manager؟
 الاثنان مفيدان، لكن تطبيق expense manager أسهل للاستخدام اليومي، بينما budget spreadsheet مناسب أكثر للتحليل اليدوي التفصيلي.
-
-## مقالات مرتبطة
-- [تتبع المصاريف: كيف تكتشف أين يضيع راتبك كل شهر؟ | خطوات عملية](https://fouadshawish-png.github.io/2026/02/12/where-salary-goes-monthly.html)
-- [كيف تحدد أهداف مالية واقعية وتلتزم بها؟](https://fouadshawish-png.github.io/2026/02/14/set-realistic-financial-goals.html)
 
 <script type="application/ld+json">
 {

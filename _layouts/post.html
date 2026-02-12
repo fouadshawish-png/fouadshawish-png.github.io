@@ -30,8 +30,8 @@ layout: default
   {%- endif -%}
 </section>
 
-<section class="post-related" aria-label="مقالات أخرى">
-  <h2 class="section-title">مقالات أخرى</h2>
+<section class="post-related" aria-label="مقالات مرتبطة">
+  <h2 class="section-title">مقالات مرتبطة</h2>
   <ul class="post-list">
     {%- assign base_related = site.posts | where_exp: 'p', 'p.url != page.url' -%}
     {%- assign related = '' | split: '' -%}
