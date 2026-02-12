@@ -124,6 +124,11 @@ main.page {
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
+.post-related {
+    max-width: 900px;
+    margin: 36px auto 0;
+}
+
 .post-item {
     background: #fff7ec;
     border-radius: 14px;
@@ -133,6 +138,10 @@ main.page {
     grid-template-columns: 160px 1fr;
     gap: 16px;
     align-items: center;
+}
+
+.post-item--text {
+    grid-template-columns: 1fr;
 }
 
 .post-body {

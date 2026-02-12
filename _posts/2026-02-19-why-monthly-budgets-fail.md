@@ -51,7 +51,7 @@ image: /assets/images/posts/why-monthly-budgets-fail.webp
 
 استخدم التقارير لمقارنة "المخطط" مقابل "الفعل"، وحدد أكبر فجوة شهرية. بعدها عدّل رقمًا واحدًا فقط في الخطة القادمة.
 
-<a href="https://fouadshawish-png.github.io/reports_root"
+<a href="/reports_root/"
    style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">
    افتح الميزة الآن داخل التطبيق
 </a>

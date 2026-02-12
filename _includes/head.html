@@ -5,6 +5,15 @@
 {%- assign og_type = page.og_type | default: 'website' -%}
 {%- assign og_image = page.image | default: site.default_og_image | default: site.logo | default: '/icon.png' -%}
 {%- assign og_image_abs = og_image | absolute_url -%}
+{%- assign og_image_lower = og_image | downcase -%}
+{%- assign og_image_type = 'image/png' -%}
+{%- if og_image_lower contains '.webp' -%}
+  {%- assign og_image_type = 'image/webp' -%}
+{%- elsif og_image_lower contains '.jpg' or og_image_lower contains '.jpeg' -%}
+  {%- assign og_image_type = 'image/jpeg' -%}
+{%- elsif og_image_lower contains '.svg' -%}
+  {%- assign og_image_type = 'image/svg+xml' -%}
+{%- endif -%}
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,7 +53,7 @@
 <meta property="og:type" content="{{ og_type }}">
 <meta property="og:locale" content="{{ site.locale | default: page_lang | escape }}">
 <meta property="og:image" content="{{ og_image_abs }}">
-<meta property="og:image:type" content="image/png">
+<meta property="og:image:type" content="{{ og_image_type }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="{{ page_title | escape }}">
@@ -96,4 +105,3 @@
 {% endif %}
 
 {% include structured-data.html %}
-

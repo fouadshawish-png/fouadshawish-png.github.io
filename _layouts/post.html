@@ -17,9 +17,24 @@ layout: default
 <section class="post-related" aria-label="مقالات أخرى">
   <h2 class="section-title">مقالات أخرى</h2>
   <ul class="post-list">
-    {%- assign related = site.posts | where_exp: 'p', 'p.url != page.url' | limit: 3 -%}
+    {%- assign base_related = site.posts | where_exp: 'p', 'p.url != page.url' -%}
+    {%- assign related = '' | split: '' -%}
+    {%- if page.categories and page.categories.size > 0 -%}
+      {%- assign primary_category = page.categories | first -%}
+      {%- assign related_by_category = base_related | where_exp: 'p', 'p.categories contains primary_category' -%}
+      {%- assign related = related | concat: related_by_category -%}
+    {%- endif -%}
+    {%- if page.tags and page.tags.size > 0 and related.size < 3 -%}
+      {%- assign primary_tag = page.tags | first -%}
+      {%- assign related_by_tag = base_related | where_exp: 'p', 'p.tags contains primary_tag' -%}
+      {%- assign related = related | concat: related_by_tag -%}
+    {%- endif -%}
+    {%- assign related = related | uniq | limit: 3 -%}
+    {%- if related.size < 3 -%}
+      {%- assign related = related | concat: base_related | uniq | limit: 3 -%}
+    {%- endif -%}
     {%- for post in related -%}
-    <li class="post-item">
+    <li class="post-item{% unless post.image %} post-item--text{% endunless %}">
       {%- if post.image -%}
       <a class="post-thumb" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
         <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" width="1200" height="630">

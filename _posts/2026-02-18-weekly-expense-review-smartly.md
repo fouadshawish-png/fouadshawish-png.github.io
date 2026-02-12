@@ -41,7 +41,7 @@ image: /assets/images/posts/weekly-expense-review-smartly.webp
 
 افتح التقارير الأسبوعية، قارن الأرقام بالمستهدف، وسجل قرارًا واحدًا للأسبوع القادم قبل إغلاق المراجعة.
 
-<a href="https://fouadshawish-png.github.io/reports_root"
+<a href="/reports_root/"
    style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">
    افتح الميزة الآن داخل التطبيق
 </a>
