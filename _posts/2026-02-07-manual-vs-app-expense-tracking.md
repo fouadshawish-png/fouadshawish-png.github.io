@@ -2,6 +2,12 @@
 layout: post
 title: "هل التسجيل اليدوي أفضل أم استخدام تطبيق إدارة مصاريف؟"
 description: "مقارنة عملية بين التسجيل اليدوي واستخدام تطبيق إدارة مصاريف لتحديد الأنسب للاستمرارية والدقة والنتائج."
+categories:
+  - تتبع المصاريف
+tags:
+  - التسجيل اليدوي
+  - expense manager
+  - تتبع المصاريف
 permalink: /manual-vs-app-expense-tracking/
 canonical: https://fouadshawish-png.github.io/manual-vs-app-expense-tracking/
 image: /assets/images/posts/daily-expense-tracking-mistakes.jpg
@@ -257,6 +263,11 @@ faq:
 
 - [تحميل التطبيق](/download.html)
 - [ابدأ بتسجيل عملياتك](/?route=all_transactions)
+
+## تصنيف المقال
+
+- التصنيف: [تتبع المصاريف](/category/تتبع-المصاريف/)
+- جميع المواضيع: [مواضيع إدارة المصاريف والميزانية](/topics/)
 
 ## English Summary
 

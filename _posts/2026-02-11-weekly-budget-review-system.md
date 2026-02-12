@@ -2,6 +2,12 @@
 layout: post
 title: "نظام مراجعة الميزانية الأسبوعي الذي يمنع الانهيار المالي"
 description: "نظام مراجعة أسبوعي عملي للميزانية يساعدك على اكتشاف الانحراف مبكرًا وتصحيح الإنفاق قبل نهاية الشهر."
+categories:
+  - الميزانية
+tags:
+  - مراجعة أسبوعية
+  - تقارير مالية
+  - تتبع المصاريف
 permalink: /weekly-budget-review-system/
 canonical: https://fouadshawish-png.github.io/weekly-budget-review-system/
 image: /assets/images/posts/weekly-budget-review-10-minutes.jpg
@@ -258,6 +264,11 @@ faq:
 
 - [تحميل التطبيق](/download.html)
 - [افتح التقارير مباشرة](/?route=reports)
+
+## تصنيف المقال
+
+- التصنيف: [الميزانية](/category/الميزانية/)
+- جميع المواضيع: [مواضيع إدارة المصاريف والميزانية](/topics/)
 
 ## English Summary
 

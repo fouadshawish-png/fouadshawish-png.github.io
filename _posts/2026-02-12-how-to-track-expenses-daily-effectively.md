@@ -2,6 +2,12 @@
 layout: post
 title: "أفضل طريقة لتتبع المصاريف يوميًا بدون ملل"
 description: "دليل عملي لتتبع المصاريف يوميًا بطريقة بسيطة تمنع الملل وتساعدك على ضبط الميزانية واتخاذ قرارات مالية أدق."
+categories:
+  - تتبع المصاريف
+tags:
+  - تتبع المصاريف
+  - تنظيم المصاريف
+  - expense manager
 permalink: /how-to-track-expenses-daily-effectively/
 canonical: https://fouadshawish-png.github.io/how-to-track-expenses-daily-effectively/
 image: /assets/images/posts/benefits-of-tracking-expenses.jpg
@@ -227,6 +233,11 @@ faq:
 
 - [تحميل التطبيق](/download.html)
 - [فتح شاشة العمليات الآن](/?route=all_transactions)
+
+## تصنيف المقال
+
+- التصنيف: [تتبع المصاريف](/category/تتبع-المصاريف/)
+- جميع المواضيع: [مواضيع إدارة المصاريف والميزانية](/topics/)
 
 ## English Summary
 

@@ -2,6 +2,13 @@
 layout: post
 title: "الدليل الشامل لإدارة المصاريف الشخصية في 2026 (مرجع كامل)"
 description: "دليل شامل ومتكامل لإدارة المصاريف الشخصية، بناء ميزانية شهرية ناجحة، تتبع المصاريف، إدارة الديون، وتحقيق الادخار بخطة عملية واضحة."
+categories:
+  - تنظيم المصاريف
+tags:
+  - التخطيط المالي الشخصي
+  - إدارة الديون
+  - الادخار
+  - الميزانية الشهرية
 permalink: /ultimate-guide-personal-finance-arabic/
 canonical: https://fouadshawish-png.github.io/ultimate-guide-personal-finance-arabic/
 ---
@@ -600,6 +607,14 @@ canonical: https://fouadshawish-png.github.io/ultimate-guide-personal-finance-ar
     <a href="/manual-vs-app-expense-tracking/">اقرأ الدليل</a>
   </div>
 </div>
+
+---
+
+## تصنيف المقال
+
+- التصنيف: [تنظيم المصاريف](/category/تنظيم-المصاريف/)
+- جميع المواضيع: [مواضيع إدارة المصاريف والميزانية](/topics/)
+- تصنيفات مرتبطة: [الميزانية](/category/الميزانية/) | [تتبع المصاريف](/category/تتبع-المصاريف/) | [الديون](/category/الديون/) | [الادخار](/category/الادخار/) | [أخطاء مالية شائعة](/category/أخطاء-مالية-شائعة/)
 
 ---
 

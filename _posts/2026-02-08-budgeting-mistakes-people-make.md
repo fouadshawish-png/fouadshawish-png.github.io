@@ -2,6 +2,12 @@
 layout: post
 title: "أخطاء الميزانية التي تجعلك تعيد نفس المشكلة كل شهر"
 description: "تعرف على أخطاء الميزانية الأكثر شيوعًا وكيف تصححها عمليًا لتتوقف عن تكرار نفس المشكلة المالية كل شهر."
+categories:
+  - أخطاء مالية شائعة
+tags:
+  - أخطاء الميزانية
+  - تنظيم المصاريف
+  - إدارة الأموال
 permalink: /budgeting-mistakes-people-make/
 canonical: https://fouadshawish-png.github.io/budgeting-mistakes-people-make/
 image: /assets/images/posts/common-monthly-budget-mistakes.jpg
@@ -266,6 +272,11 @@ faq:
 
 - [تحميل التطبيق](/download.html)
 - [افتح شاشة الميزانية الآن](/?route=budgets)
+
+## تصنيف المقال
+
+- التصنيف: [أخطاء مالية شائعة](/category/أخطاء-مالية-شائعة/)
+- جميع المواضيع: [مواضيع إدارة المصاريف والميزانية](/topics/)
 
 ## English Summary
 

@@ -2,6 +2,12 @@
 layout: post
 title: "كيف تنظم مصاريفك الشهرية خطوة بخطوة (دليل عملي شامل)"
 description: "دليل عملي لتنظيم المصاريف وتتبع المصاريف وبناء ميزانية شهرية واقعية تساعدك على إدارة الأموال بوضوح، مع أمثلة رقمية وخطة تنفيذ أسبوعية."
+categories:
+  - تنظيم المصاريف
+tags:
+  - تنظيم المصاريف
+  - ميزانية شهرية
+  - إدارة الأموال
 permalink: /organize-monthly-expenses-step-by-step/
 canonical: https://fouadshawish-png.github.io/organize-monthly-expenses-step-by-step/
 image: /assets/images/posts/organize-monthly-expenses-step-by-step.jpg
@@ -295,6 +301,11 @@ faq:
 - [الدليل الشامل لإدارة المصاريف الشخصية في 2026](/ultimate-guide-personal-finance-arabic/)
 - [أفضل طريقة لتتبع المصاريف يوميًا بدون ملل](/how-to-track-expenses-daily-effectively/)
 - [نظام مراجعة الميزانية الأسبوعي الذي يمنع الانهيار المالي](/weekly-budget-review-system/)
+
+## تصنيف المقال
+
+- التصنيف: [تنظيم المصاريف](/category/تنظيم-المصاريف/)
+- جميع المواضيع: [مواضيع إدارة المصاريف والميزانية](/topics/)
 
 ---
 

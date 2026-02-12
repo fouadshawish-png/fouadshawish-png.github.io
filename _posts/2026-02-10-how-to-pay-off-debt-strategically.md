@@ -2,6 +2,12 @@
 layout: post
 title: "استراتيجية عملية لسداد الديون بدون ضغط نفسي"
 description: "خطة عملية لسداد الديون بخطوات واضحة تقلل الضغط النفسي وتوازن بين السداد والميزانية وصندوق الطوارئ."
+categories:
+  - الديون
+tags:
+  - إدارة الديون
+  - سداد الديون
+  - التخطيط المالي
 permalink: /how-to-pay-off-debt-strategically/
 canonical: https://fouadshawish-png.github.io/how-to-pay-off-debt-strategically/
 image: /assets/images/posts/manage-personal-debt-smartly.jpg
@@ -263,6 +269,11 @@ faq:
 
 - [تحميل التطبيق](/download.html)
 - [افتح دفتر الديون الآن](/?route=debt_ledger)
+
+## تصنيف المقال
+
+- التصنيف: [الديون](/category/الديون/)
+- جميع المواضيع: [مواضيع إدارة المصاريف والميزانية](/topics/)
 
 ## English Summary
 

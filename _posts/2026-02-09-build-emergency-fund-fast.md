@@ -2,6 +2,12 @@
 layout: post
 title: "كيف تبني صندوق طوارئ خلال 6 أشهر بطريقة واقعية"
 description: "خطة عملية لبناء صندوق طوارئ خلال 6 أشهر بخطوات واضحة تناسب الدخل الحقيقي وتحمي الميزانية من الصدمات."
+categories:
+  - الادخار
+tags:
+  - صندوق الطوارئ
+  - الادخار
+  - التخطيط المالي
 permalink: /build-emergency-fund-fast/
 canonical: https://fouadshawish-png.github.io/build-emergency-fund-fast/
 image: /assets/images/posts/build-emergency-fund-6-months.jpg
@@ -255,6 +261,11 @@ faq:
 
 - [تحميل التطبيق](/download.html)
 - [افتح الميزانيات مباشرة](/?route=budgets)
+
+## تصنيف المقال
+
+- التصنيف: [الادخار](/category/الادخار/)
+- جميع المواضيع: [مواضيع إدارة المصاريف والميزانية](/topics/)
 
 ## English Summary
 
