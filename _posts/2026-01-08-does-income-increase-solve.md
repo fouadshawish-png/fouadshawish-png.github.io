@@ -3,12 +3,12 @@ layout: post
 title: "تتبع المصاريف: هل زيادة الدخل وحدها تحل المشكلة المالية؟ | خطوات عملية"
 description: "تتبع المصاريف: هل زيادة الدخل وحدها تحل المشكلة المالية؟. خطوات عملية لتنظيم المصاريف وبناء budget واضح لتحسين إدارة الأموال واتخاذ قرارات مالية أفضل بثقة."
 date: 2026-01-08 10:00:00 +0200
-image: /assets/images/posts/does-income-increase-solve.webp
+image: /assets/images/posts/2026-01-08-does-income-increase-solve.webp
 keywords: "زيادة الدخل, نمط الصرف, إدارة المصاريف, الميزانية"
 ---
 
 
-![زيادة الدخل دون تغيير السلوك](/assets/images/posts/does-income-increase-solve.webp)
+![زيادة الدخل دون تغيير السلوك](/assets/images/posts/2026-01-08-does-income-increase-solve.webp)
 
 يظن كثيرون أن المشكلة المالية ستختفي بمجرد زيادة الدخل. صحيح أن الدخل الأعلى يفتح خيارات، لكنه لا يحل المشكلة إذا بقي نمط الصرف كما هو.
 

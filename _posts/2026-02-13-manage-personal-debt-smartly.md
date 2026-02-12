@@ -5,11 +5,11 @@ description: "إدارة الأموال: أفضل طريقة لإدارة الد
 keywords: إدارة الديون الشخصية, سداد الديون, ترتيب الأولويات المالية, debt_root, تنظيم الالتزامات
 categories: [الديون, إدارة_المصاريف]
 tags: [ديون, سداد, خطة_مالية]
-image: /assets/images/posts/manage-personal-debt-smartly.webp
+image: /assets/images/posts/2026-02-13-manage-personal-debt-smartly.webp
 ---
 
 
-![أفضل طريقة لإدارة الديون الشخصية](/assets/images/posts/manage-personal-debt-smartly.webp)
+![أفضل طريقة لإدارة الديون الشخصية](/assets/images/posts/2026-02-13-manage-personal-debt-smartly.webp)
 
 الديون ليست مجرد أرقام في ورقة، بل عبء يومي يؤثر على قراراتك كلها. الحل ليس الدفع العشوائي، بل نظام واضح يحدد: ماذا تسدد أولًا؟ وكم تدفع؟ ومتى تراجع التقدم؟
 

@@ -3,12 +3,12 @@ layout: post
 title: "ميزانية: أخطاء نفسية شائعة في التعامل مع المال | خطوات عملية"
 description: "ميزانية: أخطاء نفسية شائعة في التعامل مع المال. خطوات عملية لتنظيم المصاريف وبناء budget واضح لتحسين إدارة الأموال واتخاذ قرارات مالية أفضل بثقة."
 date: 2025-12-30 10:00:00 +0200
-image: /assets/images/posts/psychological-money-mistakes.webp
+image: /assets/images/posts/2025-12-30-psychological-money-mistakes.webp
 keywords: "أخطاء مالية, إنفاق عاطفي, تبرير, مقارنة, ميزانية"
 ---
 
 
-![أخطاء نفسية في التعامل مع المال](/assets/images/posts/psychological-money-mistakes.webp)
+![أخطاء نفسية في التعامل مع المال](/assets/images/posts/2025-12-30-psychological-money-mistakes.webp)
 
 الأخطاء المالية ليست دائمًا نتيجة نقص المعرفة، بل كثيرًا ما تكون نتيجة أنماط نفسية متكررة. فهم هذه الأنماط يفتح الباب لتغيير حقيقي ومستدام.
 
