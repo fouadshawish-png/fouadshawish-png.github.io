@@ -5,6 +5,16 @@ layout: default
 <article class="post">
   {% include breadcrumb.html %}
   <h1>{{ page.title }}</h1>
+  {%- if page.image -%}
+  <img
+    class="post-image post-image--wide"
+    src="{{ page.image | relative_url }}"
+    alt="{{ page.image_alt | default: page.title }}"
+    loading="eager"
+    fetchpriority="high"
+    width="1200"
+    height="630">
+  {%- endif -%}
   {{ content }}
   <p class="post-hint">إذا شعرت أن الفكرة تلامس واقعك، فتذكّر أن تنظيم المصاريف يبدأ بخطوات بسيطة قابلة للتطبيق. كثيرون يجدون أن وجود أداة واضحة مثل تطبيق محترف المصاريف يساعدهم على تحويل الوعي إلى متابعة يومية دون تعقيد.</p>
   <div class="share-actions" aria-label="مشاركة المقال">
