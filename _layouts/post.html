@@ -3,6 +3,7 @@ layout: default
 ---
 
 <article class="post">
+  {% include breadcrumb.html %}
   <h1>{{ page.title }}</h1>
   {{ content }}
   <p class="post-hint">إذا شعرت أن الفكرة تلامس واقعك، فتذكّر أن تنظيم المصاريف يبدأ بخطوات بسيطة قابلة للتطبيق. كثيرون يجدون أن وجود أداة واضحة مثل تطبيق محترف المصاريف يساعدهم على تحويل الوعي إلى متابعة يومية دون تعقيد.</p>
@@ -75,23 +76,22 @@ layout: default
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "{{ page.title | escape }}",
-  "description": "{{ page.description | default: site.description | strip_newlines | escape }}",
-  "datePublished": "{{ page.date | date_to_xmlschema }}",
-  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "headline": "{{ page.title }}",
+  "description": "{{ page.description }}",
   "author": {
     "@type": "Person",
-    "name": "{{ site.author.name | escape }}"
+    "name": "{{ site.author.name }}"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "{{ site.title | escape }}",
+    "name": "{{ site.title }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ site.logo | default: '/icon.png' | absolute_url }}"
+      "url": "{{ site.logo | absolute_url }}"
     }
   },
-  "image": "{{ page.image | default: site.default_og_image | default: site.logo | default: '/icon.png' | absolute_url }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.date | date_to_xmlschema }}",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ page.url | absolute_url }}"
