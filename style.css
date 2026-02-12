@@ -252,6 +252,24 @@ main.page {
     font-weight: 600;
 }
 
+.reading-progress {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 3px;
+    width: 0;
+    z-index: 1200;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-mint));
+    transition: width 0.12s linear;
+}
+
+.post-reading-time {
+    margin: 0 0 10px;
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 700;
+}
+
 .post-summary {
     margin: 0 0 18px;
     padding: 14px 16px;
@@ -297,6 +315,22 @@ main.page {
 .post-content h2::before {
     content: counter(post-section-counter) ". ";
     color: var(--accent-primary);
+}
+
+.sticky-mini-nav {
+    margin: 18px 0;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid var(--card-border);
+    background: var(--surface-soft);
+    position: sticky;
+    top: 110px;
+    z-index: 9;
+}
+
+.sticky-mini-nav h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
 }
 
 .post-toc-wrap {
@@ -642,6 +676,72 @@ main.page {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+}
+
+.next-step-box {
+    margin: 18px 0 20px;
+    padding: 16px;
+}
+
+.next-step-box h2 {
+    margin: 0 0 8px;
+}
+
+.next-step-box p {
+    margin: 0 0 12px;
+    color: var(--text-secondary);
+}
+
+.next-step-box__actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.micro-faq-toggle {
+    margin: 20px 0;
+    padding: 16px;
+}
+
+.micro-faq-toggle h2 {
+    margin: 0 0 10px;
+}
+
+.micro-faq-toggle details {
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 10px 12px;
+    background: var(--bg-surface);
+    margin-bottom: 10px;
+}
+
+.micro-faq-toggle summary {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.micro-faq-toggle p {
+    margin: 8px 0 0;
+    color: var(--text-secondary);
+}
+
+.related-by-intent {
+    margin-top: 18px;
+}
+
+.intent-card h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+.intent-card p {
+    margin: 0 0 12px;
+    color: var(--text-secondary);
+}
+
+.intent-card .btn-primary {
+    text-decoration: none;
+    display: inline-block;
 }
 
 .question-box {
@@ -1305,6 +1405,12 @@ html.dark .post-hint {
 html.dark .post-thumb,
 html.dark .screen-img {
   border-color: var(--border-light);
+}
+
+html.dark .sticky-mini-nav {
+  background: rgba(19, 43, 35, 0.72);
+  border: 1px solid rgba(123, 232, 192, 0.24);
+  backdrop-filter: blur(10px);
 }
 
 html.dark .card,
@@ -2510,6 +2616,10 @@ body.dark .nav-dropdown__menu a:hover {
 
   .post-summary h2 {
     font-size: 20px;
+  }
+
+  .sticky-mini-nav {
+    position: static;
   }
 
   .hero {

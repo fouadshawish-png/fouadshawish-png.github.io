@@ -1,0 +1,150 @@
+---
+layout: default
+title: "نظام إدارة المصاريف والميزانية الكامل"
+description: "مرجع تعليمي شامل يجمع مقالات تنظيم المصاريف، الميزانية الشهرية، تتبع المصاريف، مراجعة الميزانية، الادخار، والديون ضمن مسار تعلم واحد."
+permalink: /النظام-المالي/
+canonical: https://fouadshawish-png.github.io/النظام-المالي/
+---
+
+{%- assign all_posts = site.posts | sort: "date" | reverse -%}
+{%- assign guide_pages = site.pages | where_exp: "p", "p.url contains '/expense-guides/' and p.url != '/expense-guides/'" | sort: "title" -%}
+{%- assign beginner_posts = all_posts | where_exp: "post", "post.level == 'beginner' or post.level == nil" -%}
+{%- assign practical_posts = all_posts | where_exp: "post", "post.level == 'intermediate' or post.topic == 'expense-tracking' or post.topic == 'budget'" -%}
+{%- assign advanced_posts = all_posts | where_exp: "post", "post.level == 'advanced' or post.topic == 'reports' or post.topic == 'saving' or post.topic == 'debt'" -%}
+{%- assign problem_posts = all_posts | where_exp: "post", "post.title contains 'لماذا' or post.title contains 'راتبي' or post.title contains 'أين يذهب' or post.title contains 'أخطاء'" -%}
+
+<section class="section">
+  <h1>نظام إدارة المصاريف والميزانية الكامل</h1>
+  <p>
+    هذه الصفحة هي المرجع المركزي لبناء نظام مالي شخصي عملي، وليست صفحة تسويقية. الفكرة الأساسية هنا:
+    تنظيم المصاريف لا ينجح بمعزل عن الميزانية، والميزانية لا تستمر دون تتبع المصاريف ومراجعة دورية.
+    لذلك تم تجميع المحتوى ضمن مسار واضح يبدأ من الأساسيات، ثم التنفيذ، ثم حل المشكلات، ثم المستوى المتقدم.
+  </p>
+  <p>
+    إذا كان هدفك ضبط المصاريف، أو بناء ميزانية شهرية واقعية، أو رفع جودة إدارة الأموال على المدى الطويل،
+    ستجد في هذا المركز خريطة تعلم قابلة للتطبيق خطوة بخطوة.
+  </p>
+</section>
+
+<section class="section">
+  <h2>كيف تستخدم هذا المرجع؟</h2>
+  <ol>
+    <li>ابدأ بمسار المبتدئين إذا كنت تريد أساسًا واضحًا.</li>
+    <li>انتقل إلى التنفيذ العملي لتحويل المعرفة إلى قرارات أسبوعية.</li>
+    <li>استخدم مسار حل المشكلات عندما تتعطل الميزانية أو يختفي الراتب.</li>
+    <li>ادخل المستوى المتقدم عند بناء نظام مالي مستدام.</li>
+  </ol>
+</section>
+
+<section class="section">
+  <h2>الجدول التصنيفي للمحتوى</h2>
+  <div class="card">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>المسار</th>
+          <th>الهدف</th>
+          <th>متى تبدأ به؟</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🔹 البداية (للمبتدئين)</td>
+          <td>فهم تنظيم المصاريف والفرق بين المتابعة والتخمين</td>
+          <td>إذا كنت تبدأ من الصفر</td>
+        </tr>
+        <tr>
+          <td>🔹 التنفيذ العملي</td>
+          <td>بناء ميزانية شهرية وتثبيت روتين أسبوعي</td>
+          <td>إذا لديك نية تطبيق فورية</td>
+        </tr>
+        <tr>
+          <td>🔹 حل المشكلات</td>
+          <td>معالجة التسرب المالي، انهيار الميزانية، وضغط الالتزامات</td>
+          <td>إذا لا ترى نتيجة رغم المحاولة</td>
+        </tr>
+        <tr>
+          <td>🔹 المستوى المتقدم</td>
+          <td>دمج الادخار والديون والأهداف في نظام واحد</td>
+          <td>إذا تريد استمرارية طويلة المدى</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <h2>🔹 البداية (للمبتدئين)</h2>
+  <p>هذه المقالات تضع أساس تتبع المصاريف وفهم الميزانية بأسلوب عملي مناسب للبداية.</p>
+  <ul class="topic-block__list">
+    {%- for post in beginner_posts limit:12 -%}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="section">
+  <h2>🔹 التنفيذ العملي</h2>
+  <p>هذا المسار مخصص للتطبيق: توزيع البنود، مراجعة الميزانية، وضبط المصاريف أسبوعيًا.</p>
+  <ul class="topic-block__list">
+    {%- for post in practical_posts limit:12 -%}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="section">
+  <h2>🔹 حل المشكلات</h2>
+  <p>إذا كانت النتائج ضعيفة، هذا المسار يقدّم تشخيصًا واضحًا وحلولًا قابلة للتنفيذ.</p>
+  <ul class="topic-block__list">
+    {%- for post in problem_posts limit:12 -%}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="section">
+  <h2>🔹 المستوى المتقدم</h2>
+  <p>يركز على بناء نظام مالي متكامل يربط المصاريف، الميزانية، الادخار، والديون.</p>
+  <ul class="topic-block__list">
+    {%- for post in advanced_posts limit:12 -%}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="section">
+  <h2>محاور مرجعية أساسية</h2>
+  <div class="grid-3">
+    <article class="card">
+      <h3>تنظيم المصاريف</h3>
+      <p>فهم سلوك الإنفاق وتحويل التتبع اليومي إلى قرارات واضحة.</p>
+      <a class="btn-accent" href="{{ '/المصاريف/' | relative_url }}">عرض محور المصاريف</a>
+    </article>
+    <article class="card">
+      <h3>الميزانية الشهرية</h3>
+      <p>التخطيط المسبق لتوزيع الدخل وبناء Budget واقعي قابل للاستمرار.</p>
+      <a class="btn-accent" href="{{ '/الميزانية/' | relative_url }}">عرض محور الميزانية</a>
+    </article>
+    <article class="card">
+      <h3>مرجع شامل</h3>
+      <p>دليل تعليمي طويل يجمع البنية الكاملة لإدارة الأموال داخل النظام.</p>
+      <a class="btn-accent" href="{{ '/financial-guide/' | relative_url }}">قراءة الدليل الشامل</a>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <h2>روابط Hub Model (عودة مباشرة للمقالات)</h2>
+  <p>القائمة التالية تربط الصفحة المركزية بجميع المقالات لضمان بنية ربط داخلية واضحة وقابلة للتوسع.</p>
+  <div class="card">
+    <ul class="topic-block__list">
+      {%- for post in all_posts -%}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {%- endfor -%}
+      {%- for guide in guide_pages -%}
+      <li><a href="{{ guide.url | relative_url }}">{{ guide.title }}</a></li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>

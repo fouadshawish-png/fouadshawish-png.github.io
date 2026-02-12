@@ -13,6 +13,11 @@ permalink: /blog/
   تصفح المحتوى حسب المحور لتصل مباشرة للمقالات التي تخدم وضعك الحالي.
 </p>
 
+<p class="post-meta">
+  ابدأ من المرجع المركزي:
+  <a href="{{ '/النظام-المالي/' | relative_url }}">نظام إدارة المصاريف والميزانية الكامل</a>
+</p>
+
 {%- assign guide_pages = site.pages | where_exp: 'p', 'p.url contains "/expense-guides/" or p.url == "/organizing-expenses/"' -%}
 
 {%- assign categories = "تنظيم المصاريف|الميزانية|الديون|العادات المالية" | split: "|" -%}

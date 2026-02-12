@@ -1,6 +1,10 @@
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="{{ '/' | relative_url }}">الرئيسية</a> ›
-  {%- if page.url == '/organizing-expenses/' -%}
+  {%- if page.layout == 'post' -%}
+    <a href="{{ '/blog/' | relative_url }}">المدونة</a> ›
+    <a href="{{ '/النظام-المالي/' | relative_url }}">النظام المالي</a> ›
+    <span>{{ page.title }}</span>
+  {%- elsif page.url == '/organizing-expenses/' -%}
     <span>تنظيم المصاريف</span>
   {%- elsif page.breadcrumb_parent_url and page.breadcrumb_parent_title -%}
     <a href="{{ page.breadcrumb_parent_url | relative_url }}">{{ page.breadcrumb_parent_title }}</a> ›

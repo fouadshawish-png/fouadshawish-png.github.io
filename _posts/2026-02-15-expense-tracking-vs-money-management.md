@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "الفرق بين تتبع المصاريف وإدارة الأموال (ولماذا الفرق مهم)"
-description: "شرح تحليلي للفرق بين تتبع المصاريف وإدارة الأموال، وكيف يحوّل الربط بين البيانات والقرار والمراجعة نظامك المالي من متابعة شكلية إلى نتائج مستدامة."
+title: "افهم تتبع المصاريف وإدارة الأموال خلال 10 دقائق"
+description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /expense-tracking-vs-money-management/
 canonical: https://fouadshawish-png.github.io/expense-tracking-vs-money-management/
 categories:

@@ -8,11 +8,14 @@ layout: default
 {%- assign inline_cta_label = 'افتح التقارير الآن' -%}
 {%- assign mid_cta_url = '/?route=budgets' -%}
 {%- assign mid_cta_label = 'أنشئ ميزانية الآن' -%}
-{%- assign strong_cta_url = '/?route=home' -%}
-{%- assign strong_cta_label = 'ابدأ داخل التطبيق' -%}
+{%- assign strong_cta_url = '/?route=reports' -%}
+{%- assign strong_cta_label = 'ابدأ نظامك المالي الآن' -%}
 {%- assign app_deep_route = 'reports' -%}
 {%- assign app_web_url = '/reports_root/' -%}
 {%- assign app_web_label = 'التقارير المالية' -%}
+{%- assign third_app_url = '/goals_root/' -%}
+{%- assign third_app_label = 'خطة مالية للأهداف' -%}
+{%- assign third_app_cta_url = '/?route=goals' -%}
 
 {%- assign hook_line = 'إذا أردت تحسين وضعك المالي فعلًا، ابدأ بخطوة واحدة اليوم قبل أن يتحول التأجيل إلى عادة مكلفة.' -%}
 {%- assign summary_point_1 = 'ابدأ بقياس الواقع المالي بالأرقام، لا بالتخمين أو الانطباع.' -%}
@@ -48,6 +51,12 @@ layout: default
     {%- assign same_topic_posts = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'reports' or p.tags contains 'تقارير' or p.title contains 'تقرير')" -%}
 {%- endcase -%}
 
+{%- if current_topic == 'debt' -%}
+  {%- assign third_app_url = '/debt_root/' -%}
+  {%- assign third_app_label = 'خطة سداد الديون' -%}
+  {%- assign third_app_cta_url = '/?route=debt_ledger' -%}
+{%- endif -%}
+
 {%- if same_topic_posts.size == 0 -%}
   {%- assign same_topic_posts = site.posts | where_exp: 'p', "p.url != page.url" -%}
 {%- endif -%}
@@ -64,6 +73,11 @@ layout: default
   {%- assign next_step_post = same_topic_posts | first -%}
 {%- endunless -%}
 
+{%- assign debt_intent_post = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'debt' or p.categories contains 'الديون')" | first -%}
+{%- assign saving_intent_post = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'saving' or p.categories contains 'الادخار')" | first -%}
+{%- assign expense_intent_post = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'expense-tracking' or p.categories contains 'تنظيم المصاريف' or p.categories contains 'تتبع المصاريف')" | first -%}
+{%- assign budget_intent_post = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'budget' or p.categories contains 'الميزانية')" | first -%}
+
 {%- case primary_category -%}
   {%- when 'الديون' -%}
     {%- assign inline_cta_url = '/?route=debt_ledger' -%}
@@ -79,6 +93,8 @@ layout: default
     {%- assign app_deep_route = 'debt_ledger' -%}
     {%- assign app_web_url = '/debt_root/' -%}
     {%- assign app_web_label = 'إدارة الديون' -%}
+    {%- assign third_app_url = '/debt_root/' -%}
+    {%- assign third_app_label = 'خطة سداد الديون' -%}
   {%- when 'الميزانية' -%}
     {%- assign inline_cta_url = '/?route=budgets' -%}
     {%- assign inline_cta_label = 'إنشاء ميزانية شهرية' -%}
@@ -93,48 +109,59 @@ layout: default
     {%- assign app_deep_route = 'budgets' -%}
     {%- assign app_web_url = '/budget/' -%}
     {%- assign app_web_label = 'صفحة الميزانية' -%}
+    {%- assign third_app_url = '/goals_root/' -%}
+    {%- assign third_app_label = 'خطة مالية للأهداف' -%}
   {%- when 'تتبع المصاريف' -%}
-    {%- assign inline_cta_url = '/?route=all_transactions' -%}
-    {%- assign inline_cta_label = 'سجل عملية الآن' -%}
+    {%- assign inline_cta_url = '/?route=reports' -%}
+    {%- assign inline_cta_label = 'راجع نمط الإنفاق الآن' -%}
     {%- assign mid_cta_url = '/?route=reports' -%}
     {%- assign mid_cta_label = 'افتح التقارير' -%}
-    {%- assign strong_cta_url = '/?route=all_transactions' -%}
-    {%- assign strong_cta_label = 'ابدأ التتبع الآن' -%}
+    {%- assign strong_cta_url = '/?route=reports' -%}
+    {%- assign strong_cta_label = 'ابدأ متابعة مصاريفك الآن' -%}
     {%- assign hook_line = 'كل قرار مالي صحيح يبدأ من بيانات صحيحة، لا من ذاكرة متقطعة.' -%}
     {%- assign summary_point_1 = 'سجّل كل عملية مباشرة وقت حدوثها لتقليل النسيان.' -%}
     {%- assign summary_point_2 = 'استخدم تصنيفات بسيطة تساعدك على اتخاذ قرار واضح.' -%}
     {%- assign summary_point_3 = 'حلّل النتائج أسبوعيًا لاكتشاف التسرب المالي مبكرًا.' -%}
-    {%- assign app_deep_route = 'all_transactions' -%}
+    {%- assign app_deep_route = 'reports' -%}
     {%- assign app_web_url = '/all_transactions/' -%}
     {%- assign app_web_label = 'سجل العمليات' -%}
+    {%- assign third_app_url = '/goals_root/' -%}
+    {%- assign third_app_label = 'خطة مالية للأهداف' -%}
+    {%- assign third_app_cta_url = '/?route=goals' -%}
   {%- when 'الادخار' -%}
-    {%- assign inline_cta_url = '/?route=budgets' -%}
-    {%- assign inline_cta_label = 'خصص بند ادخار' -%}
+    {%- assign inline_cta_url = '/?route=goals' -%}
+    {%- assign inline_cta_label = 'ابدأ هدفًا ماليًا' -%}
     {%- assign mid_cta_url = '/?route=reports' -%}
     {%- assign mid_cta_label = 'تابع التقدم بالتقارير' -%}
-    {%- assign strong_cta_url = '/?route=budgets' -%}
+    {%- assign strong_cta_url = '/?route=goals' -%}
     {%- assign strong_cta_label = 'ابدأ خطة الادخار' -%}
     {%- assign hook_line = 'الادخار ليس ما يتبقى آخر الشهر، بل قرار يُثبت في الخطة من البداية.' -%}
     {%- assign summary_point_1 = 'حدد هدف ادخار واضحًا بقيمة وزمن محددين.' -%}
     {%- assign summary_point_2 = 'اقتطع مبلغ الادخار فور نزول الدخل قبل المصروفات الاختيارية.' -%}
     {%- assign summary_point_3 = 'راجع تقدمك دوريًا وعدّل الهدف حسب الواقع دون إلغاء الخطة.' -%}
-    {%- assign app_deep_route = 'goals_root' -%}
+    {%- assign app_deep_route = 'goals' -%}
     {%- assign app_web_url = '/goals_root/' -%}
     {%- assign app_web_label = 'الأهداف المالية' -%}
+    {%- assign third_app_url = '/goals_root/' -%}
+    {%- assign third_app_label = 'خطة مالية للأهداف' -%}
+    {%- assign third_app_cta_url = '/?route=goals' -%}
   {%- when 'تنظيم المصاريف' -%}
-    {%- assign inline_cta_url = '/?route=all_transactions' -%}
-    {%- assign inline_cta_label = 'ابدأ تنظيم العمليات' -%}
+    {%- assign inline_cta_url = '/?route=reports' -%}
+    {%- assign inline_cta_label = 'ابدأ مراجعة المصاريف' -%}
     {%- assign mid_cta_url = '/?route=budgets' -%}
     {%- assign mid_cta_label = 'ثبت حدود الميزانية' -%}
-    {%- assign strong_cta_url = '/?route=all_transactions' -%}
+    {%- assign strong_cta_url = '/?route=budgets' -%}
     {%- assign strong_cta_label = 'حوّل الوعي إلى متابعة يومية' -%}
     {%- assign hook_line = 'تنظيم المصاريف لا يحتاج تعقيدًا، يحتاج نظامًا بسيطًا تلتزم به يوميًا.' -%}
     {%- assign summary_point_1 = 'ابدأ بتتبع أسبوع كامل للحصول على صورة مالية دقيقة.' -%}
     {%- assign summary_point_2 = 'قسّم المصروفات إلى بنود ضرورية واختيارية بوضوح.' -%}
     {%- assign summary_point_3 = 'حوّل الأرقام إلى قرارات أسبوعية ثابتة.' -%}
-    {%- assign app_deep_route = 'all_transactions' -%}
+    {%- assign app_deep_route = 'reports' -%}
     {%- assign app_web_url = '/all_transactions/' -%}
     {%- assign app_web_label = 'سجل العمليات' -%}
+    {%- assign third_app_url = '/goals_root/' -%}
+    {%- assign third_app_label = 'خطة مالية للأهداف' -%}
+    {%- assign third_app_cta_url = '/?route=goals' -%}
   {%- when 'أخطاء مالية شائعة' -%}
     {%- assign inline_cta_url = '/?route=budgets' -%}
     {%- assign inline_cta_label = 'صحح إعداد الميزانية' -%}
@@ -149,12 +176,15 @@ layout: default
     {%- assign app_deep_route = 'reports' -%}
     {%- assign app_web_url = '/reports_root/' -%}
     {%- assign app_web_label = 'التقارير المالية' -%}
+    {%- assign third_app_url = '/goals_root/' -%}
+    {%- assign third_app_label = 'خطة مالية للأهداف' -%}
+    {%- assign third_app_cta_url = '/?route=goals' -%}
 {%- endcase -%}
 
 {%- if page.hook -%}
   {%- assign hook_line = page.hook -%}
 {%- endif -%}
-{%- capture app_deep_link -%}expensemanager://open?route={{ app_deep_route }}{%- endcapture -%}
+{%- capture app_deep_link -%}/?route={{ app_deep_route }}{%- endcapture -%}
 
 {%- assign rendered_content = content -%}
 {%- for auto_link in site.data.auto_links -%}
@@ -163,15 +193,24 @@ layout: default
     {%- assign rendered_content = rendered_content | replace_first: auto_link.keyword, auto_anchor -%}
   {%- endif -%}
 {%- endfor -%}
+{%- assign reading_words = rendered_content | strip_html | number_of_words -%}
+{%- assign reading_minutes = reading_words | plus: 179 | divided_by: 180 -%}
+{%- if reading_minutes < 1 -%}
+  {%- assign reading_minutes = 1 -%}
+{%- endif -%}
+
+<div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
 
 <article
   class="post"
+  data-reading-words="{{ reading_words }}"
   data-inline-cta-url="{{ inline_cta_url }}"
   data-inline-cta-label="{{ inline_cta_label }}"
   data-mid-cta-url="{{ mid_cta_url }}"
   data-mid-cta-label="{{ mid_cta_label }}">
   {% include breadcrumb.html %}
 
+  <p class="post-reading-time">⏱ وقت القراءة: {{ reading_minutes }} دقائق</p>
   <h1>{{ page.title }}</h1>
 
   <p class="post-byline">
@@ -222,6 +261,38 @@ layout: default
     {{ rendered_content }}
   </div>
 
+  <aside class="sticky-mini-nav card" id="stickyMiniNavTemplate" hidden>
+    <h2>روابط سريعة داخل نفس المسار</h2>
+    <ul class="topic-block__list">
+      {%- for rel_post in same_topic_posts limit:3 -%}
+      <li><a href="{{ rel_post.url | relative_url }}">{{ rel_post.title }}</a></li>
+      {%- endfor -%}
+      <li><a href="{{ '/النظام-المالي/' | relative_url }}">نظام إدارة المصاريف والميزانية الكامل</a></li>
+      <li><a href="{{ '/المصاريف/' | relative_url }}">صفحة المصاريف</a></li>
+      <li><a href="{{ '/الميزانية/' | relative_url }}">صفحة الميزانية</a></li>
+    </ul>
+  </aside>
+
+  <section class="section smart-app-links" aria-label="روابط تطبيق مفيدة">
+    <div class="card">
+      <h2>روابط تطبيق مفيدة</h2>
+      <ul class="topic-block__list">
+        <li><a href="{{ '/?route=budgets' | relative_url }}">إدارة الميزانية بوضوح</a></li>
+        <li><a href="{{ '/?route=reports' | relative_url }}">تتبع الإنفاق عبر التقارير</a></li>
+        <li><a href="{{ third_app_cta_url | relative_url }}">{{ third_app_label }}</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <ul id="coreInlineCandidates" hidden>
+    {%- for slug in site.data.internal-links.core -%}
+      {%- assign candidate = site.posts | where_exp: 'p', "p.url contains slug and p.url != page.url" | first -%}
+      {%- if candidate -%}
+      <li data-url="{{ candidate.url | relative_url }}" data-title="{{ candidate.title | escape }}"></li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+
   <section class="section post-topic-cluster" aria-label="روابط موضوعية">
     <div class="card">
       <h2>اقرأ ضمن نفس الموضوع</h2>
@@ -248,7 +319,23 @@ layout: default
     <div class="card">
       <h2>الدليل الرئيسي</h2>
       <p>العودة إلى محور <strong>{{ topic_hub_title }}</strong> لقراءة المسار الكامل.</p>
-      <a class="btn-primary" href="{{ topic_hub_url | relative_url }}">عرض دليل الموضوع</a>
+      <div class="next-step-box__actions">
+        <a class="btn-primary" href="{{ topic_hub_url | relative_url }}">عرض دليل الموضوع</a>
+        <a class="btn-accent" href="{{ '/النظام-المالي/' | relative_url }}">الرجوع إلى النظام المالي</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section post-guide-read-more" aria-label="اقرأ أيضًا ضمن دليل إدارة المصاريف">
+    <div class="card">
+      <h2>اقرأ أيضًا ضمن دليل إدارة المصاريف</h2>
+      <p>هذا المقال جزء من مسار متكامل. يمكنك متابعة نفس الموضوع من الدليل المركزي ثم الانتقال لمقالات مرتبطة.</p>
+      <ul class="topic-block__list">
+        <li><a href="{{ '/money-management-guide/' | relative_url }}">الدليل الشامل لإدارة المصاريف والميزانية</a></li>
+        {%- for rel_post in same_topic_posts limit:3 -%}
+        <li><a href="{{ rel_post.url | relative_url }}">{{ rel_post.title }}</a></li>
+        {%- endfor -%}
+      </ul>
     </div>
   </section>
 
@@ -263,6 +350,19 @@ layout: default
     </ul>
   </aside>
 
+  <aside class="interactive-try-box card" id="interactiveTryTemplate" hidden>
+    <h2>جرّب الآن على وضعك الشخصي</h2>
+    <p>سؤال مباشر: ما البند الذي يتكرر عندك أسبوعيًا ويمكن تخفيضه 10% هذا الشهر بدون ضغط؟</p>
+    <div class="next-step-box__actions">
+      <a class="btn-primary" href="{{ app_deep_link | relative_url }}">ابدأ التنفيذ داخل التطبيق</a>
+      {%- if same_topic_posts and same_topic_posts.size > 0 -%}
+      <a class="btn-accent" href="{{ same_topic_posts.first.url | relative_url }}">اقرأ مقالًا مرتبطًا</a>
+      {%- else -%}
+      <a class="btn-accent" href="{{ '/money-management-guide/' | relative_url }}">اقرأ من الدليل الشامل</a>
+      {%- endif -%}
+    </div>
+  </aside>
+
   {%- unless single_cta_only -%}
   <section class="app-apply-box card" aria-label="تطبيق الخطوات داخل التطبيق">
     <h2>كيف تطبّق هذا داخل التطبيق؟</h2>
@@ -273,7 +373,39 @@ layout: default
   </section>
   {%- endunless -%}
 
+  <section class="next-step-box card" aria-label="خطوتك التالية">
+    <h2>خطوتك التالية</h2>
+    {%- if next_step_post -%}
+    <p><a href="{{ next_step_post.url | relative_url }}">اقرأ الآن: {{ next_step_post.title }}</a></p>
+    {%- endif -%}
+    <div class="next-step-box__actions">
+      <a class="btn-primary" href="{{ app_deep_link | relative_url }}">افتح الميزة داخل التطبيق</a>
+      <a class="btn-accent" href="{{ '/download.html' | relative_url }}">تحميل التطبيق</a>
+    </div>
+  </section>
+
+  <section class="saving-forecast-box card" aria-label="تقدير التوفير خلال 30 يومًا">
+    <h2>كم تتوقع أن توفر إذا طبقت هذه الخطة 30 يومًا؟</h2>
+    <p>
+      اختر بندًا واحدًا عالي التكرار، وضع له خفضًا بسيطًا (5% إلى 15%)، ثم راقب الأثر أسبوعيًا.
+      غالبًا ستكتشف أن التحسين التراكمي خلال 30 يومًا أكبر من المتوقع عند الالتزام بخطوات صغيرة.
+    </p>
+    <a class="btn-primary" href="{{ '/start-here/' | relative_url }}">ابدأ خطة 30 يومًا من هنا</a>
+  </section>
+
   <p class="post-hint">إذا شعرت أن الفكرة تلامس واقعك، فتذكّر أن تنظيم المصاريف يبدأ بخطوات بسيطة قابلة للتطبيق. كثيرون يجدون أن وجود أداة واضحة مثل تطبيق محترف المصاريف يساعدهم على تحويل الوعي إلى متابعة يومية دون تعقيد.</p>
+
+  {%- if page.faq and page.faq.size > 0 -%}
+  <section class="micro-faq-toggle card" aria-label="أسئلة سريعة">
+    <h2>أسئلة سريعة</h2>
+    {%- for item in page.faq limit:4 -%}
+    <details>
+      <summary>{{ item.question }}</summary>
+      <p>{{ item.answer }}</p>
+    </details>
+    {%- endfor -%}
+  </section>
+  {%- endif -%}
 
   <div class="share-actions" aria-label="مشاركة المقال">
     <a class="share-button share-facebook" target="_blank" rel="noopener noreferrer"
@@ -293,46 +425,167 @@ layout: default
   </section>
 </article>
 
-<section class="post-related post-related--dynamic" aria-label="اقرأ أيضًا">
-  <h2 class="section-title">اقرأ أيضًا</h2>
+<section class="related-by-intent section" aria-label="Related by Intent">
+  <h2>Related by Intent</h2>
+  <div class="grid-3">
+    <article class="card intent-card">
+      <h3>إذا كنت تعاني من الديون</h3>
+      {%- if debt_intent_post -%}
+      <p><a href="{{ debt_intent_post.url | relative_url }}">{{ debt_intent_post.title }}</a></p>
+      {%- endif -%}
+      <a class="btn-primary" href="{{ '/?route=debt_ledger' | relative_url }}">افتح خطة الديون</a>
+    </article>
+    <article class="card intent-card">
+      <h3>إذا تريد الادخار</h3>
+      {%- if saving_intent_post -%}
+      <p><a href="{{ saving_intent_post.url | relative_url }}">{{ saving_intent_post.title }}</a></p>
+      {%- endif -%}
+      <a class="btn-primary" href="{{ '/?route=goals' | relative_url }}">ابدأ هدف ادخار</a>
+    </article>
+    <article class="card intent-card">
+      <h3>إذا تريد ضبط المصاريف</h3>
+      {%- if expense_intent_post -%}
+      <p><a href="{{ expense_intent_post.url | relative_url }}">{{ expense_intent_post.title }}</a></p>
+      {%- endif -%}
+      <a class="btn-primary" href="{{ '/?route=reports' | relative_url }}">راجع المصاريف الآن</a>
+    </article>
+    <article class="card intent-card">
+      <h3>إذا تريد تحسين الميزانية</h3>
+      {%- if budget_intent_post -%}
+      <p><a href="{{ budget_intent_post.url | relative_url }}">{{ budget_intent_post.title }}</a></p>
+      {%- endif -%}
+      <a class="btn-primary" href="{{ '/?route=budgets' | relative_url }}">طوّر ميزانيتك</a>
+    </article>
+  </div>
+</section>
+
+<section class="post-related post-related--dynamic" aria-label="مقالات ذات صلة">
+  <h2 class="section-title">مقالات ذات صلة</h2>
 
   {%- assign base_related = site.posts | where_exp: 'p', 'p.url != page.url' -%}
-  {%- assign related_posts = '' | split: '' -%}
+  {%- assign shown_urls = '|' -%}
+  {%- assign core_added = 0 -%}
+  {%- assign support_added = 0 -%}
+  {%- assign countries_added = 0 -%}
 
-  {%- if page.categories and page.categories.size > 0 -%}
-    {%- for cat in page.categories -%}
-      {%- assign by_category = base_related | where_exp: 'p', 'p.categories contains cat' -%}
-      {%- assign related_posts = related_posts | concat: by_category -%}
-    {%- endfor -%}
-  {%- endif -%}
+  <div class="card">
+    <ul class="topic-block__list">
+      {%- for slug in site.data.internal-links.core -%}
+        {%- if core_added < 2 -%}
+          {%- assign lookup_slug = slug -%}
+          {%- if slug == 'why-budget-fails' -%}
+            {%- assign lookup_slug = 'why-monthly-budget-fails' -%}
+          {%- elsif slug == 'difference-between-budget-and-expenses' -%}
+            {%- assign lookup_slug = 'expense-tracking-vs-money-management' -%}
+          {%- endif -%}
+          {%- assign candidate = base_related | where_exp: 'p', "p.url contains lookup_slug" | first -%}
+          {%- if candidate -%}
+            {%- capture marker -%}|{{ candidate.url }}|{%- endcapture -%}
+            {%- unless shown_urls contains marker -%}
+            <li><a href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a></li>
+            {%- assign core_added = core_added | plus: 1 -%}
+            {%- assign shown_urls = shown_urls | append: candidate.url | append: '|' -%}
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
 
-  {%- if page.tags and page.tags.size > 0 -%}
-    {%- for tag in page.tags -%}
-      {%- assign by_tag = base_related | where_exp: 'p', 'p.tags contains tag' -%}
-      {%- assign related_posts = related_posts | concat: by_tag -%}
-    {%- endfor -%}
-  {%- endif -%}
-
-  {%- assign related_posts = related_posts | uniq -%}
-  {%- if related_posts.size < 3 -%}
-    {%- assign related_posts = related_posts | concat: base_related | uniq -%}
-  {%- endif -%}
-  {%- assign related_posts = related_posts | limit: 5 -%}
-
-  <div class="post-related-grid">
-    {%- for post in related_posts -%}
-    <article class="related-card">
-      {%- if post.image -%}
-      <a class="related-card__thumb" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
-        <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy" width="1200" height="630">
-      </a>
+      {%- if core_added < 2 -%}
+        {%- for rel in same_topic_posts -%}
+          {%- if core_added < 2 -%}
+            {%- capture marker -%}|{{ rel.url }}|{%- endcapture -%}
+            {%- unless shown_urls contains marker -%}
+            <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
+            {%- assign core_added = core_added | plus: 1 -%}
+            {%- assign shown_urls = shown_urls | append: rel.url | append: '|' -%}
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endfor -%}
       {%- endif -%}
-      <div class="related-card__body">
-        <h3 class="related-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p class="related-card__desc">{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 145 }}</p>
-      </div>
-    </article>
-    {%- endfor -%}
+
+      {%- for slug in site.data.internal-links.support -%}
+        {%- if support_added < 1 -%}
+          {%- assign candidate = base_related | where_exp: 'p', "p.url contains slug" | first -%}
+          {%- if candidate -%}
+            {%- capture marker -%}|{{ candidate.url }}|{%- endcapture -%}
+            {%- unless shown_urls contains marker -%}
+            <li><a href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a></li>
+            {%- assign support_added = support_added | plus: 1 -%}
+            {%- assign shown_urls = shown_urls | append: candidate.url | append: '|' -%}
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- if support_added < 1 -%}
+        {%- assign support_pool = base_related | where_exp: 'p', "p.categories contains 'تنظيم المصاريف' or p.categories contains 'الميزانية' or p.tags contains 'budget'" -%}
+        {%- for rel in support_pool -%}
+          {%- if support_added < 1 -%}
+            {%- capture marker -%}|{{ rel.url }}|{%- endcapture -%}
+            {%- unless shown_urls contains marker -%}
+            <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
+            {%- assign support_added = support_added | plus: 1 -%}
+            {%- assign shown_urls = shown_urls | append: rel.url | append: '|' -%}
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {%- for slug in site.data.internal-links.countries -%}
+        {%- if countries_added < 1 -%}
+          {%- assign candidate = base_related | where_exp: 'p', "p.url contains slug" | first -%}
+          {%- if candidate -%}
+            {%- capture marker -%}|{{ candidate.url }}|{%- endcapture -%}
+            {%- unless shown_urls contains marker -%}
+            <li><a href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a></li>
+            {%- assign countries_added = countries_added | plus: 1 -%}
+            {%- assign shown_urls = shown_urls | append: candidate.url | append: '|' -%}
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- if countries_added < 1 -%}
+        {%- assign countries_pool = base_related | where_exp: 'p', "p.title contains 'مصر' or p.title contains 'المغرب' or p.title contains 'السعودية' or p.title contains 'الإمارات'" -%}
+        {%- for rel in countries_pool -%}
+          {%- if countries_added < 1 -%}
+            {%- capture marker -%}|{{ rel.url }}|{%- endcapture -%}
+            {%- unless shown_urls contains marker -%}
+            <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
+            {%- assign countries_added = countries_added | plus: 1 -%}
+            {%- assign shown_urls = shown_urls | append: rel.url | append: '|' -%}
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {%- if countries_added < 1 -%}
+        {%- for rel in base_related -%}
+          {%- if countries_added < 1 -%}
+            {%- capture marker -%}|{{ rel.url }}|{%- endcapture -%}
+            {%- unless shown_urls contains marker -%}
+            <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
+            {%- assign countries_added = countries_added | plus: 1 -%}
+            {%- assign shown_urls = shown_urls | append: rel.url | append: '|' -%}
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {%- assign total_related = core_added | plus: support_added | plus: countries_added -%}
+      {%- if total_related < 4 -%}
+        {%- for rel in base_related -%}
+          {%- if total_related < 4 -%}
+            {%- capture marker -%}|{{ rel.url }}|{%- endcapture -%}
+            {%- unless shown_urls contains marker -%}
+            <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
+            {%- assign shown_urls = shown_urls | append: rel.url | append: '|' -%}
+            {%- assign total_related = total_related | plus: 1 -%}
+            {%- endunless -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    </ul>
   </div>
 </section>
 
@@ -343,6 +596,52 @@ layout: default
   <a href="{{ strong_cta_url }}" class="cta-button">{{ strong_cta_label }}</a>
 </div>
 {%- endunless -%}
+
+<script>
+(function () {
+  var progress = document.getElementById('readingProgress');
+  var article = document.querySelector('.post');
+  if (!progress || !article) return;
+  var readingWords = parseInt(article.getAttribute('data-reading-words') || '0', 10);
+  if (readingWords < 1200) {
+    progress.style.display = 'none';
+    return;
+  }
+
+  function updateProgress() {
+    var articleRect = article.getBoundingClientRect();
+    var articleTop = window.scrollY + articleRect.top;
+    var articleHeight = article.offsetHeight;
+    var viewport = window.innerHeight;
+    var total = Math.max(1, articleHeight - viewport);
+    var passed = window.scrollY - articleTop;
+    var ratio = Math.min(100, Math.max(0, (passed / total) * 100));
+    progress.style.width = ratio + '%';
+  }
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+})();
+</script>
+
+<script>
+(function () {
+  var content = document.getElementById('postContent');
+  var template = document.getElementById('stickyMiniNavTemplate');
+  if (!content || !template) return;
+  if (content.querySelector('.sticky-mini-nav')) return;
+
+  var paragraphs = content.querySelectorAll('p');
+  if (!paragraphs || paragraphs.length < 2) return;
+
+  var target = paragraphs[1];
+  var clone = template.cloneNode(true);
+  clone.hidden = false;
+  clone.removeAttribute('id');
+  target.insertAdjacentElement('afterend', clone);
+})();
+</script>
 
 <script>
 (function () {
@@ -428,6 +727,33 @@ layout: default
 </script>
 
 <script>
+(function () {
+  var content = document.getElementById('postContent');
+  var template = document.getElementById('interactiveTryTemplate');
+  if (!content || !template) return;
+  if (content.querySelector('.interactive-try-box')) return;
+
+  var paragraphs = content.querySelectorAll('p');
+  var headings = content.querySelectorAll('h2');
+  if (!paragraphs.length) return;
+
+  var target = null;
+  if (headings.length >= 2) {
+    target = headings[1];
+  } else if (paragraphs.length >= 4) {
+    target = paragraphs[Math.floor(paragraphs.length / 2)];
+  } else {
+    target = paragraphs[paragraphs.length - 1];
+  }
+
+  var clone = template.cloneNode(true);
+  clone.hidden = false;
+  clone.removeAttribute('id');
+  target.insertAdjacentElement('afterend', clone);
+})();
+</script>
+
+<script>
 {%- unless single_cta_only -%}
 (function () {
   var content = document.getElementById('postContent');
@@ -452,6 +778,35 @@ layout: default
 
 <script>
 (function () {
+  var content = document.getElementById('postContent');
+  var candidatesContainer = document.getElementById('coreInlineCandidates');
+  if (!content || !candidatesContainer) return;
+  if (content.querySelector('.core-smart-link')) return;
+
+  var firstH2 = content.querySelector('h2');
+  if (!firstH2) return;
+
+  var candidates = Array.prototype.slice.call(candidatesContainer.querySelectorAll('li[data-url][data-title]'));
+  if (!candidates.length) return;
+
+  var chosen = candidates[0];
+  var anchors = ['تنظيم المصاريف', 'إدارة الميزانية', 'تتبع الإنفاق', 'خطة مالية', 'budget عملي'];
+  var path = window.location.pathname || '';
+  var variantIndex = path.length % anchors.length;
+  var anchorText = anchors[variantIndex];
+
+  var box = document.createElement('aside');
+  box.className = 'core-smart-link card';
+  box.innerHTML =
+    '<h3>خطوة مرتبطة بنفس المحور</h3>' +
+    '<p>لتوسيع فهمك في ' + anchorText + '، اقرأ أيضًا: <a href="' + chosen.dataset.url + '" title="' + chosen.dataset.title + '">' + anchorText + ' بشكل عملي</a> ضمن مقال "' + chosen.dataset.title + '".</p>';
+
+  firstH2.insertAdjacentElement('afterend', box);
+})();
+</script>
+
+<script>
+(function () {
   var article = document.querySelector('.post[data-inline-cta-url]');
   if (!article) return;
 
@@ -463,14 +818,14 @@ layout: default
   if (!h2List || h2List.length < 2) return;
 
   var secondH2 = h2List[1];
-  var inlineUrl = article.dataset.inlineCtaUrl || '/?route=reports';
-  var inlineLabel = article.dataset.inlineCtaLabel || 'افتح التقارير الآن';
+  var inlineUrl = '/?route=reports';
+  var inlineLabel = 'جرّب الآن مراجعة ميزانيتك من هنا';
 
   var box = document.createElement('aside');
   box.className = 'inline-cta inline-cta--single';
   box.innerHTML =
-    '<h3>إذا أردت تنفيذ الخطوات عمليًا بدون جداول معقدة…</h3>' +
-    '<p>حوّل هذه الخطوات إلى متابعة يومية مباشرة داخل التطبيق.</p>' +
+    '<h3>جرّب الآن مراجعة ميزانيتك من هنا</h3>' +
+    '<p>خطوة خفيفة واحدة قد تكشف لك أين يلزم التصحيح هذا الأسبوع.</p>' +
     '<a class="cta-button" data-cta-location="inline" href="' + inlineUrl + '">' + inlineLabel + '</a>';
 
   secondH2.insertAdjacentElement('afterend', box);

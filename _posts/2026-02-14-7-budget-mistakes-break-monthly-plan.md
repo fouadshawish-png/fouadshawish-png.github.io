@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "7 أخطاء تجعل ميزانيتك تنهار كل شهر"
-description: "تحليل عملي لسبعة أخطاء متكررة تؤدي لانهيار الميزانية الشهرية، مع حلول تطبيقية تربط تتبع المصاريف والمراجعة الأسبوعية بقرارات مالية أكثر ثباتًا."
+title: "تجنّب 7 أخطاء ميزانية ووفّر خلال 30 يومًا (دليل)"
+description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /7-budget-mistakes-break-monthly-plan/
 canonical: https://fouadshawish-png.github.io/7-budget-mistakes-break-monthly-plan/
 categories:

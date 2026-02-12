@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "مراجعة الميزانية: النموذج الأسبوعي الذي يمنع الانهيار المالي"
-description: "نموذج مراجعة أسبوعي عملي يحوّل الميزانية من خطة جامدة إلى نظام قرار مستمر، ويمنع تراكم الانحراف المالي قبل نهاية الشهر."
+title: "امنع انهيار الميزانية بمراجعة أسبوعية في 10 دقائق"
+description: "لا تعرف أين يتسرّب المال أسبوعيًا؟ تعلّم طريقة عملية لمراجعة الميزانية وتتبع المصاريف. ابدأ خطة سريعة تحسّن إدارة الأموال في 10 دقائق."
 permalink: /weekly-budget-review-prevents-financial-collapse/
 canonical: https://fouadshawish-png.github.io/weekly-budget-review-prevents-financial-collapse/
 categories:

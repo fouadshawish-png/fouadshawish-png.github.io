@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "كيف تخفض المصاريف دون أن تشعر بالحرمان؟"
-description: "خطوات عملية لتقليل المصاريف بذكاء دون ضغط نفسي، عبر تعديل السلوك المالي وربط تتبع المصاريف بقرارات أسبوعية قابلة للاستمرار."
+title: "خفّض المصاريف دون حرمان ووفّر خلال 30 يومًا (طريقة)"
+description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /reduce-expenses-without-deprivation/
 canonical: https://fouadshawish-png.github.io/reduce-expenses-without-deprivation/
 categories:

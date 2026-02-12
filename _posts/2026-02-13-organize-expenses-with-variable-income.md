@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "كيف تبدأ تنظيم المصاريف إذا كان دخلك متغيرًا؟"
-description: "دليل عملي لتنظيم المصاريف وبناء ميزانية شهرية مرنة عندما يكون الدخل متغيرًا، مع نموذج قرارات أسبوعي يقلل الضغط ويحافظ على الاستمرارية."
+title: "نظّم المصاريف مع دخل متغير وقلّل العجز خلال 30 يومًا"
+description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /organize-expenses-variable-income/
 canonical: https://fouadshawish-png.github.io/organize-expenses-variable-income/
 categories:
