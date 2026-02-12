@@ -84,3 +84,7 @@
 }
 </script>
 {%- endif -%}
+
+{% if page.layout == "post" %}
+{% include breadcrumb-schema.html %}
+{% endif %}
