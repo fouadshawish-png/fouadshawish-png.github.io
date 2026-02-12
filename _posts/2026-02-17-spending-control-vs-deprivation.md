@@ -44,9 +44,9 @@ image: /assets/images/balanced-spending-vs-deprivation.jpg
 
 ## الآن طبّق ما قرأته مباشرة داخل التطبيق
 
-استخدم التقارير لمقارنة نسبة الرغبات مقابل الاحتياجات. إذا كانت النسبة غير متوازنة، عدّلها تدريجيًا حتى تحافظ على الاستمرارية.
+افتح الأهداف وحدد هدفًا ماليًا واضحًا بخطوات شهرية قابلة للتنفيذ، ثم ابدأ بأبسط خطوة اليوم.
 
-<a href="/reports_root/"
+<a href="/goals_root/"
    style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">
    افتح الميزة الآن داخل التطبيق
 </a>

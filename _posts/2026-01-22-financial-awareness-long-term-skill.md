@@ -59,6 +59,15 @@ image: /assets/images/financial-awareness-long-term-skill.webp
 
 حين تتعامل مع المال بهذه الروح، يتحول من مصدر قلق إلى مجال لتطوير الذات. يصبح المال أداة تخدم حياتك، لا عبئًا يستهلك طاقتك. هذا هو جوهر الوعي المالي طويل المدى.
 
+## الآن طبّق ما قرأته مباشرة داخل التطبيق
+
+افتح التقارير وراجع توزيع الإنفاق الفعلي، ثم حدّد بندًا واحدًا لتحسينه هذا الأسبوع.
+
+<a href="/reports_root/"
+   style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">
+   افتح الميزة الآن داخل التطبيق
+</a>
+
 ## تعزيز SEO للمقال
 
 ### تتبع المصاريف ضمن خطة يومية قابلة للتنفيذ

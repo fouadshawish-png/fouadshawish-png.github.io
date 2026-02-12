@@ -42,9 +42,9 @@ image: /assets/images/saving-becomes-burden.jpg
 
 ## الآن طبّق ما قرأته مباشرة داخل التطبيق
 
-راجع تقاريرك الشهرية وحدد بندين قابلين للتقليل، ثم حوّل الفرق مباشرة إلى صندوق الطوارئ كهدف ثابت.
+افتح الأهداف وحدد هدفًا ماليًا واضحًا بخطوات شهرية قابلة للتنفيذ، ثم ابدأ بأبسط خطوة اليوم.
 
-<a href="/reports_root/"
+<a href="/goals_root/"
    style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">
    افتح الميزة الآن داخل التطبيق
 </a>

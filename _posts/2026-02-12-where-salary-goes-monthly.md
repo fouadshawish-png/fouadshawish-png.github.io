@@ -42,9 +42,9 @@ image: /assets/images/salary-disappears-expense-tracking.jpg
 
 ## الآن طبّق ما قرأته مباشرة داخل التطبيق
 
-ادخل إلى سجل كل المعاملات، رتّب حسب الفئة أو التاريخ، وحدد أكثر 3 بنود تتكرر. بعدها خذ قرارًا واحدًا قابلًا للتنفيذ هذا الأسبوع.
+افتح التقارير وراجع توزيع الإنفاق الفعلي، ثم حدّد بندًا واحدًا لتحسينه هذا الأسبوع.
 
-<a href="/all_transactions/"
+<a href="/reports_root/"
    style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">
    افتح الميزة الآن داخل التطبيق
 </a>

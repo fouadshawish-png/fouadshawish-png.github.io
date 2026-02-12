@@ -45,7 +45,7 @@ image: /assets/images/monthly-expense-review.webp
 
 ## الآن طبّق ما قرأته مباشرة داخل التطبيق
 
-افتح قسم الديون، رتب الالتزامات حسب الأولوية، وحدد دين الهدف لهذا الشهر. اجعل كل مبلغ إضافي يذهب إليه حتى الإغلاق.
+افتح إدارة الديون ورتّب الالتزامات حسب الأولوية وتاريخ الاستحقاق، ثم ابدأ بأقرب دفعة.
 
 <a href="/debt_root/"
    style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">

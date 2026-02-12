@@ -48,9 +48,9 @@ image: /assets/images/benefits-expense-tracking.webp
 
 ## الآن طبّق ما قرأته مباشرة داخل التطبيق
 
-افتح سجل المعاملات، راجع آخر 7 أيام، وحدد أكثر فئة زادت عن المتوقع. اكتب قرارًا واضحًا للأسبوع القادم واربطه بمبلغ محدد.
+افتح التقارير وراجع توزيع الإنفاق الفعلي، ثم حدّد بندًا واحدًا لتحسينه هذا الأسبوع.
 
-<a href="/all_transactions/"
+<a href="/reports_root/"
    style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">
    افتح الميزة الآن داخل التطبيق
 </a>

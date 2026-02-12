@@ -59,6 +59,15 @@ image: /assets/images/purchase-psychological-not-financial.webp
 
 الهدف ليس أن نمنع أنفسنا من كل مكافأة، بل أن نعرف لماذا نكافئ أنفسنا وكيف. عندها يصبح المال أداة واعية، لا وسيلة سريعة للهروب من شعور مؤقت.
 
+## الآن طبّق ما قرأته مباشرة داخل التطبيق
+
+افتح التقارير وراجع توزيع الإنفاق الفعلي، ثم حدّد بندًا واحدًا لتحسينه هذا الأسبوع.
+
+<a href="/reports_root/"
+   style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">
+   افتح الميزة الآن داخل التطبيق
+</a>
+
 ## تعزيز SEO للمقال
 
 ### تتبع المصاريف ضمن خطة يومية قابلة للتنفيذ

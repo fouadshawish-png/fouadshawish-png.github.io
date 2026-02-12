@@ -38,7 +38,7 @@ image: /assets/images/financial-awareness-long-term-skill.webp
 
 ## الآن طبّق ما قرأته مباشرة داخل التطبيق
 
-افتح شاشة الأهداف، أضف هدفًا واحدًا فقط، وحدد المبلغ الشهري بوضوح. لا تبدأ بأكثر من هدفين حتى تحافظ على الالتزام.
+افتح الأهداف وحدد هدفًا ماليًا واضحًا بخطوات شهرية قابلة للتنفيذ، ثم ابدأ بأبسط خطوة اليوم.
 
 <a href="/goals_root/"
    style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">

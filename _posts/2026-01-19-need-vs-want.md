@@ -63,6 +63,15 @@ image: /assets/images/balanced-spending-vs-deprivation.jpg
 
 المال يصبح أكثر راحة عندما تعرف لماذا تنفق، لا عندما تمنع نفسك من الإنفاق. هذا الفهم البسيط هو جوهر الوعي المالي.
 
+## الآن طبّق ما قرأته مباشرة داخل التطبيق
+
+افتح الأهداف وحدد هدفًا ماليًا واضحًا بخطوات شهرية قابلة للتنفيذ، ثم ابدأ بأبسط خطوة اليوم.
+
+<a href="/goals_root/"
+   style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">
+   افتح الميزة الآن داخل التطبيق
+</a>
+
 ## تعزيز SEO للمقال
 
 ### ميزانية ضمن خطة يومية قابلة للتنفيذ

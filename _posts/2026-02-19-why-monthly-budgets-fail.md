@@ -48,9 +48,9 @@ image: /assets/images/monthly-budget-mistakes.jpg
 
 ## الآن طبّق ما قرأته مباشرة داخل التطبيق
 
-استخدم التقارير لمقارنة "المخطط" مقابل "الفعل"، وحدد أكبر فجوة شهرية. بعدها عدّل رقمًا واحدًا فقط في الخطة القادمة.
+افتح الأهداف وحدد هدفًا ماليًا واضحًا بخطوات شهرية قابلة للتنفيذ، ثم ابدأ بأبسط خطوة اليوم.
 
-<a href="/reports_root/"
+<a href="/goals_root/"
    style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">
    افتح الميزة الآن داخل التطبيق
 </a>

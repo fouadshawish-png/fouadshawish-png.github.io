@@ -63,6 +63,15 @@ image: /assets/images/financial-awareness-long-term-skill.webp
 
 حين تختار عادة تناسبك وتلتزم بها بمرونة، ستكتشف أن المال لا يحتاج إلى معارك طويلة، بل إلى وعي يومي صغير. هذا الوعي هو ما يغيّر الحياة.
 
+## الآن طبّق ما قرأته مباشرة داخل التطبيق
+
+افتح الأهداف وحدد هدفًا ماليًا واضحًا بخطوات شهرية قابلة للتنفيذ، ثم ابدأ بأبسط خطوة اليوم.
+
+<a href="/goals_root/"
+   style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">
+   افتح الميزة الآن داخل التطبيق
+</a>
+
 ## تعزيز SEO للمقال
 
 ### تنظيم المصاريف ضمن خطة يومية قابلة للتنفيذ
