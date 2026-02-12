@@ -1,4 +1,9 @@
 {% if page.layout == "post" %}
+{%- if page.canonical -%}
+{%- assign breadcrumb_post_url = page.canonical -%}
+{%- else -%}
+{%- assign breadcrumb_post_url = page.url | absolute_url -%}
+{%- endif -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -20,7 +25,7 @@
       "@type": "ListItem",
       "position": 3,
       "name": "{{ page.title | escape }}",
-      "item": "{{ site.url }}{{ page.url }}"
+      "item": "{{ breadcrumb_post_url }}"
     }
   ]
 }

@@ -5,9 +5,11 @@
   "@type": "Article",
   "headline": "{{ page.title | escape }}",
   "description": "{{ page.description | escape }}",
+  "image": "{{ page.image | default: '/assets/images/og-default.png' | absolute_url }}",
   "author": {
     "@type": "Person",
-    "name": "فؤاد شاويش"
+    "name": "فؤاد شاويش",
+    "url": "{{ site.url }}/"
   },
   "publisher": {
     "@type": "Organization",
