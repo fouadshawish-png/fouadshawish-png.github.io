@@ -41,7 +41,7 @@ image: /assets/images/financial-awareness-long-term-skill.webp
 
 افتح شاشة الأهداف، أضف هدفًا واحدًا فقط، وحدد المبلغ الشهري بوضوح. لا تبدأ بأكثر من هدفين حتى تحافظ على الالتزام.
 
-<a href="https://fouadshawish-png.github.io/goals_root"
+<a href="/goals_root/"
    style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">
    افتح الميزة الآن داخل التطبيق
 </a>

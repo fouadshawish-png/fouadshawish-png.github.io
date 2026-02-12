@@ -48,7 +48,7 @@ image: /assets/images/monthly-expense-review.webp
 
 افتح قسم الديون، رتب الالتزامات حسب الأولوية، وحدد دين الهدف لهذا الشهر. اجعل كل مبلغ إضافي يذهب إليه حتى الإغلاق.
 
-<a href="https://fouadshawish-png.github.io/debt_root"
+<a href="/debt_root/"
    style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">
    افتح الميزة الآن داخل التطبيق
 </a>

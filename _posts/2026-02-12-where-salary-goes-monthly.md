@@ -45,7 +45,7 @@ image: /assets/images/salary-disappears-expense-tracking.jpg
 
 ادخل إلى سجل كل المعاملات، رتّب حسب الفئة أو التاريخ، وحدد أكثر 3 بنود تتكرر. بعدها خذ قرارًا واحدًا قابلًا للتنفيذ هذا الأسبوع.
 
-<a href="https://fouadshawish-png.github.io/all_transactions"
+<a href="/all_transactions/"
    style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">
    افتح الميزة الآن داخل التطبيق
 </a>

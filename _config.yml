@@ -34,6 +34,7 @@ plugins:
   - jekyll-seo-tag
 
 excerpt_separator: "<!--more-->"
+future: true
 
 analytics:
   ga4: G-PYX5M4Y0JD

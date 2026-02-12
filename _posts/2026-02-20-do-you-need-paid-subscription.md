@@ -36,7 +36,7 @@ image: /assets/images/monthly-expense-review.webp
 
 راجع خطط الاشتراك وقارن كل ميزة بهدف مالي محدد لديك. اختر الخطة التي تدعم قرارك المالي، لا الخطة الأعلى سعرًا.
 
-<a href="https://fouadshawish-png.github.io/subscription_plans"
+<a href="/subscription_plans/"
    style="display:inline-block;padding:14px 22px;background:#2E7D32;color:#fff;border-radius:10px;text-decoration:none;font-weight:bold;">
    افتح الميزة الآن داخل التطبيق
 </a>
