@@ -17,13 +17,40 @@
         "@type": "ImageObject",
         "url": "{{ org_logo }}"
       },
+      "foundingDate": "2024-01-01",
+      "areaServed": ["EG", "MA", "SA", "JO", "AE"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "url": "{{ '/support.html' | absolute_url }}",
+        "availableLanguage": ["ar", "en"]
+      },
       "founder": {
         "@id": "{{ author_url }}#person"
+      },
+      "brand": {
+        "@id": "{{ site_url }}#brand"
       },
       "sameAs": [
         "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager",
         "https://www.facebook.com/ExpenseManagerApplication",
-        "https://github.com/example/expense-manager-arabic"
+        "https://github.com/fouadshawish-png/fouadshawish-png.github.io",
+        "{{ '/about/' | absolute_url }}",
+        "{{ '/about-author/' | absolute_url }}"
+      ]
+    },
+    {
+      "@type": "Brand",
+      "@id": "{{ site_url }}#brand",
+      "name": "محترف المصاريف",
+      "url": "{{ '/من-هو-محترف-المصاريف/' | absolute_url }}",
+      "logo": "{{ org_logo }}",
+      "slogan": "النظام قبل الأرقام",
+      "description": "نظام عربي لإدارة المصاريف والميزانية والديون ضمن مسار عملي أسبوعي.",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager",
+        "https://www.facebook.com/ExpenseManagerApplication",
+        "{{ '/لماذا-محترف-المصاريف-مختلف/' | absolute_url }}"
       ]
     },
     {
@@ -34,6 +61,7 @@
       "image": "{{ '/assets/images/authors/fouad-shawish-placeholder.svg' | absolute_url }}",
       "description": "مطور تطبيقات مالية يركز على بناء أنظمة عملية لإدارة المصاريف والميزانية باللغة العربية.",
       "jobTitle": "مطور تطبيقات مالية",
+      "alumniOf": "تعلم ذاتي وتطوير تطبيقي مستمر",
       "worksFor": {
         "@id": "{{ site_url }}#organization"
       },
@@ -50,7 +78,8 @@
       "sameAs": [
         "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager",
         "https://www.facebook.com/ExpenseManagerApplication",
-        "https://github.com/example/expense-manager-arabic"
+        "https://github.com/fouadshawish-png/fouadshawish-png.github.io",
+        "{{ '/about-author/' | absolute_url }}"
       ]
     },
     {

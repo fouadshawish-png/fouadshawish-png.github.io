@@ -20,11 +20,14 @@
   </head>
 
   <body>
+    {% unless page.landing_focus %}
     {% include app-banner.html %}
+    {% endunless %}
     {% include header.html %}
 
     <main class="page" id="content">
       <div class="container page-container">
+        <p class="page-last-updated">آخر تحديث: <time datetime="{{ page.last_modified_at | default: page.date | default: site.time | date_to_xmlschema }}">{{ page.last_modified_at | default: page.date | default: site.time | date: "%Y-%m-%d" }}</time></p>
         {{ content }}
 
         {% if page.is_pillar %}
@@ -39,7 +42,7 @@
         {% endif %}
       </div>
 
-      {% unless page.layout == 'post' or page.layout == 'home' or page.layout == 'category' or page.url == '/blog/' or page.url == '/topics/' %}
+      {% unless page.layout == 'post' or page.layout == 'home' or page.layout == 'category' or page.url == '/blog/' or page.url == '/topics/' or page.no_related == true %}
       <section class="section static-related" aria-label="مقالات مرتبطة">
         <h2 class="section-title">مقالات ذات صلة</h2>
         <div class="post-related-grid">
@@ -62,6 +65,13 @@
     </main>
 
     {% include footer.html %}
+
+    {% unless page.landing_focus %}
+    <div class="site-mini-banner" id="siteMiniBanner">
+      <span>حمّل التطبيق وابدأ خلال دقيقة</span>
+      <a href="{{ '/download.html?utm_source=authority&utm_medium=content&utm_campaign=demand_engine' | relative_url }}">تحميل التطبيق</a>
+      <button type="button" id="siteMiniBannerClose" aria-label="إغلاق">×</button>
+    </div>
 
     <div class="sticky-download-bar" id="stickyDownloadBar" hidden>
       <p class="sticky-download-bar__text">حوّل هذا الدليل إلى نظام عملي داخل التطبيق</p>
@@ -126,6 +136,20 @@
     </script>
     <script>
       (function() {
+        var miniBanner = document.getElementById("siteMiniBanner");
+        var miniBannerClose = document.getElementById("siteMiniBannerClose");
+        if (miniBanner && miniBannerClose) {
+          try {
+            if (sessionStorage.getItem("siteMiniBannerClosed") === "1") {
+              miniBanner.style.display = "none";
+            }
+          } catch (e) {}
+          miniBannerClose.addEventListener("click", function() {
+            miniBanner.style.display = "none";
+            try { sessionStorage.setItem("siteMiniBannerClosed", "1"); } catch (e) {}
+          });
+        }
+
         var PLAYSTORE_BASE = "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager";
         var UTM_PARAMS = "utm_source=blog&utm_medium=content&utm_campaign=demand_engine";
 
@@ -294,5 +318,6 @@
         });
       })();
     </script>
+    {% endunless %}
   </body>
 </html>
