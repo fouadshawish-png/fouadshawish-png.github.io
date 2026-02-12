@@ -1,0 +1,39 @@
+---
+layout: default
+title: "الديون | مركز إدارة الديون الشخصية"
+description: "مركز شامل لإدارة الديون الشخصية: ترتيب الالتزامات، خطط السداد، وربط الديون بالميزانية والتقارير."
+permalink: /الديون/
+canonical: https://fouadshawish-png.github.io/الديون/
+---
+
+<section class="section">
+  <h1>الديون</h1>
+  <p class="post-excerpt">
+    إدارة الديون تحتاج وضوحًا في الأرقام، وتسلسلًا واضحًا في السداد، وربطًا مباشرًا بالميزانية. هذا المركز يجمع المقالات والأدلة التي تساعدك على ترتيب الالتزامات، تحديد الأولويات، ومتابعة التقدم دون ضغط نفسي زائد. ابدأ بالمقالات التمهيدية إذا كانت لديك ديون متعددة، ثم انتقل إلى الاستراتيجيات المتقدمة التي تربط السداد بالتدفق النقدي الشهري.
+  </p>
+</section>
+
+<section class="section">
+  <h2>مقالات إدارة الديون</h2>
+  <ul>
+    <li><a href="/manage-personal-debt-step-by-step/">إدارة الديون بذكاء خطوة بخطوة</a></li>
+    <li><a href="/how-to-pay-off-debt-strategically/">استراتيجية عملية لسداد الديون بدون ضغط نفسي</a></li>
+    <li><a href="/?route=debt_ledger">افتح دفتر الديون داخل التطبيق</a></li>
+    <li><a href="/?route=budgets">اربط السداد بميزانيتك الشهرية</a></li>
+    {% assign debt_posts = site.posts | where_exp: "p", "p.topic == 'debt' or p.categories contains 'الديون'" %}
+    {% for post in debt_posts limit: 8 %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "الديون",
+  "description": "مركز مقالات إدارة الديون الشخصية.",
+  "url": "{{ page.url | absolute_url }}"
+}
+</script>
+

@@ -1,0 +1,39 @@
+---
+layout: default
+title: "تتبع المصاريف | دليل المتابعة اليومية"
+description: "صفحة مرجعية لتتبع المصاريف اليومية تشمل أفضل الممارسات، مقالات تفصيلية، وروابط تطبيقية للتسجيل والتحليل."
+permalink: /تتبع-المصاريف/
+canonical: https://fouadshawish-png.github.io/تتبع-المصاريف/
+---
+
+<section class="section">
+  <h1>تتبع المصاريف</h1>
+  <p class="post-excerpt">
+    تتبع المصاريف هو الطبقة التشغيلية اليومية التي تمنع المفاجآت المالية. في هذا المركز ستجد مسارًا واضحًا لبناء عادة تسجيل سريعة، ثم تحويل البيانات إلى قرارات أسبوعية. التركيز هنا على الاستمرارية: كيف تسجل بدون ملل، وكيف تحلل بدون تعقيد، وكيف تربط التتبع بالميزانية والديون والأهداف. اقرأ المقالات بالترتيب المقترح للحصول على أفضل نتيجة.
+  </p>
+</section>
+
+<section class="section">
+  <h2>مقالات تتبع المصاريف</h2>
+  <ul>
+    <li><a href="/تتبع-المصاريف-اليومية/">أفضل طريقة لتتبع المصاريف اليومية بدون تعقيد</a></li>
+    <li><a href="/best-way-organize-expenses/">أفضل طريقة لتنظيم المصاريف</a></li>
+    <li><a href="/?route=all_transactions">سجل المصروفات مباشرة</a></li>
+    <li><a href="/?route=reports">راجع أثر الإنفاق عبر التقارير</a></li>
+    {% assign tracking_posts = site.posts | where_exp: "p", "p.topic == 'expense-tracking' or p.tags contains 'تتبع المصاريف'" %}
+    {% for post in tracking_posts limit: 8 %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "تتبع المصاريف",
+  "description": "مركز المقالات العملية لتتبع المصاريف اليومية.",
+  "url": "{{ page.url | absolute_url }}"
+}
+</script>
+

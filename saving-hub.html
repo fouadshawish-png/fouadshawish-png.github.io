@@ -1,0 +1,39 @@
+---
+layout: default
+title: "الادخار | مركز خطط الادخار وصندوق الطوارئ"
+description: "دليل الادخار العملي: بناء صندوق طوارئ، ربط الادخار بالميزانية، وتحسين الانضباط المالي خطوة بخطوة."
+permalink: /الادخار/
+canonical: https://fouadshawish-png.github.io/الادخار/
+---
+
+<section class="section">
+  <h1>الادخار</h1>
+  <p class="post-excerpt">
+    الادخار ليس ما يتبقى آخر الشهر، بل قرار يُبنى أول الشهر. هذا المركز يجمع مقالات الادخار وصندوق الطوارئ وربط الأهداف بالميزانية. ستجد هنا مسارًا واضحًا للبدء بمبالغ بسيطة ثم رفع نسبة الادخار تدريجيًا دون تعطيل باقي الالتزامات. إذا كان هدفك هو الاستقرار المالي طويل المدى، ابدأ بالمحتوى التمهيدي ثم انتقل للمقالات التنفيذية.
+  </p>
+</section>
+
+<section class="section">
+  <h2>مقالات الادخار</h2>
+  <ul>
+    <li><a href="/build-emergency-fund-fast/">كيف تبني صندوق طوارئ خلال 6 أشهر بطريقة واقعية</a></li>
+    <li><a href="/how-to-save-from-my-salary/">كيف أوفر من راتبي بخطة عملية</a></li>
+    <li><a href="/?route=goals">ابدأ هدف ادخار داخل التطبيق</a></li>
+    <li><a href="/goals_root/">راجع أهدافك المالية</a></li>
+    {% assign saving_posts = site.posts | where_exp: "p", "p.topic == 'saving' or p.categories contains 'الادخار'" %}
+    {% for post in saving_posts limit: 8 %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "الادخار",
+  "description": "مركز مقالات الادخار وصندوق الطوارئ.",
+  "url": "{{ page.url | absolute_url }}"
+}
+</script>
+

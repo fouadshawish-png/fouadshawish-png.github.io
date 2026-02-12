@@ -1,0 +1,39 @@
+---
+layout: default
+title: "إدارة المصاريف | مركز المقالات والأدلة"
+description: "مركز شامل لإدارة المصاريف يضم الأدلة والمقالات العملية لتنظيم الإنفاق وضبط المصروفات وبناء نظام مالي يومي واضح."
+permalink: /إدارة-المصاريف/
+canonical: https://fouadshawish-png.github.io/إدارة-المصاريف/
+---
+
+<section class="section">
+  <h1>إدارة المصاريف</h1>
+  <p class="post-excerpt">
+    هذه الصفحة هي Hub مركزي لكل المحتوى المتعلق بإدارة المصاريف. الهدف ليس جمع روابط فقط، بل بناء مسار تعلم واضح يبدأ من الفهم، ثم التطبيق، ثم المراجعة. إذا كنت تبدأ من الصفر، ابدأ بالمقالات التمهيدية. وإذا لديك نظام جزئي وتحتاج نتائج أدق، انتقل إلى الأدلة التنفيذية والمقالات المتقدمة. ستجد هنا روابط مرتبة تدعم الوصول السريع للمعلومة، مع ربط مباشر بصفحات التطبيق حتى تتحول المعرفة إلى تنفيذ فعلي.
+  </p>
+</section>
+
+<section class="section">
+  <h2>المقالات المرتبطة</h2>
+  <ul>
+    <li><a href="/المصاريف/">المصاريف: الدليل الشامل لتنظيم المصاريف الشهرية</a></li>
+    <li><a href="/organize-monthly-expenses-step-by-step/">كيف تنظم مصاريفك الشهرية خطوة بخطوة</a></li>
+    <li><a href="/how-it-works.html">كيف يعمل النظام داخل التطبيق</a></li>
+    <li><a href="/?route=all_transactions">ابدأ تسجيل العمليات الآن</a></li>
+    {% assign expense_posts = site.posts | where_exp: "p", "p.topic == 'expense-tracking' or p.topic == nil or p.categories contains 'تنظيم المصاريف'" %}
+    {% for post in expense_posts limit: 8 %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "إدارة المصاريف",
+  "description": "مركز مقالات وأدلة إدارة المصاريف.",
+  "url": "{{ page.url | absolute_url }}"
+}
+</script>
+
