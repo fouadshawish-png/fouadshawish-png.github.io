@@ -36,12 +36,6 @@ body {
   padding: 0;
 }
 
-.card, .article-cta, .app-banner {
-  background-color: var(--card-bg);
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
 a {
   color: var(--primary);
 }
@@ -1041,6 +1035,32 @@ h1,h2,h3,h4 {
 
 .card:hover {
   transform: translateY(-4px);
+}
+
+/* Unified dark card system: no glow, no blur, no bright borders */
+[data-theme="dark"] .card,
+[data-theme="dark"] .feature-box,
+[data-theme="dark"] .feature-card,
+[data-theme="dark"] .guide-card,
+[data-theme="dark"] .home-card {
+  background: linear-gradient(145deg, #0F1F1A, #0B1412) !important;
+  border: 1px solid rgba(80, 200, 120, 0.15) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35) !important;
+  transition: all 0.25s ease !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+}
+
+[data-theme="dark"] .card:hover,
+[data-theme="dark"] .feature-box:hover,
+[data-theme="dark"] .feature-card:hover,
+[data-theme="dark"] .guide-card:hover,
+[data-theme="dark"] .home-card:hover {
+  transform: translateY(-4px);
+  border: 1px solid rgba(80, 200, 120, 0.35) !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5) !important;
 }
 
 /* ===== Grid ===== */
