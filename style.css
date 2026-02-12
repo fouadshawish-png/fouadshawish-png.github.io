@@ -742,3 +742,134 @@ footer a {
         scroll-snap-align: start;
     }
 }
+
+/* ===== Brand Variables ===== */
+:root {
+  --primary: #006A4E;
+  --primary-dark: #004232;
+  --accent: #48D6A0;
+  --background-light: #E8FFF4;
+  --text-dark: #333333;
+  --surface: #ffffff;
+  --border-light: rgba(0,0,0,0.08);
+
+  --success: #4CAF50;
+  --danger: #C62828;
+  --warning: #FF9800;
+  --info: #2196F3;
+
+  --radius: 12px;
+  --transition: 0.25s ease;
+}
+
+/* Dark Mode */
+body.dark {
+  --background-light: #0F1A16;
+  --surface: #1A2B24;
+  --text-dark: #E8F5F1;
+  --border-light: rgba(255,255,255,0.08);
+}
+
+/* ===== Base ===== */
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background: var(--background-light);
+  color: var(--text-dark);
+  transition: var(--transition);
+}
+
+h1,h2,h3,h4 {
+  font-family: 'Tajawal', sans-serif;
+  margin-bottom: 16px;
+}
+
+.section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: #00352A;
+  padding: 14px 24px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== Cards ===== */
+.card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: var(--transition);
+}
+
+body.dark .card {
+  background: rgba(26,43,36,0.8);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== Grid ===== */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 24px;
+}
+
+/* ===== Hero ===== */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 18px;
+  opacity: 0.85;
+}
+
+/* ===== Toggle Dark ===== */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  background: var(--surface);
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border-light);
+}
