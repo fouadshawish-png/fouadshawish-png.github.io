@@ -48,3 +48,8 @@ defaults:
       layout: "post"
       og_type: "article"
       lang: "ar"
+
+collections:
+  guides:
+    output: true
+    permalink: /guides/:name/

@@ -47,3 +47,40 @@
   ]
 }
 </script>
+
+{%- if page.layout == 'guide' -%}
+{%- assign guide_schema_type = page.schema_type | default: 'TechArticle' -%}
+{%- assign guide_url = page.url | absolute_url -%}
+{%- assign guide_title = page.title | default: site.title -%}
+{%- assign guide_description = page.description | default: site.description -%}
+{%- assign guide_image = page.image | default: site.default_og_image | default: site.logo | default: '/icon.png' | absolute_url -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ guide_schema_type }}",
+  "@id": "{{ guide_url }}#guide",
+  "headline": "{{ guide_title | escape }}",
+  "description": "{{ guide_description | strip_newlines | escape }}",
+  "url": "{{ guide_url }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ guide_url }}"
+  },
+  "inLanguage": "{{ page.lang | default: site.lang | default: 'ar' | escape }}",
+  "image": "{{ guide_image }}",
+  "author": {
+    "@type": "Organization",
+    "name": "{{ org_name | escape }}"
+  },
+  "publisher": {
+    "@id": "{{ site_url }}#organization"
+  }
+  {%- if page.date -%}
+  ,"datePublished": "{{ page.date | date_to_xmlschema }}"
+  {%- endif -%}
+  {%- if page.last_modified_at -%}
+  ,"dateModified": "{{ page.last_modified_at | date_to_xmlschema }}"
+  {%- endif -%}
+}
+</script>
+{%- endif -%}

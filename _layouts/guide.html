@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<article class="guide-page section">
+
+  <header style="margin-bottom:40px;">
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+      <p style="opacity:0.8; max-width:700px;">
+        {{ page.description }}
+      </p>
+    {% endif %}
+  </header>
+
+  <div class="guide-content">
+    {{ content }}
+  </div>
+
+</article>
