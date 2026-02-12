@@ -32,6 +32,7 @@ include:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 excerpt_separator: "<!--more-->"
 future: true
