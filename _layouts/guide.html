@@ -4,17 +4,92 @@ layout: default
 
 <article class="guide-page section">
 
+  <!-- Breadcrumb -->
+  <nav style="font-size:14px; margin-bottom:20px; opacity:0.7;">
+    <a href="/">الرئيسية</a> /
+    <a href="/guides.html">الأدلة</a> /
+    <span>{{ page.title }}</span>
+  </nav>
+
+  <!-- Title -->
   <header style="margin-bottom:40px;">
     <h1>{{ page.title }}</h1>
     {% if page.description %}
-      <p style="opacity:0.8; max-width:700px;">
+      <p style="max-width:750px; opacity:0.85;">
         {{ page.description }}
       </p>
     {% endif %}
   </header>
 
+  <!-- Table of Contents -->
+  <aside id="toc" class="card" style="margin-bottom:40px;">
+    <strong>محتويات الدليل</strong>
+    <ul id="toc-list" style="margin-top:15px;"></ul>
+  </aside>
+
+  <!-- Guide Content -->
   <div class="guide-content">
     {{ content }}
   </div>
 
+  <!-- CTA Block -->
+  <div class="card" style="margin-top:60px; text-align:center;">
+    <h3>حوّل المعرفة إلى خطوة عملية الآن</h3>
+    <p style="margin-bottom:20px;">
+      ابدأ التطبيق وطبّق ما قرأته مباشرة داخل نظامك المالي.
+    </p>
+
+    {% if page.deep_link %}
+      <a class="btn-primary" href="https://fouadshawish-png.github.io/?route={{ page.deep_link }}">
+        افتح الميزة داخل التطبيق
+      </a>
+    {% else %}
+      <a class="btn-primary" href="https://fouadshawish-png.github.io/?route=home">
+        افتح التطبيق الآن
+      </a>
+    {% endif %}
+  </div>
+
 </article>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ page.title }}",
+  "description": "{{ page.description | strip_html }}",
+  "author": {
+    "@type": "Person",
+    "name": "فؤاد شاويش"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "محترف المصاريف"
+  }
+}
+</script>
+
+<!-- TOC Script -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const tocList = document.getElementById("toc-list");
+  const headings = document.querySelectorAll(".guide-content h2");
+
+  headings.forEach(function(heading, index) {
+    const id = "section-" + index;
+    heading.setAttribute("id", id);
+
+    const li = document.createElement("li");
+    li.style.marginBottom = "8px";
+
+    const a = document.createElement("a");
+    a.href = "#" + id;
+    a.textContent = heading.textContent;
+    a.style.textDecoration = "none";
+
+    li.appendChild(a);
+    tocList.appendChild(li);
+  });
+});
+</script>
