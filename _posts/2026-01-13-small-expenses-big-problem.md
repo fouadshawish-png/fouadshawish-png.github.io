@@ -4,10 +4,10 @@ title: "ميزانية: كيف تتحول المصاريف الصغيرة إلى
 description: "ميزانية: كيف تتحول المصاريف الصغيرة إلى مشكلة كبيرة؟. خطوات عملية لتنظيم المصاريف وبناء budget واضح لتحسين إدارة الأموال واتخاذ قرارات مالية أفضل بثقة."
 date: 2026-02-26 10:00:00 +0200
 keywords: ميزانية, تنظيم المصاريف, إدارة الأموال, تتبع المصاريف, budget, how to create a budget, budget spreadsheet, gestion budget
-image: /assets/images/posts/2026-01-13-small-expenses-big-problem.webp
+image: /assets/images/posts/article-default.jpg
 ---
 
-![صورة توضيحية للمقال](/assets/images/posts/2026-01-13-small-expenses-big-problem.webp)
+![صورة توضيحية للمقال](/assets/images/posts/article-default.jpg)
 
 
 

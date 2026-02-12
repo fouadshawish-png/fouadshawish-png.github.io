@@ -5,11 +5,11 @@ description: "ميزانية: كيف تبني صندوق طوارئ خلال 6 �
 keywords: صندوق الطوارئ, ادخار 6 أشهر, خطة ادخار, تقارير المصاريف, reports_root
 categories: [الادخار, التخطيط_المالي]
 tags: [صندوق_الطوارئ, ادخار, استقرار_مالي]
-image: /assets/images/posts/2026-02-16-build-emergency-fund-6-months.webp
+image: /assets/images/posts/article-default.jpg
 ---
 
 
-![كيف تبني صندوق طوارئ خلال 6 أشهر؟](/assets/images/posts/2026-02-16-build-emergency-fund-6-months.webp)
+![كيف تبني صندوق طوارئ خلال 6 أشهر؟](/assets/images/posts/article-default.jpg)
 
 صندوق الطوارئ ليس رفاهية، بل خط الدفاع الأول عندما يحدث ظرف مفاجئ. المشكلة أن كثيرًا من الناس يؤجلون بناءه لأن الهدف يبدو كبيرًا. الحل: خطة صغيرة ثابتة لمدة 6 أشهر.
 
