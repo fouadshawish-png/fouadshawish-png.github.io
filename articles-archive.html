@@ -1,0 +1,70 @@
+---
+layout: default
+title: "أرشيف المقالات"
+description: "أرشيف مقالات محترف المصاريف مرتبة حسب الموضوع والنية والمرحلة التعليمية (مبتدئ، متوسط، متقدم)."
+permalink: /أرشيف-المقالات/
+canonical: https://fouadshawish-png.github.io/أرشيف-المقالات/
+---
+
+<section class="section">
+  <h1>أرشيف المقالات</h1>
+  <p>تصفح المحتوى حسب الموضوع، النية، والمرحلة التعليمية للوصول السريع للمقال المناسب.</p>
+</section>
+
+<section class="section">
+  <h2>حسب الموضوع</h2>
+  {% assign topics = "expense-tracking|budget|debt|saving|spending-psychology|reports" | split: "|" %}
+  <div class="grid-3">
+    {% for t in topics %}
+    {% assign t_posts = site.posts | where_exp: "p", "p.topic == t" %}
+    <article class="card">
+      <h3>{{ t }}</h3>
+      <ul class="topic-block__list">
+        {% for post in t_posts limit:8 %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <h2>حسب النية (Intent)</h2>
+  {% assign intents = "problem|action|comparison|authority" | split: "|" %}
+  <div class="grid-3">
+    {% for i in intents %}
+    {% assign i_posts = site.posts | where_exp: "p", "p.intent == i" %}
+    <article class="card">
+      <h3>{{ i }}</h3>
+      {% if i_posts.size > 0 %}
+      <ul class="topic-block__list">
+        {% for post in i_posts limit:8 %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>لم يتم تصنيف مقالات كثيرة بهذه النية بعد.</p>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <h2>حسب المرحلة</h2>
+  {% assign levels = "beginner|intermediate|advanced" | split: "|" %}
+  <div class="grid-3">
+    {% for lvl in levels %}
+    {% assign l_posts = site.posts | where_exp: "p", "p.level == lvl" %}
+    <article class="card">
+      <h3>{{ lvl }}</h3>
+      <ul class="topic-block__list">
+        {% for post in l_posts limit:10 %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
+  </div>
+</section>

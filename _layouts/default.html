@@ -72,8 +72,8 @@
     <div class="exit-intent-overlay" id="exitIntentOverlay" hidden>
       <div class="exit-intent-modal card" role="dialog" aria-modal="true" aria-labelledby="exitIntentTitle">
         <button class="exit-intent-modal__close" id="exitIntentClose" type="button" aria-label="إغلاق">×</button>
-        <h3 id="exitIntentTitle">قبل أن تغادر — هل بدأت تسجيل مصاريفك هذا الأسبوع؟</h3>
-        <a class="btn-primary exit-intent-modal__action" id="exitIntentButton" data-cta-location="exit_popup" href="https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager">ابدأ الآن</a>
+        <h3 id="exitIntentTitle">قبل أن تغادر… هل تعرف أين يذهب راتبك فعلاً؟</h3>
+        <a class="btn-primary exit-intent-modal__action" id="exitIntentButton" data-cta-location="exit_popup" href="{{ '/اختبر-وضعك-المالي/' | relative_url }}">ابدأ الاختبار المجاني</a>
       </div>
     </div>
     <script>
@@ -127,7 +127,7 @@
     <script>
       (function() {
         var PLAYSTORE_BASE = "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager";
-        var UTM_PARAMS = "utm_source=blog&utm_medium=organic&utm_campaign=conversion_layer";
+        var UTM_PARAMS = "utm_source=blog&utm_medium=content&utm_campaign=demand_engine";
 
         function withUtm(url) {
           if (!url) return "";
@@ -157,6 +157,10 @@
         allLinks.forEach(function(link) {
           link.href = withUtm(link.href);
         });
+        var downloadLinks = document.querySelectorAll("a[href*='/download.html']");
+        downloadLinks.forEach(function(link) {
+          link.href = withUtm(link.href);
+        });
 
         var bar = document.getElementById("stickyDownloadBar");
         var barButton = document.getElementById("stickyDownloadButton");
@@ -169,7 +173,6 @@
         var dismissDurationMs = 48 * 60 * 60 * 1000;
 
         if (barButton) barButton.href = withUtm(PLAYSTORE_BASE);
-        if (exitButton) exitButton.href = withUtm(PLAYSTORE_BASE);
 
         var stickySuppressed = false;
         try {

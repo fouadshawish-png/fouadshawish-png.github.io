@@ -2,7 +2,7 @@
 {%- assign org_name = site.title | default: 'محترف المصاريف' -%}
 {%- assign org_logo = site.logo | default: '/icon.png' | absolute_url -%}
 {%- assign author_name = site.author.name | default: 'فؤاد شاويش' -%}
-{%- assign author_url = '/about-author/' | absolute_url -%}
+{%- assign author_url = '/حول-الخبير/' | absolute_url -%}
 
 <script type="application/ld+json">
 {
@@ -31,10 +31,13 @@
       "@id": "{{ author_url }}#person",
       "name": "{{ author_name | escape }}",
       "url": "{{ author_url }}",
+      "image": "{{ '/assets/images/authors/fouad-shawish-placeholder.svg' | absolute_url }}",
+      "description": "مطور تطبيقات مالية يركز على بناء أنظمة عملية لإدارة المصاريف والميزانية باللغة العربية.",
       "jobTitle": "مطور تطبيقات مالية",
       "worksFor": {
         "@id": "{{ site_url }}#organization"
       },
+      "knowsLanguage": ["ar", "en"],
       "knowsAbout": [
         "تنظيم المصاريف",
         "إدارة المصاريف",
@@ -45,7 +48,9 @@
         "إدارة الأموال"
       ],
       "sameAs": [
-        "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager"
+        "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager",
+        "https://www.facebook.com/ExpenseManagerApplication",
+        "https://github.com/example/expense-manager-arabic"
       ]
     },
     {
@@ -232,4 +237,69 @@
 {% endif %}
 
 {% include breadcrumb-schema.html %}
+
+{% if page.title contains "خطوة بخطوة" or page.url contains "step-by-step" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "{{ page.title | escape }}",
+  "description": "{{ page.description | default: site.description | escape }}",
+  "image": "{{ post_image }}",
+  "author": {
+    "@id": "{{ author_url }}#person"
+  },
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "قياس الوضع المالي",
+      "text": "ابدأ بتتبع المصروفات اليومية للحصول على صورة دقيقة للواقع."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "تصنيف المصروفات",
+      "text": "قسّم البنود إلى ضرورية، مرنة، والتزامات لتحديد الأولويات."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "بناء الميزانية",
+      "text": "أنشئ budget واقعيًا بناءً على بياناتك الفعلية وليس التخمين."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "المراجعة الأسبوعية",
+      "text": "راجع النتائج أسبوعيًا وعدّل بندًا واحدًا في كل دورة."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "تثبيت النظام",
+      "text": "اربط المصاريف بالأهداف والديون لبناء انضباط مالي مستمر."
+    }
+  ]
+}
+</script>
+{% endif %}
+{% endif %}
+
+{% if page.url == "/منهج-إدارة-المصاريف/" or page.url == "/حول-الخبير/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "{{ page.title | escape }}",
+  "description": "{{ page.description | default: site.description | escape }}",
+  "url": "{{ page.url | absolute_url }}",
+  "about": {
+    "@id": "{{ author_url }}#person"
+  },
+  "publisher": {
+    "@id": "{{ site_url }}#organization"
+  }
+}
+</script>
 {% endif %}

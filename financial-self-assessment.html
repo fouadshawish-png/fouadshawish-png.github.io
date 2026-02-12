@@ -1,0 +1,127 @@
+---
+layout: default
+title: "اختبر وضعك المالي"
+description: "اختبار مالي تفاعلي من 10 أسئلة يساعدك على تقييم تنظيم المصاريف والميزانية وتحديد الخطوة التالية العملية."
+permalink: /اختبر-وضعك-المالي/
+canonical: https://fouadshawish-png.github.io/اختبر-وضعك-المالي/
+---
+
+<section class="section quiz-section">
+  <h1>اختبر وضعك المالي</h1>
+  <p>
+    هذا اختبار عملي سريع من 10 أسئلة. الهدف ليس الحكم عليك، بل تحديد نقطة البداية المناسبة
+    لتنظيم المصاريف وبناء نظام مالي واضح.
+  </p>
+
+  <form id="financialQuiz" class="card quiz-form" novalidate>
+    <ol class="quiz-list">
+      <li>
+        <p>هل تسجل مصاريفك يوميًا؟</p>
+        <label><input type="radio" name="q1" value="1"> نعم</label>
+        <label><input type="radio" name="q1" value="0"> لا</label>
+      </li>
+      <li>
+        <p>هل تعرف متوسط إنفاقك الشهري؟</p>
+        <label><input type="radio" name="q2" value="1"> نعم</label>
+        <label><input type="radio" name="q2" value="0"> لا</label>
+      </li>
+      <li>
+        <p>هل لديك صندوق طوارئ يغطي 3 أشهر على الأقل؟</p>
+        <label><input type="radio" name="q3" value="1"> نعم</label>
+        <label><input type="radio" name="q3" value="0"> لا</label>
+      </li>
+      <li>
+        <p>هل تتجاوز ميزانيتك غالبًا في منتصف الشهر؟</p>
+        <label><input type="radio" name="q4" value="0"> نعم</label>
+        <label><input type="radio" name="q4" value="1"> لا</label>
+      </li>
+      <li>
+        <p>هل لديك ديون غير منظمة أو بدون خطة سداد؟</p>
+        <label><input type="radio" name="q5" value="0"> نعم</label>
+        <label><input type="radio" name="q5" value="1"> لا</label>
+      </li>
+      <li>
+        <p>هل تراجع ميزانيتك أسبوعيًا؟</p>
+        <label><input type="radio" name="q6" value="1"> نعم</label>
+        <label><input type="radio" name="q6" value="0"> لا</label>
+      </li>
+      <li>
+        <p>هل تربط أهدافك المالية بخطة ادخار واضحة؟</p>
+        <label><input type="radio" name="q7" value="1"> نعم</label>
+        <label><input type="radio" name="q7" value="0"> لا</label>
+      </li>
+      <li>
+        <p>هل تعرف أعلى 3 بنود تستنزف راتبك؟</p>
+        <label><input type="radio" name="q8" value="1"> نعم</label>
+        <label><input type="radio" name="q8" value="0"> لا</label>
+      </li>
+      <li>
+        <p>هل تستخدم تقارير دورية لاتخاذ قرار مالي؟</p>
+        <label><input type="radio" name="q9" value="1"> نعم</label>
+        <label><input type="radio" name="q9" value="0"> لا</label>
+      </li>
+      <li>
+        <p>هل لديك نظام ثابت للتعامل مع المصاريف الطارئة؟</p>
+        <label><input type="radio" name="q10" value="1"> نعم</label>
+        <label><input type="radio" name="q10" value="0"> لا</label>
+      </li>
+    </ol>
+
+    <div class="quiz-actions">
+      <button type="submit" class="btn-primary">اعرض النتيجة</button>
+    </div>
+  </form>
+
+  <div id="quizResult" class="card quiz-result" hidden>
+    <h2>نتيجتك</h2>
+    <p id="quizScoreText"></p>
+    <p id="quizLevelText"></p>
+    <div class="next-step-box__actions">
+      <a class="btn-primary" href="/?route=reports">ابدأ بتنفيذ الخطة داخل التطبيق</a>
+      <a class="btn-accent" href="/خطة-30-يوم-لضبط-المصاريف/">اذهب لخطة 30 يوم</a>
+      <a class="btn-accent" href="/download.html?utm_source=blog&utm_medium=content&utm_campaign=demand_engine">تحميل التطبيق</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var form = document.getElementById('financialQuiz');
+  var result = document.getElementById('quizResult');
+  var scoreText = document.getElementById('quizScoreText');
+  var levelText = document.getElementById('quizLevelText');
+  if (!form || !result) return;
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var score = 0;
+    for (var i = 1; i <= 10; i++) {
+      var checked = form.querySelector('input[name="q' + i + '"]:checked');
+      if (!checked) {
+        alert('يرجى الإجابة عن كل الأسئلة قبل عرض النتيجة.');
+        return;
+      }
+      score += parseInt(checked.value, 10) || 0;
+    }
+
+    var level = '';
+    var note = '';
+
+    if (score <= 3) {
+      level = 'عشوائي مالي';
+      note = 'أنت تحتاج بداية منظمة جدًا. ابدأ بالتسجيل اليومي ثم خطّة 30 يوم.';
+    } else if (score <= 6) {
+      level = 'تحتاج نظام';
+      note = 'لديك أساس جيد، لكن ينقصك ثبات أسبوعي وخطة تنفيذ واضحة.';
+    } else {
+      level = 'منضبط جزئيًا';
+      note = 'وضعك جيد، والخطوة التالية هي تعميق النظام وربطه بالأهداف والديون.';
+    }
+
+    scoreText.textContent = 'درجتك: ' + score + ' من 10';
+    levelText.textContent = 'التصنيف: ' + level + ' — ' + note;
+    result.hidden = false;
+    result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+</script>

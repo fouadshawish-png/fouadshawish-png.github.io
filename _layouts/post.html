@@ -23,6 +23,11 @@ layout: default
 {%- assign summary_point_3 = 'راجع النتائج باستمرار وعدّل بسرعة بدل انتظار نهاية الشهر.' -%}
 {%- assign current_topic = page.topic | default: 'expense-tracking' -%}
 {%- assign current_level = page.level | default: 'beginner' -%}
+{%- assign current_intent = page.intent | default: '' -%}
+{%- assign primary_tag = page.tags | first | default: '' -%}
+{%- assign same_category_posts = site.posts | where_exp: 'p', "p.url != page.url and p.categories and page.categories and p.categories[0] == page.categories[0]" -%}
+{%- assign same_intent_posts = site.posts | where_exp: 'p', "p.url != page.url and page.intent and p.intent == page.intent" -%}
+{%- assign same_keyword_posts = site.posts | where_exp: 'p', "p.url != page.url and page.tags and p.tags and p.tags contains page.tags[0]" -%}
 
 {%- assign topic_hub_url = '/topics/expense-tracking/' -%}
 {%- assign topic_hub_title = 'تتبع المصاريف' -%}
@@ -185,6 +190,8 @@ layout: default
   {%- assign hook_line = page.hook -%}
 {%- endif -%}
 {%- capture app_deep_link -%}/?route={{ app_deep_route }}{%- endcapture -%}
+{%- capture app_intent_link -%}expensemanager://open?route={{ app_deep_route }}{%- endcapture -%}
+{%- assign demand_download_url = '/download.html?utm_source=blog&utm_medium=content&utm_campaign=demand_engine' -%}
 
 {%- assign rendered_content = content -%}
 {%- for auto_link in site.data.auto_links -%}
@@ -197,6 +204,13 @@ layout: default
 {%- assign reading_minutes = reading_words | plus: 179 | divided_by: 180 -%}
 {%- if reading_minutes < 1 -%}
   {%- assign reading_minutes = 1 -%}
+{%- endif -%}
+{%- assign anchor_selector = page.url | size | modulo: 3 -%}
+{%- assign guide_anchor_text = 'دليل إدارة المصاريف' -%}
+{%- if anchor_selector == 1 -%}
+  {%- assign guide_anchor_text = 'تنظيم الميزانية خطوة بخطوة' -%}
+{%- elsif anchor_selector == 2 -%}
+  {%- assign guide_anchor_text = 'المرجع الكامل للمصاريف' -%}
 {%- endif -%}
 
 <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
@@ -331,10 +345,21 @@ layout: default
       <h2>اقرأ أيضًا ضمن دليل إدارة المصاريف</h2>
       <p>هذا المقال جزء من مسار متكامل. يمكنك متابعة نفس الموضوع من الدليل المركزي ثم الانتقال لمقالات مرتبطة.</p>
       <ul class="topic-block__list">
-        <li><a href="{{ '/money-management-guide/' | relative_url }}">الدليل الشامل لإدارة المصاريف والميزانية</a></li>
+        <li><a href="{{ '/دليل-إدارة-المصاريف-والميزانية/' | relative_url }}">{{ guide_anchor_text }}</a></li>
         {%- for rel_post in same_topic_posts limit:3 -%}
         <li><a href="{{ rel_post.url | relative_url }}">{{ rel_post.title }}</a></li>
         {%- endfor -%}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section post-internal-link-map" aria-label="خريطة روابط داخلية ثابتة">
+    <div class="card">
+      <h2>خريطة روابط داخلية ثابتة</h2>
+      <ul class="topic-block__list">
+        <li><a href="{{ '/دليل-إدارة-المصاريف-والميزانية/' | relative_url }}">{{ guide_anchor_text }}</a></li>
+        <li><a href="{{ '/how-it-works.html' | relative_url }}">كيف يعمل</a></li>
+        <li><a href="{{ '/download.html' | relative_url }}">صفحة التحميل</a></li>
       </ul>
     </div>
   </section>
@@ -364,11 +389,12 @@ layout: default
   </aside>
 
   {%- unless single_cta_only -%}
-  <section class="app-apply-box card" aria-label="تطبيق الخطوات داخل التطبيق">
-    <h2>كيف تطبّق هذا داخل التطبيق؟</h2>
-    <p>ابدأ بنفس الفكرة التي قرأتها هنا عبر فتح الميزة مباشرة، ثم راجع الصفحة المقابلة على الويب إذا كنت تحتاج شرحًا تفصيليًا إضافيًا.</p>
+  <section class="app-apply-box card" aria-label="تحويل الخطوة لتطبيق عملي">
+    <h2>حوّل هذه الخطوة إلى تطبيق عملي الآن</h2>
+    <p>نفّذ نفس الفكرة فورًا عبر Deep Link مناسب للمقال، ثم أكمل من صفحة التحميل إذا لم يكن التطبيق لديك بعد.</p>
     <div class="app-apply-box__actions">
-      <a class="btn-primary" href="{{ app_deep_link }}">فتح الميزة داخل التطبيق</a>
+      <a class="btn-primary" href="{{ app_intent_link }}">فتح الميزة مباشرة</a>
+      <a class="btn-accent" href="{{ demand_download_url | relative_url }}">تحميل التطبيق</a>
     </div>
   </section>
   {%- endunless -%}
@@ -391,6 +417,28 @@ layout: default
       غالبًا ستكتشف أن التحسين التراكمي خلال 30 يومًا أكبر من المتوقع عند الالتزام بخطوات صغيرة.
     </p>
     <a class="btn-primary" href="{{ '/start-here/' | relative_url }}">ابدأ خطة 30 يومًا من هنا</a>
+  </section>
+
+  <section class="email-capture-box card" aria-label="تحميل نموذج مراجعة أسبوعية مجاني">
+    <h2>احصل على نموذج مراجعة أسبوعية مجاني PDF</h2>
+    <p>أدخل بريدك لتحصل على نموذج جاهز يساعدك على مراجعة الميزانية أسبوعيًا بخطوات بسيطة.</p>
+    <form class="email-capture-box__form" action="#" method="post">
+      <label class="sr-only" for="postEmailCapture">البريد الإلكتروني</label>
+      <input id="postEmailCapture" name="email" type="email" placeholder="أدخل بريدك الإلكتروني" autocomplete="email">
+      <button type="submit">أرسل النموذج</button>
+    </form>
+    <a href="{{ '/weekly-budget-template/' | relative_url }}">أو حمّل النموذج مباشرة الآن</a>
+  </section>
+
+  <section class="demand-funnel-box card" aria-label="Demand Funnel">
+    <h2>مسار التطبيق العملي</h2>
+    <ol>
+      <li><a href="{{ '/organize-monthly-expenses-step-by-step/' | relative_url }}">Pillar Article</a></li>
+      <li><a href="{{ '/خطة-30-يوم-لضبط-المصاريف/' | relative_url }}">خطة 30 يوم</a></li>
+      <li><a href="{{ '/اختبر-وضعك-المالي/' | relative_url }}">اختبار مالي</a></li>
+      <li><a href="{{ app_deep_link | relative_url }}">Deep Link: {{ app_web_label }}</a></li>
+      <li><a href="{{ demand_download_url | relative_url }}">تحميل التطبيق</a></li>
+    </ol>
   </section>
 
   <p class="post-hint">إذا شعرت أن الفكرة تلامس واقعك، فتذكّر أن تنظيم المصاريف يبدأ بخطوات بسيطة قابلة للتطبيق. كثيرون يجدون أن وجود أداة واضحة مثل تطبيق محترف المصاريف يساعدهم على تحويل الوعي إلى متابعة يومية دون تعقيد.</p>
@@ -589,6 +637,68 @@ layout: default
   </div>
 </section>
 
+<section class="section post-related-smart" aria-label="Related Articles Smart Block">
+  <h2>مقالات مرتبطة ذكيًا</h2>
+  <div class="grid-3">
+    <article class="card">
+      <h3>نفس التصنيف</h3>
+      <ul class="topic-block__list">
+        {%- assign rel_by_category = same_category_posts -%}
+        {%- if rel_by_category.size == 0 -%}
+          {%- assign rel_by_category = same_topic_posts -%}
+        {%- endif -%}
+        {%- for rel in rel_by_category limit:3 -%}
+        <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </article>
+    <article class="card">
+      <h3>نفس النية</h3>
+      <ul class="topic-block__list">
+        {%- assign rel_by_intent = same_intent_posts -%}
+        {%- if rel_by_intent.size == 0 -%}
+          {%- assign rel_by_intent = same_topic_posts -%}
+        {%- endif -%}
+        {%- for rel in rel_by_intent limit:3 -%}
+        <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </article>
+    <article class="card">
+      <h3>نفس الكلمة الأساسية</h3>
+      <ul class="topic-block__list">
+        {%- assign rel_by_keyword = same_keyword_posts -%}
+        {%- if rel_by_keyword.size == 0 -%}
+          {%- assign rel_by_keyword = same_topic_posts -%}
+        {%- endif -%}
+        {%- for rel in rel_by_keyword limit:3 -%}
+        <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </article>
+  </div>
+</section>
+
+<div class="mobile-article-sticky" id="mobileArticleSticky" hidden>
+  <a class="mobile-article-sticky__cta" href="{{ '/?route=budgets' | relative_url }}">ابدأ إدارة مصاريفك الآن</a>
+  <button type="button" class="mobile-article-sticky__close" id="mobileArticleStickyClose" aria-label="إغلاق">×</button>
+</div>
+
+<section class="section post-series-related" aria-label="مقالات مرتبطة من نفس السلسلة">
+  <div class="card">
+    <h2>مقالات مرتبطة من نفس السلسلة</h2>
+    <ul class="topic-block__list">
+      {%- assign series_posts = site.posts | where_exp: 'p', "p.url != page.url and page.series and p.series == page.series" -%}
+      {%- if series_posts.size == 0 -%}
+        {%- assign series_posts = same_topic_posts -%}
+      {%- endif -%}
+      {%- for rel in series_posts limit:5 -%}
+      <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
 {%- unless single_cta_only -%}
 <div class="article-cta article-cta--strong">
   <h3>حوّل المعرفة إلى خطوة عملية الآن</h3>
@@ -622,6 +732,42 @@ layout: default
   window.addEventListener('scroll', updateProgress, { passive: true });
   window.addEventListener('resize', updateProgress);
   updateProgress();
+})();
+</script>
+
+<script>
+(function () {
+  var sticky = document.getElementById('mobileArticleSticky');
+  var closeBtn = document.getElementById('mobileArticleStickyClose');
+  if (!sticky || !closeBtn) return;
+
+  var isMobile = window.matchMedia('(max-width: 900px)').matches;
+  if (!isMobile) return;
+
+  var hiddenForSession = false;
+  try {
+    hiddenForSession = sessionStorage.getItem('mobileArticleStickyClosed') === '1';
+  } catch (e) {}
+  if (hiddenForSession) return;
+
+  function maybeShow() {
+    var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    if (scrollable <= 0) return;
+    var depth = (window.scrollY / scrollable) * 100;
+    if (depth >= 30) {
+      sticky.hidden = false;
+    }
+  }
+
+  closeBtn.addEventListener('click', function () {
+    sticky.hidden = true;
+    try {
+      sessionStorage.setItem('mobileArticleStickyClosed', '1');
+    } catch (e) {}
+  });
+
+  window.addEventListener('scroll', maybeShow, { passive: true });
+  window.addEventListener('load', maybeShow);
 })();
 </script>
 
