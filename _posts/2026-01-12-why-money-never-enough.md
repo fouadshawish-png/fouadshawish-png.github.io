@@ -4,10 +4,10 @@ title: "تنظيم المصاريف: لماذا نشعر أن المال لا ي
 description: "تنظيم المصاريف: لماذا نشعر أن المال لا يكفينا مهما كان الدخل؟. خطوات عملية لتنظيم المصاريف وبناء budget واضح لتحسين إدارة الأموال واتخاذ قرارات مالية أفضل بثقة."
 date: 2026-02-27 10:00:00 +0200
 keywords: ميزانية, تنظيم المصاريف, إدارة الأموال, تتبع المصاريف, budget, how to create a budget, budget spreadsheet, gestion budget
-image: /assets/images/posts/article-default.jpg
+image: /assets/images/psychological-money-mistakes.jpg
 ---
 
-![صورة توضيحية للمقال](/assets/images/posts/article-default.jpg)
+![صورة توضيحية للمقال](/assets/images/psychological-money-mistakes.jpg)
 
 
 

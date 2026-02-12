@@ -5,11 +5,11 @@ description: "تتبع المصاريف: كيف تكتشف أين يضيع را�
 keywords: أين يذهب الراتب, تتبع المصاريف, مصاريف شهرية, تحليل الإنفاق, all_transactions
 categories: [تحليل_الإنفاق, إدارة_المصاريف]
 tags: [راتب, تتبع_المعاملات, تنظيم_مالي]
-image: /assets/images/posts/article-default.jpg
+image: /assets/images/salary-disappears-expense-tracking.jpg
 ---
 
 
-![كيف تكتشف أين يضيع راتبك كل شهر؟](/assets/images/posts/article-default.jpg)
+![كيف تكتشف أين يضيع راتبك كل شهر؟](/assets/images/salary-disappears-expense-tracking.jpg)
 
 كثيرون يشعرون أن الراتب ينتهي بسرعة، لكن الشعور وحده لا يحل المشكلة. ما يحلها هو تحويل الإنفاق إلى بيانات واضحة: ماذا صُرف؟ متى؟ وعلى ماذا؟ عندها فقط ستعرف أين يحدث التسرب الحقيقي.
 

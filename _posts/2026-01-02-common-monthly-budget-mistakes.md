@@ -4,7 +4,7 @@ title: "ميزانية: أخطاء شائعة في إدارة المصروف ا�
 description: "ميزانية: أخطاء شائعة في إدارة المصروف الشهري يجب أن تتجنبها. خطوات عملية لتنظيم المصاريف وبناء budget واضح لتحسين إدارة الأموال واتخاذ قرارات مالية أفضل بثقة."
 date: 2026-01-02 10:00:00 +0200
 lang: ar
-image: /assets/images/posts/article-default.jpg
+image: /assets/images/monthly-budget-mistakes.jpg
 keywords: "أخطاء الميزانية, المصروف الشهري, تنظيم المصروف, سلوك مالي"
 ---
 

@@ -4,10 +4,10 @@ title: "تنظيم المصاريف: أخطاء شائعة عند محاولة �
 description: "تنظيم المصاريف: أخطاء شائعة عند محاولة تقليل المصاريف. خطوات عملية لتنظيم المصاريف وبناء budget واضح لتحسين إدارة الأموال واتخاذ قرارات مالية أفضل بثقة."
 date: 2026-02-05 10:00:00 +0200
 keywords: ميزانية, تنظيم المصاريف, إدارة الأموال, تتبع المصاريف, budget, how to create a budget, budget spreadsheet, gestion budget
-image: /assets/images/posts/article-default.jpg
+image: /assets/images/expense-management-fails.webp
 ---
 
-![صورة توضيحية للمقال](/assets/images/posts/article-default.jpg)
+![صورة توضيحية للمقال](/assets/images/expense-management-fails.webp)
 
 
 

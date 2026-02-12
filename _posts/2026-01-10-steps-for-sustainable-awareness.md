@@ -3,12 +3,12 @@ layout: post
 title: "تتبع المصاريف: خطوات بسيطة لبناء وعي مالي مستدام | خطوات عملية"
 description: "تتبع المصاريف: خطوات بسيطة لبناء وعي مالي مستدام. خطوات عملية لتنظيم المصاريف وبناء budget واضح لتحسين إدارة الأموال واتخاذ قرارات مالية أفضل بثقة."
 date: 2026-01-10 10:00:00 +0200
-image: /assets/images/posts/article-default.jpg
+image: /assets/images/sustainable-financial-awareness.jpg
 keywords: "وعي مالي, عادات مالية, تتبع المصاريف, ميزانية مستدامة"
 ---
 
 
-![بناء وعي مالي مستدام](/assets/images/posts/article-default.jpg)
+![بناء وعي مالي مستدام](/assets/images/sustainable-financial-awareness.jpg)
 
 بناء وعي مالي مستدام لا يحتاج إلى تعقيد، بل إلى خطوات صغيرة تتكرر بانتظام. الاستمرارية هنا أهم من المثالية، لأن الوعي يتشكل مع الوقت وليس في يوم واحد.
 
