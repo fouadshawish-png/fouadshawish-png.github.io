@@ -38,6 +38,50 @@ permalink: /
   </div>
 </section>
 
+<section class="app-showcase">
+  <div class="showcase-container">
+    <div class="phone-mockup">
+      <img src="/assets/images/screens/screen-01.webp" alt="تقارير تطبيق محترف المصاريف">
+    </div>
+
+    <div class="showcase-text">
+      <h2>صورة مالية واضحة خلال ثوانٍ</h2>
+      <p>
+        سجّل العملية فورًا، وشاهد أثرها مباشرة على الرصيد، الميزانية، والتقارير.
+        لا تحتاج جداول معقدة — فقط بيانات واضحة وقرارات أذكى.
+      </p>
+
+      <a class="cta-secondary" href="expensemanager://open?route=reports">
+        افتح التقارير مباشرة
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="before-after">
+  <div class="ba-container">
+
+    <div class="ba-card bad">
+      <h3>قبل التنظيم</h3>
+      <ul>
+        <li>لا تعرف أين يذهب الراتب</li>
+        <li>تفاجأ بالمصروفات نهاية الشهر</li>
+        <li>ديون بلا متابعة واضحة</li>
+      </ul>
+    </div>
+
+    <div class="ba-card good">
+      <h3>بعد استخدام محترف المصاريف</h3>
+      <ul>
+        <li>تقارير دقيقة أسبوعية وشهرية</li>
+        <li>صورة واضحة للرصيد الفعلي</li>
+        <li>تحكم بالديون والأقساط</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
 <section class="section">
   <h2>تحكم كامل في أموالك من مكان واحد</h2>
 
@@ -209,4 +253,22 @@ permalink: /
 function toggleTheme() {
   document.body.classList.toggle('dark');
 }
+
+const elements = document.querySelectorAll('.finance-card, .phone-mockup, .ba-card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+}, { threshold: 0.2 });
+
+elements.forEach(el => {
+  el.style.opacity = 0;
+  el.style.transform = "translateY(40px)";
+  el.style.transition = "0.8s ease";
+  observer.observe(el);
+});
 </script>

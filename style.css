@@ -969,6 +969,110 @@ body.dark .card {
   z-index: 1;
 }
 
+.app-showcase {
+  padding: 120px 20px;
+  background: linear-gradient(180deg, #0e1e18, #07120e);
+  color: #e8f5f0;
+}
+
+.showcase-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.phone-mockup {
+  width: 320px;
+  padding: 16px;
+  border-radius: 36px;
+  background: #111;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+  transition: 0.4s ease;
+}
+
+.phone-mockup img {
+  width: 100%;
+  border-radius: 24px;
+}
+
+.phone-mockup:hover {
+  transform: rotateY(6deg) rotateX(4deg);
+}
+
+.showcase-text {
+  max-width: 450px;
+}
+
+.showcase-text h2 {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.showcase-text p {
+  margin: 0;
+  line-height: 1.9;
+  opacity: 0.92;
+}
+
+.cta-secondary {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: 1px solid #48D6A0;
+  color: #48D6A0;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-secondary:hover {
+  background: #48D6A0;
+  color: #0b1f17;
+}
+
+.before-after {
+  padding: 100px 20px;
+  background: #06140f;
+}
+
+.ba-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ba-card {
+  width: 320px;
+  padding: 30px;
+  border-radius: 24px;
+  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #e8f5f0;
+}
+
+.ba-card h3 {
+  margin-top: 0;
+}
+
+.ba-card ul {
+  margin: 0;
+  padding-right: 18px;
+  line-height: 2;
+}
+
+.ba-card.bad {
+  border-left: 4px solid #C62828;
+}
+
+.ba-card.good {
+  border-left: 4px solid #2E7D32;
+}
+
 .btn {
   display: inline-block;
   padding: 14px 28px;
@@ -1044,5 +1148,21 @@ body.dark .card {
 
   .hero p {
     font-size: 18px;
+  }
+
+  .app-showcase {
+    padding: 80px 16px;
+  }
+
+  .showcase-container {
+    gap: 40px;
+  }
+
+  .phone-mockup {
+    width: min(320px, 88vw);
+  }
+
+  .before-after {
+    padding: 80px 16px;
   }
 }
