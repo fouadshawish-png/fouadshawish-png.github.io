@@ -6,6 +6,13 @@ permalink: /organize-monthly-expenses-step-by-step/
 canonical: https://fouadshawish-png.github.io/organize-monthly-expenses-step-by-step/
 image: /assets/images/posts/organize-monthly-expenses-step-by-step.jpg
 image_alt: "خطوات عملية لتنظيم المصاريف الشهرية وإدارة الأموال"
+faq:
+  - question: "كم أحتاج وقتًا لرؤية نتيجة؟"
+    answer: "عادة خلال 2 إلى 4 أسابيع ستلاحظ وضوحًا أكبر في الإنفاق وانخفاضًا في الهدر."
+  - question: "هل الميزانية مناسبة إذا كان دخلي متغيرًا؟"
+    answer: "نعم، بشرط بناء الخطة على دخل آمن وليس أعلى دخل محتمل."
+  - question: "هل أحتاج تطبيق لإدارة المصاريف؟"
+    answer: "التسجيل اليدوي مفيد كبداية، لكن التطبيق يوفر تقارير أسرع واستمرارية أعلى."
 ---
 
 # كيف تنظم مصاريفك الشهرية خطوة بخطوة (دليل عملي شامل)

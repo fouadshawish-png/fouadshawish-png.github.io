@@ -88,30 +88,3 @@ layout: default
   <a href="/?route=home" class="cta-button">فتح التطبيق</a>
   <a href="/download.html" class="cta-secondary">تحميل من Google Play</a>
 </div>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "{{ page.title }}",
-  "description": "{{ page.description }}",
-  "author": {
-    "@type": "Person",
-    "name": "{{ site.author.name }}"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "{{ site.title }}",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ site.logo | absolute_url }}"
-    }
-  },
-  "datePublished": "{{ page.date | date_to_xmlschema }}",
-  "dateModified": "{{ page.date | date_to_xmlschema }}",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ page.url | absolute_url }}"
-  }
-}
-</script>
