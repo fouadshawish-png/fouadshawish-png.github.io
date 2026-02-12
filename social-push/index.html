@@ -1,0 +1,64 @@
+---
+layout: default
+title: "Social Push Helper"
+meta_title: "Social Push | مشاركة آخر مقال بسرعة | محترف المصاريف"
+description: "صفحة مساعدة لمشاركة آخر مقال مباشرة إلى فيسبوك وX وLinkedIn مع إمكانية نسخ الرابط بنقرة واحدة."
+permalink: /social-push/
+canonical: https://fouadshawish-png.github.io/social-push/
+---
+
+{% assign latest_post = site.posts.first %}
+
+<section class="section">
+  <h1 class="section-title">Social Push Helper</h1>
+  <div class="card social-push-card">
+    {% if latest_post %}
+    <p class="latest-update-date">آخر مقال:</p>
+    <h2><a id="socialPushArticleLink" href="{{ latest_post.url | absolute_url }}">{{ latest_post.title }}</a></h2>
+    <p>{{ latest_post.description | default: latest_post.excerpt | strip_html | strip_newlines | truncate: 170 }}</p>
+
+    {% assign latest_abs = latest_post.url | absolute_url %}
+    {% assign latest_title = latest_post.title | url_encode %}
+    {% assign latest_abs_encoded = latest_abs | url_encode %}
+
+    <div class="tools-actions">
+      <a class="btn-primary" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sharer/sharer.php?u={{ latest_abs_encoded }}">مشاركة فيسبوك</a>
+      <a class="btn-accent" target="_blank" rel="noopener noreferrer" href="https://x.com/intent/tweet?url={{ latest_abs_encoded }}&text={{ latest_title }}">مشاركة X</a>
+      <button class="btn-accent" type="button" id="copyLatestArticleLink">نسخ الرابط</button>
+      <a class="btn-accent" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/sharing/share-offsite/?url={{ latest_abs_encoded }}">فتح في LinkedIn</a>
+    </div>
+    <p id="copyLinkFeedback" class="tools-intro" aria-live="polite"></p>
+    {% else %}
+    <p>لا يوجد مقالات حتى الآن.</p>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+(function () {
+  var btn = document.getElementById('copyLatestArticleLink');
+  var link = document.getElementById('socialPushArticleLink');
+  var feedback = document.getElementById('copyLinkFeedback');
+  if (!btn || !link) return;
+
+  btn.addEventListener('click', function () {
+    var url = link.href;
+    if (!navigator.clipboard) {
+      var temp = document.createElement('input');
+      temp.value = url;
+      document.body.appendChild(temp);
+      temp.select();
+      document.execCommand('copy');
+      document.body.removeChild(temp);
+      if (feedback) feedback.textContent = 'تم نسخ الرابط.';
+      return;
+    }
+
+    navigator.clipboard.writeText(url).then(function () {
+      if (feedback) feedback.textContent = 'تم نسخ الرابط.';
+    }).catch(function () {
+      if (feedback) feedback.textContent = 'تعذّر النسخ، انسخ الرابط يدويًا.';
+    });
+  });
+})();
+</script>

@@ -1,0 +1,114 @@
+---
+layout: default
+title: "حاسبة الميزانية الشهرية المجانية"
+meta_title: "حاسبة الميزانية الشهرية المجانية | تطبيق عربي لإدارة المصاريف | محترف المصاريف"
+description: "استخدم حاسبة ميزانية شهرية مجانية لحساب الفائض أو العجز من دخلك ومصاريفك، ثم حوّل الخطة إلى تطبيق عملي داخل محترف المصاريف."
+permalink: /budget-calculator/
+canonical: https://fouadshawish-png.github.io/budget-calculator/
+---
+
+<section class="section budget-calculator">
+  <h1 class="section-title">حاسبة الميزانية الشهرية المجانية</h1>
+  <p class="budget-calculator__intro">
+    أدخل الأرقام الأساسية لشهرك الحالي، وستحصل فورًا على نتيجة واضحة: هل لديك فائض أم عجز،
+    وما هي الخطوة العملية التالية لتحسين ميزانيتك.
+  </p>
+
+  <div class="calculator-form">
+    <div class="calculator-grid">
+      <div class="calculator-input">
+        <label for="incomeInput">الدخل الشهري</label>
+        <input id="incomeInput" type="number" min="0" step="1" value="9000">
+      </div>
+      <div class="calculator-input">
+        <label for="housingInput">السكن</label>
+        <input id="housingInput" type="number" min="0" step="1" value="3200">
+      </div>
+      <div class="calculator-input">
+        <label for="foodInput">الطعام</label>
+        <input id="foodInput" type="number" min="0" step="1" value="1700">
+      </div>
+      <div class="calculator-input">
+        <label for="transportInput">النقل</label>
+        <input id="transportInput" type="number" min="0" step="1" value="700">
+      </div>
+      <div class="calculator-input">
+        <label for="entertainmentInput">الترفيه</label>
+        <input id="entertainmentInput" type="number" min="0" step="1" value="600">
+      </div>
+      <div class="calculator-input">
+        <label for="debtsInput">الديون والأقساط</label>
+        <input id="debtsInput" type="number" min="0" step="1" value="1200">
+      </div>
+    </div>
+
+    <div class="calculator-output" id="calculatorOutput">
+      <p>إجمالي المصروفات: <strong id="totalExpenses">0</strong></p>
+      <p class="calculator-result" id="balanceResult">0</p>
+      <p class="calculator-tip" id="balanceTip"></p>
+      <div class="calculator-actions">
+        <a class="btn-primary" href="{{ '/' | relative_url }}?route=budgets">نظّمها داخل التطبيق</a>
+        <a class="btn-accent" href="{{ '/weekly-budget-template/' | relative_url }}">تحميل قالب المراجعة الأسبوعية</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var ids = ['incomeInput', 'housingInput', 'foodInput', 'transportInput', 'entertainmentInput', 'debtsInput'];
+  var inputs = ids.map(function (id) { return document.getElementById(id); }).filter(Boolean);
+  var totalExpensesEl = document.getElementById('totalExpenses');
+  var balanceResultEl = document.getElementById('balanceResult');
+  var balanceTipEl = document.getElementById('balanceTip');
+
+  if (!inputs.length || !totalExpensesEl || !balanceResultEl || !balanceTipEl) return;
+
+  function valueOf(input) {
+    var value = parseFloat(input.value);
+    return Number.isFinite(value) && value > 0 ? value : 0;
+  }
+
+  function format(value) {
+    return '₪ ' + Math.round(value).toLocaleString('en-US');
+  }
+
+  function render() {
+    var income = valueOf(document.getElementById('incomeInput'));
+    var expenses =
+      valueOf(document.getElementById('housingInput')) +
+      valueOf(document.getElementById('foodInput')) +
+      valueOf(document.getElementById('transportInput')) +
+      valueOf(document.getElementById('entertainmentInput')) +
+      valueOf(document.getElementById('debtsInput'));
+
+    var balance = income - expenses;
+
+    totalExpensesEl.textContent = format(expenses);
+    balanceResultEl.classList.remove('calculator-result--positive', 'calculator-result--negative');
+
+    if (balance > 0) {
+      balanceResultEl.textContent = 'الفائض الشهري: ' + format(balance);
+      balanceResultEl.classList.add('calculator-result--positive');
+      balanceTipEl.textContent = 'ممتاز. خصص جزءًا ثابتًا من الفائض للادخار وجزءًا لتسريع سداد الالتزامات.';
+      return;
+    }
+
+    if (balance < 0) {
+      balanceResultEl.textContent = 'العجز الشهري: ' + format(Math.abs(balance));
+      balanceResultEl.classList.add('calculator-result--negative');
+      balanceTipEl.textContent = 'ابدأ بخفض بندين اختياريين هذا الأسبوع، ثم راجع التقارير لتحديد أعلى نقاط الهدر.';
+      return;
+    }
+
+    balanceResultEl.textContent = 'التوازن الحالي: ' + format(0);
+    balanceTipEl.textContent = 'أنت على نقطة تعادل. الخطوة التالية هي خلق فائض بسيط وثابت حتى لو كان تدريجيًا.';
+  }
+
+  inputs.forEach(function (input) {
+    input.addEventListener('input', render);
+  });
+
+  render();
+})();
+</script>

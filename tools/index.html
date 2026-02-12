@@ -1,0 +1,170 @@
+---
+layout: default
+title: "أدوات تنظيم المصاريف"
+meta_title: "أدوات تنظيم المصاريف | حاسبات ميزانية وديون وادخار | محترف المصاريف"
+description: "صفحة أدوات مالية عملية: حاسبة ميزانية، حاسبة سداد دين، وحاسبة ادخار هدف بتصميم خفيف وسريع ومتوافق مع الثيم."
+permalink: /tools/
+canonical: https://fouadshawish-png.github.io/tools/
+og_type: website
+---
+
+<section class="section budget-calculator">
+  <h1 class="section-title">أدوات تنظيم المصاريف</h1>
+  <p class="budget-calculator__intro">
+    ثلاث حاسبات سريعة تساعدك على اتخاذ قرار مباشر: ميزانيتك الشهرية، خطة سداد الدين، وسرعة الوصول لهدف الادخار.
+  </p>
+
+  <div class="grid-3">
+    <article class="calculator-form tools-calculator">
+      <h2>حاسبة الميزانية البسيطة</h2>
+      <div class="calculator-grid">
+        <div class="calculator-input">
+          <label for="tIncome">الدخل الشهري</label>
+          <input id="tIncome" type="number" min="0" value="9000">
+        </div>
+        <div class="calculator-input">
+          <label for="tExpenses">إجمالي المصروفات</label>
+          <input id="tExpenses" type="number" min="0" value="6800">
+        </div>
+      </div>
+      <div class="calculator-output">
+        <p class="calculator-result" id="tBudgetResult">-</p>
+        <p class="calculator-tip" id="tBudgetTip"></p>
+      </div>
+    </article>
+
+    <article class="calculator-form tools-calculator">
+      <h2>حاسبة سداد الدين</h2>
+      <div class="calculator-grid">
+        <div class="calculator-input">
+          <label for="tDebtAmount">إجمالي الدين</label>
+          <input id="tDebtAmount" type="number" min="0" value="5000">
+        </div>
+        <div class="calculator-input">
+          <label for="tDebtPayment">الدفعة الشهرية</label>
+          <input id="tDebtPayment" type="number" min="1" value="1000">
+        </div>
+      </div>
+      <div class="calculator-output">
+        <p class="calculator-result" id="tDebtResult">-</p>
+        <p class="calculator-tip" id="tDebtTip"></p>
+      </div>
+    </article>
+
+    <article class="calculator-form tools-calculator">
+      <h2>حاسبة ادخار الهدف</h2>
+      <div class="calculator-grid">
+        <div class="calculator-input">
+          <label for="tGoalAmount">قيمة الهدف</label>
+          <input id="tGoalAmount" type="number" min="0" value="12000">
+        </div>
+        <div class="calculator-input">
+          <label for="tGoalMonths">المدة (بالأشهر)</label>
+          <input id="tGoalMonths" type="number" min="1" value="12">
+        </div>
+      </div>
+      <div class="calculator-output">
+        <p class="calculator-result" id="tGoalResult">-</p>
+        <p class="calculator-tip" id="tGoalTip"></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card">
+    <h2>تطبيق مباشر داخل النظام</h2>
+    <div class="tools-actions">
+      <a class="btn-accent" href="{{ '/reports_root/' | relative_url }}">التقارير</a>
+      <a class="btn-accent" href="{{ '/goals_root/' | relative_url }}">الأهداف</a>
+      <a class="btn-accent" href="{{ '/debt_root/' | relative_url }}">الديون</a>
+      <a class="btn-accent" href="{{ '/budget/' | relative_url }}">الميزانية</a>
+      <a class="btn-primary" href="{{ '/download.html' | relative_url }}">ابدأ نظامك المالي الآن</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  function n(id) {
+    var el = document.getElementById(id);
+    if (!el) return 0;
+    var v = parseFloat(el.value);
+    return Number.isFinite(v) && v > 0 ? v : 0;
+  }
+
+  function fmt(v) {
+    return '₪ ' + Math.round(v).toLocaleString('en-US');
+  }
+
+  function renderBudget() {
+    var income = n('tIncome');
+    var expenses = n('tExpenses');
+    var result = document.getElementById('tBudgetResult');
+    var tip = document.getElementById('tBudgetTip');
+    if (!result || !tip) return;
+
+    var balance = income - expenses;
+    result.classList.remove('calculator-result--positive', 'calculator-result--negative');
+
+    if (balance >= 0) {
+      result.textContent = 'الفائض الشهري: ' + fmt(balance);
+      result.classList.add('calculator-result--positive');
+      tip.textContent = 'حافظ على فائض ثابت ووزعه بين ادخار وسداد التزامات.';
+    } else {
+      result.textContent = 'العجز الشهري: ' + fmt(Math.abs(balance));
+      result.classList.add('calculator-result--negative');
+      tip.textContent = 'راجع أعلى بندين استنزافًا هذا الأسبوع قبل توسيع التخفيض.';
+    }
+  }
+
+  function renderDebt() {
+    var debt = n('tDebtAmount');
+    var pay = n('tDebtPayment');
+    var result = document.getElementById('tDebtResult');
+    var tip = document.getElementById('tDebtTip');
+    if (!result || !tip) return;
+
+    if (!pay) {
+      result.textContent = 'أدخل دفعة شهرية أكبر من صفر';
+      tip.textContent = '';
+      return;
+    }
+
+    var months = Math.ceil(debt / pay);
+    result.textContent = 'مدة السداد المتوقعة: ' + months + ' شهر';
+    tip.textContent = 'الدفعة المنتظمة أهم من المبلغ الكبير غير المستمر.';
+  }
+
+  function renderGoal() {
+    var goal = n('tGoalAmount');
+    var months = n('tGoalMonths');
+    var result = document.getElementById('tGoalResult');
+    var tip = document.getElementById('tGoalTip');
+    if (!result || !tip) return;
+
+    if (!months) {
+      result.textContent = 'أدخل مدة صحيحة';
+      tip.textContent = '';
+      return;
+    }
+
+    var monthly = goal / months;
+    result.textContent = 'الادخار الشهري المطلوب: ' + fmt(monthly);
+    tip.textContent = 'راجع التقدم أسبوعيًا لتثبيت عادة الادخار.';
+  }
+
+  function renderAll() {
+    renderBudget();
+    renderDebt();
+    renderGoal();
+  }
+
+  ['tIncome', 'tExpenses', 'tDebtAmount', 'tDebtPayment', 'tGoalAmount', 'tGoalMonths'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('input', renderAll);
+  });
+
+  renderAll();
+})();
+</script>

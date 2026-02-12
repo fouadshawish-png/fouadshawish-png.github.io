@@ -1,0 +1,62 @@
+{%- assign block_id = include.id | default: 'random-related' -%}
+{%- assign block_title = include.title | default: 'مقالات ذات صلة' -%}
+{%- assign block_count = include.count | default: 3 -%}
+
+<section class="section static-related static-related--random" id="{{ block_id }}" aria-label="{{ block_title }}">
+  <h2 class="section-title">{{ block_title }}</h2>
+  <div class="post-related-grid" id="{{ block_id }}-list"></div>
+</section>
+
+<script>
+(function () {
+  var list = document.getElementById('{{ block_id }}-list');
+  if (!list) return;
+
+  var posts = [
+    {% for post in site.posts limit:40 %}
+    {
+      url: '{{ post.url | relative_url }}',
+      title: '{{ post.title | escape }}',
+      desc: '{{ post.description | default: post.excerpt | strip_html | strip_newlines | escape | truncate: 140 }}',
+      image: '{% if post.image %}{{ post.image | relative_url }}{% endif %}',
+      alt: '{{ post.image_alt | default: post.title | escape }}'
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  if (!posts.length) return;
+
+  function shuffle(array) {
+    var a = array.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i];
+      a[i] = a[j];
+      a[j] = t;
+    }
+    return a;
+  }
+
+  var chosen = shuffle(posts).slice(0, {{ block_count }});
+
+  chosen.forEach(function (post) {
+    var article = document.createElement('article');
+    article.className = 'related-card';
+
+    var thumb = '';
+    if (post.image) {
+      thumb = '<a class="related-card__thumb" href="' + post.url + '" aria-label="' + post.title + '">' +
+              '<img src="' + post.image + '" alt="' + post.alt + '" loading="lazy" width="1200" height="630">' +
+              '</a>';
+    }
+
+    article.innerHTML = thumb +
+      '<div class="related-card__body">' +
+      '<h3 class="related-card__title"><a href="' + post.url + '">' + post.title + '</a></h3>' +
+      '<p class="related-card__desc">' + post.desc + '</p>' +
+      '</div>';
+
+    list.appendChild(article);
+  });
+})();
+</script>

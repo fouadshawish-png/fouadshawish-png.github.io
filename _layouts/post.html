@@ -3,12 +3,66 @@ layout: default
 ---
 
 {%- assign primary_category = page.categories | first | default: 'تنظيم المصاريف' -%}
+{%- assign single_cta_only = page.single_cta_only | default: false -%}
 {%- assign inline_cta_url = '/?route=reports' -%}
 {%- assign inline_cta_label = 'افتح التقارير الآن' -%}
 {%- assign mid_cta_url = '/?route=budgets' -%}
 {%- assign mid_cta_label = 'أنشئ ميزانية الآن' -%}
 {%- assign strong_cta_url = '/?route=home' -%}
 {%- assign strong_cta_label = 'ابدأ داخل التطبيق' -%}
+{%- assign app_deep_route = 'reports' -%}
+{%- assign app_web_url = '/reports_root/' -%}
+{%- assign app_web_label = 'التقارير المالية' -%}
+
+{%- assign hook_line = 'إذا أردت تحسين وضعك المالي فعلًا، ابدأ بخطوة واحدة اليوم قبل أن يتحول التأجيل إلى عادة مكلفة.' -%}
+{%- assign summary_point_1 = 'ابدأ بقياس الواقع المالي بالأرقام، لا بالتخمين أو الانطباع.' -%}
+{%- assign summary_point_2 = 'حوّل الخطة الشهرية إلى قرارات أسبوعية ويومية قابلة للتنفيذ.' -%}
+{%- assign summary_point_3 = 'راجع النتائج باستمرار وعدّل بسرعة بدل انتظار نهاية الشهر.' -%}
+{%- assign current_topic = page.topic | default: 'expense-tracking' -%}
+{%- assign current_level = page.level | default: 'beginner' -%}
+
+{%- assign topic_hub_url = '/topics/expense-tracking/' -%}
+{%- assign topic_hub_title = 'تتبع المصاريف' -%}
+{%- assign same_topic_posts = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'expense-tracking' or p.topic == nil or p.categories contains 'تتبع المصاريف' or p.categories contains 'تنظيم المصاريف')" -%}
+
+{%- case current_topic -%}
+  {%- when 'budget' -%}
+    {%- assign topic_hub_url = '/topics/budget/' -%}
+    {%- assign topic_hub_title = 'الميزانية' -%}
+    {%- assign same_topic_posts = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'budget' or p.categories contains 'الميزانية')" -%}
+  {%- when 'debt' -%}
+    {%- assign topic_hub_url = '/topics/debt/' -%}
+    {%- assign topic_hub_title = 'الديون' -%}
+    {%- assign same_topic_posts = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'debt' or p.categories contains 'الديون')" -%}
+  {%- when 'saving' -%}
+    {%- assign topic_hub_url = '/topics/saving/' -%}
+    {%- assign topic_hub_title = 'الادخار' -%}
+    {%- assign same_topic_posts = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'saving' or p.categories contains 'الادخار')" -%}
+  {%- when 'spending-psychology' -%}
+    {%- assign topic_hub_url = '/topics/spending-psychology/' -%}
+    {%- assign topic_hub_title = 'سيكولوجية الإنفاق' -%}
+    {%- assign same_topic_posts = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'spending-psychology' or p.categories contains 'أخطاء مالية شائعة' or p.title contains 'نفسي')" -%}
+  {%- when 'reports' -%}
+    {%- assign topic_hub_url = '/topics/reports/' -%}
+    {%- assign topic_hub_title = 'التقارير' -%}
+    {%- assign same_topic_posts = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'reports' or p.tags contains 'تقارير' or p.title contains 'تقرير')" -%}
+{%- endcase -%}
+
+{%- if same_topic_posts.size == 0 -%}
+  {%- assign same_topic_posts = site.posts | where_exp: 'p', "p.url != page.url" -%}
+{%- endif -%}
+
+{%- assign next_level = 'advanced' -%}
+{%- if current_level == 'beginner' -%}
+  {%- assign next_level = 'intermediate' -%}
+{%- elsif current_level == 'intermediate' -%}
+  {%- assign next_level = 'advanced' -%}
+{%- endif -%}
+
+{%- assign next_step_post = same_topic_posts | where_exp: 'p', "p.level == next_level" | first -%}
+{%- unless next_step_post -%}
+  {%- assign next_step_post = same_topic_posts | first -%}
+{%- endunless -%}
 
 {%- case primary_category -%}
   {%- when 'الديون' -%}
@@ -18,6 +72,13 @@ layout: default
     {%- assign mid_cta_label = 'راجع أثر السداد بالتقارير' -%}
     {%- assign strong_cta_url = '/?route=debt_ledger' -%}
     {%- assign strong_cta_label = 'ابدأ خطة السداد الآن' -%}
+    {%- assign hook_line = 'الدين لا يصبح أزمة بسبب حجمه فقط، بل بسبب غياب خطة سداد واضحة ومستمرة.' -%}
+    {%- assign summary_point_1 = 'احصر كل الديون في قائمة واحدة واضحة بالمبلغ والتاريخ والأولوية.' -%}
+    {%- assign summary_point_2 = 'اعتمد طريقة سداد ثابتة تمنع التشتت بين الالتزامات.' -%}
+    {%- assign summary_point_3 = 'تابع التقدم أسبوعيًا لتقليل الضغط والحفاظ على الاستمرارية.' -%}
+    {%- assign app_deep_route = 'debt_ledger' -%}
+    {%- assign app_web_url = '/debt_root/' -%}
+    {%- assign app_web_label = 'إدارة الديون' -%}
   {%- when 'الميزانية' -%}
     {%- assign inline_cta_url = '/?route=budgets' -%}
     {%- assign inline_cta_label = 'إنشاء ميزانية شهرية' -%}
@@ -25,6 +86,13 @@ layout: default
     {%- assign mid_cta_label = 'فتح التقارير للمراجعة' -%}
     {%- assign strong_cta_url = '/?route=budgets' -%}
     {%- assign strong_cta_label = 'ابدأ ميزانيتك الآن' -%}
+    {%- assign hook_line = 'الميزانية الناجحة ليست الأكثر صرامة، بل الأكثر واقعية وقدرة على الاستمرار.' -%}
+    {%- assign summary_point_1 = 'ابنِ الميزانية على أرقام حقيقية من نمط إنفاقك الفعلي.' -%}
+    {%- assign summary_point_2 = 'وزّع البنود حسب الأولوية وليس حسب الرغبة اللحظية.' -%}
+    {%- assign summary_point_3 = 'صحّح الانحراف مبكرًا عبر مراجعة أسبوعية قصيرة.' -%}
+    {%- assign app_deep_route = 'budgets' -%}
+    {%- assign app_web_url = '/budget/' -%}
+    {%- assign app_web_label = 'صفحة الميزانية' -%}
   {%- when 'تتبع المصاريف' -%}
     {%- assign inline_cta_url = '/?route=all_transactions' -%}
     {%- assign inline_cta_label = 'سجل عملية الآن' -%}
@@ -32,6 +100,13 @@ layout: default
     {%- assign mid_cta_label = 'افتح التقارير' -%}
     {%- assign strong_cta_url = '/?route=all_transactions' -%}
     {%- assign strong_cta_label = 'ابدأ التتبع الآن' -%}
+    {%- assign hook_line = 'كل قرار مالي صحيح يبدأ من بيانات صحيحة، لا من ذاكرة متقطعة.' -%}
+    {%- assign summary_point_1 = 'سجّل كل عملية مباشرة وقت حدوثها لتقليل النسيان.' -%}
+    {%- assign summary_point_2 = 'استخدم تصنيفات بسيطة تساعدك على اتخاذ قرار واضح.' -%}
+    {%- assign summary_point_3 = 'حلّل النتائج أسبوعيًا لاكتشاف التسرب المالي مبكرًا.' -%}
+    {%- assign app_deep_route = 'all_transactions' -%}
+    {%- assign app_web_url = '/all_transactions/' -%}
+    {%- assign app_web_label = 'سجل العمليات' -%}
   {%- when 'الادخار' -%}
     {%- assign inline_cta_url = '/?route=budgets' -%}
     {%- assign inline_cta_label = 'خصص بند ادخار' -%}
@@ -39,6 +114,13 @@ layout: default
     {%- assign mid_cta_label = 'تابع التقدم بالتقارير' -%}
     {%- assign strong_cta_url = '/?route=budgets' -%}
     {%- assign strong_cta_label = 'ابدأ خطة الادخار' -%}
+    {%- assign hook_line = 'الادخار ليس ما يتبقى آخر الشهر، بل قرار يُثبت في الخطة من البداية.' -%}
+    {%- assign summary_point_1 = 'حدد هدف ادخار واضحًا بقيمة وزمن محددين.' -%}
+    {%- assign summary_point_2 = 'اقتطع مبلغ الادخار فور نزول الدخل قبل المصروفات الاختيارية.' -%}
+    {%- assign summary_point_3 = 'راجع تقدمك دوريًا وعدّل الهدف حسب الواقع دون إلغاء الخطة.' -%}
+    {%- assign app_deep_route = 'goals_root' -%}
+    {%- assign app_web_url = '/goals_root/' -%}
+    {%- assign app_web_label = 'الأهداف المالية' -%}
   {%- when 'تنظيم المصاريف' -%}
     {%- assign inline_cta_url = '/?route=all_transactions' -%}
     {%- assign inline_cta_label = 'ابدأ تنظيم العمليات' -%}
@@ -46,6 +128,13 @@ layout: default
     {%- assign mid_cta_label = 'ثبت حدود الميزانية' -%}
     {%- assign strong_cta_url = '/?route=all_transactions' -%}
     {%- assign strong_cta_label = 'حوّل الوعي إلى متابعة يومية' -%}
+    {%- assign hook_line = 'تنظيم المصاريف لا يحتاج تعقيدًا، يحتاج نظامًا بسيطًا تلتزم به يوميًا.' -%}
+    {%- assign summary_point_1 = 'ابدأ بتتبع أسبوع كامل للحصول على صورة مالية دقيقة.' -%}
+    {%- assign summary_point_2 = 'قسّم المصروفات إلى بنود ضرورية واختيارية بوضوح.' -%}
+    {%- assign summary_point_3 = 'حوّل الأرقام إلى قرارات أسبوعية ثابتة.' -%}
+    {%- assign app_deep_route = 'all_transactions' -%}
+    {%- assign app_web_url = '/all_transactions/' -%}
+    {%- assign app_web_label = 'سجل العمليات' -%}
   {%- when 'أخطاء مالية شائعة' -%}
     {%- assign inline_cta_url = '/?route=budgets' -%}
     {%- assign inline_cta_label = 'صحح إعداد الميزانية' -%}
@@ -53,7 +142,19 @@ layout: default
     {%- assign mid_cta_label = 'افتح التقارير للتشخيص' -%}
     {%- assign strong_cta_url = '/?route=budgets' -%}
     {%- assign strong_cta_label = 'ابدأ خطة تصحيح عملية' -%}
+    {%- assign hook_line = 'تكرار نفس الخطأ المالي شهريًا يعني أن المشكلة في النظام، لا في الإرادة فقط.' -%}
+    {%- assign summary_point_1 = 'شخّص الخطأ الجذري بدل معالجة العرض المؤقت.' -%}
+    {%- assign summary_point_2 = 'حدّد قرارًا تصحيحيًا واحدًا قابلًا للتنفيذ هذا الأسبوع.' -%}
+    {%- assign summary_point_3 = 'تابع النتيجة بالبيانات لتثبيت التحسن تدريجيًا.' -%}
+    {%- assign app_deep_route = 'reports' -%}
+    {%- assign app_web_url = '/reports_root/' -%}
+    {%- assign app_web_label = 'التقارير المالية' -%}
 {%- endcase -%}
+
+{%- if page.hook -%}
+  {%- assign hook_line = page.hook -%}
+{%- endif -%}
+{%- capture app_deep_link -%}expensemanager://open?route={{ app_deep_route }}{%- endcapture -%}
 
 {%- assign rendered_content = content -%}
 {%- for auto_link in site.data.auto_links -%}
@@ -73,6 +174,13 @@ layout: default
 
   <h1>{{ page.title }}</h1>
 
+  <p class="post-byline">
+    بقلم <a href="{{ '/about-author/' | relative_url }}">فؤاد شاويش</a>
+    {% if page.date %}
+    · <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+    {% endif %}
+  </p>
+
   {%- if page.image -%}
   <img
     class="post-image post-image--wide"
@@ -83,9 +191,87 @@ layout: default
     height="630">
   {%- endif -%}
 
+  <p class="post-hook">{{ hook_line }}</p>
+
+  <section class="post-summary" aria-label="الخلاصة في 3 نقاط">
+    <h2>الخلاصة في 3 نقاط</h2>
+    <ul>
+      <li>{{ summary_point_1 }}</li>
+      <li>{{ summary_point_2 }}</li>
+      <li>{{ summary_point_3 }}</li>
+    </ul>
+  </section>
+
+  <section class="method-box card" aria-label="منهج العمل في هذا الموقع">
+    <h2>منهج العمل في هذا الموقع</h2>
+    <p>كل مقال هنا قابل للتطبيق الفوري، وليس نصائح عامة.</p>
+  </section>
+
+  <div class="post-toc-wrap" id="postTocWrap" hidden>
+    <nav class="post-toc" aria-label="جدول المحتويات">
+      <h2>جدول المحتويات</h2>
+      <ul id="postTocList"></ul>
+    </nav>
+    <details class="post-toc-mobile" id="postTocMobile">
+      <summary>جدول المحتويات</summary>
+      <ul id="postTocMobileList"></ul>
+    </details>
+  </div>
+
   <div class="post-content" id="postContent">
     {{ rendered_content }}
   </div>
+
+  <section class="section post-topic-cluster" aria-label="روابط موضوعية">
+    <div class="card">
+      <h2>اقرأ ضمن نفس الموضوع</h2>
+      <ul class="topic-block__list">
+        {%- for rel_post in same_topic_posts limit:6 -%}
+        <li><a href="{{ rel_post.url | relative_url }}">{{ rel_post.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section post-next-step" aria-label="الخطوة التالية">
+    <div class="card">
+      <h2>الخطوة التالية</h2>
+      {%- if next_step_post -%}
+      <p><a href="{{ next_step_post.url | relative_url }}">{{ next_step_post.title }}</a></p>
+      {%- else -%}
+      <p>سيتم إضافة مقالات متدرجة المستوى قريبًا.</p>
+      {%- endif -%}
+    </div>
+  </section>
+
+  <section class="section post-topic-hub" aria-label="الدليل الرئيسي">
+    <div class="card">
+      <h2>الدليل الرئيسي</h2>
+      <p>العودة إلى محور <strong>{{ topic_hub_title }}</strong> لقراءة المسار الكامل.</p>
+      <a class="btn-primary" href="{{ topic_hub_url | relative_url }}">عرض دليل الموضوع</a>
+    </div>
+  </section>
+
+  {%- assign inline_related_pool = same_topic_posts -%}
+  {%- assign inline_related_pool = inline_related_pool | limit: 2 -%}
+  <aside class="inline-read-also card" id="inlineReadAlsoTemplate" hidden>
+    <h2>اقرأ أيضًا:</h2>
+    <ul>
+      {%- for rel in inline_related_pool -%}
+      <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
+      {%- endfor -%}
+    </ul>
+  </aside>
+
+  {%- unless single_cta_only -%}
+  <section class="app-apply-box card" aria-label="تطبيق الخطوات داخل التطبيق">
+    <h2>كيف تطبّق هذا داخل التطبيق؟</h2>
+    <p>ابدأ بنفس الفكرة التي قرأتها هنا عبر فتح الميزة مباشرة، ثم راجع الصفحة المقابلة على الويب إذا كنت تحتاج شرحًا تفصيليًا إضافيًا.</p>
+    <div class="app-apply-box__actions">
+      <a class="btn-primary" href="{{ app_deep_link }}">فتح الميزة داخل التطبيق</a>
+    </div>
+  </section>
+  {%- endunless -%}
 
   <p class="post-hint">إذا شعرت أن الفكرة تلامس واقعك، فتذكّر أن تنظيم المصاريف يبدأ بخطوات بسيطة قابلة للتطبيق. كثيرون يجدون أن وجود أداة واضحة مثل تطبيق محترف المصاريف يساعدهم على تحويل الوعي إلى متابعة يومية دون تعقيد.</p>
 
@@ -95,6 +281,16 @@ layout: default
       مشاركة على فيسبوك
     </a>
   </div>
+
+  <section class="author-box" aria-label="نبذة الكاتب">
+    <img class="author-box__avatar" src="{{ '/assets/images/authors/fouad-shawish-placeholder.svg' | relative_url }}" alt="صورة الكاتب فؤاد شاويش" loading="lazy" width="96" height="96">
+    <div class="author-box__content">
+      <p class="author-box__label">عن الكاتب</p>
+      <h3>فؤاد شاويش</h3>
+      <p>مطور تطبيق محترف المصاريف وكاتب محتوى مالي عملي، بخبرة تطبيقية في بناء أنظمة تتبع مصاريف وميزانية قابلة للاستمرار.</p>
+      <a href="{{ '/about-author/' | relative_url }}">اقرأ المزيد عن الكاتب</a>
+    </div>
+  </section>
 </article>
 
 <section class="post-related post-related--dynamic" aria-label="اقرأ أيضًا">
@@ -140,12 +336,119 @@ layout: default
   </div>
 </section>
 
+{%- unless single_cta_only -%}
 <div class="article-cta article-cta--strong">
   <h3>حوّل المعرفة إلى خطوة عملية الآن</h3>
   <p>تطبيق الفكرة فورًا داخل التطبيق يجعل النتائج أسرع وأكثر وضوحًا.</p>
   <a href="{{ strong_cta_url }}" class="cta-button">{{ strong_cta_label }}</a>
-  <a href="/download.html" class="cta-secondary">تحميل التطبيق</a>
 </div>
+{%- endunless -%}
+
+<script>
+(function () {
+  var content = document.getElementById('postContent');
+  var tocWrap = document.getElementById('postTocWrap');
+  var tocList = document.getElementById('postTocList');
+  var tocMobileList = document.getElementById('postTocMobileList');
+
+  if (!content || !tocWrap || !tocList || !tocMobileList) return;
+
+  var text = content.textContent || '';
+  var wordCount = text.trim().split(/\s+/).filter(Boolean).length;
+  if (wordCount < 1200) return;
+
+  var headings = content.querySelectorAll('h2, h3');
+  if (!headings.length) return;
+
+  var usedIds = {};
+
+  function slugify(value) {
+    return value
+      .toLowerCase()
+      .replace(/[^\w\u0600-\u06FF\s-]/g, '')
+      .trim()
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-');
+  }
+
+  headings.forEach(function (heading, index) {
+    var textContent = heading.textContent.trim();
+    if (!textContent) return;
+
+    var embeddedAnchor = heading.querySelector('a[id]');
+    var baseId = heading.id || (embeddedAnchor ? embeddedAnchor.id : slugify(textContent));
+    if (!baseId) baseId = 'section-' + (index + 1);
+
+    var finalId = baseId;
+    var counter = 2;
+    while (usedIds[finalId]) {
+      finalId = baseId + '-' + counter;
+      counter += 1;
+    }
+    usedIds[finalId] = true;
+    heading.id = finalId;
+
+    var item = document.createElement('li');
+    item.className = heading.tagName.toLowerCase() === 'h3' ? 'toc-item toc-item--sub' : 'toc-item';
+
+    var anchor = document.createElement('a');
+    anchor.href = '#' + finalId;
+    anchor.textContent = textContent;
+
+    item.appendChild(anchor);
+    tocList.appendChild(item);
+
+    var mobileItem = item.cloneNode(true);
+    tocMobileList.appendChild(mobileItem);
+  });
+
+  if (!tocList.children.length) return;
+  tocWrap.hidden = false;
+})();
+</script>
+
+<script>
+(function () {
+  var content = document.getElementById('postContent');
+  var template = document.getElementById('inlineReadAlsoTemplate');
+  if (!content || !template) return;
+  if (content.querySelector('.inline-read-also')) return;
+
+  var paragraphs = content.querySelectorAll('p');
+  if (!paragraphs.length) return;
+
+  var target = paragraphs.length >= 3 ? paragraphs[2] : paragraphs[paragraphs.length - 1];
+  var clone = template.cloneNode(true);
+  clone.hidden = false;
+  clone.removeAttribute('id');
+
+  if (!clone.querySelector('li')) return;
+  target.insertAdjacentElement('afterend', clone);
+})();
+</script>
+
+<script>
+{%- unless single_cta_only -%}
+(function () {
+  var content = document.getElementById('postContent');
+  if (!content) return;
+
+  var firstHeading = content.querySelector('h2');
+  if (!firstHeading) return;
+
+  if (content.querySelector('.template-download-box')) return;
+
+  var box = document.createElement('aside');
+  box.className = 'template-download-box card';
+  box.innerHTML =
+    '<h3>حمّل قالب مراجعة الميزانية الأسبوعية PDF</h3>' +
+    '<p>استخدم القالب الجاهز لمراجعة أسبوعية سريعة ثم طبّق نفس الخطة داخل التطبيق.</p>' +
+    '<a class="btn-accent" href="{{ "/weekly-budget-template/" | relative_url }}">تحميل القالب الآن</a>';
+
+  firstHeading.insertAdjacentElement('afterend', box);
+})();
+{%- endunless -%}
+</script>
 
 <script>
 (function () {
@@ -154,60 +457,22 @@ layout: default
 
   var content = article.querySelector('#postContent');
   if (!content) return;
+  if (content.querySelector('.inline-cta--single')) return;
 
-  var blocks = content.querySelectorAll('p, ul, ol, h2, h3');
-  if (!blocks || blocks.length < 4) return;
+  var h2List = content.querySelectorAll('h2');
+  if (!h2List || h2List.length < 2) return;
 
-  function createInlineCta(type, title, text, href, label) {
-    var box = document.createElement('div');
-    box.className = 'inline-cta inline-cta--' + type;
-
-    var heading = document.createElement('h3');
-    heading.textContent = title;
-
-    var paragraph = document.createElement('p');
-    paragraph.textContent = text;
-
-    var action = document.createElement('a');
-    action.className = 'cta-button';
-    action.href = href;
-    action.textContent = label;
-
-    box.appendChild(heading);
-    box.appendChild(paragraph);
-    box.appendChild(action);
-
-    return box;
-  }
-
-  var inlineIndex = Math.max(1, Math.floor(blocks.length * 0.3) - 1);
-  var middleIndex = Math.max(inlineIndex + 1, Math.floor(blocks.length * 0.6) - 1);
-
+  var secondH2 = h2List[1];
   var inlineUrl = article.dataset.inlineCtaUrl || '/?route=reports';
   var inlineLabel = article.dataset.inlineCtaLabel || 'افتح التقارير الآن';
 
-  var midUrl = article.dataset.midCtaUrl || '/?route=budgets';
-  var midLabel = article.dataset.midCtaLabel || 'أنشئ ميزانية الآن';
+  var box = document.createElement('aside');
+  box.className = 'inline-cta inline-cta--single';
+  box.innerHTML =
+    '<h3>إذا أردت تنفيذ الخطوات عمليًا بدون جداول معقدة…</h3>' +
+    '<p>حوّل هذه الخطوات إلى متابعة يومية مباشرة داخل التطبيق.</p>' +
+    '<a class="cta-button" data-cta-location="inline" href="' + inlineUrl + '">' + inlineLabel + '</a>';
 
-  var inlineCta = createInlineCta(
-    'light',
-    'خطوة صغيرة الآن',
-    'ابدأ تطبيق ما قرأته مباشرة لتثبيت النتيجة قبل الانتقال لباقي الخطوات.',
-    inlineUrl,
-    inlineLabel
-  );
-
-  var middleCta = createInlineCta(
-    'medium',
-    'تابع التنفيذ داخل التطبيق',
-    'بعد هذا الجزء، نفّذ خطوة عملية واحدة حتى تتحول الفكرة إلى قرار مالي واضح.',
-    midUrl,
-    midLabel
-  );
-
-  blocks[inlineIndex].insertAdjacentElement('afterend', inlineCta);
-  if (blocks[middleIndex]) {
-    blocks[middleIndex].insertAdjacentElement('afterend', middleCta);
-  }
+  secondH2.insertAdjacentElement('afterend', box);
 })();
 </script>

@@ -1,48 +1,69 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% assign canonical_url = page.canonical | default: page.url | absolute_url %}
+{% assign page_title = page.meta_title | default: page.title | default: site.title %}
+{% assign page_description = page.description | default: site.description %}
+{% assign default_og_image = '/assets/images/og-default.jpg' | absolute_url %}
+{% assign page_og_image = page.og_image | default: page.image | default: '/assets/images/og-default.jpg' | absolute_url %}
+{% assign og_type = page.og_type | default: 'website' %}
 
 <title>
-{% if page.title %}
+{% if page.meta_title %}
+{{ page.meta_title }}
+{% elsif page.title %}
 {{ page.title }} | {{ site.title }}
 {% else %}
 {{ site.title }} – تطبيق عربي لإدارة المصاريف والميزانية
 {% endif %}
 </title>
 
-<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="description" content="{{ page_description }}">
 
-<link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="canonical" href="{{ canonical_url }}">
+{% if page.noindex == true %}
+<meta name="robots" content="noindex, nofollow">
+{% else %}
+<meta name="robots" content="index, follow">
+{% endif %}
+{% if page.crawl_priority %}
+<meta name="crawl-priority" content="{{ page.crawl_priority }}">
+{% endif %}
 
-{% assign default_og_image = site.url | append: '/assets/images/og-default.jpg' %}
-{% assign post_og_image = page.image | absolute_url %}
 {% if page.layout == "post" %}
 <!-- Open Graph: Article -->
 <meta property="og:type" content="article">
-<meta property="og:title" content="{{ page.title }}">
-<meta property="og:description" content="{{ page.description }}">
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta property="og:image" content="{% if page.image %}{{ post_og_image }}{% else %}{{ default_og_image }}{% endif %}">
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{{ page_description }}">
+<meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:image" content="{{ page_og_image }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:locale" content="{{ site.locale | default: 'ar_AR' }}">
 <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-<meta property="article:author" content="{{ site.author.name | default: 'فؤاد شاويش' }}">
+<meta property="article:modified_time" content="{{ page.last_modified_at | default: page.date | date_to_xmlschema }}">
+<meta property="article:author" content="{{ '/about-author/' | absolute_url }}">
 
 <!-- Twitter Card: Article -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ page.title }}">
-<meta name="twitter:description" content="{{ page.description }}">
-<meta name="twitter:image" content="{% if page.image %}{{ post_og_image }}{% else %}{{ default_og_image }}{% endif %}">
+<meta name="twitter:title" content="{{ page_title }}">
+<meta name="twitter:description" content="{{ page_description }}">
+<meta name="twitter:image" content="{{ page_og_image }}">
+<meta name="twitter:url" content="{{ canonical_url }}">
 {% else %}
 <!-- Open Graph: Website -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="{{ site.title }}">
-<meta property="og:description" content="{{ site.description }}">
-<meta property="og:url" content="{{ site.url }}">
-<meta property="og:image" content="{{ default_og_image }}">
+<meta property="og:type" content="{{ og_type }}">
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{{ page_description }}">
+<meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:image" content="{{ page_og_image | default: default_og_image }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:locale" content="{{ site.locale | default: 'ar_AR' }}">
 
 <!-- Twitter Card: Website -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ site.title }}">
-<meta name="twitter:description" content="{{ site.description }}">
-<meta name="twitter:image" content="{{ default_og_image }}">
+<meta name="twitter:title" content="{{ page_title }}">
+<meta name="twitter:description" content="{{ page_description }}">
+<meta name="twitter:image" content="{{ page_og_image | default: default_og_image }}">
+<meta name="twitter:url" content="{{ canonical_url }}">
 {% endif %}
 
 <!-- Theme Color -->

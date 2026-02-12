@@ -1,33 +1,59 @@
 ---
 layout: default
 title: "المقالات"
-description: "مقالات عربية عن إدارة المصاريف، الادخار، الميزانية الشخصية، وأخطاء شائعة مع حلول عملية." 
+meta_title: "مقالات تنظيم المصاريف | تطبيق عربي لإدارة الأموال | محترف المصاريف"
+description: "مقالات عربية عملية مقسمة حسب المحاور: تنظيم المصاريف، الميزانية، الديون، والعادات المالية."
 canonical_url: /blog/
 permalink: /blog/
 ---
 
 <h1 class="page-title">المدونة</h1>
 
-<p class="post-meta">الصفحة الأساسية للمدونة: <a class="post-link" href="{{ '/blog/' | relative_url }}">/blog</a></p>
+<p class="post-meta">
+  تصفح المحتوى حسب المحور لتصل مباشرة للمقالات التي تخدم وضعك الحالي.
+</p>
 
-<ul class="post-list">
-  {% for post in site.posts %}
-  <li class="post-item">
-    {% if post.image %}
-      <a class="post-thumb" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
-        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" width="1200" height="630">
-      </a>
-    {% endif %}
-    <div class="post-body">
-      <h2 class="post-title">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </h2>
-      <p class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</p>
-      {% if post.description %}
-        <p class="post-excerpt">{{ post.description }}</p>
-      {% endif %}
-      <p class="post-readmore"><a class="post-link" href="{{ post.url | relative_url }}">اقرأ المقال</a></p>
-    </div>
-  </li>
-  {% endfor %}
-</ul>
+{%- assign guide_pages = site.pages | where_exp: 'p', 'p.url contains "/expense-guides/" or p.url == "/organizing-expenses/"' -%}
+
+{%- assign categories = "تنظيم المصاريف|الميزانية|الديون|العادات المالية" | split: "|" -%}
+{%- for category in categories -%}
+<section class="blog-category section">
+  <h2 class="section-title">{{ category }}</h2>
+  <ul class="post-list">
+    {%- assign category_posts = site.posts | where_exp: 'post', 'post.categories contains category' -%}
+    {%- assign category_guides = guide_pages | where_exp: 'guide', 'guide.categories contains category' -%}
+    {%- assign section_items = category_posts | concat: category_guides | sort: 'date' | reverse -%}
+
+    {%- if section_items.size == 0 -%}
+      <li class="post-item post-item--text">
+        <div class="post-body">
+          <h3 class="post-title">لا توجد مقالات في هذا القسم بعد</h3>
+          <p class="post-excerpt">سيتم إضافة محتوى جديد قريبًا ضمن هذا المحور.</p>
+        </div>
+      </li>
+    {%- else -%}
+      {%- for item in section_items -%}
+      <li class="post-item{% unless item.image %} post-item--text{% endunless %}">
+        {% if item.image %}
+          <a class="post-thumb" href="{{ item.url | relative_url }}" aria-label="{{ item.title }}">
+            <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" loading="lazy" width="1200" height="630">
+          </a>
+        {% endif %}
+        <div class="post-body">
+          <h3 class="post-title">
+            <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          </h3>
+          {% if item.date %}
+            <p class="post-meta">{{ item.date | date: "%Y-%m-%d" }}</p>
+          {% endif %}
+          {% if item.description %}
+            <p class="post-excerpt">{{ item.description }}</p>
+          {% endif %}
+          <p class="post-readmore"><a class="post-link" href="{{ item.url | relative_url }}">اقرأ المقال</a></p>
+        </div>
+      </li>
+      {%- endfor -%}
+    {%- endif -%}
+  </ul>
+</section>
+{%- endfor -%}

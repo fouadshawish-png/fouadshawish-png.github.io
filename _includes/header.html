@@ -25,7 +25,17 @@
       <a href="{{ '/guide.html' | relative_url }}">دليل الاستخدام</a>
       <a href="{{ '/features-advanced.html' | relative_url }}">المميزات المتقدمة</a>
       <a href="{{ '/blog/' | relative_url }}">مقالات</a>
-      <a href="{{ '/topics/' | relative_url }}">المواضيع</a>
+      <details class="nav-dropdown">
+        <summary>المواضيع</summary>
+        <div class="nav-dropdown__menu">
+          <a href="{{ '/topics/budget/' | relative_url }}">الميزانية</a>
+          <a href="{{ '/topics/expense-tracking/' | relative_url }}">تتبع المصاريف</a>
+          <a href="{{ '/topics/debt/' | relative_url }}">الديون</a>
+          <a href="{{ '/topics/saving/' | relative_url }}">الادخار</a>
+          <a href="{{ '/topics/spending-psychology/' | relative_url }}">سيكولوجية الإنفاق</a>
+          <a href="{{ '/topics/reports/' | relative_url }}">التقارير</a>
+        </div>
+      </details>
       <a href="/guides.html">الأدلة</a>
 
       <a href="{{ '/faq.html' | relative_url }}">الأسئلة الشائعة</a>

@@ -1,0 +1,23 @@
+---
+layout: default
+title: "Ping خريطة الموقع"
+meta_title: "Ping أدوات الفهرسة | Google وBing وYandex | محترف المصاريف"
+description: "صفحة سريعة لإرسال Ping لخريطة الموقع إلى محركات البحث بهدف تسريع اكتشاف الصفحات الجديدة."
+permalink: /ping/
+canonical: https://fouadshawish-png.github.io/ping/
+---
+
+{% assign sitemap_url = 'https://fouadshawish-png.github.io/sitemap.xml' %}
+
+<section class="section">
+  <h1 class="section-title">Ping خريطة الموقع</h1>
+  <div class="card">
+    <p>اضغط على الزر المناسب لفتح رابط Ping مباشرة.</p>
+    <div class="tools-actions">
+      <a class="btn-primary" target="_blank" rel="noopener noreferrer" href="https://www.google.com/ping?sitemap={{ sitemap_url | url_encode }}">Ping Google</a>
+      <a class="btn-accent" target="_blank" rel="noopener noreferrer" href="https://www.bing.com/ping?sitemap={{ sitemap_url | url_encode }}">Ping Bing</a>
+      <a class="btn-accent" target="_blank" rel="noopener noreferrer" href="https://webmaster.yandex.com/ping?sitemap={{ sitemap_url | url_encode }}">Ping Yandex</a>
+    </div>
+    <p class="tools-intro">رابط السايت ماب المستخدم: <a href="{{ sitemap_url }}" target="_blank" rel="noopener noreferrer">{{ sitemap_url }}</a></p>
+  </div>
+</section>

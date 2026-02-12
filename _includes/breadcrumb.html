@@ -1,5 +1,15 @@
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="{{ '/' | relative_url }}">الرئيسية</a> ›
-  <a href="{{ '/blog/' | relative_url }}">المقالات</a> ›
-  <span>{{ page.title }}</span>
+  {%- if page.url == '/organizing-expenses/' -%}
+    <span>تنظيم المصاريف</span>
+  {%- elsif page.breadcrumb_parent_url and page.breadcrumb_parent_title -%}
+    <a href="{{ page.breadcrumb_parent_url | relative_url }}">{{ page.breadcrumb_parent_title }}</a> ›
+    <span>{{ page.title }}</span>
+  {%- elsif page.url contains '/expense-guides/' -%}
+    <a href="{{ '/organizing-expenses/' | relative_url }}">تنظيم المصاريف</a> ›
+    <span>{{ page.title }}</span>
+  {%- else -%}
+    <a href="{{ '/blog/' | relative_url }}">المقالات</a> ›
+    <span>{{ page.title }}</span>
+  {%- endif -%}
 </nav>

@@ -1,0 +1,98 @@
+{%- assign topic_key = include.key | default: 'expense-tracking' -%}
+{%- assign topic_title = include.title | default: 'تتبع المصاريف' -%}
+{%- assign topic_description = include.description | default: '' -%}
+{%- assign topic_deep_route = include.deep_route | default: 'all_transactions' -%}
+
+{%- case topic_key -%}
+  {%- when 'budget' -%}
+    {%- assign topic_posts = site.posts | where_exp: 'p', "p.topic == 'budget' or p.categories contains 'الميزانية'" -%}
+  {%- when 'debt' -%}
+    {%- assign topic_posts = site.posts | where_exp: 'p', "p.topic == 'debt' or p.categories contains 'الديون'" -%}
+  {%- when 'saving' -%}
+    {%- assign topic_posts = site.posts | where_exp: 'p', "p.topic == 'saving' or p.categories contains 'الادخار'" -%}
+  {%- when 'spending-psychology' -%}
+    {%- assign topic_posts = site.posts | where_exp: 'p', "p.topic == 'spending-psychology' or p.categories contains 'أخطاء مالية شائعة' or p.title contains 'نفسي'" -%}
+  {%- when 'reports' -%}
+    {%- assign topic_posts = site.posts | where_exp: 'p', "p.topic == 'reports' or p.tags contains 'تقارير' or p.title contains 'تقرير'" -%}
+  {%- else -%}
+    {%- assign topic_posts = site.posts | where_exp: 'p', "p.topic == 'expense-tracking' or p.topic == nil or p.categories contains 'تتبع المصاريف' or p.categories contains 'تنظيم المصاريف'" -%}
+{%- endcase -%}
+
+{%- if topic_posts.size == 0 -%}
+  {%- assign topic_posts = site.posts | limit: 6 -%}
+{%- endif -%}
+
+{%- assign beginner_post = topic_posts | where_exp: 'p', "p.level == 'beginner'" | first -%}
+{%- assign intermediate_post = topic_posts | where_exp: 'p', "p.level == 'intermediate'" | first -%}
+{%- assign advanced_post = topic_posts | where_exp: 'p', "p.level == 'advanced'" | first -%}
+
+{%- unless beginner_post -%}
+  {%- assign beginner_post = topic_posts[0] -%}
+{%- endunless -%}
+{%- unless intermediate_post -%}
+  {%- assign intermediate_post = topic_posts[1] | default: topic_posts[0] -%}
+{%- endunless -%}
+{%- unless advanced_post -%}
+  {%- assign advanced_post = topic_posts[2] | default: topic_posts[1] | default: topic_posts[0] -%}
+{%- endunless -%}
+
+<section class="section topic-hub">
+  <h1 class="section-title">{{ topic_title }}</h1>
+  <div class="card">
+    <p>{{ topic_description }}</p>
+  </div>
+</section>
+
+<section class="section topic-level-ladder">
+  <h2>مسار القراءة حسب المستوى</h2>
+  <div class="grid-3">
+    <article class="card">
+      <h3>مقال تمهيدي</h3>
+      {% if beginner_post %}
+      <p><a href="{{ beginner_post.url | relative_url }}">{{ beginner_post.title }}</a></p>
+      {% else %}
+      <p>سيتم إضافة مقال تمهيدي قريبًا.</p>
+      {% endif %}
+    </article>
+    <article class="card">
+      <h3>مقال متوسط</h3>
+      {% if intermediate_post %}
+      <p><a href="{{ intermediate_post.url | relative_url }}">{{ intermediate_post.title }}</a></p>
+      {% else %}
+      <p>سيتم إضافة مقال متوسط قريبًا.</p>
+      {% endif %}
+    </article>
+    <article class="card">
+      <h3>مقال متقدم</h3>
+      {% if advanced_post %}
+      <p><a href="{{ advanced_post.url | relative_url }}">{{ advanced_post.title }}</a></p>
+      {% else %}
+      <p>سيتم إضافة مقال متقدم قريبًا.</p>
+      {% endif %}
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <h2>آخر المقالات ضمن الموضوع</h2>
+  <div class="post-related-grid">
+    {% for post in topic_posts limit:6 %}
+    <article class="related-card">
+      {% if post.image %}
+      <a class="related-card__thumb" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy" width="1200" height="630">
+      </a>
+      {% endif %}
+      <div class="related-card__body">
+        <h3 class="related-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="related-card__desc">{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 130 }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <div class="tools-actions" style="margin-top:20px;">
+    <a class="btn-primary" href="{{ '/?route=' | append: topic_deep_route | relative_url }}">فتح داخل التطبيق</a>
+    <a class="btn-accent" href="{{ '/blog/' | relative_url }}">استعرض كل المقالات</a>
+  </div>
+</section>

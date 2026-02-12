@@ -1,72 +1,100 @@
-{%- assign org_name = site.author.name | default: site.title -%}
 {%- assign site_url = '/' | absolute_url -%}
-{%- assign logo_abs = site.logo | default: '/icon.png' | absolute_url -%}
-{%- assign og_abs = site.default_og_image | default: site.logo | default: '/icon.png' | absolute_url -%}
-{%- assign is_home = page.url == '/' or page.url == '/index.html' -%}
+{%- assign org_name = site.title | default: 'محترف المصاريف' -%}
+{%- assign org_logo = site.logo | default: '/icon.png' | absolute_url -%}
+{%- assign author_name = site.author.name | default: 'فؤاد شاويش' -%}
+{%- assign author_url = '/about-author/' | absolute_url -%}
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "{{ site_url }}#organization",
-  "name": "{{ org_name | escape }}",
-  "url": "{{ site_url }}",
-  "logo": {
-    "@type": "ImageObject",
-    "url": "{{ logo_abs }}"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site_url }}#organization",
+      "name": "{{ org_name | escape }}",
+      "url": "{{ site_url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ org_logo }}"
+      },
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager",
+        "https://www.facebook.com/ExpenseManagerApplication",
+        "https://github.com/example/expense-manager-arabic"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ author_url }}#person",
+      "name": "{{ author_name | escape }}",
+      "url": "{{ author_url }}",
+      "jobTitle": "مطور تطبيقات مالية",
+      "worksFor": {
+        "@id": "{{ site_url }}#organization"
+      },
+      "knowsAbout": [
+        "تنظيم المصاريف",
+        "الميزانية الشهرية",
+        "تتبع المصاريف",
+        "إدارة الديون",
+        "إدارة الأموال"
+      ],
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.fouadshawish.ExpenseManager"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site_url }}#website",
+      "url": "{{ site_url }}",
+      "name": "{{ site.title | escape }}",
+      "description": "{{ site.description | strip_newlines | escape }}",
+      "inLanguage": "{{ site.lang | default: 'ar' | escape }}",
+      "publisher": {
+        "@id": "{{ site_url }}#organization"
+      },
+      "author": {
+        "@id": "{{ author_url }}#person"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ site.url }}/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
 }
 </script>
-
-{%- if is_home -%}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "{{ site_url }}#website",
-  "url": "{{ site_url }}",
-  "name": "{{ site.title | escape }}",
-  "description": "{{ site.description | strip_newlines | escape }}",
-  "inLanguage": "{{ site.lang | default: 'ar' | escape }}",
-  "publisher": {
-    "@id": "{{ site_url }}#organization"
-  }
-}
-</script>
-{%- endif -%}
 
 {%- if page.layout == 'guide' -%}
-{%- assign guide_schema_type = page.schema_type | default: 'TechArticle' -%}
-{%- assign guide_url = page.url | absolute_url -%}
-{%- assign guide_title = page.title | default: site.title -%}
-{%- assign guide_description = page.description | default: site.description -%}
-{%- assign guide_image = page.image | default: site.default_og_image | default: site.logo | default: '/icon.png' | absolute_url -%}
+{%- assign guide_url = page.canonical | default: page.url | absolute_url -%}
+{%- assign guide_type = page.schema_type | default: 'TechArticle' -%}
+{%- assign guide_image = page.image | default: '/assets/images/og-default.jpg' | absolute_url -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "{{ guide_schema_type }}",
+  "@type": "{{ guide_type }}",
   "@id": "{{ guide_url }}#guide",
-  "headline": "{{ guide_title | escape }}",
-  "description": "{{ guide_description | strip_newlines | escape }}",
+  "headline": "{{ page.title | default: site.title | escape }}",
+  "description": "{{ page.description | default: site.description | strip_newlines | escape }}",
   "url": "{{ guide_url }}",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "{{ guide_url }}"
   },
-  "inLanguage": "{{ page.lang | default: site.lang | default: 'ar' | escape }}",
   "image": "{{ guide_image }}",
+  "inLanguage": "{{ page.lang | default: site.lang | default: 'ar' | escape }}",
   "author": {
-    "@type": "Organization",
-    "name": "{{ org_name | escape }}"
+    "@id": "{{ author_url }}#person"
   },
   "publisher": {
     "@id": "{{ site_url }}#organization"
   }
-  {%- if page.date -%}
-  ,"datePublished": "{{ page.date | date_to_xmlschema }}"
+  {%- if page.date -%},
+  "datePublished": "{{ page.date | date_to_xmlschema }}"
   {%- endif -%}
-  {%- if page.last_modified_at -%}
-  ,"dateModified": "{{ page.last_modified_at | date_to_xmlschema }}"
+  {%- if page.last_modified_at -%},
+  "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}"
   {%- endif -%}
 }
 </script>
@@ -86,37 +114,37 @@
       {
         "@type": "ListItem",
         "position": 1,
-        "url": "{{ '/category/تنظيم-المصاريف/' | absolute_url }}",
+        "url": "{{ '/category-expense-organization.html' | absolute_url }}",
         "name": "تنظيم المصاريف"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "url": "{{ '/category/الميزانية/' | absolute_url }}",
-        "name": "الميزانية"
+        "url": "{{ '/category-budget.html' | absolute_url }}",
+        "name": "الميزانية الشهرية"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "url": "{{ '/category/تتبع-المصاريف/' | absolute_url }}",
+        "url": "{{ '/category-expense-tracking.html' | absolute_url }}",
         "name": "تتبع المصاريف"
       },
       {
         "@type": "ListItem",
         "position": 4,
-        "url": "{{ '/category/الديون/' | absolute_url }}",
-        "name": "الديون"
+        "url": "{{ '/category-debt.html' | absolute_url }}",
+        "name": "إدارة الديون"
       },
       {
         "@type": "ListItem",
         "position": 5,
-        "url": "{{ '/category/الادخار/' | absolute_url }}",
+        "url": "{{ '/category-saving.html' | absolute_url }}",
         "name": "الادخار"
       },
       {
         "@type": "ListItem",
         "position": 6,
-        "url": "{{ '/category/أخطاء-مالية-شائعة/' | absolute_url }}",
+        "url": "{{ '/category-common-mistakes.html' | absolute_url }}",
         "name": "أخطاء مالية شائعة"
       }
     ]
@@ -152,33 +180,28 @@
 {% endif %}
 
 {% if page.layout == "post" %}
-{%- assign post_schema_image = page.image | default: '/assets/images/og-default.jpg' | absolute_url -%}
+{%- assign post_url = page.canonical | default: page.url | absolute_url -%}
+{%- assign post_image = page.image | default: '/assets/images/og-default.jpg' | absolute_url -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "{{ page.title | escape }}",
-  "description": "{{ page.description | escape }}",
-  "image": "{{ post_schema_image }}",
+  "description": "{{ page.description | default: site.description | escape }}",
+  "image": "{{ post_image }}",
   "author": {
-    "@type": "Person",
-    "name": "فؤاد شاويش",
-    "url": "{{ site.url }}/"
+    "@id": "{{ author_url }}#person"
   },
   "publisher": {
-    "@type": "Organization",
-    "name": "محترف المصاريف",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ site.url }}/icon.png"
-    }
+    "@id": "{{ site_url }}#organization"
   },
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "{{ page.canonical | default: page.url | absolute_url }}"
-  }
+    "@id": "{{ post_url }}"
+  },
+  "inLanguage": "{{ page.lang | default: site.lang | default: 'ar' | escape }}"
 }
 </script>
 

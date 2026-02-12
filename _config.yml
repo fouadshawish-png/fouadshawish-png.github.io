@@ -13,3 +13,6 @@ timezone: "Asia/Gaza"
 
 plugins:
   - jekyll-sitemap
+
+sitemap:
+  priority: 0.8

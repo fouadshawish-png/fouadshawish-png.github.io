@@ -1,0 +1,32 @@
+---
+layout: default
+title: "أحدث المقالات الآن"
+meta_title: "أحدث المقالات | تحديثات فورية للمحتوى | محترف المصاريف"
+description: "صفحة فورية تعرض أحدث 10 مقالات مع الوصف والتاريخ لتسريع الاكتشاف والزحف والمراجعة."
+permalink: /new/
+canonical: https://fouadshawish-png.github.io/new/
+noindex: false
+crawl_priority: high
+sitemap:
+  priority: 1.0
+  changefreq: daily
+---
+
+<section class="section">
+  <h1 class="section-title">أحدث المقالات الآن</h1>
+  <p class="tools-intro">هذه الصفحة مخصصة لتجميع آخر المحتوى المنشور بسرعة، مع روابط مباشرة للقراءة.</p>
+
+  <div class="new-posts-list">
+    {% for post in site.posts limit:10 %}
+    <article class="card new-post-item">
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p>{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 170 }}</p>
+      <p class="latest-update-date">
+        التاريخ:
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      </p>
+      <a class="btn-primary" href="{{ post.url | relative_url }}">اقرأ الآن</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>

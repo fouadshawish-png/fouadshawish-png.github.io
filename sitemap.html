@@ -6,13 +6,51 @@ permalink: /sitemap/
 
 <h1>خريطة الموقع</h1>
 
-<h2>الصفحات</h2>
+<h2>الصفحات الأساسية</h2>
 <ul>
   <li><a href="/">الرئيسية</a></li>
   <li><a href="/blog/">المقالات</a></li>
+  <li><a href="/topics/">المواضيع</a></li>
+  <li><a href="/organizing-expenses/">الدليل الشامل لتنظيم المصاريف وإدارة الميزانية</a></li>
+  <li><a href="/budget/">الدليل الكامل لإنشاء ميزانية شهرية</a></li>
+  <li><a href="/expense-management-guide/">دليل إدارة المصاريف 2026</a></li>
+  <li><a href="/financial-system-framework/">المنهج المتكامل لتنظيم المصاريف وإدارة الأموال</a></li>
+  <li><a href="/money-philosophy/">فلسفة إدارة الأموال</a></li>
+  <li><a href="/budget-calculator/">حاسبة الميزانية الشهرية المجانية</a></li>
+  <li><a href="/weekly-budget-template/">قالب مراجعة الميزانية الأسبوعية</a></li>
+  <li><a href="/new/">أحدث المقالات الآن</a></li>
+  <li><a href="/ping/">Ping خريطة الموقع</a></li>
+  <li><a href="/social-push/">Social Push Helper</a></li>
+  <li><a href="/start/">ابدأ من هنا</a></li>
+  <li><a href="/tools/">أدوات تنظيم المصاريف</a></li>
+  <li><a href="/future-plans/">الميزات القادمة</a></li>
+  <li><a href="/about-expense-manager/">ما هو محترف المصاريف؟</a></li>
+  <li><a href="/about-system/">فلسفة النظام المالي</a></li>
+  <li><a href="/expense-manager-arabic/">تطبيق إدارة المصاريف بالعربي</a></li>
+  <li><a href="/budget-app-arabic/">Budget App بالعربي</a></li>
   <li><a href="/about/">عن التطبيق</a></li>
+  <li><a href="/about-author/">عن الكاتب</a></li>
+  <li><a href="/press/">للصحافة والإعلام</a></li>
+  <li><a href="/media-kit/">Media Kit</a></li>
+  <li><a href="/share/">Share Pack</a></li>
+  <li><a href="/case-studies/">دراسات حالة</a></li>
+  <li><a href="/outreach/">Outreach وبناء الروابط</a></li>
+  <li><a href="/recommend/">أفضل تطبيقات تتبع المصاريف (مقارنة عادلة)</a></li>
+  <li><a href="/resources/">مصادر تعليمية وأدوات مالية</a></li>
+  <li><a href="/updates/">تحديثات الموقع</a></li>
   <li><a href="/methodology/">منهجية العمل</a></li>
   <li><a href="/editorial-policy/">سياسة التحرير</a></li>
+  <li><a href="/data-sources/">مصادر البيانات</a></li>
+  <li><a href="/privacy-summary/">ملخص الخصوصية</a></li>
+</ul>
+
+<h2>أدلة تنظيم المصاريف</h2>
+<ul>
+  <li><a href="/expense-guides/">كل أدلة تنظيم المصاريف</a></li>
+  {% assign expense_guides = site.pages | where_exp: 'p', 'p.url contains "/expense-guides/" and p.url != "/expense-guides/"' | sort: 'title' %}
+  {% for guide in expense_guides %}
+    <li><a href="{{ guide.url | relative_url }}">{{ guide.title }}</a></li>
+  {% endfor %}
 </ul>
 
 <h2>المقالات</h2>

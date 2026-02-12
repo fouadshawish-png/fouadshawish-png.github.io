@@ -1,0 +1,38 @@
+{%- assign key = include.key -%}
+{%- assign title = include.title -%}
+{%- assign desc = include.desc -%}
+{%- assign hub = include.hub -%}
+{%- assign deep = include.deep -%}
+
+{%- case key -%}
+  {%- when 'budget' -%}
+    {%- assign block_posts = site.posts | where_exp: 'p', "p.topic == 'budget' or p.categories contains 'الميزانية'" -%}
+  {%- when 'debt' -%}
+    {%- assign block_posts = site.posts | where_exp: 'p', "p.topic == 'debt' or p.categories contains 'الديون'" -%}
+  {%- when 'saving' -%}
+    {%- assign block_posts = site.posts | where_exp: 'p', "p.topic == 'saving' or p.categories contains 'الادخار'" -%}
+  {%- when 'spending-psychology' -%}
+    {%- assign block_posts = site.posts | where_exp: 'p', "p.topic == 'spending-psychology' or p.categories contains 'أخطاء مالية شائعة' or p.title contains 'نفسي'" -%}
+  {%- when 'reports' -%}
+    {%- assign block_posts = site.posts | where_exp: 'p', "p.topic == 'reports' or p.tags contains 'تقارير' or p.title contains 'تقرير'" -%}
+  {%- else -%}
+    {%- assign block_posts = site.posts | where_exp: 'p', "p.topic == 'expense-tracking' or p.topic == nil or p.categories contains 'تتبع المصاريف' or p.categories contains 'تنظيم المصاريف'" -%}
+{%- endcase -%}
+
+{%- if block_posts.size == 0 -%}
+  {%- assign block_posts = site.posts -%}
+{%- endif -%}
+
+<article class="card topic-block">
+  <h3>{{ title }}</h3>
+  <p>{{ desc }}</p>
+  <ul class="topic-block__list">
+    {% for post in block_posts limit:3 %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <div class="tools-actions">
+    <a class="btn-accent" href="{{ hub | relative_url }}">عرض دليل الموضوع</a>
+    <a class="btn-primary" href="{{ '/?route=' | append: deep | relative_url }}">فتح داخل التطبيق</a>
+  </div>
+</article>
