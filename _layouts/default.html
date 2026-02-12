@@ -27,12 +27,37 @@
       <div class="container page-container">
         {{ content }}
       </div>
+
+      {% unless page.layout == 'post' or page.layout == 'home' or page.layout == 'category' or page.url == '/blog/' or page.url == '/topics/' %}
+      <section class="section static-related" aria-label="مقالات مرتبطة">
+        <h2 class="section-title">مقالات ذات صلة</h2>
+        <div class="post-related-grid">
+          {% for post in site.posts limit:3 %}
+          <article class="related-card">
+            {% if post.image %}
+            <a class="related-card__thumb" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
+              <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy" width="1200" height="630">
+            </a>
+            {% endif %}
+            <div class="related-card__body">
+              <h3 class="related-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+              <p class="related-card__desc">{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 120 }}</p>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+      {% endunless %}
     </main>
 
     {% include footer.html %}
     <a href="/?route=home" class="floating-app-btn">
       فتح التطبيق
     </a>
+    <div class="mobile-download-bar" id="mobileDownloadBar" hidden>
+      <button class="mobile-download-bar__close" id="mobileDownloadClose" type="button" aria-label="إغلاق">×</button>
+      <a class="mobile-download-bar__button" href="/download.html">تحميل التطبيق الآن</a>
+    </div>
     <script>
       (function() {
         var toggle = document.getElementById("themeToggle");
@@ -53,6 +78,67 @@
           } catch (e) {}
           applyToggleState();
         });
+      })();
+    </script>
+    <script>
+      (function() {
+        var marks = [25, 50, 75, 100];
+        var fired = {};
+
+        function getDepth() {
+          var doc = document.documentElement;
+          var scrollable = doc.scrollHeight - window.innerHeight;
+          if (scrollable <= 0) return 100;
+          return Math.round((window.scrollY / scrollable) * 100);
+        }
+
+        function trackDepth() {
+          var depth = getDepth();
+          marks.forEach(function(mark) {
+            if (!fired[mark] && depth >= mark) {
+              fired[mark] = true;
+              console.log("Scroll Depth:", mark + "%");
+            }
+          });
+        }
+
+        window.addEventListener("scroll", trackDepth, { passive: true });
+        window.addEventListener("load", trackDepth);
+      })();
+    </script>
+    <script>
+      (function() {
+        var bar = document.getElementById("mobileDownloadBar");
+        var closeBtn = document.getElementById("mobileDownloadClose");
+        if (!bar || !closeBtn) return;
+
+        var isMobile = window.matchMedia("(max-width: 768px)").matches;
+        if (!isMobile) return;
+
+        try {
+          if (sessionStorage.getItem("downloadBarClosed") === "1") return;
+        } catch (e) {}
+
+        function handleVisibility() {
+          var doc = document.documentElement;
+          var scrollable = doc.scrollHeight - window.innerHeight;
+          if (scrollable <= 0) return;
+          var depth = (window.scrollY / scrollable) * 100;
+          if (depth >= 40) {
+            bar.hidden = false;
+            window.removeEventListener("scroll", handleVisibility);
+          }
+        }
+
+        closeBtn.addEventListener("click", function() {
+          bar.hidden = true;
+          try {
+            sessionStorage.setItem("downloadBarClosed", "1");
+          } catch (e) {}
+        });
+
+        window.addEventListener("scroll", handleVisibility, { passive: true });
+        window.addEventListener("load", handleVisibility);
       })();
     </script>
   </body>

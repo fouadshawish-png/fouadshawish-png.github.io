@@ -2,89 +2,212 @@
 layout: default
 ---
 
-<article class="post">
+{%- assign primary_category = page.categories | first | default: 'تنظيم المصاريف' -%}
+{%- assign inline_cta_url = '/?route=reports' -%}
+{%- assign inline_cta_label = 'افتح التقارير الآن' -%}
+{%- assign mid_cta_url = '/?route=budgets' -%}
+{%- assign mid_cta_label = 'أنشئ ميزانية الآن' -%}
+{%- assign strong_cta_url = '/?route=home' -%}
+{%- assign strong_cta_label = 'ابدأ داخل التطبيق' -%}
+
+{%- case primary_category -%}
+  {%- when 'الديون' -%}
+    {%- assign inline_cta_url = '/?route=debt_ledger' -%}
+    {%- assign inline_cta_label = 'تسجيل دين الآن' -%}
+    {%- assign mid_cta_url = '/?route=reports' -%}
+    {%- assign mid_cta_label = 'راجع أثر السداد بالتقارير' -%}
+    {%- assign strong_cta_url = '/?route=debt_ledger' -%}
+    {%- assign strong_cta_label = 'ابدأ خطة السداد الآن' -%}
+  {%- when 'الميزانية' -%}
+    {%- assign inline_cta_url = '/?route=budgets' -%}
+    {%- assign inline_cta_label = 'إنشاء ميزانية شهرية' -%}
+    {%- assign mid_cta_url = '/?route=reports' -%}
+    {%- assign mid_cta_label = 'فتح التقارير للمراجعة' -%}
+    {%- assign strong_cta_url = '/?route=budgets' -%}
+    {%- assign strong_cta_label = 'ابدأ ميزانيتك الآن' -%}
+  {%- when 'تتبع المصاريف' -%}
+    {%- assign inline_cta_url = '/?route=all_transactions' -%}
+    {%- assign inline_cta_label = 'سجل عملية الآن' -%}
+    {%- assign mid_cta_url = '/?route=reports' -%}
+    {%- assign mid_cta_label = 'افتح التقارير' -%}
+    {%- assign strong_cta_url = '/?route=all_transactions' -%}
+    {%- assign strong_cta_label = 'ابدأ التتبع الآن' -%}
+  {%- when 'الادخار' -%}
+    {%- assign inline_cta_url = '/?route=budgets' -%}
+    {%- assign inline_cta_label = 'خصص بند ادخار' -%}
+    {%- assign mid_cta_url = '/?route=reports' -%}
+    {%- assign mid_cta_label = 'تابع التقدم بالتقارير' -%}
+    {%- assign strong_cta_url = '/?route=budgets' -%}
+    {%- assign strong_cta_label = 'ابدأ خطة الادخار' -%}
+  {%- when 'تنظيم المصاريف' -%}
+    {%- assign inline_cta_url = '/?route=all_transactions' -%}
+    {%- assign inline_cta_label = 'ابدأ تنظيم العمليات' -%}
+    {%- assign mid_cta_url = '/?route=budgets' -%}
+    {%- assign mid_cta_label = 'ثبت حدود الميزانية' -%}
+    {%- assign strong_cta_url = '/?route=all_transactions' -%}
+    {%- assign strong_cta_label = 'حوّل الوعي إلى متابعة يومية' -%}
+  {%- when 'أخطاء مالية شائعة' -%}
+    {%- assign inline_cta_url = '/?route=budgets' -%}
+    {%- assign inline_cta_label = 'صحح إعداد الميزانية' -%}
+    {%- assign mid_cta_url = '/?route=reports' -%}
+    {%- assign mid_cta_label = 'افتح التقارير للتشخيص' -%}
+    {%- assign strong_cta_url = '/?route=budgets' -%}
+    {%- assign strong_cta_label = 'ابدأ خطة تصحيح عملية' -%}
+{%- endcase -%}
+
+{%- assign rendered_content = content -%}
+{%- for auto_link in site.data.auto_links -%}
+  {%- if rendered_content contains auto_link.keyword -%}
+    {%- capture auto_anchor -%}<a href="{{ auto_link.url | relative_url }}" class="auto-link" title="{{ auto_link.title | default: auto_link.keyword }}">{{ auto_link.keyword }}</a>{%- endcapture -%}
+    {%- assign rendered_content = rendered_content | replace_first: auto_link.keyword, auto_anchor -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<article
+  class="post"
+  data-inline-cta-url="{{ inline_cta_url }}"
+  data-inline-cta-label="{{ inline_cta_label }}"
+  data-mid-cta-url="{{ mid_cta_url }}"
+  data-mid-cta-label="{{ mid_cta_label }}">
   {% include breadcrumb.html %}
+
   <h1>{{ page.title }}</h1>
+
   {%- if page.image -%}
   <img
     class="post-image post-image--wide"
     src="{{ page.image | relative_url }}"
     alt="{{ page.image_alt | default: page.title }}"
-    loading="eager"
-    fetchpriority="high"
+    loading="lazy"
     width="1200"
     height="630">
   {%- endif -%}
-  {{ content }}
+
+  <div class="post-content" id="postContent">
+    {{ rendered_content }}
+  </div>
+
   <p class="post-hint">إذا شعرت أن الفكرة تلامس واقعك، فتذكّر أن تنظيم المصاريف يبدأ بخطوات بسيطة قابلة للتطبيق. كثيرون يجدون أن وجود أداة واضحة مثل تطبيق محترف المصاريف يساعدهم على تحويل الوعي إلى متابعة يومية دون تعقيد.</p>
+
   <div class="share-actions" aria-label="مشاركة المقال">
-     <a class="share-button share-facebook" target="_blank" rel="noopener noreferrer"
-       href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}">
+    <a class="share-button share-facebook" target="_blank" rel="noopener noreferrer"
+      href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}">
       مشاركة على فيسبوك
     </a>
   </div>
 </article>
 
-<section class="post-nav" aria-label="اقرأ أيضًا في السلسلة">
-  <h2 class="section-title">اقرأ أيضًا في السلسلة</h2>
-  {%- if page.previous -%}
-  <a class="post-nav__item post-nav__item--prev" href="{{ page.previous.url | relative_url }}">
-    <span class="post-nav__label">المقال السابق</span>
-    <span class="post-nav__title">{{ page.previous.title }}</span>
-  </a>
+<section class="post-related post-related--dynamic" aria-label="اقرأ أيضًا">
+  <h2 class="section-title">اقرأ أيضًا</h2>
+
+  {%- assign base_related = site.posts | where_exp: 'p', 'p.url != page.url' -%}
+  {%- assign related_posts = '' | split: '' -%}
+
+  {%- if page.categories and page.categories.size > 0 -%}
+    {%- for cat in page.categories -%}
+      {%- assign by_category = base_related | where_exp: 'p', 'p.categories contains cat' -%}
+      {%- assign related_posts = related_posts | concat: by_category -%}
+    {%- endfor -%}
   {%- endif -%}
 
-  {%- if page.next -%}
-  <a class="post-nav__item post-nav__item--next" href="{{ page.next.url | relative_url }}">
-    <span class="post-nav__label">المقال التالي</span>
-    <span class="post-nav__title">{{ page.next.title }}</span>
-  </a>
+  {%- if page.tags and page.tags.size > 0 -%}
+    {%- for tag in page.tags -%}
+      {%- assign by_tag = base_related | where_exp: 'p', 'p.tags contains tag' -%}
+      {%- assign related_posts = related_posts | concat: by_tag -%}
+    {%- endfor -%}
   {%- endif -%}
-</section>
 
-<section class="post-related" aria-label="مقالات مرتبطة">
-  <h2 class="section-title">مقالات مرتبطة</h2>
-  <ul class="post-list">
-    {%- assign base_related = site.posts | where_exp: 'p', 'p.url != page.url' -%}
-    {%- assign related = '' | split: '' -%}
-    {%- if page.categories and page.categories.size > 0 -%}
-      {%- assign primary_category = page.categories | first -%}
-      {%- assign related_by_category = base_related | where_exp: 'p', 'p.categories contains primary_category' -%}
-      {%- assign related = related | concat: related_by_category -%}
-    {%- endif -%}
-    {%- if page.tags and page.tags.size > 0 and related.size < 3 -%}
-      {%- assign primary_tag = page.tags | first -%}
-      {%- assign related_by_tag = base_related | where_exp: 'p', 'p.tags contains primary_tag' -%}
-      {%- assign related = related | concat: related_by_tag -%}
-    {%- endif -%}
-    {%- assign related = related | uniq | limit: 3 -%}
-    {%- if related.size < 3 -%}
-      {%- assign related = related | concat: base_related | uniq | limit: 3 -%}
-    {%- endif -%}
-    {%- for post in related -%}
-    <li class="post-item{% unless post.image %} post-item--text{% endunless %}">
+  {%- assign related_posts = related_posts | uniq -%}
+  {%- if related_posts.size < 3 -%}
+    {%- assign related_posts = related_posts | concat: base_related | uniq -%}
+  {%- endif -%}
+  {%- assign related_posts = related_posts | limit: 5 -%}
+
+  <div class="post-related-grid">
+    {%- for post in related_posts -%}
+    <article class="related-card">
       {%- if post.image -%}
-      <a class="post-thumb" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
-        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" width="1200" height="630">
+      <a class="related-card__thumb" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy" width="1200" height="630">
       </a>
       {%- endif -%}
-      <div class="post-body">
-        <h3 class="post-title">
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h3>
-        {%- if post.description -%}
-        <p class="post-excerpt">{{ post.description }}</p>
-        {%- endif -%}
-        <p class="post-readmore"><a class="post-link" href="{{ post.url | relative_url }}">اقرأ المقال</a></p>
+      <div class="related-card__body">
+        <h3 class="related-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="related-card__desc">{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 145 }}</p>
       </div>
-    </li>
+    </article>
     {%- endfor -%}
-  </ul>
+  </div>
 </section>
 
-<div class="article-cta">
-  <h3>حوّل الفكرة إلى تطبيق عملي</h3>
-  <p>افتح نفس الخطوات داخل التطبيق وابدأ التنظيم فورًا.</p>
-  <a href="/?route=home" class="cta-button">فتح التطبيق</a>
-  <a href="/download.html" class="cta-secondary">تحميل من Google Play</a>
+<div class="article-cta article-cta--strong">
+  <h3>حوّل المعرفة إلى خطوة عملية الآن</h3>
+  <p>تطبيق الفكرة فورًا داخل التطبيق يجعل النتائج أسرع وأكثر وضوحًا.</p>
+  <a href="{{ strong_cta_url }}" class="cta-button">{{ strong_cta_label }}</a>
+  <a href="/download.html" class="cta-secondary">تحميل التطبيق</a>
 </div>
+
+<script>
+(function () {
+  var article = document.querySelector('.post[data-inline-cta-url]');
+  if (!article) return;
+
+  var content = article.querySelector('#postContent');
+  if (!content) return;
+
+  var blocks = content.querySelectorAll('p, ul, ol, h2, h3');
+  if (!blocks || blocks.length < 4) return;
+
+  function createInlineCta(type, title, text, href, label) {
+    var box = document.createElement('div');
+    box.className = 'inline-cta inline-cta--' + type;
+
+    var heading = document.createElement('h3');
+    heading.textContent = title;
+
+    var paragraph = document.createElement('p');
+    paragraph.textContent = text;
+
+    var action = document.createElement('a');
+    action.className = 'cta-button';
+    action.href = href;
+    action.textContent = label;
+
+    box.appendChild(heading);
+    box.appendChild(paragraph);
+    box.appendChild(action);
+
+    return box;
+  }
+
+  var inlineIndex = Math.max(1, Math.floor(blocks.length * 0.3) - 1);
+  var middleIndex = Math.max(inlineIndex + 1, Math.floor(blocks.length * 0.6) - 1);
+
+  var inlineUrl = article.dataset.inlineCtaUrl || '/?route=reports';
+  var inlineLabel = article.dataset.inlineCtaLabel || 'افتح التقارير الآن';
+
+  var midUrl = article.dataset.midCtaUrl || '/?route=budgets';
+  var midLabel = article.dataset.midCtaLabel || 'أنشئ ميزانية الآن';
+
+  var inlineCta = createInlineCta(
+    'light',
+    'خطوة صغيرة الآن',
+    'ابدأ تطبيق ما قرأته مباشرة لتثبيت النتيجة قبل الانتقال لباقي الخطوات.',
+    inlineUrl,
+    inlineLabel
+  );
+
+  var middleCta = createInlineCta(
+    'medium',
+    'تابع التنفيذ داخل التطبيق',
+    'بعد هذا الجزء، نفّذ خطوة عملية واحدة حتى تتحول الفكرة إلى قرار مالي واضح.',
+    midUrl,
+    midLabel
+  );
+
+  blocks[inlineIndex].insertAdjacentElement('afterend', inlineCta);
+  if (blocks[middleIndex]) {
+    blocks[middleIndex].insertAdjacentElement('afterend', middleCta);
+  }
+})();
+</script>
