@@ -258,3 +258,56 @@ layout: default
   }
 })();
 </script>
+
+<script>
+(function () {
+  var content = document.getElementById('postContent');
+  if (!content) return;
+
+  var terms = [
+    "الميزانية","المصاريف الثابتة","المصاريف المتغيرة","التدفق النقدي","صافي الدخل",
+    "صندوق الطوارئ","الاستهلاك","التخطيط المالي","الالتزامات","القسط","الفائدة",
+    "رأس المال","العائد","التضخم","القوة الشرائية","السلوك المالي","العجز","الفائض",
+    "الادخار","الاستثمار","التنويع","المخاطر المالية","إدارة الديون","إعادة جدولة الدين",
+    "التحليل المالي الشخصي"
+  ];
+
+  function linkFirstTerm(root, term) {
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function(node) {
+        if (!node.nodeValue || node.nodeValue.indexOf(term) === -1) return NodeFilter.FILTER_REJECT;
+        var parent = node.parentElement;
+        if (!parent) return NodeFilter.FILTER_REJECT;
+        if (parent.closest('a,script,style,code,pre')) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+
+    var target = walker.nextNode();
+    if (!target) return false;
+
+    var text = target.nodeValue;
+    var idx = text.indexOf(term);
+    if (idx < 0) return false;
+
+    var before = text.slice(0, idx);
+    var after = text.slice(idx + term.length);
+    var frag = document.createDocumentFragment();
+    if (before) frag.appendChild(document.createTextNode(before));
+
+    var a = document.createElement('a');
+    a.href = "{{ '/financial-terms/' | relative_url }}";
+    a.textContent = term;
+    a.setAttribute('aria-label', term + " - قاموس المصطلحات المالية");
+    frag.appendChild(a);
+
+    if (after) frag.appendChild(document.createTextNode(after));
+    target.parentNode.replaceChild(frag, target);
+    return true;
+  }
+
+  for (var i = 0; i < terms.length; i++) {
+    linkFirstTerm(content, terms[i]);
+  }
+})();
+</script>
