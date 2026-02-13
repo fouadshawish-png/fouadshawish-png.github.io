@@ -8,15 +8,21 @@ permalink: /guides/
   <h1>الأدلة المالية</h1>
 
   <div class="grid-3">
-    {% for guide in site.guides %}
-      <div class="card">
-        <h3>{{ guide.title }}</h3>
-        <p>{{ guide.description }}</p>
-        <a class="btn-accent" href="{{ guide.url }}">
-          اقرأ الدليل
-        </a>
-      </div>
-    {% endfor %}
+    <div class="card">
+      <h3>دليل تنظيم المصاريف</h3>
+      <p>مرجع شامل للتتبع اليومي والتصنيف واكتشاف الهدر.</p>
+      <a class="btn-accent" href="{{ '/guides/المصاريف/' | relative_url }}">اقرأ الدليل</a>
+    </div>
+    <div class="card">
+      <h3>دليل الميزانية</h3>
+      <p>خطوات واضحة لبناء ميزانية شهرية قابلة للتنفيذ والاستمرار.</p>
+      <a class="btn-accent" href="{{ '/guides/الميزانية/' | relative_url }}">اقرأ الدليل</a>
+    </div>
+    <div class="card">
+      <h3>إدارة الأموال الشخصية</h3>
+      <p>الرؤية الكاملة التي تربط المصاريف والميزانية والادخار والديون.</p>
+      <a class="btn-accent" href="{{ '/guides/إدارة-الأموال/' | relative_url }}">اقرأ الدليل</a>
+    </div>
   </div>
 </section>
 

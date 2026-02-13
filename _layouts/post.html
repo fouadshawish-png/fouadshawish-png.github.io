@@ -6,6 +6,15 @@ layout: default
 {%- assign fallback_posts = site.posts -%}
 {%- assign reading_minutes = content | strip_html | number_of_words | plus: 199 | divided_by: 200 -%}
 {%- assign last_updated = page.dateModified | default: page.last_modified_at | default: page.date -%}
+{%- assign guide_url = '/guides/المصاريف/' -%}
+{%- assign guide_title = 'تنظيم المصاريف' -%}
+{%- if primary_category == 'الميزانية' -%}
+  {%- assign guide_url = '/guides/الميزانية/' -%}
+  {%- assign guide_title = 'بناء ميزانية شهرية' -%}
+{%- elsif primary_category == 'إدارة الأموال' or primary_category == 'الديون' or primary_category == 'الادخار' -%}
+  {%- assign guide_url = '/guides/إدارة-الأموال/' -%}
+  {%- assign guide_title = 'إدارة الأموال الشخصية' -%}
+{%- endif -%}
 
 <article class="post">
   {% include breadcrumb.html %}
@@ -54,6 +63,19 @@ layout: default
   <div class="post-content" id="postContent">
     {{ content }}
   </div>
+
+  <section class="section topic-graph-links" aria-label="خريطة الموضوع">
+    <div class="card">
+      <h2>خريطة الموضوع</h2>
+      <ul class="free-tools-links">
+        <li><a href="{{ '/guides/المصاريف/' | relative_url }}">تنظيم المصاريف</a></li>
+        <li><a href="{{ '/guides/الميزانية/' | relative_url }}">بناء ميزانية شهرية</a></li>
+        <li><a href="{{ '/guides/إدارة-الأموال/' | relative_url }}">إدارة الأموال الشخصية</a></li>
+        <li><a href="{{ guide_url | relative_url }}">الدليل المرتبط بهذا المقال</a></li>
+      </ul>
+      <p>مسار المتابعة: <a href="{{ '/guides/' | relative_url }}">كل الأدلة</a> → <a href="{{ guide_url | relative_url }}">{{ guide_title }}</a>.</p>
+    </div>
+  </section>
 
   <template id="readAlsoBurstTemplate">
     <aside class="inline-cta inline-read-also" aria-label="اقرأ أيضًا">
@@ -113,10 +135,10 @@ layout: default
     <div class="card">
       <h2>مسارات مرتبطة</h2>
       <ul class="free-tools-links">
-        <li><a href="{{ '/organize-monthly-expenses-step-by-step/' | relative_url }}">إدارة المصروفات الشهرية</a></li>
-        <li><a href="{{ '/reduce-monthly-expenses-smartly/' | relative_url }}">ضبط النفقات</a></li>
-        <li><a href="{{ '/how-to-track-expenses-daily-effectively/' | relative_url }}">تتبع الإنفاق</a></li>
-        <li><a href="{{ '/build-realistic-monthly-budget/' | relative_url }}">بناء ميزانية فعالة</a></li>
+        <li><a href="{{ '/guides/المصاريف/' | relative_url }}">تنظيم المصاريف</a></li>
+        <li><a href="{{ '/guides/الميزانية/' | relative_url }}">بناء ميزانية شهرية</a></li>
+        <li><a href="{{ '/guides/إدارة-الأموال/' | relative_url }}">إدارة الأموال الشخصية</a></li>
+        <li><a href="{{ '/organize-monthly-expenses-step-by-step/' | relative_url }}">تنظيم المصاريف خطوة بخطوة</a></li>
       </ul>
       <p><a href="{{ '/guides/' | relative_url }}">استعرض الأدلة المالية الكاملة</a></p>
     </div>
@@ -191,8 +213,9 @@ layout: default
     <div class="author-box__content">
       <p class="author-box__label">عن الكاتب</p>
       <h3>فؤاد شاويش</h3>
-      <p>مطور نظام محترف المصاريف وكاتب محتوى مالي عملي يركز على خطوات قابلة للتطبيق.</p>
-      <a href="{{ '/about-author/' | relative_url }}">اقرأ المزيد عن الكاتب</a>
+      <p>مطور تطبيق محترف المصاريف</p>
+      <p>مختص في تنظيم المصاريف وإدارة الميزانيات الرقمية</p>
+      <a href="{{ '/about/' | relative_url }}">اقرأ المزيد عن الكاتب</a>
     </div>
   </section>
 </article>
