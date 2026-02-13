@@ -576,5 +576,20 @@
       });
     })();
     </script>
+    <script>
+    window.addEventListener("load", function() {
+      setTimeout(function() {
+        var perf = performance.getEntriesByType("navigation")[0];
+        if (!perf) return;
+
+        var loadTime = Math.round(perf.loadEventEnd - perf.startTime);
+
+        gtag('event', 'page_load_time', {
+          load_time_ms: loadTime,
+          page_path: window.location.pathname
+        });
+      }, 0);
+    });
+    </script>
   </body>
 </html>
