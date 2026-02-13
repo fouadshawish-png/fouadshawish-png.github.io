@@ -190,15 +190,12 @@ sitemap:
 - [الفرق بين تتبع المصاريف وإدارة الأموال](/expense-tracking-vs-money-management/)
 - [كيف تضبط ميزانيتك في مصر أو المغرب حسب اختلاف الدخل](/تنظيم-المصاريف-في-مصر-والمغرب/)
 
-{% assign expense_posts = site.posts | where_exp: "p", "p.url contains 'مصاريف'" %}
-{% if expense_posts and expense_posts.size > 0 %}
 ### مقالات إضافية مرتبطة بالمصاريف
 {% for post in site.posts %}
 {% if post.title contains 'مصاريف' or post.title contains 'الإنفاق' or post.topic == 'expense-tracking' %}
 - [{{ post.title }}]({{ post.url | relative_url }})
 {% endif %}
 {% endfor %}
-{% endif %}
 
 ## روابط مصر ومسارات محلية {#egypt-links}
 
