@@ -35,3 +35,60 @@ featured_posts:
   - /build-realistic-monthly-budget/
   - /manage-personal-debt-step-by-step/
   - /how-to-track-expenses-daily-effectively/
+
+defaults:
+  - scope:
+      path: "all_transactions.html"
+    values:
+      sitemap: false
+      robots: "noindex,follow"
+  - scope:
+      path: "reports_root.html"
+    values:
+      sitemap: false
+      robots: "noindex,follow"
+  - scope:
+      path: "debt_root.html"
+    values:
+      sitemap: false
+      robots: "noindex,follow"
+  - scope:
+      path: "goals_root.html"
+    values:
+      sitemap: false
+      robots: "noindex,follow"
+  - scope:
+      path: "subscription_plans.html"
+    values:
+      sitemap: false
+      robots: "noindex,follow"
+  - scope:
+      path: "reports_root/index.html"
+    values:
+      sitemap: false
+      robots: "noindex,follow"
+  - scope:
+      path: "404.html"
+    values:
+      sitemap: false
+      robots: "noindex,follow"
+  - scope:
+      path: "google04ed8dc5b604f682.html"
+    values:
+      sitemap: false
+      robots: "noindex,follow"
+  - scope:
+      path: "manifest.webmanifest"
+    values:
+      sitemap: false
+      robots: "noindex,follow"
+  - scope:
+      path: "style.css"
+    values:
+      sitemap: false
+      robots: "noindex,follow"
+  - scope:
+      path: "app-ads.txt"
+    values:
+      sitemap: false
+      robots: "noindex,follow"

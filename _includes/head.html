@@ -20,7 +20,9 @@
 <meta name="description" content="{{ page_description }}">
 
 <link rel="canonical" href="{{ canonical_url }}">
-{% if page.noindex == true %}
+{% if page.robots %}
+<meta name="robots" content="{{ page.robots }}">
+{% elsif page.noindex == true %}
 <meta name="robots" content="noindex, nofollow">
 {% else %}
 <meta name="robots" content="index, follow">
