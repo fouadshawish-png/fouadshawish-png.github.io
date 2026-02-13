@@ -14,7 +14,7 @@ permalink: /
     </p>
 
     <div class="hero-buttons">
-      <a class="btn primary cta-primary" href="/download.html">ابدأ نظامك المالي الآن</a>
+      <a class="btn primary cta-primary cta-start" href="/download.html">ابدأ نظامك المالي الآن</a>
       <a class="btn secondary" href="/?route=reports">فتح التقارير</a>
     </div>
   </div>
@@ -627,16 +627,4 @@ if (phoneScreens.length > 1) {
   }, 1200);
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  const startBtn = document.querySelector(".cta-primary");
-
-  if (startBtn) {
-    startBtn.addEventListener("click", function() {
-      gtag('event', 'cta_start_financial_system', {
-        event_category: 'engagement',
-        event_label: 'home_hero_button'
-      });
-    });
-  }
-});
 </script>
