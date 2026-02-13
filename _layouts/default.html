@@ -452,5 +452,19 @@
       }
     });
     </script>
+    <script>
+    (function() {
+      var exitTracked = false;
+
+      document.addEventListener("mouseleave", function(e) {
+        if (e.clientY <= 0 && !exitTracked) {
+          exitTracked = true;
+          gtag('event', 'exit_intent', {
+            page_path: window.location.pathname
+          });
+        }
+      });
+    })();
+    </script>
   </body>
 </html>
