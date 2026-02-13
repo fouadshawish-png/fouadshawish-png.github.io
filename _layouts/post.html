@@ -25,9 +25,10 @@ layout: default
 {%- assign current_level = page.level | default: 'beginner' -%}
 {%- assign current_intent = page.intent | default: '' -%}
 {%- assign primary_tag = page.tags | first | default: '' -%}
-{%- assign same_category_posts = site.posts | where_exp: 'p', "p.url != page.url and p.categories and page.categories and p.categories[0] == page.categories[0]" -%}
+{%- assign primary_page_category = page.categories | first | default: '' -%}
+{%- assign same_category_posts = site.posts | where_exp: 'p', "p.url != page.url and p.categories and p.categories contains primary_page_category" -%}
 {%- assign same_intent_posts = site.posts | where_exp: 'p', "p.url != page.url and page.intent and p.intent == page.intent" -%}
-{%- assign same_keyword_posts = site.posts | where_exp: 'p', "p.url != page.url and page.tags and p.tags and p.tags contains page.tags[0]" -%}
+{%- assign same_keyword_posts = site.posts | where_exp: 'p', "p.url != page.url and p.tags and p.tags contains primary_tag" -%}
 
 {%- assign topic_hub_url = '/topics/expense-tracking/' -%}
 {%- assign topic_hub_title = 'تتبع المصاريف' -%}
