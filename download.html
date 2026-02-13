@@ -35,11 +35,25 @@ description: "ابدأ باستخدام محترف المصاريف عبر Googl
 <section class="section text-center">
   <h2>لقطة من داخل التطبيق</h2>
   <img
+    id="downloadAppScreenshot"
     src="{{ '/assets/images/screens/screen-01.webp' | relative_url }}"
     alt="لقطة شاشة من تطبيق محترف المصاريف"
     loading="lazy"
     width="420"
     height="840"
+    data-screens='[
+      "{{ '/assets/images/screens/screen-01.webp' | relative_url }}",
+      "{{ '/assets/images/screens/screen-02.webp' | relative_url }}",
+      "{{ '/assets/images/screens/screen-03.webp' | relative_url }}",
+      "{{ '/assets/images/screens/screen-04.webp' | relative_url }}",
+      "{{ '/assets/images/screens/screen-05.webp' | relative_url }}",
+      "{{ '/assets/images/screens/screen-06.webp' | relative_url }}",
+      "{{ '/assets/images/screens/screen-07.webp' | relative_url }}",
+      "{{ '/assets/images/screens/screen-08.webp' | relative_url }}",
+      "{{ '/assets/images/screens/screen-09.webp' | relative_url }}",
+      "{{ '/assets/images/screens/screen-10.webp' | relative_url }}",
+      "{{ '/assets/images/screens/screen-11.webp' | relative_url }}"
+    ]'
     style="max-width: min(420px, 92%); border-radius:16px; box-shadow:0 10px 26px rgba(0,0,0,0.18);">
 </section>
 
@@ -53,3 +67,56 @@ description: "ابدأ باستخدام محترف المصاريف عبر Googl
     </div>
   </div>
 </section>
+
+<script>
+  (function() {
+    var screenshot = document.getElementById("downloadAppScreenshot");
+    if (!screenshot) return;
+
+    var screens = [];
+    try {
+      screens = JSON.parse(screenshot.getAttribute("data-screens") || "[]");
+    } catch (e) {
+      screens = [];
+    }
+    if (screens.length < 2) return;
+
+    var current = 0;
+    var timer = null;
+    var intervalMs = 7000; // change every 7 seconds
+
+    function nextImage() {
+      current = (current + 1) % screens.length;
+      screenshot.style.opacity = "0.15";
+      setTimeout(function() {
+        screenshot.src = screens[current];
+        screenshot.style.opacity = "1";
+      }, 220);
+    }
+
+    screenshot.style.transition = "opacity 220ms ease";
+
+    function start() {
+      if (timer) return;
+      timer = setInterval(nextImage, intervalMs);
+    }
+
+    function stop() {
+      if (!timer) return;
+      clearInterval(timer);
+      timer = null;
+    }
+
+    if ("IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) start();
+          else stop();
+        });
+      }, { threshold: 0.25 });
+      observer.observe(screenshot);
+    } else {
+      start();
+    }
+  })();
+</script>

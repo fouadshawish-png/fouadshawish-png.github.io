@@ -141,6 +141,31 @@
     </script>
     <script>
       (function() {
+        var startTime = Date.now();
+        var sent = false;
+
+        function sendEngagement() {
+          if (sent) return;
+          sent = true;
+
+          var seconds = Math.floor((Date.now() - startTime) / 1000);
+
+          var bucket = "0-10s";
+          if (seconds > 10 && seconds <= 30) bucket = "10-30s";
+          if (seconds > 30 && seconds <= 60) bucket = "30-60s";
+          if (seconds > 60) bucket = "60s+";
+
+          gtag("event", "article_engagement", {
+            engagement_time_bucket: bucket,
+            page_path: window.location.pathname
+          });
+        }
+
+        window.addEventListener("beforeunload", sendEngagement);
+      })();
+    </script>
+    <script>
+      (function() {
         var miniBanner = document.getElementById("siteMiniBanner");
         var miniBannerClose = document.getElementById("siteMiniBannerClose");
         if (miniBanner && miniBannerClose) {
