@@ -26,35 +26,35 @@ layout: default
 {%- assign current_intent = page.intent | default: '' -%}
 {%- assign primary_tag = page.tags | first | default: '' -%}
 {%- assign primary_page_category = page.categories | first | default: '' -%}
-{%- assign same_category_posts = site.posts | where_exp: 'p', "p.url != page.url and p.categories and p.categories contains primary_page_category" -%}
-{%- assign same_intent_posts = site.posts | where_exp: 'p', "p.url != page.url and page.intent and p.intent == page.intent" -%}
-{%- assign same_keyword_posts = site.posts | where_exp: 'p', "p.url != page.url and p.tags and p.tags contains primary_tag" -%}
+{%- assign same_category_posts = site.posts | where_exp: 'p', "p.url != page.url" -%}
+{%- assign same_intent_posts = same_category_posts -%}
+{%- assign same_keyword_posts = same_category_posts -%}
 
 {%- assign topic_hub_url = '/topics/expense-tracking/' -%}
 {%- assign topic_hub_title = 'تتبع المصاريف' -%}
-{%- assign same_topic_posts = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'expense-tracking' or p.topic == nil or p.categories contains 'تتبع المصاريف' or p.categories contains 'تنظيم المصاريف')" -%}
+{%- assign same_topic_posts = site.posts | where: 'topic', 'expense-tracking' -%}
 
 {%- case current_topic -%}
   {%- when 'budget' -%}
     {%- assign topic_hub_url = '/topics/budget/' -%}
     {%- assign topic_hub_title = 'الميزانية' -%}
-    {%- assign same_topic_posts = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'budget' or p.categories contains 'الميزانية')" -%}
+    {%- assign same_topic_posts = site.posts | where: 'topic', 'budget' -%}
   {%- when 'debt' -%}
     {%- assign topic_hub_url = '/topics/debt/' -%}
     {%- assign topic_hub_title = 'الديون' -%}
-    {%- assign same_topic_posts = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'debt' or p.categories contains 'الديون')" -%}
+    {%- assign same_topic_posts = site.posts | where: 'topic', 'debt' -%}
   {%- when 'saving' -%}
     {%- assign topic_hub_url = '/topics/saving/' -%}
     {%- assign topic_hub_title = 'الادخار' -%}
-    {%- assign same_topic_posts = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'saving' or p.categories contains 'الادخار')" -%}
+    {%- assign same_topic_posts = site.posts | where: 'topic', 'saving' -%}
   {%- when 'spending-psychology' -%}
     {%- assign topic_hub_url = '/topics/spending-psychology/' -%}
     {%- assign topic_hub_title = 'سيكولوجية الإنفاق' -%}
-    {%- assign same_topic_posts = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'spending-psychology' or p.categories contains 'أخطاء مالية شائعة' or p.title contains 'نفسي')" -%}
+    {%- assign same_topic_posts = site.posts | where: 'topic', 'spending-psychology' -%}
   {%- when 'reports' -%}
     {%- assign topic_hub_url = '/topics/reports/' -%}
     {%- assign topic_hub_title = 'التقارير' -%}
-    {%- assign same_topic_posts = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'reports' or p.tags contains 'تقارير' or p.title contains 'تقرير')" -%}
+    {%- assign same_topic_posts = site.posts | where: 'topic', 'reports' -%}
 {%- endcase -%}
 
 {%- if current_topic == 'debt' -%}
@@ -63,8 +63,9 @@ layout: default
   {%- assign third_app_cta_url = '/?route=debt_ledger' -%}
 {%- endif -%}
 
+{%- assign same_topic_posts = same_topic_posts | where_exp: 'p', "p.url != page.url" -%}
 {%- if same_topic_posts.size == 0 -%}
-  {%- assign same_topic_posts = site.posts | where_exp: 'p', "p.url != page.url" -%}
+  {%- assign same_topic_posts = same_category_posts -%}
 {%- endif -%}
 
 {%- assign next_level = 'advanced' -%}
@@ -79,10 +80,10 @@ layout: default
   {%- assign next_step_post = same_topic_posts | first -%}
 {%- endunless -%}
 
-{%- assign debt_intent_post = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'debt' or p.categories contains 'الديون')" | first -%}
-{%- assign saving_intent_post = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'saving' or p.categories contains 'الادخار')" | first -%}
-{%- assign expense_intent_post = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'expense-tracking' or p.categories contains 'تنظيم المصاريف' or p.categories contains 'تتبع المصاريف')" | first -%}
-{%- assign budget_intent_post = site.posts | where_exp: 'p', "p.url != page.url and (p.topic == 'budget' or p.categories contains 'الميزانية')" | first -%}
+{%- assign debt_intent_post = site.posts | where: 'topic', 'debt' | where_exp: 'p', "p.url != page.url" | first -%}
+{%- assign saving_intent_post = site.posts | where: 'topic', 'saving' | where_exp: 'p', "p.url != page.url" | first -%}
+{%- assign expense_intent_post = site.posts | where: 'topic', 'expense-tracking' | where_exp: 'p', "p.url != page.url" | first -%}
+{%- assign budget_intent_post = site.posts | where: 'topic', 'budget' | where_exp: 'p', "p.url != page.url" | first -%}
 
 {%- case primary_category -%}
   {%- when 'الديون' -%}
