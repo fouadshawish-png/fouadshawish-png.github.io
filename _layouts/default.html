@@ -362,5 +362,18 @@
       }
     });
     </script>
+    <script>
+    document.addEventListener("click", function(e) {
+      var el = e.target.closest("[data-cta]");
+      if (!el) return;
+
+      var ctaName = el.getAttribute("data-cta");
+
+      gtag('event', 'cta_click', {
+        cta_name: ctaName,
+        page_path: window.location.pathname
+      });
+    });
+    </script>
   </body>
 </html>
