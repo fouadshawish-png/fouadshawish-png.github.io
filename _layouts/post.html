@@ -26,7 +26,7 @@ layout: default
 {%- assign current_intent = page.intent | default: '' -%}
 {%- assign primary_tag = page.tags | first | default: '' -%}
 {%- assign primary_page_category = page.categories | first | default: '' -%}
-{%- assign same_category_posts = site.posts | where_exp: 'p', "p.url != page.url" -%}
+{%- assign same_category_posts = site.posts -%}
 {%- assign same_intent_posts = same_category_posts -%}
 {%- assign same_keyword_posts = same_category_posts -%}
 
@@ -63,7 +63,7 @@ layout: default
   {%- assign third_app_cta_url = '/?route=debt_ledger' -%}
 {%- endif -%}
 
-{%- assign same_topic_posts = same_topic_posts | where_exp: 'p', "p.url != page.url" -%}
+{%- assign same_topic_posts = same_topic_posts | where: 'published', true | default: same_topic_posts -%}
 {%- if same_topic_posts.size == 0 -%}
   {%- assign same_topic_posts = same_category_posts -%}
 {%- endif -%}
@@ -80,10 +80,16 @@ layout: default
   {%- assign next_step_post = same_topic_posts | first -%}
 {%- endunless -%}
 
-{%- assign debt_intent_post = site.posts | where: 'topic', 'debt' | where_exp: 'p', "p.url != page.url" | first -%}
-{%- assign saving_intent_post = site.posts | where: 'topic', 'saving' | where_exp: 'p', "p.url != page.url" | first -%}
-{%- assign expense_intent_post = site.posts | where: 'topic', 'expense-tracking' | where_exp: 'p', "p.url != page.url" | first -%}
-{%- assign budget_intent_post = site.posts | where: 'topic', 'budget' | where_exp: 'p', "p.url != page.url" | first -%}
+{%- assign debt_intent_post = nil -%}
+{%- assign saving_intent_post = nil -%}
+{%- assign expense_intent_post = nil -%}
+{%- assign budget_intent_post = nil -%}
+{%- for p in site.posts -%}
+  {%- if p.url != page.url and p.topic == 'debt' and debt_intent_post == nil -%}{%- assign debt_intent_post = p -%}{%- endif -%}
+  {%- if p.url != page.url and p.topic == 'saving' and saving_intent_post == nil -%}{%- assign saving_intent_post = p -%}{%- endif -%}
+  {%- if p.url != page.url and p.topic == 'expense-tracking' and expense_intent_post == nil -%}{%- assign expense_intent_post = p -%}{%- endif -%}
+  {%- if p.url != page.url and p.topic == 'budget' and budget_intent_post == nil -%}{%- assign budget_intent_post = p -%}{%- endif -%}
+{%- endfor -%}
 
 {%- case primary_category -%}
   {%- when 'الديون' -%}
@@ -546,7 +552,7 @@ layout: default
 <section class="post-related post-related--dynamic" aria-label="مقالات ذات صلة">
   <h2 class="section-title">مقالات ذات صلة</h2>
 
-  {%- assign base_related = site.posts | where_exp: 'p', 'p.url != page.url' -%}
+  {%- assign base_related = site.posts -%}
   {%- assign shown_urls = '|' -%}
   {%- assign core_added = 0 -%}
   {%- assign support_added = 0 -%}
@@ -563,6 +569,7 @@ layout: default
             {%- assign lookup_slug = 'expense-tracking-vs-money-management' -%}
           {%- endif -%}
           {%- for candidate in base_related -%}
+            {%- if candidate.url == page.url -%}{%- continue -%}{%- endif -%}
             {%- if candidate.url contains lookup_slug -%}
               {%- capture marker -%}|{{ candidate.url }}|{%- endcapture -%}
               {%- unless shown_urls contains marker -%}
@@ -577,8 +584,9 @@ layout: default
       {%- endfor -%}
 
       {%- if core_added < 2 -%}
-        {%- for rel in same_topic_posts -%}
-          {%- if core_added < 2 -%}
+          {%- for rel in same_topic_posts -%}
+            {%- if rel.url == page.url -%}{%- continue -%}{%- endif -%}
+            {%- if core_added < 2 -%}
             {%- capture marker -%}|{{ rel.url }}|{%- endcapture -%}
             {%- unless shown_urls contains marker -%}
             <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
@@ -592,6 +600,7 @@ layout: default
       {%- for slug in site.data.internal-links.support -%}
         {%- if support_added < 1 -%}
           {%- for candidate in base_related -%}
+            {%- if candidate.url == page.url -%}{%- continue -%}{%- endif -%}
             {%- if candidate.url contains slug -%}
               {%- capture marker -%}|{{ candidate.url }}|{%- endcapture -%}
               {%- unless shown_urls contains marker -%}
@@ -606,8 +615,9 @@ layout: default
       {%- endfor -%}
 
       {%- if support_added < 1 -%}
-        {%- assign support_pool = base_related | where_exp: 'p', "p.categories contains 'تنظيم المصاريف' or p.categories contains 'الميزانية' or p.tags contains 'budget'" -%}
-        {%- for rel in support_pool -%}
+        {%- for rel in base_related -%}
+          {%- if rel.url == page.url -%}{%- continue -%}{%- endif -%}
+          {%- unless rel.categories contains 'تنظيم المصاريف' or rel.categories contains 'الميزانية' or rel.tags contains 'budget' -%}{%- continue -%}{%- endunless -%}
           {%- if support_added < 1 -%}
             {%- capture marker -%}|{{ rel.url }}|{%- endcapture -%}
             {%- unless shown_urls contains marker -%}
@@ -622,6 +632,7 @@ layout: default
       {%- for slug in site.data.internal-links.countries -%}
         {%- if countries_added < 1 -%}
           {%- for candidate in base_related -%}
+            {%- if candidate.url == page.url -%}{%- continue -%}{%- endif -%}
             {%- if candidate.url contains slug -%}
               {%- capture marker -%}|{{ candidate.url }}|{%- endcapture -%}
               {%- unless shown_urls contains marker -%}
@@ -636,8 +647,9 @@ layout: default
       {%- endfor -%}
 
       {%- if countries_added < 1 -%}
-        {%- assign countries_pool = base_related | where_exp: 'p', "p.title contains 'مصر' or p.title contains 'المغرب' or p.title contains 'السعودية' or p.title contains 'الإمارات'" -%}
-        {%- for rel in countries_pool -%}
+        {%- for rel in base_related -%}
+          {%- if rel.url == page.url -%}{%- continue -%}{%- endif -%}
+          {%- unless rel.title contains 'مصر' or rel.title contains 'المغرب' or rel.title contains 'السعودية' or rel.title contains 'الإمارات' -%}{%- continue -%}{%- endunless -%}
           {%- if countries_added < 1 -%}
             {%- capture marker -%}|{{ rel.url }}|{%- endcapture -%}
             {%- unless shown_urls contains marker -%}
@@ -651,6 +663,7 @@ layout: default
 
       {%- if countries_added < 1 -%}
         {%- for rel in base_related -%}
+          {%- if rel.url == page.url -%}{%- continue -%}{%- endif -%}
           {%- if countries_added < 1 -%}
             {%- capture marker -%}|{{ rel.url }}|{%- endcapture -%}
             {%- unless shown_urls contains marker -%}
@@ -665,6 +678,7 @@ layout: default
       {%- assign total_related = core_added | plus: support_added | plus: countries_added -%}
       {%- if total_related < 4 -%}
         {%- for rel in base_related -%}
+          {%- if rel.url == page.url -%}{%- continue -%}{%- endif -%}
           {%- if total_related < 4 -%}
             {%- capture marker -%}|{{ rel.url }}|{%- endcapture -%}
             {%- unless shown_urls contains marker -%}
@@ -732,9 +746,10 @@ layout: default
     <ul class="topic-block__list">
       {%- assign series_posts = same_topic_posts -%}
       {%- if page.series -%}
-        {%- assign series_posts = site.posts | where: 'series', page.series | where_exp: 'p', "p.url != page.url" -%}
+        {%- assign series_posts = site.posts | where: 'series', page.series -%}
       {%- endif -%}
       {%- for rel in series_posts limit:5 -%}
+      {%- if rel.url == page.url -%}{%- continue -%}{%- endif -%}
       <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
       {%- endfor -%}
     </ul>
