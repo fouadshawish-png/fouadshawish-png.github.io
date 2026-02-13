@@ -6,6 +6,7 @@ layout: default
 {%- assign fallback_posts = site.posts -%}
 {%- assign reading_minutes = content | strip_html | number_of_words | plus: 199 | divided_by: 200 -%}
 {%- assign last_updated = page.dateModified | default: page.last_modified_at | default: page.date -%}
+{%- assign direct_answer_text = page.direct_answer | default: content | strip_html | strip_newlines | truncatewords: 50, '' -%}
 {%- assign guide_url = '/guides/المصاريف/' -%}
 {%- assign guide_title = 'تنظيم المصاريف' -%}
 {%- if primary_category == 'الميزانية' -%}
@@ -63,6 +64,50 @@ layout: default
   <div class="post-content" id="postContent">
     {{ content }}
   </div>
+
+  <template id="directAnswerTemplate">
+    <section class="post-summary card" aria-label="الإجابة المختصرة">
+      <h2>الإجابة المختصرة</h2>
+      <p>{{ direct_answer_text }}</p>
+    </section>
+  </template>
+
+  <section class="section snippet-paa-block" aria-label="أسئلة مباشرة">
+    <div class="card">
+      <h2>أسئلة يبحث عنها الناس</h2>
+
+      <h3>ما أفضل طريقة لـ تنظيم المصاريف بدون تعقيد؟</h3>
+      <p>
+        أفضل طريقة هي نظام بسيط يجمع بين تسجيل فوري لكل عملية، تصنيف واضح للبنود، ومراجعة أسبوعية قصيرة.
+        هذا المزيج يحول الأرقام إلى قرارات قابلة للتنفيذ.
+      </p>
+
+      <h3>هل يمكن الالتزام بالميزانية مع دخل متغير؟</h3>
+      <p>
+        نعم، بشرط بناء الخطة على دخل أساس محافظ، ثم تعديل البنود المرنة أسبوعيًا بناءً على البيانات.
+        بهذه الطريقة تظل الخطة واقعية حتى في الأشهر الأقل دخلًا.
+      </p>
+
+      <h3>كم يستغرق ظهور نتيجة واضحة من إدارة الأموال؟</h3>
+      <p>
+        غالبًا تبدأ الملامح الأولى خلال 2 إلى 4 أسابيع إذا كان التسجيل يوميًا والمراجعة منتظمة.
+        النتائج الأعمق تظهر عادة بعد دورة 60 إلى 90 يومًا من التطبيق المتواصل.
+      </p>
+    </div>
+  </section>
+
+  <section class="section snippet-list-block" aria-label="خطوات سريعة">
+    <div class="card">
+      <h2>خطة سريعة من 5 نقاط</h2>
+      <ol>
+        <li>سجل كل عملية مالية فورًا.</li>
+        <li>صنّف البنود إلى ثابتة ومتغيرة.</li>
+        <li>حوّل الأهداف الشهرية إلى حدود أسبوعية.</li>
+        <li>راجع أعلى البنود صرفًا كل أسبوع.</li>
+        <li>عدّل قرارًا واحدًا فقط في كل دورة مراجعة.</li>
+      </ol>
+    </div>
+  </section>
 
   <section class="section topic-graph-links" aria-label="خريطة الموضوع">
     <div class="card">
@@ -223,6 +268,25 @@ layout: default
 <script>
 (function () {
   var content = document.getElementById('postContent');
+  var template = document.getElementById('directAnswerTemplate');
+  if (!content || !template) return;
+
+  var block = template.content.firstElementChild ? template.content.firstElementChild.cloneNode(true) : null;
+  if (!block) return;
+
+  var paragraphs = content.querySelectorAll('p');
+  if (paragraphs.length >= 2) {
+    paragraphs[1].insertAdjacentElement('afterend', block);
+    return;
+  }
+
+  content.insertBefore(block, content.firstChild);
+})();
+</script>
+
+<script>
+(function () {
+  var content = document.getElementById('postContent');
   var template = document.getElementById('readAlsoBurstTemplate');
   if (!content || !template) return;
 
@@ -263,6 +327,44 @@ layout: default
 (function () {
   var content = document.getElementById('postContent');
   if (!content) return;
+
+  var keywords = [
+    "المصاريف",
+    "الميزانية",
+    "إدارة الأموال",
+    "تتبع المصاريف"
+  ];
+
+  function boldFirst(root, keyword) {
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function(node) {
+        if (!node.nodeValue || node.nodeValue.indexOf(keyword) === -1) return NodeFilter.FILTER_REJECT;
+        var parent = node.parentElement;
+        if (!parent) return NodeFilter.FILTER_REJECT;
+        if (parent.closest('a,strong,script,style,code,pre,h1,h2,h3')) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var target = walker.nextNode();
+    if (!target) return false;
+    var text = target.nodeValue;
+    var idx = text.indexOf(keyword);
+    if (idx < 0) return false;
+    var before = text.slice(0, idx);
+    var after = text.slice(idx + keyword.length);
+    var frag = document.createDocumentFragment();
+    if (before) frag.appendChild(document.createTextNode(before));
+    var strong = document.createElement('strong');
+    strong.textContent = keyword;
+    frag.appendChild(strong);
+    if (after) frag.appendChild(document.createTextNode(after));
+    target.parentNode.replaceChild(frag, target);
+    return true;
+  }
+
+  for (var i = 0; i < keywords.length; i++) {
+    boldFirst(content, keywords[i]);
+  }
 
   var terms = [
     "الميزانية","المصاريف الثابتة","المصاريف المتغيرة","التدفق النقدي","صافي الدخل",
