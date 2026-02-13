@@ -8,6 +8,36 @@ layout: default
 {%- assign last_updated = page.dateModified | default: page.last_modified_at | default: page.date -%}
 
 <article class="post">
+  <style>
+    .conversion-card { margin: 18px 0; border: 1px solid rgba(0,106,78,0.2); }
+    .conversion-card p { margin: 0 0 10px; }
+    .post-quick-funnel { margin: 18px 0; }
+    .post-quick-funnel ul { margin: 0; padding-right: 18px; }
+    .post-quick-funnel li { margin: 6px 0; }
+    .floating-start-btn {
+      position: fixed; left: 14px; right: 14px; bottom: 14px; z-index: 1200;
+      display: none; text-align: center; padding: 12px 14px; border-radius: 12px;
+      background: #006a4e; color: #fff; font-weight: 700; text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.24);
+    }
+    .exit-intent-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 1400;
+      display: none; align-items: center; justify-content: center; padding: 16px;
+    }
+    .exit-intent-box {
+      width: min(560px, 100%); background: #fff; color: #1f2937; border-radius: 14px;
+      padding: 20px; box-shadow: 0 12px 32px rgba(0,0,0,0.28);
+    }
+    .exit-intent-box h3 { margin-top: 0; }
+    .exit-intent-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .exit-intent-close { background: transparent; border: 1px solid #cbd5e1; border-radius: 10px; padding: 8px 12px; cursor: pointer; }
+    @media (max-width: 768px) { .floating-start-btn { display: block; } }
+    @media (prefers-color-scheme: dark) {
+      .exit-intent-box { background: #0f172a; color: #e2e8f0; border: 1px solid #334155; }
+      .exit-intent-close { color: #e2e8f0; border-color: #475569; }
+    }
+  </style>
+
   {% include breadcrumb.html %}
 
   <p class="post-reading-time">
@@ -35,6 +65,15 @@ layout: default
     </div>
   </section>
 
+  <section class="post-quick-funnel card" aria-label="روابط التنفيذ السريع">
+    <h2>روابط التنفيذ السريع</h2>
+    <ul>
+      <li><a href="{{ '/?route=budgets' | relative_url }}">ابدأ ميزانيتك الآن</a></li>
+      <li><a href="{{ '/?route=reports' | relative_url }}">راجع تقاريرك أولًا بأول</a></li>
+      <li><a href="{{ '/?route=goals' | relative_url }}">ثبّت هدفك المالي القادم</a></li>
+    </ul>
+  </section>
+
   {% if page.image %}
   <img
     class="post-image post-image--wide"
@@ -57,6 +96,24 @@ layout: default
   <div class="post-content" id="postContent">
     {{ content }}
   </div>
+
+  <template id="softCtaTemplate">
+    <section class="conversion-card card" aria-label="CTA Soft">
+      <h3>هل تريد تطبيق هذه الخطوات عمليًا؟ جرّب تسجيل أول عملية الآن.</h3>
+      <div class="tools-actions">
+        <a class="btn-primary" href="{{ '/?route=all_transactions' | relative_url }}" data-cta="soft">ابدأ تسجيل أول عملية</a>
+      </div>
+    </section>
+  </template>
+
+  <template id="mediumCtaTemplate">
+    <section class="conversion-card card" aria-label="CTA Medium">
+      <h3>أنشئ ميزانيتك الأولى خلال دقيقتين.</h3>
+      <div class="tools-actions">
+        <a class="btn-primary" href="{{ '/?route=budgets' | relative_url }}" data-cta="medium">افتح الميزانيات الآن</a>
+      </div>
+    </section>
+  </template>
 
   <template id="readAlsoBurstTemplate">
     <aside class="inline-cta inline-read-also" aria-label="اقرأ أيضًا">
@@ -161,17 +218,15 @@ layout: default
     </div>
   </section>
 
-  <section class="section post-bottom-cta" aria-label="تنفيذ داخل التطبيق">
+  <section class="section post-bottom-cta" aria-label="CTA Strong">
     <div class="card">
-      <h2>كيف تطبّق هذا داخل التطبيق؟</h2>
-      <p>اختر الإجراء المناسب الآن: رابط ويب للفهرسة + رابط عميق للتنفيذ السريع داخل التطبيق.</p>
+      <h2>ابدأ إدارة مصاريفك باحتراف اليوم.</h2>
+      <p>ابدأ من صفحة التحميل، ثم أكمل التنفيذ من الميزانيات والتقارير والأهداف داخل التطبيق.</p>
       <div class="tools-actions">
-        <a class="btn-accent" href="{{ '/budget/' | relative_url }}">ابدأ ميزانيتك (ويب)</a>
-        <a class="btn-primary" href="{{ '/?route=budgets' | relative_url }}">ابدأ ميزانيتك (داخل التطبيق)</a>
-        <a class="btn-accent" href="{{ '/reports_root/' | relative_url }}">عرض التقارير (ويب)</a>
-        <a class="btn-primary" href="{{ '/?route=all_transactions' | relative_url }}">عرض كل العمليات (داخل التطبيق)</a>
-        <a class="btn-accent" href="{{ '/debt_root/' | relative_url }}">دفتر الديون (ويب)</a>
-        <a class="btn-primary" href="{{ '/?route=debt_ledger' | relative_url }}">دفتر الديون (داخل التطبيق)</a>
+        <a class="btn-primary" href="{{ '/download.html' | relative_url }}" data-cta="strong">تحميل التطبيق</a>
+        <a class="btn-accent" href="{{ '/?route=budgets' | relative_url }}">الميزانيات</a>
+        <a class="btn-accent" href="{{ '/?route=reports' | relative_url }}">التقارير</a>
+        <a class="btn-accent" href="{{ '/?route=goals' | relative_url }}">الأهداف</a>
       </div>
     </div>
   </section>
@@ -186,6 +241,21 @@ layout: default
     </div>
   </section>
 </article>
+
+<a class="floating-start-btn" href="{{ '/download.html' | relative_url }}" data-cta="strong" aria-label="ابدأ الآن">
+  ابدأ الآن
+</a>
+
+<div class="exit-intent-overlay" id="exitIntentOverlay" aria-hidden="true">
+  <div class="exit-intent-box" role="dialog" aria-modal="true" aria-labelledby="exitIntentTitle">
+    <h3 id="exitIntentTitle">قبل أن تغادر — هل ترغب في تجربة النظام عمليًا؟</h3>
+    <p>ابدأ بخطوة بسيطة اليوم، وسترى فرقًا واضحًا خلال أسابيع.</p>
+    <div class="exit-intent-actions">
+      <a class="btn-primary" href="{{ '/download.html' | relative_url }}" data-cta="strong">تحميل التطبيق</a>
+      <button class="exit-intent-close" id="exitIntentClose" type="button">إغلاق</button>
+    </div>
+  </div>
+</div>
 
 <script>
 (function () {
@@ -212,6 +282,29 @@ layout: default
 })();
 </script>
 
+<script>
+(function () {
+  var content = document.getElementById('postContent');
+  var softTemplate = document.getElementById('softCtaTemplate');
+  var mediumTemplate = document.getElementById('mediumCtaTemplate');
+  if (!content || !softTemplate || !mediumTemplate) return;
+
+  var blocks = content.querySelectorAll('p, h2, h3, ul, ol, table');
+  if (!blocks.length) return;
+
+  var softIndex = Math.max(1, Math.floor(blocks.length * 0.25));
+  var mediumIndex = Math.max(2, Math.floor(blocks.length * 0.60));
+  softIndex = Math.min(softIndex, blocks.length - 1);
+  mediumIndex = Math.min(mediumIndex, blocks.length - 1);
+
+  var softNode = softTemplate.content.firstElementChild.cloneNode(true);
+  var mediumNode = mediumTemplate.content.firstElementChild.cloneNode(true);
+
+  blocks[softIndex].insertAdjacentElement('afterend', softNode);
+  blocks[mediumIndex].insertAdjacentElement('afterend', mediumNode);
+})();
+</script>
+
 {% include scroll-cta.html %}
 
 <script>
@@ -223,6 +316,39 @@ layout: default
     if (!images[i].getAttribute('loading')) images[i].setAttribute('loading', 'lazy');
     if (!images[i].getAttribute('decoding')) images[i].setAttribute('decoding', 'async');
   }
+})();
+</script>
+
+<script>
+(function () {
+  // Desktop exit intent: show once per session.
+  if (window.matchMedia('(max-width: 992px)').matches) return;
+  if (sessionStorage.getItem('exit_intent_seen') === '1') return;
+
+  var overlay = document.getElementById('exitIntentOverlay');
+  var closeBtn = document.getElementById('exitIntentClose');
+  if (!overlay || !closeBtn) return;
+
+  function closePopup() {
+    overlay.style.display = 'none';
+    overlay.setAttribute('aria-hidden', 'true');
+  }
+
+  function openPopup() {
+    if (sessionStorage.getItem('exit_intent_seen') === '1') return;
+    sessionStorage.setItem('exit_intent_seen', '1');
+    overlay.style.display = 'flex';
+    overlay.setAttribute('aria-hidden', 'false');
+  }
+
+  document.addEventListener('mouseout', function (e) {
+    if (!e.relatedTarget && e.clientY <= 0) openPopup();
+  });
+
+  closeBtn.addEventListener('click', closePopup);
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closePopup();
+  });
 })();
 </script>
 
