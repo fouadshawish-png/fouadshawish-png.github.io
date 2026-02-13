@@ -31,6 +31,21 @@ canonical: https://fouadshawish-png.github.io/النظام-المالي/
   </ol>
 </section>
 
+{% assign latest_post = all_posts.first %}
+{% if latest_post %}
+<section class="section">
+  <h2>أحدث إضافة في الشبكة</h2>
+  <div class="card">
+    <h3><a href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a></h3>
+    <p>{{ latest_post.description | default: latest_post.excerpt | strip_html | strip_newlines | truncate: 180 }}</p>
+    <p>
+      أضف هذا المقال لمسار القراءة الحالي لضمان ربط داخلي مباشر من Hub إلى المحتوى الجديد.
+    </p>
+    <a class="btn-accent" href="{{ latest_post.url | relative_url }}">اقرأ الإضافة الجديدة</a>
+  </div>
+</section>
+{% endif %}
+
 <section class="section">
   <h2>الجدول التصنيفي للمحتوى</h2>
   <div class="card">

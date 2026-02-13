@@ -13,6 +13,7 @@ timezone: "Asia/Gaza"
 
 plugins:
   - jekyll-sitemap
+  - jekyll-feed
   - jekyll-last-modified-at
 
 exclude:

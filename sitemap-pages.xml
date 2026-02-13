@@ -9,6 +9,12 @@ layout: null
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>{{ '/new/' | absolute_url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
   {% assign static_pages = "/blog/,/download.html,/how-it-works.html,/features-advanced.html,/faq.html,/pricing.html,/roadmap.html,/support.html,/results.html,/security.html,/privacy.html,/terms.html" | split: "," %}
   {% for page_url in static_pages %}
   <url>
