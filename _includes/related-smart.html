@@ -1,0 +1,82 @@
+{%- assign rel_limit = include.limit | default: 4 -%}
+{%- assign rel_title = include.title | default: "مقالات ذات صلة" -%}
+{%- assign rel_category = page.categories | first -%}
+{%- assign rel_shown = 0 -%}
+{%- assign rel_urls = "|" -%}
+
+<section class="post-related post-related--dynamic" aria-label="{{ rel_title }}">
+  <h2 class="section-title">{{ rel_title }}</h2>
+  <div class="post-related-grid">
+    {% for rel in site.posts %}
+      {% assign rel_token = rel.url | append: "|" %}
+      {% if rel.url != page.url and rel_category and rel.categories contains rel_category and rel.title and rel.description and rel_shown < rel_limit %}
+        {% unless rel_urls contains rel_token %}
+        <article class="related-card">
+          {% if rel.image %}
+          <a class="related-card__thumb" href="{{ rel.url | relative_url }}" aria-label="{{ rel.title }}">
+            <img src="{{ rel.image | relative_url }}" alt="{{ rel.image_alt | default: rel.title }}" loading="lazy" width="1200" height="630">
+          </a>
+          {% endif %}
+          <div class="related-card__body">
+            <h3 class="related-card__title"><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></h3>
+            <p class="related-card__desc">{{ rel.description | strip_html | strip_newlines | truncate: 130 }}</p>
+          </div>
+        </article>
+        {% assign rel_shown = rel_shown | plus: 1 %}
+        {% assign rel_urls = rel_urls | append: rel_token %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+
+    {% if page.tags %}
+      {% for rel in site.posts %}
+        {% assign rel_token = rel.url | append: "|" %}
+        {% assign tag_match = false %}
+        {% for t in page.tags %}
+          {% if rel.tags contains t %}
+            {% assign tag_match = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% if rel.url != page.url and tag_match and rel.title and rel.description and rel_shown < rel_limit %}
+          {% unless rel_urls contains rel_token %}
+          <article class="related-card">
+            {% if rel.image %}
+            <a class="related-card__thumb" href="{{ rel.url | relative_url }}" aria-label="{{ rel.title }}">
+              <img src="{{ rel.image | relative_url }}" alt="{{ rel.image_alt | default: rel.title }}" loading="lazy" width="1200" height="630">
+            </a>
+            {% endif %}
+            <div class="related-card__body">
+              <h3 class="related-card__title"><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></h3>
+              <p class="related-card__desc">{{ rel.description | strip_html | strip_newlines | truncate: 130 }}</p>
+            </div>
+          </article>
+          {% assign rel_shown = rel_shown | plus: 1 %}
+          {% assign rel_urls = rel_urls | append: rel_token %}
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% for rel in site.posts %}
+      {% assign rel_token = rel.url | append: "|" %}
+      {% if rel.url != page.url and rel.title and rel.description and rel_shown < rel_limit %}
+        {% unless rel_urls contains rel_token %}
+        <article class="related-card">
+          {% if rel.image %}
+          <a class="related-card__thumb" href="{{ rel.url | relative_url }}" aria-label="{{ rel.title }}">
+            <img src="{{ rel.image | relative_url }}" alt="{{ rel.image_alt | default: rel.title }}" loading="lazy" width="1200" height="630">
+          </a>
+          {% endif %}
+          <div class="related-card__body">
+            <h3 class="related-card__title"><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></h3>
+            <p class="related-card__desc">{{ rel.description | strip_html | strip_newlines | truncate: 130 }}</p>
+          </div>
+        </article>
+        {% assign rel_shown = rel_shown | plus: 1 %}
+        {% assign rel_urls = rel_urls | append: rel_token %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

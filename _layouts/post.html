@@ -29,7 +29,10 @@ layout: default
   </p>
 
   <section class="post-top-cta card" aria-label="تنفيذ سريع">
-    <a class="btn-accent" href="{{ '/?route=reports' | relative_url }}">افتح التقارير الآن</a>
+    <div class="tools-actions">
+      <a class="btn-accent" href="{{ '/reports_root/' | relative_url }}">افتح التقارير الآن (ويب)</a>
+      <a class="btn-primary" href="{{ '/?route=reports' | relative_url }}">افتح التقارير الآن (داخل التطبيق)</a>
+    </div>
   </section>
 
   {% if page.image %}
@@ -104,94 +107,81 @@ layout: default
     </aside>
   </template>
 
-  <section class="post-related post-related--dynamic" aria-label="مقالات ذات صلة">
-    <h2 class="section-title">مقالات ذات صلة</h2>
-    <div class="post-related-grid">
-      {% assign shown = 0 %}
-      {% assign shown_urls = "|" %}
+  {% include related-smart.html title="مقالات ذات صلة" limit=4 %}
 
-      {% for rel in fallback_posts %}
-        {% assign rel_token = rel.url | append: "|" %}
-        {% if rel.url != page.url and rel.categories contains primary_category and rel.title and rel.description and shown < 4 %}
-          {% unless shown_urls contains rel_token %}
-          <article class="related-card">
-            {% if rel.image %}
-            <a class="related-card__thumb" href="{{ rel.url | relative_url }}" aria-label="{{ rel.title }}">
-              <img src="{{ rel.image | relative_url }}" alt="{{ rel.image_alt | default: rel.title }}" loading="lazy" width="1200" height="630">
-            </a>
-            {% endif %}
-            <div class="related-card__body">
-              <h3 class="related-card__title"><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></h3>
-              <p class="related-card__desc">{{ rel.description | strip_html | strip_newlines | truncate: 130 }}</p>
-            </div>
-          </article>
-          {% assign shown = shown | plus: 1 %}
-          {% assign shown_urls = shown_urls | append: rel_token %}
-          {% endunless %}
-        {% endif %}
-      {% endfor %}
+  <section class="section semantic-anchors" aria-label="روابط دلالية مرتبطة">
+    <div class="card">
+      <h2>مسارات مرتبطة</h2>
+      <ul class="free-tools-links">
+        <li><a href="{{ '/organize-monthly-expenses-step-by-step/' | relative_url }}">إدارة المصروفات الشهرية</a></li>
+        <li><a href="{{ '/reduce-monthly-expenses-smartly/' | relative_url }}">ضبط النفقات</a></li>
+        <li><a href="{{ '/how-to-track-expenses-daily-effectively/' | relative_url }}">تتبع الإنفاق</a></li>
+        <li><a href="{{ '/build-realistic-monthly-budget/' | relative_url }}">بناء ميزانية فعالة</a></li>
+      </ul>
+      <p><a href="{{ '/guides/' | relative_url }}">استعرض الأدلة المالية الكاملة</a></p>
+    </div>
+  </section>
 
-      {% if page.tags %}
+  <section class="section contextual-footer-links" aria-label="اقرأ أيضًا">
+    <div class="card">
+      <h2>اقرأ أيضًا:</h2>
+      <ul class="free-tools-links">
+        {% assign footer_shown = 0 %}
+        {% assign footer_urls = "|" %}
         {% for rel in fallback_posts %}
           {% assign rel_token = rel.url | append: "|" %}
-          {% assign tag_match = false %}
-          {% for t in page.tags %}
-            {% if rel.tags contains t %}
-              {% assign tag_match = true %}
-              {% break %}
-            {% endif %}
-          {% endfor %}
-          {% if rel.url != page.url and tag_match and rel.title and rel.description and shown < 4 %}
-            {% unless shown_urls contains rel_token %}
-            <article class="related-card">
-              {% if rel.image %}
-              <a class="related-card__thumb" href="{{ rel.url | relative_url }}" aria-label="{{ rel.title }}">
-                <img src="{{ rel.image | relative_url }}" alt="{{ rel.image_alt | default: rel.title }}" loading="lazy" width="1200" height="630">
-              </a>
-              {% endif %}
-              <div class="related-card__body">
-                <h3 class="related-card__title"><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></h3>
-                <p class="related-card__desc">{{ rel.description | strip_html | strip_newlines | truncate: 130 }}</p>
-              </div>
-            </article>
-            {% assign shown = shown | plus: 1 %}
-            {% assign shown_urls = shown_urls | append: rel_token %}
+          {% if rel.url != page.url and rel.categories contains primary_category and rel.title and footer_shown < 3 %}
+            {% unless footer_urls contains rel_token %}
+              <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
+              {% assign footer_shown = footer_shown | plus: 1 %}
+              {% assign footer_urls = footer_urls | append: rel_token %}
             {% endunless %}
           {% endif %}
         {% endfor %}
-      {% endif %}
-
-      {% for rel in fallback_posts %}
-        {% assign rel_token = rel.url | append: "|" %}
-        {% if rel.url != page.url and rel.title and rel.description and shown < 4 %}
-          {% unless shown_urls contains rel_token %}
-          <article class="related-card">
-            {% if rel.image %}
-            <a class="related-card__thumb" href="{{ rel.url | relative_url }}" aria-label="{{ rel.title }}">
-              <img src="{{ rel.image | relative_url }}" alt="{{ rel.image_alt | default: rel.title }}" loading="lazy" width="1200" height="630">
-            </a>
+        {% if page.tags %}
+          {% for rel in fallback_posts %}
+            {% assign rel_token = rel.url | append: "|" %}
+            {% assign tag_match = false %}
+            {% for t in page.tags %}
+              {% if rel.tags contains t %}
+                {% assign tag_match = true %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+            {% if rel.url != page.url and tag_match and rel.title and footer_shown < 3 %}
+              {% unless footer_urls contains rel_token %}
+                <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
+                {% assign footer_shown = footer_shown | plus: 1 %}
+                {% assign footer_urls = footer_urls | append: rel_token %}
+              {% endunless %}
             {% endif %}
-            <div class="related-card__body">
-              <h3 class="related-card__title"><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></h3>
-              <p class="related-card__desc">{{ rel.description | strip_html | strip_newlines | truncate: 130 }}</p>
-            </div>
-          </article>
-          {% assign shown = shown | plus: 1 %}
-          {% assign shown_urls = shown_urls | append: rel_token %}
-          {% endunless %}
+          {% endfor %}
         {% endif %}
-      {% endfor %}
+        {% for rel in fallback_posts %}
+          {% assign rel_token = rel.url | append: "|" %}
+          {% if rel.url != page.url and rel.title and footer_shown < 3 %}
+            {% unless footer_urls contains rel_token %}
+              <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
+              {% assign footer_shown = footer_shown | plus: 1 %}
+              {% assign footer_urls = footer_urls | append: rel_token %}
+            {% endunless %}
+          {% endif %}
+        {% endfor %}
+      </ul>
     </div>
   </section>
 
   <section class="section post-bottom-cta" aria-label="تنفيذ داخل التطبيق">
     <div class="card">
       <h2>كيف تطبّق هذا داخل التطبيق؟</h2>
-      <p>اختر الإجراء المناسب الآن وابدأ التنفيذ مباشرة.</p>
+      <p>اختر الإجراء المناسب الآن: رابط ويب للفهرسة + رابط عميق للتنفيذ السريع داخل التطبيق.</p>
       <div class="tools-actions">
-        <a class="btn-accent" href="{{ '/?route=budgets' | relative_url }}">ابدأ ميزانيتك</a>
-        <a class="btn-primary" href="{{ '/?route=all_transactions' | relative_url }}">عرض كل العمليات</a>
-        <a class="btn-primary" href="{{ '/?route=debt_ledger' | relative_url }}">دفتر الديون</a>
+        <a class="btn-accent" href="{{ '/budget/' | relative_url }}">ابدأ ميزانيتك (ويب)</a>
+        <a class="btn-primary" href="{{ '/?route=budgets' | relative_url }}">ابدأ ميزانيتك (داخل التطبيق)</a>
+        <a class="btn-accent" href="{{ '/reports_root/' | relative_url }}">عرض التقارير (ويب)</a>
+        <a class="btn-primary" href="{{ '/?route=all_transactions' | relative_url }}">عرض كل العمليات (داخل التطبيق)</a>
+        <a class="btn-accent" href="{{ '/debt_root/' | relative_url }}">دفتر الديون (ويب)</a>
+        <a class="btn-primary" href="{{ '/?route=debt_ledger' | relative_url }}">دفتر الديون (داخل التطبيق)</a>
       </div>
     </div>
   </section>
