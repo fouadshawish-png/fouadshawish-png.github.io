@@ -25,6 +25,23 @@
 {% else %}
 <meta name="robots" content="index, follow">
 {% endif %}
+<script>
+  (function() {
+    try {
+      if (window.location.search.indexOf("route=") !== -1) {
+        var existing = document.querySelector('meta[name="robots"]');
+        if (existing) {
+          existing.setAttribute("content", "noindex, follow");
+        } else {
+          var meta = document.createElement("meta");
+          meta.setAttribute("name", "robots");
+          meta.setAttribute("content", "noindex, follow");
+          document.head.appendChild(meta);
+        }
+      }
+    } catch (e) {}
+  })();
+</script>
 {% if page.crawl_priority %}
 <meta name="crawl-priority" content="{{ page.crawl_priority }}">
 {% endif %}

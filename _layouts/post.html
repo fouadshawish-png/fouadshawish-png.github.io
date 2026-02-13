@@ -118,3 +118,14 @@ layout: default
   h2.insertAdjacentElement('afterend', box);
 })();
 </script>
+<script>
+(function () {
+  var content = document.getElementById('postContent');
+  if (!content) return;
+  var images = content.querySelectorAll('img');
+  for (var i = 0; i < images.length; i++) {
+    if (!images[i].getAttribute('loading')) images[i].setAttribute('loading', 'lazy');
+    if (!images[i].getAttribute('decoding')) images[i].setAttribute('decoding', 'async');
+  }
+})();
+</script>

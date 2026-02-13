@@ -3,4 +3,11 @@ Allow: /
 Crawl-delay: 1
 Disallow: /assets/
 Disallow: /404.html
+Disallow: /subscription_plans/
+Disallow: /subscription_plans.html
+Disallow: /reports_root/
+Disallow: /debt_root/
+Disallow: /goals_root/
+Disallow: /all_transactions/
+Disallow: /*?route=
 Sitemap: https://fouadshawish-png.github.io/sitemap.xml

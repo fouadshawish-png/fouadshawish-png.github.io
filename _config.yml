@@ -13,6 +13,16 @@ timezone: "Asia/Gaza"
 
 plugins:
   - jekyll-sitemap
+  - jekyll-last-modified-at
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
 
 sitemap:
   priority: 0.8
+
+last_modified_at: true
