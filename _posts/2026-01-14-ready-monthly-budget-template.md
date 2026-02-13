@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "استخدم ميزانية شهرية جاهزة وابدأ التنظيم خلال 30 يومًا"
-description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
+description: "دليل عملي: استخدم ميزانية شهرية جاهزة وابدأ التنظيم خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
 permalink: /ready-monthly-budget-template/
 canonical: https://fouadshawish-png.github.io/ready-monthly-budget-template/
 image: /assets/images/posts/ready-monthly-budget-template-cover.jpeg

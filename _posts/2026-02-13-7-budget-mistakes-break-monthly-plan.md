@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "تجنّب 7 أخطاء ميزانية ووفّر خلال 30 يومًا (دليل)"
-description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
+description: "دليل عملي: تجنّب 7 أخطاء ميزانية ووفّر خلال 30 يومًا (دليل). يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
 permalink: /7-budget-mistakes-break-monthly-plan/
 canonical: https://fouadshawish-png.github.io/7-budget-mistakes-break-monthly-plan/
 image: /assets/images/posts/7-budget-mistakes-break-monthly-plan-cover.jpg

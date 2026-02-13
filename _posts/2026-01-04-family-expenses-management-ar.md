@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "نظّم مصاريف الأسرة وقلّل الهدر خلال 30 يومًا (خطة)"
-description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
+description: "دليل عملي: نظّم مصاريف الأسرة وقلّل الهدر خلال 30 يومًا (خطة). يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
 permalink: /family-expenses-management-ar/
 canonical: https://fouadshawish-png.github.io/family-expenses-management-ar/
 image: /assets/images/posts/family-expenses-management-ar-cover.jpg

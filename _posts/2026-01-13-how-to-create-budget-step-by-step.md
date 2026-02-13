@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "أنشئ ميزانية شهرية ناجحة في 5 خطوات خلال 30 يومًا"
-description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
+description: "دليل عملي: أنشئ ميزانية شهرية ناجحة في 5 خطوات خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
 permalink: /how-to-create-budget-step-by-step/
 canonical: https://fouadshawish-png.github.io/how-to-create-budget-step-by-step/
 image: /assets/images/posts/how-to-create-budget-step-by-step-cover.jpg

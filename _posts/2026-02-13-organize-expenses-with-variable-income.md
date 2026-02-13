@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "نظّم المصاريف مع دخل متغير وقلّل العجز خلال 30 يومًا"
-description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
+description: "دليل عملي: نظّم المصاريف مع دخل متغير وقلّل العجز خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
 permalink: /organize-expenses-variable-income/
 canonical: https://fouadshawish-png.github.io/organize-expenses-variable-income/
 image: /assets/images/posts/organize-expenses-with-variable-income-cover.jpg

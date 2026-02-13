@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "اضبط مصاريف الحياة اليومية ووفّر خلال 4 أسابيع"
-description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
+description: "دليل عملي: اضبط مصاريف الحياة اليومية ووفّر خلال 4 أسابيع. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
 permalink: /daily-life-expenses-control/
 canonical: https://fouadshawish-png.github.io/daily-life-expenses-control/
 image: /assets/images/posts/daily-life-expenses-control-cover.jpg

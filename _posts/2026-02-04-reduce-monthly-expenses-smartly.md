@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "قلّل المصاريف الشهرية بذكاء ووفّر 20% خلال 30 يومًا"
-description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
+description: "دليل عملي: قلّل المصاريف الشهرية بذكاء ووفّر 20% خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
 categories:
   - تنظيم المصاريف
 tags:
@@ -12,6 +12,7 @@ permalink: /reduce-monthly-expenses-smartly/
 canonical: https://fouadshawish-png.github.io/reduce-monthly-expenses-smartly/
 image: /assets/images/posts/reduce-monthly-expenses-smartly-cover.jpg
 image_alt: "قلّل المصاريف الشهرية بذكاء ووفّر 20% خلال 30 يومًا"
+editor_note: "عند مراجعة الإنفاق الفعلي، أكثر التخفيضات تأثيرًا جاءت من بندين متكررين، لا من عشرات البنود الصغيرة. التركيز على الأعلى أثرًا يختصر الوقت."
 last_modified_at: 2026-02-04
 ---
 

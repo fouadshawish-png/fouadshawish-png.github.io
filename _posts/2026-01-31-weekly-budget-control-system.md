@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "اضبط الميزانية أسبوعيًا وامنع الانهيار في 10 دقائق"
-description: "لا تعرف أين يتسرّب المال أسبوعيًا؟ تعلّم طريقة عملية لمراجعة الميزانية وتتبع المصاريف. ابدأ خطة سريعة تحسّن إدارة الأموال في 10 دقائق."
+description: "اضبط الميزانية أسبوعيًا وامنع الانهيار في 10 دقائق — تحليل تطبيقي بخطوات عملية وأمثلة مالية واقعية تساعدك على اتخاذ قرارات أفضل وبناء نظام إنفاق مستقر."
 categories:
   - الميزانية
 tags:
@@ -12,6 +12,7 @@ permalink: /weekly-budget-control-system/
 canonical: https://fouadshawish-png.github.io/weekly-budget-control-system/
 image: /assets/images/posts/weekly-budget-control-system-cover.jpeg
 image_alt: "اضبط الميزانية أسبوعيًا وامنع الانهيار في 10 دقائق"
+editor_note: "أكثر نقطة حسنت الالتزام هي تحديد سؤال أسبوعي ثابت: ما بند التجاوز الرئيسي هذا الأسبوع؟ هذا السؤال وحده يوجه القرار التالي."
 last_modified_at: 2026-01-31
 ---
 

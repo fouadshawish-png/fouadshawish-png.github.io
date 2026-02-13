@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ابنِ ميزانية شهرية واقعية ووفّر خلال 30 يومًا"
-description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
+description: "دليل عملي: ابنِ ميزانية شهرية واقعية ووفّر خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
 categories:
   - الميزانية
 tags:
@@ -12,6 +12,7 @@ permalink: /build-realistic-monthly-budget/
 canonical: https://fouadshawish-png.github.io/build-realistic-monthly-budget/
 image: /assets/images/posts/build-realistic-monthly-budget-cover.jpg
 image_alt: "ابنِ ميزانية شهرية واقعية ووفّر خلال 30 يومًا"
+editor_note: "الميزانية التي تصمد هي التي تتضمن هامش مرونة واضح. كل مرة حذفت فيها هامش الطوارئ من الخطة، ظهرت مشكلة غير متوقعة كسرت الالتزام."
 last_modified_at: 2026-02-03
 ---
 

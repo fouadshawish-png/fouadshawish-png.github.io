@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "خفّض المصاريف دون حرمان ووفّر خلال 30 يومًا (طريقة)"
-description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
+description: "دليل عملي: خفّض المصاريف دون حرمان ووفّر خلال 30 يومًا (طريقة). يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
 permalink: /reduce-expenses-without-deprivation/
 canonical: https://fouadshawish-png.github.io/reduce-expenses-without-deprivation/
 image: /assets/images/posts/reduce-expenses-without-deprivation-cover.jpg

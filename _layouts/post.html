@@ -6,16 +6,6 @@ layout: default
 {%- assign fallback_posts = site.posts -%}
 {%- assign reading_minutes = content | strip_html | number_of_words | plus: 199 | divided_by: 200 -%}
 {%- assign last_updated = page.dateModified | default: page.last_modified_at | default: page.date -%}
-{%- assign direct_answer_text = page.direct_answer | default: content | strip_html | strip_newlines | truncatewords: 50, '' -%}
-{%- assign guide_url = '/guides/المصاريف/' -%}
-{%- assign guide_title = 'تنظيم المصاريف' -%}
-{%- if primary_category == 'الميزانية' -%}
-  {%- assign guide_url = '/guides/الميزانية/' -%}
-  {%- assign guide_title = 'بناء ميزانية شهرية' -%}
-{%- elsif primary_category == 'إدارة الأموال' or primary_category == 'الديون' or primary_category == 'الادخار' -%}
-  {%- assign guide_url = '/guides/إدارة-الأموال/' -%}
-  {%- assign guide_title = 'إدارة الأموال الشخصية' -%}
-{%- endif -%}
 
 <article class="post">
   {% include breadcrumb.html %}
@@ -55,78 +45,18 @@ layout: default
     height="630">
   {% endif %}
 
-  <section class="method-box card" aria-label="منهج العمل في هذا الموقع">
-    <h2>منهج العمل في هذا الموقع</h2>
-    <p>كل مقال هنا قابل للتطبيق الفوري، وليس نصائح عامة.</p>
-    <p>هذا المحتوى جزء من <a href="{{ '/من-هو-محترف-المصاريف/' | relative_url }}">نظام محترف المصاريف</a>.</p>
+  {% if page.editor_note %}
+  <section class="section" aria-label="ملاحظة من التجربة">
+    <div class="card">
+      <h2>ملاحظة من التجربة</h2>
+      <p>{{ page.editor_note }}</p>
+    </div>
   </section>
+  {% endif %}
 
   <div class="post-content" id="postContent">
     {{ content }}
   </div>
-
-  <template id="directAnswerTemplate">
-    <section class="post-summary card" aria-label="الإجابة المختصرة">
-      <h2>الإجابة المختصرة</h2>
-      <p>{{ direct_answer_text }}</p>
-    </section>
-  </template>
-
-  <template id="curiosityHookTemplate">
-    <p class="post-curiosity-hook">
-      الخطأ الذي يقع فيه كثير من الناس هو الاعتماد على الحماس بدل النظام؛ إذا طبقت الخطوة التالية فقط قد ترى فرقًا واضحًا خلال 30 يومًا.
-    </p>
-  </template>
-
-  <section class="section snippet-paa-block" aria-label="أسئلة مباشرة">
-    <div class="card">
-      <h2>أسئلة يبحث عنها الناس</h2>
-
-      <h3>ما أفضل طريقة لـ تنظيم المصاريف بدون تعقيد؟</h3>
-      <p>
-        أفضل طريقة هي نظام بسيط يجمع بين تسجيل فوري لكل عملية، تصنيف واضح للبنود، ومراجعة أسبوعية قصيرة.
-        هذا المزيج يحول الأرقام إلى قرارات قابلة للتنفيذ.
-      </p>
-
-      <h3>هل يمكن الالتزام بالميزانية مع دخل متغير؟</h3>
-      <p>
-        نعم، بشرط بناء الخطة على دخل أساس محافظ، ثم تعديل البنود المرنة أسبوعيًا بناءً على البيانات.
-        بهذه الطريقة تظل الخطة واقعية حتى في الأشهر الأقل دخلًا.
-      </p>
-
-      <h3>كم يستغرق ظهور نتيجة واضحة من إدارة الأموال؟</h3>
-      <p>
-        غالبًا تبدأ الملامح الأولى خلال 2 إلى 4 أسابيع إذا كان التسجيل يوميًا والمراجعة منتظمة.
-        النتائج الأعمق تظهر عادة بعد دورة 60 إلى 90 يومًا من التطبيق المتواصل.
-      </p>
-    </div>
-  </section>
-
-  <section class="section snippet-list-block" aria-label="خطوات سريعة">
-    <div class="card">
-      <h2>خطة سريعة من 5 نقاط</h2>
-      <ol>
-        <li>سجل كل عملية مالية فورًا.</li>
-        <li>صنّف البنود إلى ثابتة ومتغيرة.</li>
-        <li>حوّل الأهداف الشهرية إلى حدود أسبوعية.</li>
-        <li>راجع أعلى البنود صرفًا كل أسبوع.</li>
-        <li>عدّل قرارًا واحدًا فقط في كل دورة مراجعة.</li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="section topic-graph-links" aria-label="خريطة الموضوع">
-    <div class="card">
-      <h2>خريطة الموضوع</h2>
-      <ul class="free-tools-links">
-        <li><a href="{{ '/guides/المصاريف/' | relative_url }}">تنظيم المصاريف</a></li>
-        <li><a href="{{ '/guides/الميزانية/' | relative_url }}">بناء ميزانية شهرية</a></li>
-        <li><a href="{{ '/guides/إدارة-الأموال/' | relative_url }}">إدارة الأموال الشخصية</a></li>
-        <li><a href="{{ guide_url | relative_url }}">الدليل المرتبط بهذا المقال</a></li>
-      </ul>
-      <p>مسار المتابعة: <a href="{{ '/guides/' | relative_url }}">كل الأدلة</a> → <a href="{{ guide_url | relative_url }}">{{ guide_title }}</a>.</p>
-    </div>
-  </section>
 
   <template id="readAlsoBurstTemplate">
     <aside class="inline-cta inline-read-also" aria-label="اقرأ أيضًا">
@@ -181,19 +111,6 @@ layout: default
   </template>
 
   {% include related-smart.html title="مقالات ذات صلة" limit=4 %}
-
-  <section class="section semantic-anchors" aria-label="روابط دلالية مرتبطة">
-    <div class="card">
-      <h2>مسارات مرتبطة</h2>
-      <ul class="free-tools-links">
-        <li><a href="{{ '/guides/المصاريف/' | relative_url }}">تنظيم المصاريف</a></li>
-        <li><a href="{{ '/guides/الميزانية/' | relative_url }}">بناء ميزانية شهرية</a></li>
-        <li><a href="{{ '/guides/إدارة-الأموال/' | relative_url }}">إدارة الأموال الشخصية</a></li>
-        <li><a href="{{ '/organize-monthly-expenses-step-by-step/' | relative_url }}">تنظيم المصاريف خطوة بخطوة</a></li>
-      </ul>
-      <p><a href="{{ '/guides/' | relative_url }}">استعرض الأدلة المالية الكاملة</a></p>
-    </div>
-  </section>
 
   <section class="section contextual-footer-links" aria-label="اقرأ أيضًا">
     <div class="card">
@@ -269,44 +186,6 @@ layout: default
     </div>
   </section>
 </article>
-
-<script>
-(function () {
-  var content = document.getElementById('postContent');
-  var template = document.getElementById('curiosityHookTemplate');
-  if (!content || !template) return;
-
-  var block = template.content.firstElementChild ? template.content.firstElementChild.cloneNode(true) : null;
-  if (!block) return;
-
-  var paragraphs = content.querySelectorAll('p');
-  if (paragraphs.length >= 1) {
-    paragraphs[0].insertAdjacentElement('afterend', block);
-    return;
-  }
-
-  content.insertBefore(block, content.firstChild);
-})();
-</script>
-
-<script>
-(function () {
-  var content = document.getElementById('postContent');
-  var template = document.getElementById('directAnswerTemplate');
-  if (!content || !template) return;
-
-  var block = template.content.firstElementChild ? template.content.firstElementChild.cloneNode(true) : null;
-  if (!block) return;
-
-  var paragraphs = content.querySelectorAll('p');
-  if (paragraphs.length >= 2) {
-    paragraphs[1].insertAdjacentElement('afterend', block);
-    return;
-  }
-
-  content.insertBefore(block, content.firstChild);
-})();
-</script>
 
 <script>
 (function () {

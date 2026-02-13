@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "استخدم دفتر المصاريف بذكاء وارفع الدقة خلال 30 يومًا"
-description: "التتبع اليدوي يرهقك؟ تعرّف على طريقة عملية لتتبع المصاريف وضبط الميزانية. ابدأ خطوات واضحة لتحسين إدارة الأموال دون تعقيد."
+description: "استخدم دفتر المصاريف بذكاء وارفع الدقة خلال 30 يومًا — تحليل تطبيقي بخطوات عملية وأمثلة مالية واقعية تساعدك على اتخاذ قرارات أفضل وبناء نظام إنفاق مستقر."
 permalink: /expense-ledger-practical-guide/
 canonical: https://fouadshawish-png.github.io/expense-ledger-practical-guide/
 image: /assets/images/posts/expense-ledger-practical-guide-cover.jpeg

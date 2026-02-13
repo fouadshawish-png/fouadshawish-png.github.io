@@ -12,6 +12,7 @@ permalink: /where-does-my-salary-go/
 canonical: https://fouadshawish-png.github.io/where-does-my-salary-go/
 image: /assets/images/posts/where-does-my-salary-go-cover.jpg
 image_alt: "اكتشف أين يضيع راتبك ونظّم المصاريف خلال 30 يومًا"
+editor_note: "في التحليل العملي، اكتشاف تسرب الراتب يحدث بسرعة عند تتبع 14 يومًا فقط؛ هذه المدة كافية لإظهار نمط الإنفاق غير المرئي."
 last_modified_at: 2026-02-13
 ---
 

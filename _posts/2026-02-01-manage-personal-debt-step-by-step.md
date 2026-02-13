@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "نظّم إدارة الديون خطوة بخطوة خلال 90 يومًا (خطة)"
-description: "الديون تضغط على مصاريفك وميزانيتك؟ تعلّم طريقة عملية لتتبع المصاريف مع خطة سداد واضحة. ابدأ خطوات ثابتة لتحسين إدارة الأموال خلال 90 يومًا."
+description: "نظّم إدارة الديون خطوة بخطوة خلال 90 يومًا (خطة) — تحليل تطبيقي بخطوات عملية وأمثلة مالية واقعية تساعدك على اتخاذ قرارات أفضل وبناء نظام إنفاق مستقر."
 categories:
   - الديون
 tags:
@@ -12,6 +12,7 @@ permalink: /manage-personal-debt-step-by-step/
 canonical: https://fouadshawish-png.github.io/manage-personal-debt-step-by-step/
 image: /assets/images/posts/manage-personal-debt-step-by-step-cover.jpg
 image_alt: "نظّم إدارة الديون خطوة بخطوة خلال 90 يومًا (خطة)"
+editor_note: "في ملفات الديون، الترتيب الواضح للسداد أهم من محاولة الدفع العشوائي. مجرد ترتيب الأولويات يخفض الضغط النفسي حتى قبل انخفاض الرصيد."
 last_modified_at: 2026-02-01
 ---
 

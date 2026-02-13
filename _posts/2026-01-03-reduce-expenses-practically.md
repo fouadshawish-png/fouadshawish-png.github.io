@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "خفّض المصاريف عمليًا ووفّر 15% خلال 30 يومًا"
-description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
+description: "دليل عملي: خفّض المصاريف عمليًا ووفّر 15% خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
 permalink: /reduce-expenses-practically/
 canonical: https://fouadshawish-png.github.io/reduce-expenses-practically/
 image: /assets/images/posts/reduce-expenses-practically-cover.jpeg

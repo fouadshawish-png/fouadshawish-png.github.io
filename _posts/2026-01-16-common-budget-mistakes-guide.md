@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "تجنّب أخطاء الميزانية ووفّر 15% خلال 30 يومًا (دليل)"
-description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
+description: "دليل عملي: تجنّب أخطاء الميزانية ووفّر 15% خلال 30 يومًا (دليل). يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
 permalink: /common-budget-mistakes-guide/
 canonical: https://fouadshawish-png.github.io/common-budget-mistakes-guide/
 image: /assets/images/posts/common-budget-mistakes-guide-cover.jpg
