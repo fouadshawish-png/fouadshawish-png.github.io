@@ -110,28 +110,33 @@
     </script>
     <script>
       (function() {
-        var marks = [25, 50, 75, 100];
-        var fired = {};
+        var milestones = [25, 50, 75, 100];
+        var triggered = [];
 
-        function getDepth() {
-          var doc = document.documentElement;
-          var scrollable = doc.scrollHeight - window.innerHeight;
-          if (scrollable <= 0) return 100;
-          return Math.round((window.scrollY / scrollable) * 100);
+        function sendScrollEvent(percent) {
+          if (!triggered.includes(percent)) {
+            triggered.push(percent);
+            if (typeof window.gtag === "function") {
+              gtag("event", "scroll_depth", {
+                percent_scrolled: percent,
+                page_path: window.location.pathname
+              });
+            }
+          }
         }
 
-        function trackDepth() {
-          var depth = getDepth();
-          marks.forEach(function(mark) {
-            if (!fired[mark] && depth >= mark) {
-              fired[mark] = true;
-              console.log("Scroll Depth:", mark + "%");
+        window.addEventListener("scroll", function() {
+          var scrollTop = window.scrollY;
+          var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          if (docHeight <= 0) return;
+          var scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+          milestones.forEach(function(m) {
+            if (scrollPercent >= m) {
+              sendScrollEvent(m);
             }
           });
-        }
-
-        window.addEventListener("scroll", trackDepth, { passive: true });
-        window.addEventListener("load", trackDepth);
+        }, { passive: true });
       })();
     </script>
     <script>
