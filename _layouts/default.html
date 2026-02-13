@@ -483,5 +483,27 @@
       window.addEventListener('click', trackActive);
     })();
     </script>
+    <script>
+    (function() {
+      var fullReadTracked = false;
+
+      window.addEventListener('scroll', function() {
+        if (fullReadTracked) return;
+
+        var scrollTop = window.scrollY;
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (docHeight <= 0) return;
+        var scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+        if (scrollPercent >= 95) {
+          fullReadTracked = true;
+
+          gtag('event', 'full_article_read', {
+            page_path: window.location.pathname
+          });
+        }
+      }, { passive: true });
+    })();
+    </script>
   </body>
 </html>
