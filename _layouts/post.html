@@ -72,6 +72,12 @@ layout: default
     </section>
   </template>
 
+  <template id="curiosityHookTemplate">
+    <p class="post-curiosity-hook">
+      الخطأ الذي يقع فيه كثير من الناس هو الاعتماد على الحماس بدل النظام؛ إذا طبقت الخطوة التالية فقط قد ترى فرقًا واضحًا خلال 30 يومًا.
+    </p>
+  </template>
+
   <section class="section snippet-paa-block" aria-label="أسئلة مباشرة">
     <div class="card">
       <h2>أسئلة يبحث عنها الناس</h2>
@@ -264,6 +270,25 @@ layout: default
     </div>
   </section>
 </article>
+
+<script>
+(function () {
+  var content = document.getElementById('postContent');
+  var template = document.getElementById('curiosityHookTemplate');
+  if (!content || !template) return;
+
+  var block = template.content.firstElementChild ? template.content.firstElementChild.cloneNode(true) : null;
+  if (!block) return;
+
+  var paragraphs = content.querySelectorAll('p');
+  if (paragraphs.length >= 1) {
+    paragraphs[0].insertAdjacentElement('afterend', block);
+    return;
+  }
+
+  content.insertBefore(block, content.firstChild);
+})();
+</script>
 
 <script>
 (function () {

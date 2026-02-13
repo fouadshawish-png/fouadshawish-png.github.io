@@ -1,21 +1,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% assign canonical_url = page.canonical | default: page.url | absolute_url %}
+{% assign is_post = page.layout == "post" %}
 {% assign page_title = page.meta_title | default: page.title | default: site.title %}
-{% assign page_description = page.description | default: site.description %}
+{% assign page_description = page.meta_description | default: page.description | default: site.description %}
+{% if is_post %}
+  {% assign post_day = page.date | date: "%-d" | plus: 0 %}
+  {% assign post_day_mod = post_day | modulo: 3 %}
+  {% assign post_year_signal = "" %}
+  {% if post_day_mod == 0 %}
+    {% assign post_year_signal = " (2026)" %}
+  {% endif %}
+  {% capture generated_post_title %}خطة عملية: {{ page.title | strip_html | strip }} خلال 30 يومًا{{ post_year_signal }}{% endcapture %}
+  {% capture generated_post_description %}{{ page.description | default: "دليل عملي لإدارة المصاريف والميزانية وتتبع الإنفاق" | strip_html | strip | truncate: 95, "" }} خطة واضحة خطوة بخطوة خلال 30 يومًا بنتيجة قابلة للتطبيق. اقرأ التفاصيل الآن.{% endcapture %}
+  {% assign page_title = page.meta_title | default: generated_post_title %}
+  {% assign page_description = page.meta_description | default: generated_post_description %}
+{% endif %}
 {% assign default_og_image = '/assets/images/og-default.jpg' | absolute_url %}
 {% assign page_og_image = page.og_image | default: page.image | default: '/assets/images/og-default.jpg' | absolute_url %}
 {% assign og_type = page.og_type | default: 'website' %}
 
-<title>
-{% if page.meta_title %}
-{{ page.meta_title }}
-{% elsif page.title %}
-{{ page.title }} | {{ site.title }}
-{% else %}
-{{ site.title }} – تطبيق عربي لإدارة المصاريف والميزانية
-{% endif %}
-</title>
+<title>{{ page_title | strip }}</title>
 
 <meta name="description" content="{{ page_description }}">
 
