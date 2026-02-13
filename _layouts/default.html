@@ -350,6 +350,20 @@
     </script>
     {% endunless %}
     <script>
+    (function() {
+      function sendOncePerSession(eventName, data) {
+        try {
+          if (sessionStorage.getItem(eventName)) return;
+          sessionStorage.setItem(eventName, "true");
+        } catch (e) {}
+
+        gtag('event', eventName, data || {});
+      }
+
+      window.sendOncePerSession = sendOncePerSession;
+    })();
+    </script>
+    <script>
     document.addEventListener("click", function(e) {
       var link = e.target.closest("a");
       if (!link) return;
@@ -474,7 +488,7 @@
         if (activeTracked) return;
         activeTracked = true;
 
-        gtag('event', 'active_reader', {
+        sendOncePerSession('active_reader', {
           page_path: window.location.pathname
         });
       }
