@@ -562,5 +562,19 @@
       }
     });
     </script>
+    <script>
+    (function() {
+      var article = document.querySelector("article");
+      if (!article) return;
+
+      var text = article.innerText || "";
+      var words = text.trim().split(/\s+/).length;
+
+      gtag('event', 'article_word_count', {
+        word_count: words,
+        page_path: window.location.pathname
+      });
+    })();
+    </script>
   </body>
 </html>
