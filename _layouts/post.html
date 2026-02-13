@@ -3,238 +3,16 @@ layout: default
 ---
 
 {%- assign primary_category = page.categories | first | default: 'تنظيم المصاريف' -%}
-{%- assign single_cta_only = page.single_cta_only | default: false -%}
-{%- assign inline_cta_url = '/?route=reports' -%}
-{%- assign inline_cta_label = 'افتح التقارير الآن' -%}
-{%- assign mid_cta_url = '/?route=budgets' -%}
-{%- assign mid_cta_label = 'أنشئ ميزانية الآن' -%}
-{%- assign strong_cta_url = '/?route=reports' -%}
-{%- assign strong_cta_label = 'ابدأ نظامك المالي الآن' -%}
-{%- assign app_deep_route = 'reports' -%}
-{%- assign app_web_url = '/reports_root/' -%}
-{%- assign app_web_label = 'التقارير المالية' -%}
-{%- assign third_app_url = '/goals_root/' -%}
-{%- assign third_app_label = 'خطة مالية للأهداف' -%}
-{%- assign third_app_cta_url = '/?route=goals' -%}
+{%- assign topic_posts = site.posts | where: 'topic', page.topic -%}
+{%- assign fallback_posts = site.posts -%}
 
-{%- assign hook_line = 'إذا أردت تحسين وضعك المالي فعلًا، ابدأ بخطوة واحدة اليوم قبل أن يتحول التأجيل إلى عادة مكلفة.' -%}
-{%- assign summary_point_1 = 'ابدأ بقياس الواقع المالي بالأرقام، لا بالتخمين أو الانطباع.' -%}
-{%- assign summary_point_2 = 'حوّل الخطة الشهرية إلى قرارات أسبوعية ويومية قابلة للتنفيذ.' -%}
-{%- assign summary_point_3 = 'راجع النتائج باستمرار وعدّل بسرعة بدل انتظار نهاية الشهر.' -%}
-{%- assign current_topic = page.topic | default: 'expense-tracking' -%}
-{%- assign current_level = page.level | default: 'beginner' -%}
-{%- assign current_intent = page.intent | default: '' -%}
-{%- assign primary_tag = page.tags | first | default: '' -%}
-{%- assign primary_page_category = page.categories | first | default: '' -%}
-{%- assign same_category_posts = site.posts -%}
-{%- assign same_intent_posts = same_category_posts -%}
-{%- assign same_keyword_posts = same_category_posts -%}
-
-{%- assign topic_hub_url = '/topics/expense-tracking/' -%}
-{%- assign topic_hub_title = 'تتبع المصاريف' -%}
-{%- assign same_topic_posts = site.posts | where: 'topic', 'expense-tracking' -%}
-
-{%- case current_topic -%}
-  {%- when 'budget' -%}
-    {%- assign topic_hub_url = '/topics/budget/' -%}
-    {%- assign topic_hub_title = 'الميزانية' -%}
-    {%- assign same_topic_posts = site.posts | where: 'topic', 'budget' -%}
-  {%- when 'debt' -%}
-    {%- assign topic_hub_url = '/topics/debt/' -%}
-    {%- assign topic_hub_title = 'الديون' -%}
-    {%- assign same_topic_posts = site.posts | where: 'topic', 'debt' -%}
-  {%- when 'saving' -%}
-    {%- assign topic_hub_url = '/topics/saving/' -%}
-    {%- assign topic_hub_title = 'الادخار' -%}
-    {%- assign same_topic_posts = site.posts | where: 'topic', 'saving' -%}
-  {%- when 'spending-psychology' -%}
-    {%- assign topic_hub_url = '/topics/spending-psychology/' -%}
-    {%- assign topic_hub_title = 'سيكولوجية الإنفاق' -%}
-    {%- assign same_topic_posts = site.posts | where: 'topic', 'spending-psychology' -%}
-  {%- when 'reports' -%}
-    {%- assign topic_hub_url = '/topics/reports/' -%}
-    {%- assign topic_hub_title = 'التقارير' -%}
-    {%- assign same_topic_posts = site.posts | where: 'topic', 'reports' -%}
-{%- endcase -%}
-
-{%- if current_topic == 'debt' -%}
-  {%- assign third_app_url = '/debt_root/' -%}
-  {%- assign third_app_label = 'خطة سداد الديون' -%}
-  {%- assign third_app_cta_url = '/?route=debt_ledger' -%}
-{%- endif -%}
-
-{%- assign same_topic_posts = same_topic_posts | where: 'published', true | default: same_topic_posts -%}
-{%- if same_topic_posts.size == 0 -%}
-  {%- assign same_topic_posts = same_category_posts -%}
-{%- endif -%}
-
-{%- assign next_level = 'advanced' -%}
-{%- if current_level == 'beginner' -%}
-  {%- assign next_level = 'intermediate' -%}
-{%- elsif current_level == 'intermediate' -%}
-  {%- assign next_level = 'advanced' -%}
-{%- endif -%}
-
-{%- assign next_step_post = same_topic_posts | where: 'level', next_level | first -%}
-{%- unless next_step_post -%}
-  {%- assign next_step_post = same_topic_posts | first -%}
-{%- endunless -%}
-
-{%- assign debt_intent_post = nil -%}
-{%- assign saving_intent_post = nil -%}
-{%- assign expense_intent_post = nil -%}
-{%- assign budget_intent_post = nil -%}
-{%- for p in site.posts -%}
-  {%- if p.url != page.url and p.topic == 'debt' and debt_intent_post == nil -%}{%- assign debt_intent_post = p -%}{%- endif -%}
-  {%- if p.url != page.url and p.topic == 'saving' and saving_intent_post == nil -%}{%- assign saving_intent_post = p -%}{%- endif -%}
-  {%- if p.url != page.url and p.topic == 'expense-tracking' and expense_intent_post == nil -%}{%- assign expense_intent_post = p -%}{%- endif -%}
-  {%- if p.url != page.url and p.topic == 'budget' and budget_intent_post == nil -%}{%- assign budget_intent_post = p -%}{%- endif -%}
-{%- endfor -%}
-
-{%- case primary_category -%}
-  {%- when 'الديون' -%}
-    {%- assign inline_cta_url = '/?route=debt_ledger' -%}
-    {%- assign inline_cta_label = 'تسجيل دين الآن' -%}
-    {%- assign mid_cta_url = '/?route=reports' -%}
-    {%- assign mid_cta_label = 'راجع أثر السداد بالتقارير' -%}
-    {%- assign strong_cta_url = '/?route=debt_ledger' -%}
-    {%- assign strong_cta_label = 'ابدأ خطة السداد الآن' -%}
-    {%- assign hook_line = 'الدين لا يصبح أزمة بسبب حجمه فقط، بل بسبب غياب خطة سداد واضحة ومستمرة.' -%}
-    {%- assign summary_point_1 = 'احصر كل الديون في قائمة واحدة واضحة بالمبلغ والتاريخ والأولوية.' -%}
-    {%- assign summary_point_2 = 'اعتمد طريقة سداد ثابتة تمنع التشتت بين الالتزامات.' -%}
-    {%- assign summary_point_3 = 'تابع التقدم أسبوعيًا لتقليل الضغط والحفاظ على الاستمرارية.' -%}
-    {%- assign app_deep_route = 'debt_ledger' -%}
-    {%- assign app_web_url = '/debt_root/' -%}
-    {%- assign app_web_label = 'إدارة الديون' -%}
-    {%- assign third_app_url = '/debt_root/' -%}
-    {%- assign third_app_label = 'خطة سداد الديون' -%}
-  {%- when 'الميزانية' -%}
-    {%- assign inline_cta_url = '/?route=budgets' -%}
-    {%- assign inline_cta_label = 'إنشاء ميزانية شهرية' -%}
-    {%- assign mid_cta_url = '/?route=reports' -%}
-    {%- assign mid_cta_label = 'فتح التقارير للمراجعة' -%}
-    {%- assign strong_cta_url = '/?route=budgets' -%}
-    {%- assign strong_cta_label = 'ابدأ ميزانيتك الآن' -%}
-    {%- assign hook_line = 'الميزانية الناجحة ليست الأكثر صرامة، بل الأكثر واقعية وقدرة على الاستمرار.' -%}
-    {%- assign summary_point_1 = 'ابنِ الميزانية على أرقام حقيقية من نمط إنفاقك الفعلي.' -%}
-    {%- assign summary_point_2 = 'وزّع البنود حسب الأولوية وليس حسب الرغبة اللحظية.' -%}
-    {%- assign summary_point_3 = 'صحّح الانحراف مبكرًا عبر مراجعة أسبوعية قصيرة.' -%}
-    {%- assign app_deep_route = 'budgets' -%}
-    {%- assign app_web_url = '/budget/' -%}
-    {%- assign app_web_label = 'صفحة الميزانية' -%}
-    {%- assign third_app_url = '/goals_root/' -%}
-    {%- assign third_app_label = 'خطة مالية للأهداف' -%}
-  {%- when 'تتبع المصاريف' -%}
-    {%- assign inline_cta_url = '/?route=reports' -%}
-    {%- assign inline_cta_label = 'راجع نمط الإنفاق الآن' -%}
-    {%- assign mid_cta_url = '/?route=reports' -%}
-    {%- assign mid_cta_label = 'افتح التقارير' -%}
-    {%- assign strong_cta_url = '/?route=reports' -%}
-    {%- assign strong_cta_label = 'ابدأ متابعة مصاريفك الآن' -%}
-    {%- assign hook_line = 'كل قرار مالي صحيح يبدأ من بيانات صحيحة، لا من ذاكرة متقطعة.' -%}
-    {%- assign summary_point_1 = 'سجّل كل عملية مباشرة وقت حدوثها لتقليل النسيان.' -%}
-    {%- assign summary_point_2 = 'استخدم تصنيفات بسيطة تساعدك على اتخاذ قرار واضح.' -%}
-    {%- assign summary_point_3 = 'حلّل النتائج أسبوعيًا لاكتشاف التسرب المالي مبكرًا.' -%}
-    {%- assign app_deep_route = 'reports' -%}
-    {%- assign app_web_url = '/all_transactions/' -%}
-    {%- assign app_web_label = 'سجل العمليات' -%}
-    {%- assign third_app_url = '/goals_root/' -%}
-    {%- assign third_app_label = 'خطة مالية للأهداف' -%}
-    {%- assign third_app_cta_url = '/?route=goals' -%}
-  {%- when 'الادخار' -%}
-    {%- assign inline_cta_url = '/?route=goals' -%}
-    {%- assign inline_cta_label = 'ابدأ هدفًا ماليًا' -%}
-    {%- assign mid_cta_url = '/?route=reports' -%}
-    {%- assign mid_cta_label = 'تابع التقدم بالتقارير' -%}
-    {%- assign strong_cta_url = '/?route=goals' -%}
-    {%- assign strong_cta_label = 'ابدأ خطة الادخار' -%}
-    {%- assign hook_line = 'الادخار ليس ما يتبقى آخر الشهر، بل قرار يُثبت في الخطة من البداية.' -%}
-    {%- assign summary_point_1 = 'حدد هدف ادخار واضحًا بقيمة وزمن محددين.' -%}
-    {%- assign summary_point_2 = 'اقتطع مبلغ الادخار فور نزول الدخل قبل المصروفات الاختيارية.' -%}
-    {%- assign summary_point_3 = 'راجع تقدمك دوريًا وعدّل الهدف حسب الواقع دون إلغاء الخطة.' -%}
-    {%- assign app_deep_route = 'goals' -%}
-    {%- assign app_web_url = '/goals_root/' -%}
-    {%- assign app_web_label = 'الأهداف المالية' -%}
-    {%- assign third_app_url = '/goals_root/' -%}
-    {%- assign third_app_label = 'خطة مالية للأهداف' -%}
-    {%- assign third_app_cta_url = '/?route=goals' -%}
-  {%- when 'تنظيم المصاريف' -%}
-    {%- assign inline_cta_url = '/?route=reports' -%}
-    {%- assign inline_cta_label = 'ابدأ مراجعة المصاريف' -%}
-    {%- assign mid_cta_url = '/?route=budgets' -%}
-    {%- assign mid_cta_label = 'ثبت حدود الميزانية' -%}
-    {%- assign strong_cta_url = '/?route=budgets' -%}
-    {%- assign strong_cta_label = 'حوّل الوعي إلى متابعة يومية' -%}
-    {%- assign hook_line = 'تنظيم المصاريف لا يحتاج تعقيدًا، يحتاج نظامًا بسيطًا تلتزم به يوميًا.' -%}
-    {%- assign summary_point_1 = 'ابدأ بتتبع أسبوع كامل للحصول على صورة مالية دقيقة.' -%}
-    {%- assign summary_point_2 = 'قسّم المصروفات إلى بنود ضرورية واختيارية بوضوح.' -%}
-    {%- assign summary_point_3 = 'حوّل الأرقام إلى قرارات أسبوعية ثابتة.' -%}
-    {%- assign app_deep_route = 'reports' -%}
-    {%- assign app_web_url = '/all_transactions/' -%}
-    {%- assign app_web_label = 'سجل العمليات' -%}
-    {%- assign third_app_url = '/goals_root/' -%}
-    {%- assign third_app_label = 'خطة مالية للأهداف' -%}
-    {%- assign third_app_cta_url = '/?route=goals' -%}
-  {%- when 'أخطاء مالية شائعة' -%}
-    {%- assign inline_cta_url = '/?route=budgets' -%}
-    {%- assign inline_cta_label = 'صحح إعداد الميزانية' -%}
-    {%- assign mid_cta_url = '/?route=reports' -%}
-    {%- assign mid_cta_label = 'افتح التقارير للتشخيص' -%}
-    {%- assign strong_cta_url = '/?route=budgets' -%}
-    {%- assign strong_cta_label = 'ابدأ خطة تصحيح عملية' -%}
-    {%- assign hook_line = 'تكرار نفس الخطأ المالي شهريًا يعني أن المشكلة في النظام، لا في الإرادة فقط.' -%}
-    {%- assign summary_point_1 = 'شخّص الخطأ الجذري بدل معالجة العرض المؤقت.' -%}
-    {%- assign summary_point_2 = 'حدّد قرارًا تصحيحيًا واحدًا قابلًا للتنفيذ هذا الأسبوع.' -%}
-    {%- assign summary_point_3 = 'تابع النتيجة بالبيانات لتثبيت التحسن تدريجيًا.' -%}
-    {%- assign app_deep_route = 'reports' -%}
-    {%- assign app_web_url = '/reports_root/' -%}
-    {%- assign app_web_label = 'التقارير المالية' -%}
-    {%- assign third_app_url = '/goals_root/' -%}
-    {%- assign third_app_label = 'خطة مالية للأهداف' -%}
-    {%- assign third_app_cta_url = '/?route=goals' -%}
-{%- endcase -%}
-
-{%- if page.hook -%}
-  {%- assign hook_line = page.hook -%}
-{%- endif -%}
-{%- capture app_deep_link -%}/?route={{ app_deep_route }}{%- endcapture -%}
-{%- capture app_intent_link -%}expensemanager://open?route={{ app_deep_route }}{%- endcapture -%}
-{%- assign demand_download_url = '/download.html?utm_source=blog&utm_medium=content&utm_campaign=demand_engine' -%}
-{%- assign guide_download_url = '/download.html?utm_source=guide&utm_medium=content&utm_campaign=demand_engine' -%}
-{%- assign authority_download_url = '/download.html?utm_source=authority&utm_medium=content&utm_campaign=demand_engine' -%}
-
-{%- assign rendered_content = content -%}
-{%- for auto_link in site.data.auto_links -%}
-  {%- if rendered_content contains auto_link.keyword -%}
-    {%- capture auto_anchor -%}<a href="{{ auto_link.url | relative_url }}" class="auto-link" title="{{ auto_link.title | default: auto_link.keyword }}">{{ auto_link.keyword }}</a>{%- endcapture -%}
-    {%- assign rendered_content = rendered_content | replace_first: auto_link.keyword, auto_anchor -%}
-  {%- endif -%}
-{%- endfor -%}
-{%- assign reading_words = rendered_content | strip_html | number_of_words -%}
-{%- assign reading_minutes = reading_words | plus: 179 | divided_by: 180 -%}
-{%- if reading_minutes < 1 -%}
-  {%- assign reading_minutes = 1 -%}
-{%- endif -%}
-{%- assign anchor_selector = page.url | size | modulo: 3 -%}
-{%- assign guide_anchor_text = 'دليل إدارة المصاريف' -%}
-{%- if anchor_selector == 1 -%}
-  {%- assign guide_anchor_text = 'تنظيم الميزانية خطوة بخطوة' -%}
-{%- elsif anchor_selector == 2 -%}
-  {%- assign guide_anchor_text = 'المرجع الكامل للمصاريف' -%}
-{%- endif -%}
-
-<div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
-
-<article
-  class="post"
-  data-reading-words="{{ reading_words }}"
-  data-inline-cta-url="{{ inline_cta_url }}"
-  data-inline-cta-label="{{ inline_cta_label }}"
-  data-mid-cta-url="{{ mid_cta_url }}"
-  data-mid-cta-label="{{ mid_cta_label }}">
+<article class="post">
   {% include breadcrumb.html %}
 
-  <p class="post-reading-time">⏱ وقت القراءة: {{ reading_minutes }} دقائق</p>
+  <p class="post-reading-time">
+    ⏱ وقت القراءة: {{ content | strip_html | number_of_words | plus: 179 | divided_by: 180 }} دقائق
+  </p>
+
   <h1>{{ page.title }}</h1>
 
   <p class="post-byline">
@@ -244,7 +22,7 @@ layout: default
     {% endif %}
   </p>
 
-  {%- if page.image -%}
+  {% if page.image %}
   <img
     class="post-image post-image--wide"
     src="{{ page.image | relative_url }}"
@@ -252,110 +30,26 @@ layout: default
     loading="lazy"
     width="1200"
     height="630">
-  {%- endif -%}
-
-  <p class="post-hook">{{ hook_line }}</p>
-
-  <section class="post-summary" aria-label="الخلاصة في 3 نقاط">
-    <h2>الخلاصة في 3 نقاط</h2>
-    <ul>
-      <li>{{ summary_point_1 }}</li>
-      <li>{{ summary_point_2 }}</li>
-      <li>{{ summary_point_3 }}</li>
-    </ul>
-  </section>
+  {% endif %}
 
   <section class="method-box card" aria-label="منهج العمل في هذا الموقع">
     <h2>منهج العمل في هذا الموقع</h2>
     <p>كل مقال هنا قابل للتطبيق الفوري، وليس نصائح عامة.</p>
-    <p>هذا المحتوى جزء من <a href="{{ '/من-هو-محترف-المصاريف/' | relative_url }}">نظام محترف المصاريف</a> المبني على منهج عملي تدريجي.</p>
+    <p>هذا المحتوى جزء من <a href="{{ '/من-هو-محترف-المصاريف/' | relative_url }}">نظام محترف المصاريف</a>.</p>
   </section>
-
-  <section class="author-mini card" aria-label="عن الكاتب">
-    <h2>عن الكاتب</h2>
-    <p>فؤاد شاويش مطور نظام محترف المصاريف.</p>
-    <p>يركز على تحويل إدارة الأموال إلى خطوات يومية بسيطة قابلة للاستمرار.</p>
-    <p><a href="{{ '/من-هو-فؤاد-شاويش/' | relative_url }}">اقرأ الصفحة الشخصية الكاملة</a></p>
-  </section>
-
-  <div class="post-toc-wrap" id="postTocWrap" hidden>
-    <nav class="post-toc" aria-label="جدول المحتويات">
-      <h2>جدول المحتويات</h2>
-      <ul id="postTocList"></ul>
-    </nav>
-    <details class="post-toc-mobile" id="postTocMobile">
-      <summary>جدول المحتويات</summary>
-      <ul id="postTocMobileList"></ul>
-    </details>
-  </div>
 
   <div class="post-content" id="postContent">
-    {{ rendered_content }}
+    {{ content }}
   </div>
 
-  <aside class="sticky-mini-nav card" id="stickyMiniNavTemplate" hidden>
-    <h2>روابط سريعة داخل نفس المسار</h2>
-    <ul class="topic-block__list">
-      {%- for rel_post in same_topic_posts limit:3 -%}
-      <li><a href="{{ rel_post.url | relative_url }}">{{ rel_post.title }}</a></li>
-      {%- endfor -%}
-      <li><a href="{{ '/النظام-المالي/' | relative_url }}">نظام إدارة المصاريف والميزانية الكامل</a></li>
-      <li><a href="{{ '/المصاريف/' | relative_url }}">صفحة المصاريف</a></li>
-      <li><a href="{{ '/الميزانية/' | relative_url }}">صفحة الميزانية</a></li>
-    </ul>
-  </aside>
-
-  <section class="section smart-app-links" aria-label="روابط تطبيق مفيدة">
+  <section class="section">
     <div class="card">
-      <h2>روابط تطبيق مفيدة</h2>
-      <ul class="topic-block__list">
-        <li><a href="{{ '/?route=budgets' | relative_url }}">إدارة الميزانية بوضوح</a></li>
-        <li><a href="{{ '/?route=reports' | relative_url }}">تتبع الإنفاق عبر التقارير</a></li>
-        <li><a href="{{ third_app_cta_url | relative_url }}">{{ third_app_label }}</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <ul id="coreInlineCandidates" hidden>
-    {%- for slug in site.data.internal-links.core -%}
-      {%- for candidate in site.posts -%}
-        {%- if candidate.url != page.url and candidate.url contains slug -%}
-        <li data-url="{{ candidate.url | relative_url }}" data-title="{{ candidate.title | escape }}"></li>
-        {%- break -%}
-        {%- endif -%}
-      {%- endfor -%}
-    {%- endfor -%}
-  </ul>
-
-  <section class="section post-topic-cluster" aria-label="روابط موضوعية">
-    <div class="card">
-      <h2>اقرأ ضمن نفس الموضوع</h2>
-      <ul class="topic-block__list">
-        {%- for rel_post in same_topic_posts limit:6 -%}
-        <li><a href="{{ rel_post.url | relative_url }}">{{ rel_post.title }}</a></li>
-        {%- endfor -%}
-      </ul>
-    </div>
-  </section>
-
-  <section class="section post-next-step" aria-label="الخطوة التالية">
-    <div class="card">
-      <h2>الخطوة التالية</h2>
-      {%- if next_step_post -%}
-      <p><a href="{{ next_step_post.url | relative_url }}">{{ next_step_post.title }}</a></p>
-      {%- else -%}
-      <p>سيتم إضافة مقالات متدرجة المستوى قريبًا.</p>
-      {%- endif -%}
-    </div>
-  </section>
-
-  <section class="section post-topic-hub" aria-label="الدليل الرئيسي">
-    <div class="card">
-      <h2>الدليل الرئيسي</h2>
-      <p>العودة إلى محور <strong>{{ topic_hub_title }}</strong> لقراءة المسار الكامل.</p>
-      <div class="next-step-box__actions">
-        <a class="btn-primary" href="{{ topic_hub_url | relative_url }}">عرض دليل الموضوع</a>
-        <a class="btn-accent" href="{{ '/النظام-المالي/' | relative_url }}">الرجوع إلى النظام المالي</a>
+      <h2>جاهز تطبّق الآن؟</h2>
+      <p>ابدأ بخطوة واحدة عملية داخل التطبيق.</p>
+      <div class="tools-actions">
+        <a class="btn-primary" href="{{ '/?route=reports' | relative_url }}">فتح التقارير</a>
+        <a class="btn-accent" href="{{ '/?route=budgets' | relative_url }}">فتح الميزانيات</a>
+        <a class="btn-primary" href="{{ '/download.html?utm_source=blog&utm_medium=content&utm_campaign=demand_engine' | relative_url }}">ابدأ نظامك المالي الآن</a>
       </div>
     </div>
   </section>
@@ -363,674 +57,64 @@ layout: default
   <section class="section post-guide-read-more" aria-label="اقرأ أيضًا ضمن دليل إدارة المصاريف">
     <div class="card">
       <h2>اقرأ أيضًا ضمن دليل إدارة المصاريف</h2>
-      <p>هذا المقال جزء من مسار متكامل. يمكنك متابعة نفس الموضوع من الدليل المركزي ثم الانتقال لمقالات مرتبطة.</p>
       <ul class="topic-block__list">
-        <li><a href="{{ '/دليل-إدارة-المصاريف-والميزانية/' | relative_url }}">{{ guide_anchor_text }}</a></li>
-        {%- for rel_post in same_topic_posts limit:3 -%}
-        <li><a href="{{ rel_post.url | relative_url }}">{{ rel_post.title }}</a></li>
-        {%- endfor -%}
-      </ul>
-    </div>
-  </section>
-
-  <section class="section post-internal-link-map" aria-label="خريطة روابط داخلية ثابتة">
-    <div class="card">
-      <h2>خريطة روابط داخلية ثابتة</h2>
-      <ul class="topic-block__list">
-        <li><a href="{{ '/دليل-إدارة-المصاريف-والميزانية/' | relative_url }}">{{ guide_anchor_text }}</a></li>
-        <li><a href="{{ '/مصطلحات-إدارة-الأموال/' | relative_url }}">قاموس إدارة الأموال</a></li>
-        <li><a href="{{ '/أسئلة-الناس-عن-المصاريف/' | relative_url }}">الأسئلة الشائعة عن المصاريف</a></li>
-        <li><a href="{{ '/منهج-محترف-المصاريف/' | relative_url }}">منهج النظام</a></li>
+        <li><a href="{{ '/دليل-إدارة-المصاريف-والميزانية/' | relative_url }}">دليل إدارة المصاريف</a></li>
         <li><a href="{{ '/how-it-works.html' | relative_url }}">كيف يعمل</a></li>
         <li><a href="{{ '/download.html' | relative_url }}">صفحة التحميل</a></li>
       </ul>
     </div>
   </section>
 
-  {%- assign inline_related_pool = same_topic_posts -%}
-  {%- assign inline_related_pool = inline_related_pool | limit: 2 -%}
-  <aside class="inline-read-also card" id="inlineReadAlsoTemplate" hidden>
-    <h2>اقرأ أيضًا:</h2>
-    <ul>
-      {%- for rel in inline_related_pool -%}
-      <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
-      {%- endfor -%}
-    </ul>
-  </aside>
+  <section class="post-related post-related--dynamic" aria-label="مقالات ذات صلة">
+    <h2 class="section-title">مقالات ذات صلة</h2>
+    <div class="card">
+      <ul class="topic-block__list">
+        {% assign shown = 0 %}
+        {% if topic_posts and topic_posts.size > 0 %}
+          {% for rel in topic_posts %}
+            {% if rel.url != page.url and shown < 3 %}
+              <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
+              {% assign shown = shown | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
 
-  <aside class="interactive-try-box card" id="interactiveTryTemplate" hidden>
-    <h2>جرّب الآن على وضعك الشخصي</h2>
-    <p>سؤال مباشر: ما البند الذي يتكرر عندك أسبوعيًا ويمكن تخفيضه 10% هذا الشهر بدون ضغط؟</p>
-    <div class="next-step-box__actions">
-      <a class="btn-primary" href="{{ app_deep_link | relative_url }}">ابدأ التنفيذ داخل التطبيق</a>
-      {%- if same_topic_posts and same_topic_posts.size > 0 -%}
-      <a class="btn-accent" href="{{ same_topic_posts.first.url | relative_url }}">اقرأ مقالًا مرتبطًا</a>
-      {%- else -%}
-      <a class="btn-accent" href="{{ '/money-management-guide/' | relative_url }}">اقرأ من الدليل الشامل</a>
-      {%- endif -%}
-    </div>
-  </aside>
-
-  {%- unless single_cta_only -%}
-  <section class="app-apply-box card" aria-label="تحويل الخطوة لتطبيق عملي">
-    <h2>حوّل هذه الخطوة إلى تطبيق عملي الآن</h2>
-    <p>نفّذ نفس الفكرة فورًا عبر Deep Link مناسب للمقال، ثم أكمل من صفحة التحميل إذا لم يكن التطبيق لديك بعد.</p>
-    <div class="app-apply-box__actions">
-      <a class="btn-primary" href="{{ app_intent_link }}">فتح الميزة مباشرة</a>
-      <a class="btn-accent" href="{{ demand_download_url | relative_url }}">تحميل التطبيق</a>
+        {% if shown < 3 %}
+          {% for rel in fallback_posts %}
+            {% if rel.url != page.url and shown < 3 %}
+              <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
+              {% assign shown = shown | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </ul>
     </div>
   </section>
-  {%- endunless -%}
-
-  <section class="next-step-box card" aria-label="خطوتك التالية">
-    <h2>خطوتك التالية</h2>
-    {%- if next_step_post -%}
-    <p><a href="{{ next_step_post.url | relative_url }}">اقرأ الآن: {{ next_step_post.title }}</a></p>
-    {%- endif -%}
-    <div class="next-step-box__actions">
-      <a class="btn-primary" href="{{ app_deep_link | relative_url }}">افتح الميزة داخل التطبيق</a>
-      <a class="btn-accent" href="{{ '/download.html' | relative_url }}">تحميل التطبيق</a>
-    </div>
-  </section>
-
-  <section class="article-apply-now card" aria-label="جاهز تطبق الآن">
-    <h2>جاهز تطبق الآن؟</h2>
-    <p>ابدأ بخطوة تنفيذ مباشرة داخل النظام بدل تأجيل التطبيق.</p>
-    <div class="next-step-box__actions">
-      <a class="btn-primary" href="{{ '/?route=reports&utm_source=blog&utm_medium=content&utm_campaign=demand_engine' | relative_url }}">فتح التقارير</a>
-      <a class="btn-accent" href="{{ '/?route=budgets&utm_source=blog&utm_medium=content&utm_campaign=demand_engine' | relative_url }}">فتح الميزانيات</a>
-      <a class="btn-accent" href="{{ demand_download_url | relative_url }}">تحميل التطبيق</a>
-    </div>
-  </section>
-
-  <section class="micro-conversion-box card" aria-label="Micro Conversion">
-    <h2>خطوة صغيرة اليوم</h2>
-    <ul class="topic-block__list">
-      <li>احفظ هذه الصفحة للرجوع إليها في المراجعة القادمة.</li>
-      <li><a href="{{ '/?route=all_transactions&utm_source=blog&utm_medium=content&utm_campaign=demand_engine' | relative_url }}">ابدأ بخطوة اليوم</a></li>
-      <li><a href="{{ '/?route=reports&utm_source=blog&utm_medium=content&utm_campaign=demand_engine' | relative_url }}">راجع تقرير هذا الأسبوع</a></li>
-    </ul>
-  </section>
-
-  <section class="saving-forecast-box card" aria-label="تقدير التوفير خلال 30 يومًا">
-    <h2>كم تتوقع أن توفر إذا طبقت هذه الخطة 30 يومًا؟</h2>
-    <p>
-      اختر بندًا واحدًا عالي التكرار، وضع له خفضًا بسيطًا (5% إلى 15%)، ثم راقب الأثر أسبوعيًا.
-      غالبًا ستكتشف أن التحسين التراكمي خلال 30 يومًا أكبر من المتوقع عند الالتزام بخطوات صغيرة.
-    </p>
-    <a class="btn-primary" href="{{ '/start-here/' | relative_url }}">ابدأ خطة 30 يومًا من هنا</a>
-  </section>
-
-  <section class="email-capture-box card" aria-label="تحميل نموذج مراجعة أسبوعية مجاني">
-    <h2>احصل على دليل تنظيم المصاريف PDF</h2>
-    <p>أدخل بريدك لتحصل على دليل مبسط يساعدك على تطبيق النظام أسبوعيًا بخطوات عملية.</p>
-    <form class="email-capture-box__form" action="#" method="post">
-      <label class="sr-only" for="postEmailCapture">البريد الإلكتروني</label>
-      <input id="postEmailCapture" name="email" type="email" placeholder="أدخل بريدك الإلكتروني" autocomplete="email">
-      <button type="submit">أرسل النموذج</button>
-    </form>
-    <a href="{{ '/weekly-budget-template/' | relative_url }}">أو حمّل النموذج مباشرة الآن</a>
-  </section>
-
-  <section class="demand-funnel-box card" aria-label="Demand Funnel">
-    <h2>Intent Funnel Structure</h2>
-    <ol>
-      <li><a href="{{ '/blog/' | relative_url }}">مقالات تعليمية</a></li>
-      <li><a href="{{ '/دليل-إدارة-المصاريف-والميزانية/' | relative_url }}">الدليل الشامل</a></li>
-      <li><a href="{{ '/ابدأ-تنظيم-مصاريفك-الآن/' | relative_url }}">صفحة البدء</a></li>
-      <li><a href="{{ '/تنزيل-تطبيق-إدارة-المصاريف/' | relative_url }}">صفحة التحميل</a></li>
-    </ol>
-    <p class="post-hint">روابط التحميل والتطبيق تستخدم UTM لقياس المصدر: blog / guide / authority.</p>
-  </section>
-
-  <p class="post-hint">إذا شعرت أن الفكرة تلامس واقعك، فتذكّر أن تنظيم المصاريف يبدأ بخطوات بسيطة قابلة للتطبيق. كثيرون يجدون أن وجود أداة واضحة مثل تطبيق محترف المصاريف يساعدهم على تحويل الوعي إلى متابعة يومية دون تعقيد.</p>
-
-  {%- if page.faq and page.faq.size > 0 -%}
-  <section class="micro-faq-toggle card" aria-label="أسئلة سريعة">
-    <h2>أسئلة سريعة</h2>
-    {%- for item in page.faq limit:4 -%}
-    <details>
-      <summary>{{ item.question }}</summary>
-      <p>{{ item.answer }}</p>
-    </details>
-    {%- endfor -%}
-  </section>
-  {%- endif -%}
-
-  <div class="share-actions" aria-label="مشاركة المقال">
-    <a class="share-button share-facebook" target="_blank" rel="noopener noreferrer"
-      href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}">
-      مشاركة على فيسبوك
-    </a>
-  </div>
 
   <section class="author-box" aria-label="نبذة الكاتب">
     <img class="author-box__avatar" src="{{ '/assets/images/authors/fouad-shawish-placeholder.svg' | relative_url }}" alt="صورة الكاتب فؤاد شاويش" loading="lazy" width="96" height="96">
     <div class="author-box__content">
       <p class="author-box__label">عن الكاتب</p>
       <h3>فؤاد شاويش</h3>
-      <p>مطور تطبيق محترف المصاريف وكاتب محتوى مالي عملي، بخبرة تطبيقية في بناء أنظمة تتبع مصاريف وميزانية قابلة للاستمرار.</p>
+      <p>مطور نظام محترف المصاريف وكاتب محتوى مالي عملي يركز على خطوات قابلة للتطبيق.</p>
       <a href="{{ '/about-author/' | relative_url }}">اقرأ المزيد عن الكاتب</a>
     </div>
   </section>
 </article>
 
-<section class="related-by-intent section" aria-label="Related by Intent">
-  <h2>Related by Intent</h2>
-  <div class="grid-3">
-    <article class="card intent-card">
-      <h3>إذا كنت تعاني من الديون</h3>
-      {%- if debt_intent_post -%}
-      <p><a href="{{ debt_intent_post.url | relative_url }}">{{ debt_intent_post.title }}</a></p>
-      {%- endif -%}
-      <a class="btn-primary" href="{{ '/?route=debt_ledger' | relative_url }}">افتح خطة الديون</a>
-    </article>
-    <article class="card intent-card">
-      <h3>إذا تريد الادخار</h3>
-      {%- if saving_intent_post -%}
-      <p><a href="{{ saving_intent_post.url | relative_url }}">{{ saving_intent_post.title }}</a></p>
-      {%- endif -%}
-      <a class="btn-primary" href="{{ '/?route=goals' | relative_url }}">ابدأ هدف ادخار</a>
-    </article>
-    <article class="card intent-card">
-      <h3>إذا تريد ضبط المصاريف</h3>
-      {%- if expense_intent_post -%}
-      <p><a href="{{ expense_intent_post.url | relative_url }}">{{ expense_intent_post.title }}</a></p>
-      {%- endif -%}
-      <a class="btn-primary" href="{{ '/?route=reports' | relative_url }}">راجع المصاريف الآن</a>
-    </article>
-    <article class="card intent-card">
-      <h3>إذا تريد تحسين الميزانية</h3>
-      {%- if budget_intent_post -%}
-      <p><a href="{{ budget_intent_post.url | relative_url }}">{{ budget_intent_post.title }}</a></p>
-      {%- endif -%}
-      <a class="btn-primary" href="{{ '/?route=budgets' | relative_url }}">طوّر ميزانيتك</a>
-    </article>
-  </div>
-</section>
-
-<section class="post-related post-related--dynamic" aria-label="مقالات ذات صلة">
-  <h2 class="section-title">مقالات ذات صلة</h2>
-
-  {%- assign base_related = site.posts -%}
-  {%- assign shown_urls = '|' -%}
-  {%- assign core_added = 0 -%}
-  {%- assign support_added = 0 -%}
-  {%- assign countries_added = 0 -%}
-
-  <div class="card">
-    <ul class="topic-block__list">
-      {%- for slug in site.data.internal-links.core -%}
-        {%- if core_added < 2 -%}
-          {%- assign lookup_slug = slug -%}
-          {%- if slug == 'why-budget-fails' -%}
-            {%- assign lookup_slug = 'why-monthly-budget-fails' -%}
-          {%- elsif slug == 'difference-between-budget-and-expenses' -%}
-            {%- assign lookup_slug = 'expense-tracking-vs-money-management' -%}
-          {%- endif -%}
-          {%- for candidate in base_related -%}
-            {%- if candidate.url == page.url -%}{%- continue -%}{%- endif -%}
-            {%- if candidate.url contains lookup_slug -%}
-              {%- capture marker -%}|{{ candidate.url }}|{%- endcapture -%}
-              {%- unless shown_urls contains marker -%}
-              <li><a href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a></li>
-              {%- assign core_added = core_added | plus: 1 -%}
-              {%- assign shown_urls = shown_urls | append: candidate.url | append: '|' -%}
-              {%- endunless -%}
-              {%- break -%}
-            {%- endif -%}
-          {%- endfor -%}
-        {%- endif -%}
-      {%- endfor -%}
-
-      {%- if core_added < 2 -%}
-          {%- for rel in same_topic_posts -%}
-            {%- if rel.url == page.url -%}{%- continue -%}{%- endif -%}
-            {%- if core_added < 2 -%}
-            {%- capture marker -%}|{{ rel.url }}|{%- endcapture -%}
-            {%- unless shown_urls contains marker -%}
-            <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
-            {%- assign core_added = core_added | plus: 1 -%}
-            {%- assign shown_urls = shown_urls | append: rel.url | append: '|' -%}
-            {%- endunless -%}
-          {%- endif -%}
-        {%- endfor -%}
-      {%- endif -%}
-
-      {%- for slug in site.data.internal-links.support -%}
-        {%- if support_added < 1 -%}
-          {%- for candidate in base_related -%}
-            {%- if candidate.url == page.url -%}{%- continue -%}{%- endif -%}
-            {%- if candidate.url contains slug -%}
-              {%- capture marker -%}|{{ candidate.url }}|{%- endcapture -%}
-              {%- unless shown_urls contains marker -%}
-              <li><a href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a></li>
-              {%- assign support_added = support_added | plus: 1 -%}
-              {%- assign shown_urls = shown_urls | append: candidate.url | append: '|' -%}
-              {%- endunless -%}
-              {%- break -%}
-            {%- endif -%}
-          {%- endfor -%}
-        {%- endif -%}
-      {%- endfor -%}
-
-      {%- if support_added < 1 -%}
-        {%- for rel in base_related -%}
-          {%- if rel.url == page.url -%}{%- continue -%}{%- endif -%}
-          {%- unless rel.categories contains 'تنظيم المصاريف' or rel.categories contains 'الميزانية' or rel.tags contains 'budget' -%}{%- continue -%}{%- endunless -%}
-          {%- if support_added < 1 -%}
-            {%- capture marker -%}|{{ rel.url }}|{%- endcapture -%}
-            {%- unless shown_urls contains marker -%}
-            <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
-            {%- assign support_added = support_added | plus: 1 -%}
-            {%- assign shown_urls = shown_urls | append: rel.url | append: '|' -%}
-            {%- endunless -%}
-          {%- endif -%}
-        {%- endfor -%}
-      {%- endif -%}
-
-      {%- for slug in site.data.internal-links.countries -%}
-        {%- if countries_added < 1 -%}
-          {%- for candidate in base_related -%}
-            {%- if candidate.url == page.url -%}{%- continue -%}{%- endif -%}
-            {%- if candidate.url contains slug -%}
-              {%- capture marker -%}|{{ candidate.url }}|{%- endcapture -%}
-              {%- unless shown_urls contains marker -%}
-              <li><a href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a></li>
-              {%- assign countries_added = countries_added | plus: 1 -%}
-              {%- assign shown_urls = shown_urls | append: candidate.url | append: '|' -%}
-              {%- endunless -%}
-              {%- break -%}
-            {%- endif -%}
-          {%- endfor -%}
-        {%- endif -%}
-      {%- endfor -%}
-
-      {%- if countries_added < 1 -%}
-        {%- for rel in base_related -%}
-          {%- if rel.url == page.url -%}{%- continue -%}{%- endif -%}
-          {%- unless rel.title contains 'مصر' or rel.title contains 'المغرب' or rel.title contains 'السعودية' or rel.title contains 'الإمارات' -%}{%- continue -%}{%- endunless -%}
-          {%- if countries_added < 1 -%}
-            {%- capture marker -%}|{{ rel.url }}|{%- endcapture -%}
-            {%- unless shown_urls contains marker -%}
-            <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
-            {%- assign countries_added = countries_added | plus: 1 -%}
-            {%- assign shown_urls = shown_urls | append: rel.url | append: '|' -%}
-            {%- endunless -%}
-          {%- endif -%}
-        {%- endfor -%}
-      {%- endif -%}
-
-      {%- if countries_added < 1 -%}
-        {%- for rel in base_related -%}
-          {%- if rel.url == page.url -%}{%- continue -%}{%- endif -%}
-          {%- if countries_added < 1 -%}
-            {%- capture marker -%}|{{ rel.url }}|{%- endcapture -%}
-            {%- unless shown_urls contains marker -%}
-            <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
-            {%- assign countries_added = countries_added | plus: 1 -%}
-            {%- assign shown_urls = shown_urls | append: rel.url | append: '|' -%}
-            {%- endunless -%}
-          {%- endif -%}
-        {%- endfor -%}
-      {%- endif -%}
-
-      {%- assign total_related = core_added | plus: support_added | plus: countries_added -%}
-      {%- if total_related < 4 -%}
-        {%- for rel in base_related -%}
-          {%- if rel.url == page.url -%}{%- continue -%}{%- endif -%}
-          {%- if total_related < 4 -%}
-            {%- capture marker -%}|{{ rel.url }}|{%- endcapture -%}
-            {%- unless shown_urls contains marker -%}
-            <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
-            {%- assign shown_urls = shown_urls | append: rel.url | append: '|' -%}
-            {%- assign total_related = total_related | plus: 1 -%}
-            {%- endunless -%}
-          {%- endif -%}
-        {%- endfor -%}
-      {%- endif -%}
-    </ul>
-  </div>
-</section>
-
-<section class="section post-related-smart" aria-label="Related Articles Smart Block">
-  <h2>مقالات مرتبطة ذكيًا</h2>
-  <div class="grid-3">
-    <article class="card">
-      <h3>نفس التصنيف</h3>
-      <ul class="topic-block__list">
-        {%- assign rel_by_category = same_category_posts -%}
-        {%- if rel_by_category.size == 0 -%}
-          {%- assign rel_by_category = same_topic_posts -%}
-        {%- endif -%}
-        {%- for rel in rel_by_category limit:3 -%}
-        <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
-        {%- endfor -%}
-      </ul>
-    </article>
-    <article class="card">
-      <h3>نفس النية</h3>
-      <ul class="topic-block__list">
-        {%- assign rel_by_intent = same_intent_posts -%}
-        {%- if rel_by_intent.size == 0 -%}
-          {%- assign rel_by_intent = same_topic_posts -%}
-        {%- endif -%}
-        {%- for rel in rel_by_intent limit:3 -%}
-        <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
-        {%- endfor -%}
-      </ul>
-    </article>
-    <article class="card">
-      <h3>نفس الكلمة الأساسية</h3>
-      <ul class="topic-block__list">
-        {%- assign rel_by_keyword = same_keyword_posts -%}
-        {%- if rel_by_keyword.size == 0 -%}
-          {%- assign rel_by_keyword = same_topic_posts -%}
-        {%- endif -%}
-        {%- for rel in rel_by_keyword limit:3 -%}
-        <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
-        {%- endfor -%}
-      </ul>
-    </article>
-  </div>
-</section>
-
-<div class="mobile-article-sticky" id="mobileArticleSticky" hidden>
-  <a class="mobile-article-sticky__cta" href="{{ '/?route=budgets' | relative_url }}">ابدأ إدارة مصاريفك الآن</a>
-  <button type="button" class="mobile-article-sticky__close" id="mobileArticleStickyClose" aria-label="إغلاق">×</button>
-</div>
-
-<section class="section post-series-related" aria-label="مقالات مرتبطة من نفس السلسلة">
-  <div class="card">
-    <h2>مقالات مرتبطة من نفس السلسلة</h2>
-    <ul class="topic-block__list">
-      {%- assign series_posts = same_topic_posts -%}
-      {%- if page.series -%}
-        {%- assign series_posts = site.posts | where: 'series', page.series -%}
-      {%- endif -%}
-      {%- for rel in series_posts limit:5 -%}
-      {%- if rel.url == page.url -%}{%- continue -%}{%- endif -%}
-      <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
-      {%- endfor -%}
-    </ul>
-  </div>
-</section>
-
-{%- unless single_cta_only -%}
-<div class="article-cta article-cta--strong">
-  <h3>حوّل المعرفة إلى خطوة عملية الآن</h3>
-  <p>تطبيق الفكرة فورًا داخل التطبيق يجعل النتائج أسرع وأكثر وضوحًا.</p>
-  <a href="{{ strong_cta_url }}" class="cta-button">{{ strong_cta_label }}</a>
-</div>
-{%- endunless -%}
-
 <script>
-(function () {
-  var progress = document.getElementById('readingProgress');
-  var article = document.querySelector('.post');
-  if (!progress || !article) return;
-  var readingWords = parseInt(article.getAttribute('data-reading-words') || '0', 10);
-  if (readingWords < 1200) {
-    progress.style.display = 'none';
-    return;
-  }
-
-  function updateProgress() {
-    var articleRect = article.getBoundingClientRect();
-    var articleTop = window.scrollY + articleRect.top;
-    var articleHeight = article.offsetHeight;
-    var viewport = window.innerHeight;
-    var total = Math.max(1, articleHeight - viewport);
-    var passed = window.scrollY - articleTop;
-    var ratio = Math.min(100, Math.max(0, (passed / total) * 100));
-    progress.style.width = ratio + '%';
-  }
-
-  window.addEventListener('scroll', updateProgress, { passive: true });
-  window.addEventListener('resize', updateProgress);
-  updateProgress();
-})();
-</script>
-
-<script>
-(function () {
-  var sticky = document.getElementById('mobileArticleSticky');
-  var closeBtn = document.getElementById('mobileArticleStickyClose');
-  if (!sticky || !closeBtn) return;
-
-  var isMobile = window.matchMedia('(max-width: 900px)').matches;
-  if (!isMobile) return;
-
-  var hiddenForSession = false;
-  try {
-    hiddenForSession = sessionStorage.getItem('mobileArticleStickyClosed') === '1';
-  } catch (e) {}
-  if (hiddenForSession) return;
-
-  function maybeShow() {
-    var scrollable = document.documentElement.scrollHeight - window.innerHeight;
-    if (scrollable <= 0) return;
-    var depth = (window.scrollY / scrollable) * 100;
-    if (depth >= 30) {
-      sticky.hidden = false;
-    }
-  }
-
-  closeBtn.addEventListener('click', function () {
-    sticky.hidden = true;
-    try {
-      sessionStorage.setItem('mobileArticleStickyClosed', '1');
-    } catch (e) {}
-  });
-
-  window.addEventListener('scroll', maybeShow, { passive: true });
-  window.addEventListener('load', maybeShow);
-})();
-</script>
-
-<script>
-(function () {
-  var content = document.getElementById('postContent');
-  var template = document.getElementById('stickyMiniNavTemplate');
-  if (!content || !template) return;
-  if (content.querySelector('.sticky-mini-nav')) return;
-
-  var paragraphs = content.querySelectorAll('p');
-  if (!paragraphs || paragraphs.length < 2) return;
-
-  var target = paragraphs[1];
-  var clone = template.cloneNode(true);
-  clone.hidden = false;
-  clone.removeAttribute('id');
-  target.insertAdjacentElement('afterend', clone);
-})();
-</script>
-
-<script>
-(function () {
-  var content = document.getElementById('postContent');
-  var tocWrap = document.getElementById('postTocWrap');
-  var tocList = document.getElementById('postTocList');
-  var tocMobileList = document.getElementById('postTocMobileList');
-
-  if (!content || !tocWrap || !tocList || !tocMobileList) return;
-
-  var text = content.textContent || '';
-  var wordCount = text.trim().split(/\s+/).filter(Boolean).length;
-  if (wordCount < 1200) return;
-
-  var headings = content.querySelectorAll('h2, h3');
-  if (!headings.length) return;
-
-  var usedIds = {};
-
-  function slugify(value) {
-    return value
-      .toLowerCase()
-      .replace(/[^\w\u0600-\u06FF\s-]/g, '')
-      .trim()
-      .replace(/\s+/g, '-')
-      .replace(/-+/g, '-');
-  }
-
-  headings.forEach(function (heading, index) {
-    var textContent = heading.textContent.trim();
-    if (!textContent) return;
-
-    var embeddedAnchor = heading.querySelector('a[id]');
-    var baseId = heading.id || (embeddedAnchor ? embeddedAnchor.id : slugify(textContent));
-    if (!baseId) baseId = 'section-' + (index + 1);
-
-    var finalId = baseId;
-    var counter = 2;
-    while (usedIds[finalId]) {
-      finalId = baseId + '-' + counter;
-      counter += 1;
-    }
-    usedIds[finalId] = true;
-    heading.id = finalId;
-
-    var item = document.createElement('li');
-    item.className = heading.tagName.toLowerCase() === 'h3' ? 'toc-item toc-item--sub' : 'toc-item';
-
-    var anchor = document.createElement('a');
-    anchor.href = '#' + finalId;
-    anchor.textContent = textContent;
-
-    item.appendChild(anchor);
-    tocList.appendChild(item);
-
-    var mobileItem = item.cloneNode(true);
-    tocMobileList.appendChild(mobileItem);
-  });
-
-  if (!tocList.children.length) return;
-  tocWrap.hidden = false;
-})();
-</script>
-
-<script>
-(function () {
-  var content = document.getElementById('postContent');
-  var template = document.getElementById('inlineReadAlsoTemplate');
-  if (!content || !template) return;
-  if (content.querySelector('.inline-read-also')) return;
-
-  var paragraphs = content.querySelectorAll('p');
-  if (!paragraphs.length) return;
-
-  var target = paragraphs.length >= 3 ? paragraphs[2] : paragraphs[paragraphs.length - 1];
-  var clone = template.cloneNode(true);
-  clone.hidden = false;
-  clone.removeAttribute('id');
-
-  if (!clone.querySelector('li')) return;
-  target.insertAdjacentElement('afterend', clone);
-})();
-</script>
-
-<script>
-(function () {
-  var content = document.getElementById('postContent');
-  var template = document.getElementById('interactiveTryTemplate');
-  if (!content || !template) return;
-  if (content.querySelector('.interactive-try-box')) return;
-
-  var paragraphs = content.querySelectorAll('p');
-  var headings = content.querySelectorAll('h2');
-  if (!paragraphs.length) return;
-
-  var target = null;
-  if (headings.length >= 2) {
-    target = headings[1];
-  } else if (paragraphs.length >= 4) {
-    target = paragraphs[Math.floor(paragraphs.length / 2)];
-  } else {
-    target = paragraphs[paragraphs.length - 1];
-  }
-
-  var clone = template.cloneNode(true);
-  clone.hidden = false;
-  clone.removeAttribute('id');
-  target.insertAdjacentElement('afterend', clone);
-})();
-</script>
-
-<script>
-{%- unless single_cta_only -%}
 (function () {
   var content = document.getElementById('postContent');
   if (!content) return;
-
-  var firstHeading = content.querySelector('h2');
-  if (!firstHeading) return;
-
-  if (content.querySelector('.template-download-box')) return;
-
-  var box = document.createElement('aside');
-  box.className = 'template-download-box card';
-  box.innerHTML =
-    '<h3>حمّل قالب مراجعة الميزانية الأسبوعية PDF</h3>' +
-    '<p>استخدم القالب الجاهز لمراجعة أسبوعية سريعة ثم طبّق نفس الخطة داخل التطبيق.</p>' +
-    '<a class="btn-accent" href="{{ "/weekly-budget-template/" | relative_url }}">تحميل القالب الآن</a>';
-
-  firstHeading.insertAdjacentElement('afterend', box);
-})();
-{%- endunless -%}
-</script>
-
-<script>
-(function () {
-  var content = document.getElementById('postContent');
-  var candidatesContainer = document.getElementById('coreInlineCandidates');
-  if (!content || !candidatesContainer) return;
-  if (content.querySelector('.core-smart-link')) return;
-
-  var firstH2 = content.querySelector('h2');
-  if (!firstH2) return;
-
-  var candidates = Array.prototype.slice.call(candidatesContainer.querySelectorAll('li[data-url][data-title]'));
-  if (!candidates.length) return;
-
-  var chosen = candidates[0];
-  var anchors = ['تنظيم المصاريف', 'إدارة الميزانية', 'تتبع الإنفاق', 'خطة مالية', 'budget عملي'];
-  var path = window.location.pathname || '';
-  var variantIndex = path.length % anchors.length;
-  var anchorText = anchors[variantIndex];
-
-  var box = document.createElement('aside');
-  box.className = 'core-smart-link card';
-  box.innerHTML =
-    '<h3>خطوة مرتبطة بنفس المحور</h3>' +
-    '<p>لتوسيع فهمك في ' + anchorText + '، اقرأ أيضًا: <a href="' + chosen.dataset.url + '" title="' + chosen.dataset.title + '">' + anchorText + ' بشكل عملي</a> ضمن مقال "' + chosen.dataset.title + '".</p>';
-
-  firstH2.insertAdjacentElement('afterend', box);
-})();
-</script>
-
-<script>
-(function () {
-  var article = document.querySelector('.post[data-inline-cta-url]');
-  if (!article) return;
-
-  var content = article.querySelector('#postContent');
-  if (!content) return;
-  if (content.querySelector('.inline-cta--single')) return;
-
-  var h2List = content.querySelectorAll('h2');
-  if (!h2List || h2List.length < 2) return;
-
-  var secondH2 = h2List[1];
-  var inlineUrl = '/?route=reports';
-  var inlineLabel = 'جرّب الآن مراجعة ميزانيتك من هنا';
+  var h2 = content.querySelector('h2');
+  if (!h2) return;
 
   var box = document.createElement('aside');
   box.className = 'inline-cta inline-cta--single';
   box.innerHTML =
-    '<h3>جرّب الآن مراجعة ميزانيتك من هنا</h3>' +
-    '<p>خطوة خفيفة واحدة قد تكشف لك أين يلزم التصحيح هذا الأسبوع.</p>' +
-    '<a class="cta-button" data-cta-location="inline" href="' + inlineUrl + '">' + inlineLabel + '</a>';
-
-  secondH2.insertAdjacentElement('afterend', box);
+    '<h3>حوّل هذه الخطوة إلى تطبيق عملي الآن</h3>' +
+    '<p>جرّب تنفيذ الفكرة مباشرة داخل التطبيق بدون تعقيد.</p>' +
+    '<a class=\"cta-button\" href=\"{{ \"/?route=reports\" | relative_url }}\">جرّب الآن مراجعة ميزانيتك من هنا</a>';
+  h2.insertAdjacentElement('afterend', box);
 })();
 </script>
