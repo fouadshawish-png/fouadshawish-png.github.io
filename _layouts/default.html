@@ -423,5 +423,18 @@
       });
     })();
     </script>
+    <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var query = params.get("q") || params.get("search");
+
+      if (query) {
+        gtag('event', 'site_search', {
+          search_term: query,
+          page_path: window.location.pathname
+        });
+      }
+    })();
+    </script>
   </body>
 </html>
