@@ -466,5 +466,22 @@
       });
     })();
     </script>
+    <script>
+    (function() {
+      var activeTracked = false;
+
+      function trackActive() {
+        if (activeTracked) return;
+        activeTracked = true;
+
+        gtag('event', 'active_reader', {
+          page_path: window.location.pathname
+        });
+      }
+
+      window.addEventListener('scroll', trackActive);
+      window.addEventListener('click', trackActive);
+    })();
+    </script>
   </body>
 </html>
