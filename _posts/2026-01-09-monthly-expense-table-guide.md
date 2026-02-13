@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "استخدم جدول مصاريف عمليًا وقلّل الهدر خلال 30 يومًا"
-description: "دليل عملي: استخدم جدول مصاريف عمليًا وقلّل الهدر خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /monthly-expense-table-guide/
-canonical: https://fouadshawish-png.github.io/monthly-expense-table-guide/
-image: /assets/images/posts/monthly-expense-table-guide-cover.jpeg
-image_alt: "استخدم جدول مصاريف عمليًا وقلّل الهدر خلال 30 يومًا"
-topic: expense-tracking
-level: intermediate
+description: "استخدم جدول مصاريف عمليًا وقلّل الهدر خلال 30 يومًا: تفصيل منهجي يساعدك على تحويل النصائح العامة إلى خطوات تنفيذية تقاس بالنتائج."
 categories:
   - المصاريف
 tags:
   - تنظيم المصاريف
   - تنظيم المصاريف
   - الميزانية
+permalink: "/monthly-expense-table-guide/"
+canonical: "https://fouadshawish-png.github.io/monthly-expense-table-guide/"
+image: "/assets/images/posts/monthly-expense-table-guide-cover.jpeg"
+image_alt: "استخدم جدول مصاريف عمليًا وقلّل الهدر خلال 30 يومًا"
 faq:
-  - question: "ما أول خطوة عملية للبدء؟"
-    answer: "ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على التوقع."
-  - question: "كم مرة أراجع الخطة؟"
-    answer: "مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا مع كثرة العمليات."
+  - question: ما أول خطوة عملية للبدء؟
+    answer: ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على
+      التوقع.
+  - question: كم مرة أراجع الخطة؟
+    answer: مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا
+      مع كثرة العمليات.
+level: "intermediate"
+topic: "expense-tracking"
 ---
 
 # جدول مصاريف عملي: كيف تستخدمه أسبوعيًا وشهريًا بفاعلية

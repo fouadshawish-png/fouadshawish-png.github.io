@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "خطّط مصاريف المعيشة بذكاء خلال 30 يومًا (دليل)"
-description: "دليل عملي: خطّط مصاريف المعيشة بذكاء خلال 30 يومًا (دليل). يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /cost-of-living-expenses-guide/
-canonical: https://fouadshawish-png.github.io/cost-of-living-expenses-guide/
-image: /assets/images/posts/cost-of-living-expenses-guide-cover.jpg
-image_alt: "خطّط مصاريف المعيشة بذكاء خلال 30 يومًا (دليل)"
-topic: expense-tracking
-level: intermediate
+description: "خطّط مصاريف المعيشة بذكاء خلال 30 يومًا: عرض عملي يوازن بين الانضباط والمرونة حتى تستمر الخطة بدون ضغط مبالغ فيه."
 categories:
   - المصاريف
 tags:
   - تنظيم المصاريف
   - تنظيم المصاريف
   - الميزانية
+permalink: "/cost-of-living-expenses-guide/"
+canonical: "https://fouadshawish-png.github.io/cost-of-living-expenses-guide/"
+image: "/assets/images/posts/cost-of-living-expenses-guide-cover.jpg"
+image_alt: "خطّط مصاريف المعيشة بذكاء خلال 30 يومًا (دليل)"
 faq:
-  - question: "ما أول خطوة عملية للبدء؟"
-    answer: "ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على التوقع."
-  - question: "كم مرة أراجع الخطة؟"
-    answer: "مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا مع كثرة العمليات."
+  - question: ما أول خطوة عملية للبدء؟
+    answer: ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على
+      التوقع.
+  - question: كم مرة أراجع الخطة؟
+    answer: مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا
+      مع كثرة العمليات.
+level: "intermediate"
+topic: "expense-tracking"
 ---
 
 # مصاريف المعيشة: دليل عملي للفهم والتخطيط والتقليل الذكي

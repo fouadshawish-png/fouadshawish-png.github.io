@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "طبّق ميزانية الأسرة بذكاء ووفّر خلال 4 أسابيع"
-description: "دليل عملي: طبّق ميزانية الأسرة بذكاء ووفّر خلال 4 أسابيع. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /family-budget-system-guide/
-canonical: https://fouadshawish-png.github.io/family-budget-system-guide/
-image: /assets/images/posts/family-budget-system-guide-cover.jpeg
-image_alt: "طبّق ميزانية الأسرة بذكاء ووفّر خلال 4 أسابيع"
-topic: budget
-level: intermediate
+description: "طبّق ميزانية الأسرة بذكاء ووفّر خلال 4 أسابيع: تفصيل منهجي يساعدك على تحويل النصائح العامة إلى خطوات تنفيذية تقاس بالنتائج."
 categories:
   - الميزانية
 tags:
   - الميزانية الشهرية
   - تنظيم المصاريف
   - الميزانية
+permalink: "/family-budget-system-guide/"
+canonical: "https://fouadshawish-png.github.io/family-budget-system-guide/"
+image: "/assets/images/posts/family-budget-system-guide-cover.jpeg"
+image_alt: "طبّق ميزانية الأسرة بذكاء ووفّر خلال 4 أسابيع"
 faq:
-  - question: "ما أول خطوة عملية للبدء؟"
-    answer: "ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على التوقع."
-  - question: "كم مرة أراجع الخطة؟"
-    answer: "مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا مع كثرة العمليات."
+  - question: ما أول خطوة عملية للبدء؟
+    answer: ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على
+      التوقع.
+  - question: كم مرة أراجع الخطة؟
+    answer: مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا
+      مع كثرة العمليات.
+level: "intermediate"
+topic: "budget"
 ---
 
 # ميزانية الأسرة: توزيع الدخل والالتزامات بدون تعقيد

@@ -1,19 +1,19 @@
 ---
-layout: post
+layout: "post"
 title: "راجع ميزانيتك في 10 دقائق وارفع التحكم خلال 30 يومًا"
-description: "راجع ميزانيتك في 10 دقائق وارفع التحكم خلال 30 يومًا — تحليل تطبيقي بخطوات عملية وأمثلة مالية واقعية تساعدك على اتخاذ قرارات أفضل وبناء نظام إنفاق مستقر."
-permalink: /weekly-budget-review/
-canonical: https://fouadshawish-png.github.io/weekly-budget-review/
+description: "راجع ميزانيتك في 10 دقائق وارفع التحكم خلال 30 يومًا: دليل عملي مختصر يركز على ما يجب فعله فعليًا، مع أمثلة واقعية تساعدك على الالتزام."
 categories:
   - الميزانية
 tags:
   - مراجعة الميزانية
   - التقارير المالية
   - إدارة الأموال
-image: /assets/images/posts/weekly-budget-review-cover.jpeg
+permalink: "/weekly-budget-review/"
+canonical: "https://fouadshawish-png.github.io/weekly-budget-review/"
+image: "/assets/images/posts/weekly-budget-review-cover.jpeg"
 image_alt: "راجع ميزانيتك في 10 دقائق وارفع التحكم خلال 30 يومًا"
 editor_note: "في التجربة العملية، المراجعة الأسبوعية الناجحة لا تحتاج أكثر من 10 دقائق إذا كانت الفئات محددة مسبقًا، والقرار الأسبوعي يركز على بند واحد فقط."
-last_modified_at: 2026-02-12
+last_modified_at: "2026-02-12"
 ---
 
 الميزانية لا تنهار في يوم واحد؛ تنهار لأن الانحرافات الصغيرة تمر بدون مراجعة. عندما تنتظر نهاية الشهر، غالبًا يكون وقت التصحيح قد تأخر. لذلك المراجعة الأسبوعية ليست خطوة إضافية، بل صمام أمان.

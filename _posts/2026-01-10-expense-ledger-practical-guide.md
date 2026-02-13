@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "استخدم دفتر المصاريف بذكاء وارفع الدقة خلال 30 يومًا"
-description: "استخدم دفتر المصاريف بذكاء وارفع الدقة خلال 30 يومًا — تحليل تطبيقي بخطوات عملية وأمثلة مالية واقعية تساعدك على اتخاذ قرارات أفضل وبناء نظام إنفاق مستقر."
-permalink: /expense-ledger-practical-guide/
-canonical: https://fouadshawish-png.github.io/expense-ledger-practical-guide/
-image: /assets/images/posts/expense-ledger-practical-guide-cover.jpeg
-image_alt: "استخدم دفتر المصاريف بذكاء وارفع الدقة خلال 30 يومًا"
-topic: expense-tracking
-level: intermediate
+description: "استخدم دفتر المصاريف بذكاء وارفع الدقة خلال 30 يومًا: شرح من واقع التطبيق يركز على القرارات الأعلى أثرًا بدل التشتت في التفاصيل."
 categories:
   - المصاريف
 tags:
   - تنظيم المصاريف
   - تنظيم المصاريف
   - الميزانية
+permalink: "/expense-ledger-practical-guide/"
+canonical: "https://fouadshawish-png.github.io/expense-ledger-practical-guide/"
+image: "/assets/images/posts/expense-ledger-practical-guide-cover.jpeg"
+image_alt: "استخدم دفتر المصاريف بذكاء وارفع الدقة خلال 30 يومًا"
 faq:
-  - question: "ما أول خطوة عملية للبدء؟"
-    answer: "ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على التوقع."
-  - question: "كم مرة أراجع الخطة؟"
-    answer: "مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا مع كثرة العمليات."
+  - question: ما أول خطوة عملية للبدء؟
+    answer: ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على
+      التوقع.
+  - question: كم مرة أراجع الخطة؟
+    answer: مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا
+      مع كثرة العمليات.
+level: "intermediate"
+topic: "expense-tracking"
 ---
 
 # دفتر مصاريف: متى يكفي؟ ومتى تحتاج نظامًا رقميًا؟

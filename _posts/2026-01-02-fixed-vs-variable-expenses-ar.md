@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "فرّق المصاريف الثابتة والمتغيرة ووفّر خلال 30 يومًا"
-description: "دليل عملي: فرّق المصاريف الثابتة والمتغيرة ووفّر خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /fixed-vs-variable-expenses-ar/
-canonical: https://fouadshawish-png.github.io/fixed-vs-variable-expenses-ar/
-image: /assets/images/posts/fixed-vs-variable-expenses-ar-cover.jpg
-image_alt: "فرّق المصاريف الثابتة والمتغيرة ووفّر خلال 30 يومًا"
-topic: expense-tracking
-level: intermediate
+description: "فرّق المصاريف الثابتة والمتغيرة ووفّر خلال 30 يومًا: دليل عملي مختصر يركز على ما يجب فعله فعليًا، مع أمثلة واقعية تساعدك على الالتزام."
 categories:
   - المصاريف
 tags:
   - تنظيم المصاريف
   - تنظيم المصاريف
   - الميزانية
+permalink: "/fixed-vs-variable-expenses-ar/"
+canonical: "https://fouadshawish-png.github.io/fixed-vs-variable-expenses-ar/"
+image: "/assets/images/posts/fixed-vs-variable-expenses-ar-cover.jpg"
+image_alt: "فرّق المصاريف الثابتة والمتغيرة ووفّر خلال 30 يومًا"
 faq:
-  - question: "ما أول خطوة عملية للبدء؟"
-    answer: "ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على التوقع."
-  - question: "كم مرة أراجع الخطة؟"
-    answer: "مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا مع كثرة العمليات."
+  - question: ما أول خطوة عملية للبدء؟
+    answer: ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على
+      التوقع.
+  - question: كم مرة أراجع الخطة؟
+    answer: مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا
+      مع كثرة العمليات.
+level: "intermediate"
+topic: "expense-tracking"
 ---
 
 # المصاريف الثابتة والمتغيرة: الطريقة العملية للتعامل مع كل نوع

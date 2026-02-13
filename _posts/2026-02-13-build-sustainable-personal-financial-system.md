@@ -1,26 +1,29 @@
 ---
-layout: post
+layout: "post"
 title: "كيف تبني نظامًا ماليًا شخصيًا مستدامًا؟"
-description: "تريد نظامًا ماليًا يستمر لسنوات؟ تعلّم طريقة عملية تربط المصاريف والميزانية والادخار والديون. ابدأ خطة مرحلية لبناء إدارة أموال مستقرة."
-permalink: /build-sustainable-personal-financial-system/
-canonical: https://fouadshawish-png.github.io/build-sustainable-personal-financial-system/
-image: /assets/images/posts/build-sustainable-personal-financial-system-cover.jpeg
-image_alt: "كيف تبني نظامًا ماليًا شخصيًا مستدامًا؟"
-topic: budget
-level: intermediate
+description: "كيف تبني نظامًا ماليًا شخصيًا مستدامًا؟: دليل عملي مختصر يركز على ما يجب فعله فعليًا، مع أمثلة واقعية تساعدك على الالتزام."
 categories:
   - الميزانية
 tags:
   - المصاريف
   - الميزانية
   - إدارة الأموال
+permalink: "/build-sustainable-personal-financial-system/"
+canonical: "https://fouadshawish-png.github.io/build-sustainable-personal-financial-system/"
+image: "/assets/images/posts/build-sustainable-personal-financial-system-cover.jpeg"
+image_alt: "كيف تبني نظامًا ماليًا شخصيًا مستدامًا؟"
 faq:
-  - question: "ما أول خطوة عملية أبدأ بها اليوم؟"
-    answer: "ابدأ بتسجيل مصاريف 7 أيام متتالية، ثم راجع بندًا واحدًا مرتفعًا وطبّق تعديلًا أسبوعيًا واضحًا."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يساعدك على تتبع المصاريف بدقة واستخراج تقارير سريعة لتحسين الميزانية."
-  - question: "متى أرى نتيجة حقيقية؟"
-    answer: "غالبًا خلال 3 إلى 6 أسابيع إذا التزمت بالمراجعة الأسبوعية واتخذت قرارات تصحيحية صغيرة مستمرة."
+  - question: ما أول خطوة عملية أبدأ بها اليوم؟
+    answer: ابدأ بتسجيل مصاريف 7 أيام متتالية، ثم راجع بندًا واحدًا مرتفعًا وطبّق تعديلًا
+      أسبوعيًا واضحًا.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يساعدك على تتبع المصاريف بدقة واستخراج تقارير
+      سريعة لتحسين الميزانية.
+  - question: متى أرى نتيجة حقيقية؟
+    answer: غالبًا خلال 3 إلى 6 أسابيع إذا التزمت بالمراجعة الأسبوعية واتخذت قرارات
+      تصحيحية صغيرة مستمرة.
+level: "intermediate"
+topic: "budget"
 ---
 
 # كيف تبني نظامًا ماليًا شخصيًا مستدامًا؟

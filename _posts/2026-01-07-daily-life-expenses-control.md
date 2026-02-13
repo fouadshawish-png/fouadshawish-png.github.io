@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "اضبط مصاريف الحياة اليومية ووفّر خلال 4 أسابيع"
-description: "دليل عملي: اضبط مصاريف الحياة اليومية ووفّر خلال 4 أسابيع. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /daily-life-expenses-control/
-canonical: https://fouadshawish-png.github.io/daily-life-expenses-control/
-image: /assets/images/posts/daily-life-expenses-control-cover.jpg
-image_alt: "اضبط مصاريف الحياة اليومية ووفّر خلال 4 أسابيع"
-topic: expense-tracking
-level: intermediate
+description: "اضبط مصاريف الحياة اليومية ووفّر خلال 4 أسابيع: إطار عمل واضح يبدأ بالتشخيص ثم ينتقل إلى التنفيذ مع أمثلة مالية مباشرة."
 categories:
   - المصاريف
 tags:
   - تنظيم المصاريف
   - تنظيم المصاريف
   - الميزانية
+permalink: "/daily-life-expenses-control/"
+canonical: "https://fouadshawish-png.github.io/daily-life-expenses-control/"
+image: "/assets/images/posts/daily-life-expenses-control-cover.jpg"
+image_alt: "اضبط مصاريف الحياة اليومية ووفّر خلال 4 أسابيع"
 faq:
-  - question: "ما أول خطوة عملية للبدء؟"
-    answer: "ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على التوقع."
-  - question: "كم مرة أراجع الخطة؟"
-    answer: "مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا مع كثرة العمليات."
+  - question: ما أول خطوة عملية للبدء؟
+    answer: ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على
+      التوقع.
+  - question: كم مرة أراجع الخطة؟
+    answer: مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا
+      مع كثرة العمليات.
+level: "intermediate"
+topic: "expense-tracking"
 ---
 
 # مصاريف الحياة اليومية: كيف تسيطر على التسرب المالي الصغير

@@ -1,25 +1,25 @@
 ---
-layout: post
+layout: "post"
 title: "كيف أقلل المصاريف بدون حرمان؟"
-description: "خطوات عملية لتقليل المصاريف تدريجيًا بدون ضغط نفسي عبر ضبط البنود عالية التأثير."
-permalink: /reduce-expenses-without-deprivation-intent/
-canonical: https://fouadshawish-png.github.io/reduce-expenses-without-deprivation-intent/
+description: "كيف أقلل المصاريف بدون حرمان؟: خطة تنفيذ عملية تربط بين التتبع والقرار والمراجعة الأسبوعية دون تعقيد."
 categories:
   - المصاريف
 tags:
   - تنظيم المصاريف
   - ضبط النفقات
   - إدارة الأموال الشخصية
-topic: spending-psychology
-level: beginner
-sitemap_priority: 0.7
+permalink: "/reduce-expenses-without-deprivation-intent/"
+canonical: "https://fouadshawish-png.github.io/reduce-expenses-without-deprivation-intent/"
 faq:
-  - question: "هل التقليل يعني إلغاء كل المصاريف الترفيهية؟"
-    answer: "لا، الهدف هو ضبط البنود عالية التأثير وليس منع كل المصروفات."
-  - question: "ما أول بند يُفضّل تقليله؟"
-    answer: "البند الأكثر تكرارًا وتأثيرًا على إجمالي الإنفاق الشهري."
-  - question: "كيف أحافظ على الاستمرارية؟"
-    answer: "بالتقليل التدريجي والمراجعة الأسبوعية بدل القرارات الحادة."
+  - question: هل التقليل يعني إلغاء كل المصاريف الترفيهية؟
+    answer: لا، الهدف هو ضبط البنود عالية التأثير وليس منع كل المصروفات.
+  - question: ما أول بند يُفضّل تقليله؟
+    answer: البند الأكثر تكرارًا وتأثيرًا على إجمالي الإنفاق الشهري.
+  - question: كيف أحافظ على الاستمرارية؟
+    answer: بالتقليل التدريجي والمراجعة الأسبوعية بدل القرارات الحادة.
+level: "beginner"
+sitemap_priority: "0.7"
+topic: "spending-psychology"
 ---
 
 كيف أقلل المصاريف بدون حرمان يجعلني أكره الخطة وأتوقف سريعًا؟ هذا السؤال مهم لأن كثيرًا من محاولات التوفير تفشل بسبب الشدة الزائدة. الهدف ليس أن تمنع نفسك من كل شيء، بل أن تضبط الإنفاق بذكاء حتى يتحسن وضعك المالي بشكل مستمر.

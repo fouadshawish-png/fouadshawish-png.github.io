@@ -1,19 +1,19 @@
 ---
-layout: post
+layout: "post"
 title: "نظّم إدارة الديون خطوة بخطوة خلال 90 يومًا (خطة)"
-description: "نظّم إدارة الديون خطوة بخطوة خلال 90 يومًا (خطة) — تحليل تطبيقي بخطوات عملية وأمثلة مالية واقعية تساعدك على اتخاذ قرارات أفضل وبناء نظام إنفاق مستقر."
+description: "نظّم إدارة الديون خطوة بخطوة خلال 90 يومًا: تفصيل منهجي يساعدك على تحويل النصائح العامة إلى خطوات تنفيذية تقاس بالنتائج."
 categories:
   - الديون
 tags:
   - إدارة الديون
   - السداد
   - التخطيط المالي
-permalink: /manage-personal-debt-step-by-step/
-canonical: https://fouadshawish-png.github.io/manage-personal-debt-step-by-step/
-image: /assets/images/posts/manage-personal-debt-step-by-step-cover.jpg
+permalink: "/manage-personal-debt-step-by-step/"
+canonical: "https://fouadshawish-png.github.io/manage-personal-debt-step-by-step/"
+image: "/assets/images/posts/manage-personal-debt-step-by-step-cover.jpg"
 image_alt: "نظّم إدارة الديون خطوة بخطوة خلال 90 يومًا (خطة)"
 editor_note: "في ملفات الديون، الترتيب الواضح للسداد أهم من محاولة الدفع العشوائي. مجرد ترتيب الأولويات يخفض الضغط النفسي حتى قبل انخفاض الرصيد."
-last_modified_at: 2026-02-01
+last_modified_at: "2026-02-01"
 ---
 
 # إدارة الديون بذكاء خطوة بخطوة
@@ -38,7 +38,6 @@ last_modified_at: 2026-02-01
 10. [FAQ](#faq)
 
 ---
-
 ## <a id="why-fail"></a>لماذا تفشل أغلب محاولات سداد الديون؟
 
 الفشل غالبًا يحدث بسبب العشوائية. يدفع الشخص مبلغًا عندما يتوفر، ثم يتوقف عندما تضغط المصاريف. المشكلة هنا ليست في المبلغ، بل في غياب النظام.

@@ -1,26 +1,29 @@
 ---
-layout: post
+layout: "post"
 title: "لماذا تفشل الميزانية رغم أنني ألتزم بها؟"
-description: "تلتزم بالميزانية لكن النتائج لا تتحسن؟ اكتشف الأسباب الحقيقية لفشل الميزانية وكيف تربطها بتتبع المصاريف. ابدأ خطة تصحيح عملية هذا الأسبوع."
-permalink: /why-budget-fails-even-with-discipline/
-canonical: https://fouadshawish-png.github.io/why-budget-fails-even-with-discipline/
-image: /assets/images/posts/why-budget-fails-even-with-discipline-cover.jpeg
-image_alt: "لماذا تفشل الميزانية رغم أنني ألتزم بها؟"
-topic: budget
-level: intermediate
+description: "لماذا تفشل الميزانية رغم أنني ألتزم بها؟: محتوى عملي يقدّم خطوات واضحة ومؤشرات متابعة تساعدك على تحسين النتيجة خلال أسابيع."
 categories:
   - الميزانية
 tags:
   - المصاريف
   - الميزانية
   - إدارة الأموال
+permalink: "/why-budget-fails-even-with-discipline/"
+canonical: "https://fouadshawish-png.github.io/why-budget-fails-even-with-discipline/"
+image: "/assets/images/posts/why-budget-fails-even-with-discipline-cover.jpeg"
+image_alt: "لماذا تفشل الميزانية رغم أنني ألتزم بها؟"
 faq:
-  - question: "ما أول خطوة عملية أبدأ بها اليوم؟"
-    answer: "ابدأ بتسجيل مصاريف 7 أيام متتالية، ثم راجع بندًا واحدًا مرتفعًا وطبّق تعديلًا أسبوعيًا واضحًا."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يساعدك على تتبع المصاريف بدقة واستخراج تقارير سريعة لتحسين الميزانية."
-  - question: "متى أرى نتيجة حقيقية؟"
-    answer: "غالبًا خلال 3 إلى 6 أسابيع إذا التزمت بالمراجعة الأسبوعية واتخذت قرارات تصحيحية صغيرة مستمرة."
+  - question: ما أول خطوة عملية أبدأ بها اليوم؟
+    answer: ابدأ بتسجيل مصاريف 7 أيام متتالية، ثم راجع بندًا واحدًا مرتفعًا وطبّق تعديلًا
+      أسبوعيًا واضحًا.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يساعدك على تتبع المصاريف بدقة واستخراج تقارير
+      سريعة لتحسين الميزانية.
+  - question: متى أرى نتيجة حقيقية؟
+    answer: غالبًا خلال 3 إلى 6 أسابيع إذا التزمت بالمراجعة الأسبوعية واتخذت قرارات
+      تصحيحية صغيرة مستمرة.
+level: "intermediate"
+topic: "budget"
 ---
 
 # لماذا تفشل الميزانية رغم أنني ألتزم بها؟

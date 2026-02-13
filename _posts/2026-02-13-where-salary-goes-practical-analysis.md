@@ -1,26 +1,29 @@
 ---
-layout: post
+layout: "post"
 title: "أين يذهب راتبي؟ تحليل عملي للأخطاء الشائعة"
-description: "لا تعرف أين يذهب الراتب كل شهر؟ تعلّم تحليلًا عمليًا لأخطاء المصاريف والميزانية. ابدأ نظام تتبع واضحًا يحسن إدارة الأموال بسرعة."
-permalink: /where-does-my-salary-go-practical-analysis/
-canonical: https://fouadshawish-png.github.io/where-does-my-salary-go-practical-analysis/
-image: /assets/images/posts/where-salary-goes-practical-analysis-cover.jpeg
-image_alt: "أين يذهب راتبي؟ تحليل عملي للأخطاء الشائعة"
-topic: expense-tracking
-level: intermediate
+description: "أين يذهب راتبي؟ تحليل عملي للأخطاء الشائعة: خطة تنفيذ عملية تربط بين التتبع والقرار والمراجعة الأسبوعية دون تعقيد."
 categories:
   - المصاريف
 tags:
   - المصاريف
   - الميزانية
   - إدارة الأموال
+permalink: "/where-does-my-salary-go-practical-analysis/"
+canonical: "https://fouadshawish-png.github.io/where-does-my-salary-go-practical-analysis/"
+image: "/assets/images/posts/where-salary-goes-practical-analysis-cover.jpeg"
+image_alt: "أين يذهب راتبي؟ تحليل عملي للأخطاء الشائعة"
 faq:
-  - question: "ما أول خطوة عملية أبدأ بها اليوم؟"
-    answer: "ابدأ بتسجيل مصاريف 7 أيام متتالية، ثم راجع بندًا واحدًا مرتفعًا وطبّق تعديلًا أسبوعيًا واضحًا."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يساعدك على تتبع المصاريف بدقة واستخراج تقارير سريعة لتحسين الميزانية."
-  - question: "متى أرى نتيجة حقيقية؟"
-    answer: "غالبًا خلال 3 إلى 6 أسابيع إذا التزمت بالمراجعة الأسبوعية واتخذت قرارات تصحيحية صغيرة مستمرة."
+  - question: ما أول خطوة عملية أبدأ بها اليوم؟
+    answer: ابدأ بتسجيل مصاريف 7 أيام متتالية، ثم راجع بندًا واحدًا مرتفعًا وطبّق تعديلًا
+      أسبوعيًا واضحًا.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يساعدك على تتبع المصاريف بدقة واستخراج تقارير
+      سريعة لتحسين الميزانية.
+  - question: متى أرى نتيجة حقيقية؟
+    answer: غالبًا خلال 3 إلى 6 أسابيع إذا التزمت بالمراجعة الأسبوعية واتخذت قرارات
+      تصحيحية صغيرة مستمرة.
+level: "intermediate"
+topic: "expense-tracking"
 ---
 
 # أين يذهب راتبي؟ تحليل عملي للأخطاء الشائعة

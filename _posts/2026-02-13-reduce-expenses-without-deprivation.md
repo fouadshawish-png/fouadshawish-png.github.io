@@ -1,25 +1,26 @@
 ---
-layout: post
-title: "خفّض المصاريف دون حرمان ووفّر خلال 30 يومًا (طريقة)"
-description: "دليل عملي: خفّض المصاريف دون حرمان ووفّر خلال 30 يومًا (طريقة). يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /reduce-expenses-without-deprivation/
-canonical: https://fouadshawish-png.github.io/reduce-expenses-without-deprivation/
-image: /assets/images/posts/reduce-expenses-without-deprivation-cover.jpg
-image_alt: "خفّض المصاريف دون حرمان ووفّر خلال 30 يومًا (طريقة)"
+layout: "post"
+title: "خفّض المصاريف بذكاء دون حرمان: خطة 21 يوم"
+description: "خفّض المصاريف بذكاء دون حرمان: خطة 21 يوم: منهج عملي يوضح كيف تقلل الإنفاق تدريجيًا مع الحفاظ على جودة الحياة والالتزام المستمر."
 categories:
   - تنظيم المصاريف
 tags:
   - تنظيم المصاريف
   - تتبع المصاريف
   - expense tracking
+permalink: "/reduce-expenses-without-deprivation/"
+canonical: "https://fouadshawish-png.github.io/reduce-expenses-without-deprivation/"
+image: "/assets/images/posts/reduce-expenses-without-deprivation-cover.jpg"
+image_alt: "خفّض المصاريف دون حرمان ووفّر خلال 30 يومًا (طريقة)"
 faq:
-  - question: "هل خفض المصاريف يعني إلغاء كل الكماليات؟"
-    answer: "لا، بل يعني ترتيب الأولويات وتقليل الهدر مع الحفاظ على جودة الحياة المعقولة."
-  - question: "كيف أتجنب الارتداد بعد أسبوعين؟"
-    answer: "اعتمد تعديلات صغيرة متدرجة مع مراجعة أسبوعية بدل قرارات حادة ومفاجئة."
-  - question: "ما أفضل بند أبدأ به؟"
-    answer: "ابدأ بالبند الأعلى تكرارًا والأقل قيمة مضافة، لأنه الأسرع تأثيرًا والأقل ألمًا."
-last_modified_at: 2026-02-13
+  - question: هل خفض المصاريف يعني إلغاء كل الكماليات؟
+    answer: لا، بل يعني ترتيب الأولويات وتقليل الهدر مع الحفاظ على جودة الحياة المعقولة.
+  - question: كيف أتجنب الارتداد بعد أسبوعين؟
+    answer: اعتمد تعديلات صغيرة متدرجة مع مراجعة أسبوعية بدل قرارات حادة ومفاجئة.
+  - question: ما أفضل بند أبدأ به؟
+    answer: ابدأ بالبند الأعلى تكرارًا والأقل قيمة مضافة، لأنه الأسرع تأثيرًا والأقل
+      ألمًا.
+last_modified_at: "2026-02-13"
 ---
 
 # كيف تخفض المصاريف دون أن تشعر بالحرمان؟
@@ -42,7 +43,6 @@ last_modified_at: 2026-02-13
 10. [FAQ](#faq)
 
 ---
-
 ## <a id="why-fails"></a>لماذا تفشل خطط التقشف السريع؟
 
 خطط التقشف السريع تفشل لثلاثة أسباب:

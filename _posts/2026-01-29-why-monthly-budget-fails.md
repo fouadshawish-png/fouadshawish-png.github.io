@@ -1,19 +1,19 @@
 ---
-layout: post
+layout: "post"
 title: "تجنّب فشل الميزانية الشهرية بخطة عملية خلال 30 يومًا"
-description: "دليل عملي: تجنّب فشل الميزانية الشهرية بخطة عملية خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /why-monthly-budget-fails/
-canonical: https://fouadshawish-png.github.io/why-monthly-budget-fails/
+description: "تجنّب فشل الميزانية الشهرية بخطة عملية خلال 30 يومًا: إطار عمل واضح يبدأ بالتشخيص ثم ينتقل إلى التنفيذ مع أمثلة مالية مباشرة."
 categories:
   - الميزانية
 tags:
   - ميزانية شهرية
   - أخطاء الميزانية
   - تنظيم المصاريف
-image: /assets/images/posts/why-monthly-budget-fails-cover.jpg
+permalink: "/why-monthly-budget-fails/"
+canonical: "https://fouadshawish-png.github.io/why-monthly-budget-fails/"
+image: "/assets/images/posts/why-monthly-budget-fails-cover.jpg"
 image_alt: "تجنّب فشل الميزانية الشهرية بخطة عملية خلال 30 يومًا"
 editor_note: "لاحظت أن أغلب الإخفاقات لا تأتي من ضعف الانضباط، بل من ميزانية غير واقعية منذ البداية. بناء الخطة على دخل محافظ يقلل الإحباط بشكل كبير."
-last_modified_at: 2026-01-29
+last_modified_at: "2026-01-29"
 ---
 
 كثير من الميزانيات لا تفشل لأنها "خاطئة تمامًا"، بل لأنها مثالية أكثر من الواقع. نكتب خطة جميلة، ثم نصطدم بأسبوع مزدحم أو ظرف مفاجئ، فتبدأ الخطة بالتفكك. إذا مررت بهذا، فأنت لست وحدك.

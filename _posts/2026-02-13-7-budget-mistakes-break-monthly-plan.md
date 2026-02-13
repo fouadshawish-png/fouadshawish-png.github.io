@@ -1,25 +1,25 @@
 ---
-layout: post
+layout: "post"
 title: "تجنّب 7 أخطاء ميزانية ووفّر خلال 30 يومًا (دليل)"
-description: "دليل عملي: تجنّب 7 أخطاء ميزانية ووفّر خلال 30 يومًا (دليل). يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /7-budget-mistakes-break-monthly-plan/
-canonical: https://fouadshawish-png.github.io/7-budget-mistakes-break-monthly-plan/
-image: /assets/images/posts/7-budget-mistakes-break-monthly-plan-cover.jpg
-image_alt: "تجنّب 7 أخطاء ميزانية ووفّر خلال 30 يومًا (دليل)"
+description: "تجنّب 7 أخطاء ميزانية ووفّر خلال 30 يومًا: تحليل واضح للأخطاء الشائعة ثم طريقة التصحيح بأسلوب بسيط وقابل للاستمرار."
 categories:
   - الميزانية
 tags:
   - ميزانية شهرية
   - تنظيم المصاريف
   - budget planning
+permalink: "/7-budget-mistakes-break-monthly-plan/"
+canonical: "https://fouadshawish-png.github.io/7-budget-mistakes-break-monthly-plan/"
+image: "/assets/images/posts/7-budget-mistakes-break-monthly-plan-cover.jpg"
+image_alt: "تجنّب 7 أخطاء ميزانية ووفّر خلال 30 يومًا (دليل)"
 faq:
-  - question: "ما أول خطأ يجب إصلاحه فورًا؟"
-    answer: "الاعتماد على أرقام تقديرية بدل بيانات فعلية من تتبع المصاريف اليومي."
-  - question: "هل المشكلة في الميزانية أم في الالتزام؟"
-    answer: "غالبًا في تصميم الميزانية نفسها؛ عندما تكون غير واقعية يصبح الالتزام صعبًا."
-  - question: "كم مرة أحتاج مراجعة الميزانية؟"
-    answer: "مرة أسبوعيًا كحد أدنى، لأن المراجعة الشهرية وحدها متأخرة غالبًا."
-last_modified_at: 2026-02-13
+  - question: ما أول خطأ يجب إصلاحه فورًا؟
+    answer: الاعتماد على أرقام تقديرية بدل بيانات فعلية من تتبع المصاريف اليومي.
+  - question: هل المشكلة في الميزانية أم في الالتزام؟
+    answer: غالبًا في تصميم الميزانية نفسها؛ عندما تكون غير واقعية يصبح الالتزام صعبًا.
+  - question: كم مرة أحتاج مراجعة الميزانية؟
+    answer: مرة أسبوعيًا كحد أدنى، لأن المراجعة الشهرية وحدها متأخرة غالبًا.
+last_modified_at: "2026-02-13"
 ---
 
 # 7 أخطاء تجعل ميزانيتك تنهار كل شهر
@@ -43,7 +43,6 @@ last_modified_at: 2026-02-13
 11. [FAQ](#faq)
 
 ---
-
 ## <a id="mistake-1"></a>الخطأ 1: بناء الخطة على التوقع بدل البيانات
 
 أكبر خطأ في **budget planning** أن تبدأ بالأمنيات لا بالأرقام. عندما تقول "أعتقد أني أصرف كذا"، فأنت تبني الخطة على انطباع. الحل: أسبوعان من **expense tracking** قبل أي تقسيم نهائي. سجّل كل عملية، ثم استخرج المتوسط الحقيقي لكل بند.

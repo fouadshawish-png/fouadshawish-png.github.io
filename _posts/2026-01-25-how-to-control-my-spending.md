@@ -1,18 +1,18 @@
 ---
-layout: post
+layout: "post"
 title: "تحكّم في المصاريف وقلّل الهدر خلال 30 يومًا (طريقة)"
-description: "دليل عملي: تحكّم في المصاريف وقلّل الهدر خلال 30 يومًا (طريقة). يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
+description: "تحكّم في المصاريف وقلّل الهدر خلال 30 يومًا: تحليل واضح للأخطاء الشائعة ثم طريقة التصحيح بأسلوب بسيط وقابل للاستمرار."
 categories:
   - تنظيم المصاريف
 tags:
   - كيف أتحكم في مصروفي
   - تتبع المصاريف
   - إدارة الأموال
-permalink: /how-to-control-my-spending/
-canonical: https://fouadshawish-png.github.io/how-to-control-my-spending/
-image: /assets/images/posts/how-to-control-my-spending-cover.jpg
+permalink: "/how-to-control-my-spending/"
+canonical: "https://fouadshawish-png.github.io/how-to-control-my-spending/"
+image: "/assets/images/posts/how-to-control-my-spending-cover.jpg"
 image_alt: "تحكّم في المصاريف وقلّل الهدر خلال 30 يومًا (طريقة)"
-last_modified_at: 2026-01-25
+last_modified_at: "2026-01-25"
 ---
 
 # كيف أتحكم في مصروفي؟ خطة عملية من 7 خطوات
@@ -33,7 +33,6 @@ last_modified_at: 2026-01-25
 8. [FAQ](#faq)
 
 ---
-
 ## <a id="why-hard"></a>لماذا لا أستطيع التحكم في المصروف؟
 
 السبب غالبًا ليس ضعف الانضباط فقط، بل غياب قواعد قرار واضحة. عندما لا يوجد سقف يومي أو أسبوعي، كل قرار يتم لحظيًا، وغالبًا يتأثر بالمزاج والضغط.

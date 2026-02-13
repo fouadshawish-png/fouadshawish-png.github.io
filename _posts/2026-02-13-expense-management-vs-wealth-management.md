@@ -1,26 +1,29 @@
 ---
-layout: post
+layout: "post"
 title: "الفرق بين إدارة المصاريف وإدارة الثروة"
-description: "ما الفرق بين إدارة المصاريف وإدارة الثروة؟ تعرّف على الفارق العملي بين الانضباط اليومي والنمو طويل المدى. ابدأ من قاعدة مالية متينة أولًا."
-permalink: /difference-between-expense-management-and-wealth-management/
-canonical: https://fouadshawish-png.github.io/difference-between-expense-management-and-wealth-management/
-image: /assets/images/posts/expense-management-vs-wealth-management-cover.jpeg
-image_alt: "الفرق بين إدارة المصاريف وإدارة الثروة"
-topic: budget
-level: intermediate
+description: "الفرق بين إدارة المصاريف وإدارة الثروة: إطار عمل واضح يبدأ بالتشخيص ثم ينتقل إلى التنفيذ مع أمثلة مالية مباشرة."
 categories:
   - الميزانية
 tags:
   - المصاريف
   - الميزانية
   - إدارة الأموال
+permalink: "/difference-between-expense-management-and-wealth-management/"
+canonical: "https://fouadshawish-png.github.io/difference-between-expense-management-and-wealth-management/"
+image: "/assets/images/posts/expense-management-vs-wealth-management-cover.jpeg"
+image_alt: "الفرق بين إدارة المصاريف وإدارة الثروة"
 faq:
-  - question: "ما أول خطوة عملية أبدأ بها اليوم؟"
-    answer: "ابدأ بتسجيل مصاريف 7 أيام متتالية، ثم راجع بندًا واحدًا مرتفعًا وطبّق تعديلًا أسبوعيًا واضحًا."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يساعدك على تتبع المصاريف بدقة واستخراج تقارير سريعة لتحسين الميزانية."
-  - question: "متى أرى نتيجة حقيقية؟"
-    answer: "غالبًا خلال 3 إلى 6 أسابيع إذا التزمت بالمراجعة الأسبوعية واتخذت قرارات تصحيحية صغيرة مستمرة."
+  - question: ما أول خطوة عملية أبدأ بها اليوم؟
+    answer: ابدأ بتسجيل مصاريف 7 أيام متتالية، ثم راجع بندًا واحدًا مرتفعًا وطبّق تعديلًا
+      أسبوعيًا واضحًا.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يساعدك على تتبع المصاريف بدقة واستخراج تقارير
+      سريعة لتحسين الميزانية.
+  - question: متى أرى نتيجة حقيقية؟
+    answer: غالبًا خلال 3 إلى 6 أسابيع إذا التزمت بالمراجعة الأسبوعية واتخذت قرارات
+      تصحيحية صغيرة مستمرة.
+level: "intermediate"
+topic: "budget"
 ---
 
 # الفرق بين إدارة المصاريف وإدارة الثروة

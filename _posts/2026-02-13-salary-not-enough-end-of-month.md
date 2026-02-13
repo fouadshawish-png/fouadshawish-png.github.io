@@ -1,27 +1,30 @@
 ---
-layout: post
+layout: "post"
 title: "راتبي لا يكفيني لنهاية الشهر: ماذا أفعل؟"
-description: "راتبك ينتهي قبل نهاية الشهر؟ تعلّم خطة عملية لضبط المصاريف والميزانية خطوة بخطوة. ابدأ نظامًا واضحًا لتحسين إدارة الأموال خلال 30 يومًا."
-permalink: /salary-not-enough-end-of-month/
-canonical: https://fouadshawish-png.github.io/salary-not-enough-end-of-month/
-image: /assets/images/posts/salary-not-enough-end-of-month-cover.jpeg
-image_alt: "راتبي لا يكفيني لنهاية الشهر: ماذا أفعل؟"
-topic: expense-tracking
-level: intermediate
+description: "راتبي لا يكفيني لنهاية الشهر: ماذا أفعل؟: عرض عملي يوازن بين الانضباط والمرونة حتى تستمر الخطة بدون ضغط مبالغ فيه."
 categories:
   - المصاريف
 tags:
   - المصاريف
   - الميزانية
   - إدارة الأموال
+permalink: "/salary-not-enough-end-of-month/"
+canonical: "https://fouadshawish-png.github.io/salary-not-enough-end-of-month/"
+image: "/assets/images/posts/salary-not-enough-end-of-month-cover.jpeg"
+image_alt: "راتبي لا يكفيني لنهاية الشهر: ماذا أفعل؟"
 faq:
-  - question: "ما أول خطوة عملية أبدأ بها اليوم؟"
-    answer: "ابدأ بتسجيل مصاريف 7 أيام متتالية، ثم راجع بندًا واحدًا مرتفعًا وطبّق تعديلًا أسبوعيًا واضحًا."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يساعدك على تتبع المصاريف بدقة واستخراج تقارير سريعة لتحسين الميزانية."
-  - question: "متى أرى نتيجة حقيقية؟"
-    answer: "غالبًا خلال 3 إلى 6 أسابيع إذا التزمت بالمراجعة الأسبوعية واتخذت قرارات تصحيحية صغيرة مستمرة."
-last_modified_at: 2026-02-13
+  - question: ما أول خطوة عملية أبدأ بها اليوم؟
+    answer: ابدأ بتسجيل مصاريف 7 أيام متتالية، ثم راجع بندًا واحدًا مرتفعًا وطبّق تعديلًا
+      أسبوعيًا واضحًا.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يساعدك على تتبع المصاريف بدقة واستخراج تقارير
+      سريعة لتحسين الميزانية.
+  - question: متى أرى نتيجة حقيقية؟
+    answer: غالبًا خلال 3 إلى 6 أسابيع إذا التزمت بالمراجعة الأسبوعية واتخذت قرارات
+      تصحيحية صغيرة مستمرة.
+last_modified_at: "2026-02-13"
+level: "intermediate"
+topic: "expense-tracking"
 ---
 
 # راتبي لا يكفيني لنهاية الشهر: ماذا أفعل؟

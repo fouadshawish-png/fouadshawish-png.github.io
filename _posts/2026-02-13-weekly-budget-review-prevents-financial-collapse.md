@@ -1,25 +1,25 @@
 ---
-layout: post
+layout: "post"
 title: "امنع انهيار الميزانية بمراجعة أسبوعية في 10 دقائق"
-description: "امنع انهيار الميزانية بمراجعة أسبوعية في 10 دقائق — تحليل تطبيقي بخطوات عملية وأمثلة مالية واقعية تساعدك على اتخاذ قرارات أفضل وبناء نظام إنفاق مستقر."
-permalink: /weekly-budget-review-prevents-financial-collapse/
-canonical: https://fouadshawish-png.github.io/weekly-budget-review-prevents-financial-collapse/
-image: /assets/images/posts/weekly-budget-review-prevents-financial-collapse-cover.jpg
-image_alt: "امنع انهيار الميزانية بمراجعة أسبوعية في 10 دقائق"
+description: "امنع انهيار الميزانية بمراجعة أسبوعية في 10 دقائق: تحليل واضح للأخطاء الشائعة ثم طريقة التصحيح بأسلوب بسيط وقابل للاستمرار."
 categories:
   - الميزانية
 tags:
   - ميزانية شهرية
   - تتبع المصاريف
   - budget planning
+permalink: "/weekly-budget-review-prevents-financial-collapse/"
+canonical: "https://fouadshawish-png.github.io/weekly-budget-review-prevents-financial-collapse/"
+image: "/assets/images/posts/weekly-budget-review-prevents-financial-collapse-cover.jpg"
+image_alt: "امنع انهيار الميزانية بمراجعة أسبوعية في 10 دقائق"
 faq:
-  - question: "كم تستغرق المراجعة الأسبوعية الفعالة؟"
-    answer: "عادة بين 10 و20 دقيقة إذا كانت البيانات اليومية مسجلة بشكل منتظم."
-  - question: "ما أهم نتيجة يجب أن أخرج بها كل أسبوع؟"
-    answer: "قرار واحد واضح قابل للتنفيذ خلال الأسبوع التالي."
-  - question: "هل المراجعة الأسبوعية تغني عن المراجعة الشهرية؟"
-    answer: "لا، لكنها تمنع التراكم وتُحسن جودة المراجعة الشهرية بشكل كبير."
-last_modified_at: 2026-02-13
+  - question: كم تستغرق المراجعة الأسبوعية الفعالة؟
+    answer: عادة بين 10 و20 دقيقة إذا كانت البيانات اليومية مسجلة بشكل منتظم.
+  - question: ما أهم نتيجة يجب أن أخرج بها كل أسبوع؟
+    answer: قرار واحد واضح قابل للتنفيذ خلال الأسبوع التالي.
+  - question: هل المراجعة الأسبوعية تغني عن المراجعة الشهرية؟
+    answer: لا، لكنها تمنع التراكم وتُحسن جودة المراجعة الشهرية بشكل كبير.
+last_modified_at: "2026-02-13"
 ---
 
 # مراجعة الميزانية: النموذج الأسبوعي الذي يمنع الانهيار المالي
@@ -42,7 +42,6 @@ last_modified_at: 2026-02-13
 10. [FAQ](#faq)
 
 ---
-
 ## <a id="monthly-not-enough"></a>لماذا المراجعة الشهرية وحدها لا تكفي؟
 
 المراجعة الشهرية مهمة، لكنها متأخرة تشغيليًا. إذا انتظرت نهاية الشهر، تكون معظم القرارات اليومية قد حدثت وانتهت. هذا يعني أن هامش التصحيح ضيق.

@@ -1,19 +1,19 @@
 ---
-layout: post
+layout: "post"
 title: "اكتشف أين يضيع راتبك ونظّم المصاريف خلال 30 يومًا"
-description: "راتبك ينتهي بسرعة كل شهر؟ اكتشف طريقة عملية لتتبع المصاريف وتوزيع الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
+description: "اكتشف أين يضيع راتبك ونظّم المصاريف خلال 30 يومًا: شرح من واقع التطبيق يركز على القرارات الأعلى أثرًا بدل التشتت في التفاصيل."
 categories:
   - تتبع المصاريف
 tags:
   - تتبع المصاريف
   - الراتب
   - إدارة الأموال
-permalink: /where-does-my-salary-go/
-canonical: https://fouadshawish-png.github.io/where-does-my-salary-go/
-image: /assets/images/posts/where-does-my-salary-go-cover.jpg
+permalink: "/where-does-my-salary-go/"
+canonical: "https://fouadshawish-png.github.io/where-does-my-salary-go/"
+image: "/assets/images/posts/where-does-my-salary-go-cover.jpg"
 image_alt: "اكتشف أين يضيع راتبك ونظّم المصاريف خلال 30 يومًا"
 editor_note: "في التحليل العملي، اكتشاف تسرب الراتب يحدث بسرعة عند تتبع 14 يومًا فقط؛ هذه المدة كافية لإظهار نمط الإنفاق غير المرئي."
-last_modified_at: 2026-02-13
+last_modified_at: "2026-02-13"
 ---
 
 # كيف تكتشف أين يضيع راتبك كل شهر؟
@@ -37,7 +37,6 @@ last_modified_at: 2026-02-13
 9. [FAQ](#faq)
 
 ---
-
 ## <a id="why-disappear"></a>لماذا يبدو الراتب كأنه يختفي؟
 
 الراتب لا يختفي فجأة. هو يتوزع يوميًا على بنود صغيرة ومتوسطة وكبيرة، لكننا لا نراها مجتمعة إلا عند نهاية الشهر، وبعد أن يكون وقت التصحيح قد تأخر.

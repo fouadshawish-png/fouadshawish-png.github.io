@@ -1,19 +1,19 @@
 ---
-layout: post
+layout: "post"
 title: "وفّر من الراتب بذكاء وحسّن الميزانية خلال 30 يومًا"
-description: "كيف توفّر من راتبك فعليًا؟ هذا المقال يقدّم خطة ادخار واقعية مرتبطة بالمصاريف والميزانية مع خطوات قابلة للتنفيذ من أول أسبوع."
+description: "وفّر من الراتب بذكاء وحسّن الميزانية خلال 30 يومًا: دليل عملي مختصر يركز على ما يجب فعله فعليًا، مع أمثلة واقعية تساعدك على الالتزام."
 categories:
   - الادخار
 tags:
   - كيف أوفر من راتبي
   - الادخار
   - إدارة الأموال
-permalink: /how-to-save-from-my-salary/
-canonical: https://fouadshawish-png.github.io/how-to-save-from-my-salary/
-image: /assets/images/posts/how-to-save-from-my-salary-cover.jpg
+permalink: "/how-to-save-from-my-salary/"
+canonical: "https://fouadshawish-png.github.io/how-to-save-from-my-salary/"
+image: "/assets/images/posts/how-to-save-from-my-salary-cover.jpg"
 image_alt: "وفّر من الراتب بذكاء وحسّن الميزانية خلال 30 يومًا"
 editor_note: "الادخار المنتظم بدأ فعليًا فقط عندما أصبح مبلغ الادخار يُحجز أولًا، لا عندما يتم انتظار المتبقي في نهاية الشهر."
-last_modified_at: 2026-01-24
+last_modified_at: "2026-01-24"
 ---
 
 # كيف أوفر من راتبي بدون ضغط؟ استراتيجية واقعية
@@ -35,7 +35,6 @@ last_modified_at: 2026-01-24
 9. [FAQ](#faq)
 
 ---
-
 ## <a id="why-fail"></a>لماذا يفشل الادخار عند أغلب الناس؟
 
 الفشل يحدث غالبًا بسبب 4 نقاط:

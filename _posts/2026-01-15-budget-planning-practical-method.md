@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "خطّط الميزانية بوضوح وقلّل العشوائية خلال 30 يومًا"
-description: "دليل عملي: خطّط الميزانية بوضوح وقلّل العشوائية خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /budget-planning-practical-method/
-canonical: https://fouadshawish-png.github.io/budget-planning-practical-method/
-image: /assets/images/posts/budget-planning-practical-method-cover.jpeg
-image_alt: "خطّط الميزانية بوضوح وقلّل العشوائية خلال 30 يومًا"
-topic: budget
-level: intermediate
+description: "خطّط الميزانية بوضوح وقلّل العشوائية خلال 30 يومًا: محتوى عملي يقدّم خطوات واضحة ومؤشرات متابعة تساعدك على تحسين النتيجة خلال أسابيع."
 categories:
   - الميزانية
 tags:
   - الميزانية الشهرية
   - تنظيم المصاريف
   - الميزانية
+permalink: "/budget-planning-practical-method/"
+canonical: "https://fouadshawish-png.github.io/budget-planning-practical-method/"
+image: "/assets/images/posts/budget-planning-practical-method-cover.jpeg"
+image_alt: "خطّط الميزانية بوضوح وقلّل العشوائية خلال 30 يومًا"
 faq:
-  - question: "ما أول خطوة عملية للبدء؟"
-    answer: "ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على التوقع."
-  - question: "كم مرة أراجع الخطة؟"
-    answer: "مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا مع كثرة العمليات."
+  - question: ما أول خطوة عملية للبدء؟
+    answer: ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على
+      التوقع.
+  - question: كم مرة أراجع الخطة؟
+    answer: مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا
+      مع كثرة العمليات.
+level: "intermediate"
+topic: "budget"
 ---
 
 # تخطيط الميزانية: كيف تحول الدخل إلى قرارات مالية مسبقة

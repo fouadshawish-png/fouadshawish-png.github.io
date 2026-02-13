@@ -1,18 +1,18 @@
 ---
-layout: post
+layout: "post"
 title: "اختر برنامج إدارة الميزانية وارفع الالتزام خلال 30 يومًا"
-description: "دليل عملي: اختر برنامج إدارة الميزانية وارفع الالتزام خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
+description: "اختر برنامج إدارة الميزانية وارفع الالتزام خلال 30 يومًا: خطة تنفيذ عملية تربط بين التتبع والقرار والمراجعة الأسبوعية دون تعقيد."
 categories:
   - الميزانية
 tags:
   - برنامج إدارة ميزانية
   - budget
   - التخطيط المالي
-permalink: /budget-management-program/
-canonical: https://fouadshawish-png.github.io/budget-management-program/
-image: /assets/images/posts/budget-management-program-cover.jpeg
+permalink: "/budget-management-program/"
+canonical: "https://fouadshawish-png.github.io/budget-management-program/"
+image: "/assets/images/posts/budget-management-program-cover.jpeg"
 image_alt: "اختر برنامج إدارة الميزانية وارفع الالتزام خلال 30 يومًا"
-last_modified_at: 2026-01-26
+last_modified_at: "2026-01-26"
 ---
 
 # برنامج إدارة ميزانية: كيف تبني خطة شهرية قابلة للاستمرار؟
@@ -34,7 +34,6 @@ last_modified_at: 2026-01-26
 9. [FAQ](#faq)
 
 ---
-
 ## <a id="program-role"></a>ما وظيفة برنامج إدارة الميزانية فعليًا؟
 
 البرنامج الجيد يفعل ثلاث مهام:

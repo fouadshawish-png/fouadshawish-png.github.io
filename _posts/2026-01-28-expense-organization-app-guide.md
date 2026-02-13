@@ -1,18 +1,18 @@
 ---
-layout: post
+layout: "post"
 title: "اختر تطبيق تنظيم المصاريف المناسب خلال 7 أيام"
-description: "اختر تطبيق تنظيم المصاريف المناسب خلال 7 أيام — تحليل تطبيقي بخطوات عملية وأمثلة مالية واقعية تساعدك على اتخاذ قرارات أفضل وبناء نظام إنفاق مستقر."
+description: "اختر تطبيق تنظيم المصاريف المناسب خلال 7 أيام: طريقة واقعية لبناء نظام مالي منضبط عبر خطوات قصيرة قابلة للتطبيق في الحياة اليومية."
 categories:
   - تنظيم المصاريف
 tags:
   - تطبيق لتنظيم المصاريف
   - تتبع المصاريف
   - إدارة الأموال
-permalink: /expense-organization-app-guide/
-canonical: https://fouadshawish-png.github.io/expense-organization-app-guide/
-image: /assets/images/posts/expense-organization-app-guide-cover.jpeg
+permalink: "/expense-organization-app-guide/"
+canonical: "https://fouadshawish-png.github.io/expense-organization-app-guide/"
+image: "/assets/images/posts/expense-organization-app-guide-cover.jpeg"
 image_alt: "اختر تطبيق تنظيم المصاريف المناسب خلال 7 أيام"
-last_modified_at: 2026-01-28
+last_modified_at: "2026-01-28"
 ---
 
 # تطبيق لتنظيم المصاريف: كيف تختار نظامًا ينجح فعلاً؟
@@ -34,7 +34,6 @@ last_modified_at: 2026-01-28
 9. [FAQ](#faq)
 
 ---
-
 ## <a id="why-choice-matters"></a>لماذا اختيار التطبيق مهم أكثر مما تتوقع؟
 
 اختيار الأداة يؤثر مباشرة على سلوكك. إذا كانت عملية تسجيل المصروف تحتاج خطوات طويلة، ستؤجل التسجيل. وإذا تأخر التسجيل، تضيع الدقة. ومع الوقت تتحول الخطة كلها إلى تخمين.

@@ -1,19 +1,19 @@
 ---
-layout: post
+layout: "post"
 title: "ابنِ ميزانية شهرية واقعية ووفّر خلال 30 يومًا"
-description: "دليل عملي: ابنِ ميزانية شهرية واقعية ووفّر خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
+description: "ابنِ ميزانية شهرية واقعية ووفّر خلال 30 يومًا: شرح تطبيقي يوضح الفكرة خطوة بخطوة مع قرارات عملية يمكن تنفيذها من اليوم الأول."
 categories:
   - الميزانية
 tags:
   - ميزانية شهرية
   - التخطيط المالي
   - تنظيم المصاريف
-permalink: /build-realistic-monthly-budget/
-canonical: https://fouadshawish-png.github.io/build-realistic-monthly-budget/
-image: /assets/images/posts/build-realistic-monthly-budget-cover.jpg
+permalink: "/build-realistic-monthly-budget/"
+canonical: "https://fouadshawish-png.github.io/build-realistic-monthly-budget/"
+image: "/assets/images/posts/build-realistic-monthly-budget-cover.jpg"
 image_alt: "ابنِ ميزانية شهرية واقعية ووفّر خلال 30 يومًا"
 editor_note: "الميزانية التي تصمد هي التي تتضمن هامش مرونة واضح. كل مرة حذفت فيها هامش الطوارئ من الخطة، ظهرت مشكلة غير متوقعة كسرت الالتزام."
-last_modified_at: 2026-02-03
+last_modified_at: "2026-02-03"
 ---
 
 # أفضل طريقة لبناء ميزانية شهرية واقعية
@@ -37,7 +37,6 @@ last_modified_at: 2026-02-03
 9. [FAQ](#faq)
 
 ---
-
 ## <a id="why-break"></a>لماذا الميزانيات التقليدية لا تصمد؟
 
 أغلب الميزانيات تنهار لسببين: التوقع المبالغ فيه، وغياب نظام المراجعة. حين تفترض أنك ستنفق بأفضل سلوك كل يوم، ستبني خطة لا تتحمل التقلبات الواقعية.
@@ -247,7 +246,6 @@ A realistic monthly budget is built on actual spending data, safe income assumpt
 - ثبّت الخطة: [صفحة الميزانية](/budget/)
 
 ---
-
 ## المراجع (References)
 
 - مفاهيم الميزانية الواقعية وربطها بنمط الإنفاق الفعلي.

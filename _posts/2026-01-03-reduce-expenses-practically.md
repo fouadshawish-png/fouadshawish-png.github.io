@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "خفّض المصاريف عمليًا ووفّر 15% خلال 30 يومًا"
-description: "دليل عملي: خفّض المصاريف عمليًا ووفّر 15% خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /reduce-expenses-practically/
-canonical: https://fouadshawish-png.github.io/reduce-expenses-practically/
-image: /assets/images/posts/reduce-expenses-practically-cover.jpeg
-image_alt: "خفّض المصاريف عمليًا ووفّر 15% خلال 30 يومًا"
-topic: expense-tracking
-level: intermediate
+description: "خفّض المصاريف عمليًا ووفّر 15% خلال 30 يومًا: تحليل واضح للأخطاء الشائعة ثم طريقة التصحيح بأسلوب بسيط وقابل للاستمرار."
 categories:
   - المصاريف
 tags:
   - تنظيم المصاريف
   - تنظيم المصاريف
   - الميزانية
+permalink: "/reduce-expenses-practically/"
+canonical: "https://fouadshawish-png.github.io/reduce-expenses-practically/"
+image: "/assets/images/posts/reduce-expenses-practically-cover.jpeg"
+image_alt: "خفّض المصاريف عمليًا ووفّر 15% خلال 30 يومًا"
 faq:
-  - question: "ما أول خطوة عملية للبدء؟"
-    answer: "ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على التوقع."
-  - question: "كم مرة أراجع الخطة؟"
-    answer: "مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا مع كثرة العمليات."
+  - question: ما أول خطوة عملية للبدء؟
+    answer: ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على
+      التوقع.
+  - question: كم مرة أراجع الخطة؟
+    answer: مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا
+      مع كثرة العمليات.
+level: "intermediate"
+topic: "expense-tracking"
 ---
 
 # تقليل المصاريف بدون ضغط: منهج عملي قابل للاستمرار

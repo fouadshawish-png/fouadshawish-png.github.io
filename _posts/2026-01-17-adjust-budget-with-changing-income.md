@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "عدّل الميزانية مع تغير الدخل خلال 30 يومًا (خطة)"
-description: "دليل عملي: عدّل الميزانية مع تغير الدخل خلال 30 يومًا (خطة). يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /adjust-budget-with-changing-income/
-canonical: https://fouadshawish-png.github.io/adjust-budget-with-changing-income/
-image: /assets/images/posts/adjust-budget-with-changing-income-cover.jpg
-image_alt: "عدّل الميزانية مع تغير الدخل خلال 30 يومًا (خطة)"
-topic: budget
-level: intermediate
+description: "عدّل الميزانية مع تغير الدخل خلال 30 يومًا: إطار عمل واضح يبدأ بالتشخيص ثم ينتقل إلى التنفيذ مع أمثلة مالية مباشرة."
 categories:
   - الميزانية
 tags:
   - الميزانية الشهرية
   - تنظيم المصاريف
   - الميزانية
+permalink: "/adjust-budget-with-changing-income/"
+canonical: "https://fouadshawish-png.github.io/adjust-budget-with-changing-income/"
+image: "/assets/images/posts/adjust-budget-with-changing-income-cover.jpg"
+image_alt: "عدّل الميزانية مع تغير الدخل خلال 30 يومًا (خطة)"
 faq:
-  - question: "ما أول خطوة عملية للبدء؟"
-    answer: "ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على التوقع."
-  - question: "كم مرة أراجع الخطة؟"
-    answer: "مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا مع كثرة العمليات."
+  - question: ما أول خطوة عملية للبدء؟
+    answer: ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على
+      التوقع.
+  - question: كم مرة أراجع الخطة؟
+    answer: مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا
+      مع كثرة العمليات.
+level: "intermediate"
+topic: "budget"
 ---
 
 # تعديل الميزانية عند تغير الدخل: منهج مرن يمنع الفوضى

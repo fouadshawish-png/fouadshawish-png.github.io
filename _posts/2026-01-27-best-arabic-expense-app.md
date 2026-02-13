@@ -1,18 +1,18 @@
 ---
-layout: post
+layout: "post"
 title: "اختر أفضل تطبيق مصاريف عربي خلال 7 أيام (دليل)"
-description: "اختر أفضل تطبيق مصاريف عربي خلال 7 أيام (دليل) — تحليل تطبيقي بخطوات عملية وأمثلة مالية واقعية تساعدك على اتخاذ قرارات أفضل وبناء نظام إنفاق مستقر."
+description: "اختر أفضل تطبيق مصاريف عربي خلال 7 أيام: محتوى عملي يقدّم خطوات واضحة ومؤشرات متابعة تساعدك على تحسين النتيجة خلال أسابيع."
 categories:
   - تنظيم المصاريف
 tags:
   - أفضل تطبيق مصاريف عربي
   - تطبيق مصاريف
   - إدارة الميزانية
-permalink: /best-arabic-expense-app/
-canonical: https://fouadshawish-png.github.io/best-arabic-expense-app/
-image: /assets/images/posts/best-arabic-expense-app-cover.jpeg
+permalink: "/best-arabic-expense-app/"
+canonical: "https://fouadshawish-png.github.io/best-arabic-expense-app/"
+image: "/assets/images/posts/best-arabic-expense-app-cover.jpeg"
 image_alt: "اختر أفضل تطبيق مصاريف عربي خلال 7 أيام (دليل)"
-last_modified_at: 2026-01-27
+last_modified_at: "2026-01-27"
 ---
 
 # أفضل تطبيق مصاريف عربي: معايير الاختيار قبل التحميل
@@ -34,7 +34,6 @@ last_modified_at: 2026-01-27
 9. [FAQ](#faq)
 
 ---
-
 ## <a id="what-best-means"></a>ماذا يعني "أفضل تطبيق" فعليًا؟
 
 الأفضل ليس الأكثر شهرة، بل الأكثر قابلية للاستخدام اليومي بالنسبة لك.

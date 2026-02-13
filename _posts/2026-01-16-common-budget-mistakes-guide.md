@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "تجنّب أخطاء الميزانية ووفّر 15% خلال 30 يومًا (دليل)"
-description: "دليل عملي: تجنّب أخطاء الميزانية ووفّر 15% خلال 30 يومًا (دليل). يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /common-budget-mistakes-guide/
-canonical: https://fouadshawish-png.github.io/common-budget-mistakes-guide/
-image: /assets/images/posts/common-budget-mistakes-guide-cover.jpg
-image_alt: "تجنّب أخطاء الميزانية ووفّر 15% خلال 30 يومًا (دليل)"
-topic: budget
-level: intermediate
+description: "تجنّب أخطاء الميزانية ووفّر 15% خلال 30 يومًا: طريقة واقعية لبناء نظام مالي منضبط عبر خطوات قصيرة قابلة للتطبيق في الحياة اليومية."
 categories:
   - الميزانية
 tags:
   - الميزانية الشهرية
   - تنظيم المصاريف
   - الميزانية
+permalink: "/common-budget-mistakes-guide/"
+canonical: "https://fouadshawish-png.github.io/common-budget-mistakes-guide/"
+image: "/assets/images/posts/common-budget-mistakes-guide-cover.jpg"
+image_alt: "تجنّب أخطاء الميزانية ووفّر 15% خلال 30 يومًا (دليل)"
 faq:
-  - question: "ما أول خطوة عملية للبدء؟"
-    answer: "ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على التوقع."
-  - question: "كم مرة أراجع الخطة؟"
-    answer: "مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا مع كثرة العمليات."
+  - question: ما أول خطوة عملية للبدء؟
+    answer: ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على
+      التوقع.
+  - question: كم مرة أراجع الخطة؟
+    answer: مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا
+      مع كثرة العمليات.
+level: "intermediate"
+topic: "budget"
 ---
 
 # أخطاء الميزانية الشائعة: لماذا تنهار الخطة رغم النية الجيدة

@@ -1,26 +1,29 @@
 ---
-layout: post
+layout: "post"
 title: "كيف تبني ميزانية شهرية من الصفر في 15 دقيقة؟"
-description: "تريد ميزانية شهرية سريعة وواضحة؟ تعلّم طريقة عملية لبناء الميزانية من الصفر في 15 دقيقة. ابدأ تطبيقها فورًا مع تتبع المصاريف."
-permalink: /build-monthly-budget-from-zero-15-min/
-canonical: https://fouadshawish-png.github.io/build-monthly-budget-from-zero-15-min/
-image: /assets/images/posts/build-budget-from-zero-15-min-cover.jpeg
-image_alt: "كيف تبني ميزانية شهرية من الصفر في 15 دقيقة؟"
-topic: budget
-level: intermediate
+description: "كيف تبني ميزانية شهرية من الصفر في 15 دقيقة؟: شرح تطبيقي يوضح الفكرة خطوة بخطوة مع قرارات عملية يمكن تنفيذها من اليوم الأول."
 categories:
   - الميزانية
 tags:
   - المصاريف
   - الميزانية
   - إدارة الأموال
+permalink: "/build-monthly-budget-from-zero-15-min/"
+canonical: "https://fouadshawish-png.github.io/build-monthly-budget-from-zero-15-min/"
+image: "/assets/images/posts/build-budget-from-zero-15-min-cover.jpeg"
+image_alt: "كيف تبني ميزانية شهرية من الصفر في 15 دقيقة؟"
 faq:
-  - question: "ما أول خطوة عملية أبدأ بها اليوم؟"
-    answer: "ابدأ بتسجيل مصاريف 7 أيام متتالية، ثم راجع بندًا واحدًا مرتفعًا وطبّق تعديلًا أسبوعيًا واضحًا."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يساعدك على تتبع المصاريف بدقة واستخراج تقارير سريعة لتحسين الميزانية."
-  - question: "متى أرى نتيجة حقيقية؟"
-    answer: "غالبًا خلال 3 إلى 6 أسابيع إذا التزمت بالمراجعة الأسبوعية واتخذت قرارات تصحيحية صغيرة مستمرة."
+  - question: ما أول خطوة عملية أبدأ بها اليوم؟
+    answer: ابدأ بتسجيل مصاريف 7 أيام متتالية، ثم راجع بندًا واحدًا مرتفعًا وطبّق تعديلًا
+      أسبوعيًا واضحًا.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يساعدك على تتبع المصاريف بدقة واستخراج تقارير
+      سريعة لتحسين الميزانية.
+  - question: متى أرى نتيجة حقيقية؟
+    answer: غالبًا خلال 3 إلى 6 أسابيع إذا التزمت بالمراجعة الأسبوعية واتخذت قرارات
+      تصحيحية صغيرة مستمرة.
+level: "intermediate"
+topic: "budget"
 ---
 
 # كيف تبني ميزانية شهرية من الصفر في 15 دقيقة؟

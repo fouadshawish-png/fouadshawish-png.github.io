@@ -1,18 +1,18 @@
 ---
-layout: post
+layout: "post"
 title: "سدّد الديون بسرعة وحرّر الميزانية خلال 90 يومًا (خطة)"
-description: "سدّد الديون بسرعة وحرّر الميزانية خلال 90 يومًا (خطة) — تحليل تطبيقي بخطوات عملية وأمثلة مالية واقعية تساعدك على اتخاذ قرارات أفضل وبناء نظام إنفاق مستقر."
+description: "سدّد الديون بسرعة وحرّر الميزانية خلال 90 يومًا: شرح تطبيقي يوضح الفكرة خطوة بخطوة مع قرارات عملية يمكن تنفيذها من اليوم الأول."
 categories:
   - الديون
 tags:
   - تسديد الديون بسرعة
   - إدارة الديون
   - التخطيط المالي
-permalink: /fast-debt-repayment-method/
-canonical: https://fouadshawish-png.github.io/fast-debt-repayment-method/
-image: /assets/images/posts/fast-debt-repayment-method-cover.jpg
+permalink: "/fast-debt-repayment-method/"
+canonical: "https://fouadshawish-png.github.io/fast-debt-repayment-method/"
+image: "/assets/images/posts/fast-debt-repayment-method-cover.jpg"
 image_alt: "سدّد الديون بسرعة وحرّر الميزانية خلال 90 يومًا (خطة)"
-last_modified_at: 2026-01-23
+last_modified_at: "2026-01-23"
 ---
 
 # طريقة تسديد الديون بسرعة بدون فوضى مالية
@@ -34,7 +34,6 @@ last_modified_at: 2026-01-23
 9. [FAQ](#faq)
 
 ---
-
 ## <a id="is-possible"></a>هل يمكن تسديد الديون بسرعة فعلاً؟
 
 نعم، لكن بشرط أن تكون السرعة "مستدامة" لا "اندفاعية". كثير من الناس يدفعون مبلغًا كبيرًا أول شهر ثم ينهارون في الشهر التالي. هذه ليست سرعة حقيقية، بل قفزة غير مستقرة.

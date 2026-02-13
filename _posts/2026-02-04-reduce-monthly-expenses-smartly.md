@@ -1,19 +1,19 @@
 ---
-layout: post
+layout: "post"
 title: "قلّل المصاريف الشهرية بذكاء ووفّر 20% خلال 30 يومًا"
-description: "دليل عملي: قلّل المصاريف الشهرية بذكاء ووفّر 20% خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
+description: "قلّل المصاريف الشهرية بذكاء ووفّر 20% خلال 30 يومًا: دليل عملي مختصر يركز على ما يجب فعله فعليًا، مع أمثلة واقعية تساعدك على الالتزام."
 categories:
   - تنظيم المصاريف
 tags:
   - تقليل المصاريف
   - إدارة الأموال
   - ميزانية شهرية
-permalink: /reduce-monthly-expenses-smartly/
-canonical: https://fouadshawish-png.github.io/reduce-monthly-expenses-smartly/
-image: /assets/images/posts/reduce-monthly-expenses-smartly-cover.jpg
+permalink: "/reduce-monthly-expenses-smartly/"
+canonical: "https://fouadshawish-png.github.io/reduce-monthly-expenses-smartly/"
+image: "/assets/images/posts/reduce-monthly-expenses-smartly-cover.jpg"
 image_alt: "قلّل المصاريف الشهرية بذكاء ووفّر 20% خلال 30 يومًا"
 editor_note: "عند مراجعة الإنفاق الفعلي، أكثر التخفيضات تأثيرًا جاءت من بندين متكررين، لا من عشرات البنود الصغيرة. التركيز على الأعلى أثرًا يختصر الوقت."
-last_modified_at: 2026-02-04
+last_modified_at: "2026-02-04"
 ---
 
 # كيفية تقليل المصاريف الشهرية بدون حرمان
@@ -37,7 +37,6 @@ last_modified_at: 2026-02-04
 9. [FAQ](#faq)
 
 ---
-
 ## <a id="why-fail"></a>لماذا تفشل خطط تقليل المصروفات؟
 
 الفشل غالبًا لا يكون بسبب ضعف الإرادة، بل بسبب تصميم الخطة نفسها. عندما تضع خطة شديدة جدًا، تصبح حياتك اليومية أصعب، فتبدأ بالمقاومة النفسية ثم التراجع.

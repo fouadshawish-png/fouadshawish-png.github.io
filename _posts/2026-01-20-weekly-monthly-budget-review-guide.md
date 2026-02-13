@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "راجع الميزانية أسبوعيًا في 10 دقائق (خطة شهرية)"
-description: "راجع الميزانية أسبوعيًا في 10 دقائق (خطة شهرية) — تحليل تطبيقي بخطوات عملية وأمثلة مالية واقعية تساعدك على اتخاذ قرارات أفضل وبناء نظام إنفاق مستقر."
-permalink: /weekly-monthly-budget-review-guide/
-canonical: https://fouadshawish-png.github.io/weekly-monthly-budget-review-guide/
-image: /assets/images/posts/weekly-monthly-budget-review-guide-cover.jpeg
-image_alt: "راجع الميزانية أسبوعيًا في 10 دقائق (خطة شهرية)"
-topic: budget
-level: intermediate
+description: "راجع الميزانية أسبوعيًا في 10 دقائق: شرح من واقع التطبيق يركز على القرارات الأعلى أثرًا بدل التشتت في التفاصيل."
 categories:
   - الميزانية
 tags:
   - الميزانية الشهرية
   - تنظيم المصاريف
   - الميزانية
+permalink: "/weekly-monthly-budget-review-guide/"
+canonical: "https://fouadshawish-png.github.io/weekly-monthly-budget-review-guide/"
+image: "/assets/images/posts/weekly-monthly-budget-review-guide-cover.jpeg"
+image_alt: "راجع الميزانية أسبوعيًا في 10 دقائق (خطة شهرية)"
 faq:
-  - question: "ما أول خطوة عملية للبدء؟"
-    answer: "ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على التوقع."
-  - question: "كم مرة أراجع الخطة؟"
-    answer: "مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا مع كثرة العمليات."
+  - question: ما أول خطوة عملية للبدء؟
+    answer: ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على
+      التوقع.
+  - question: كم مرة أراجع الخطة؟
+    answer: مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا
+      مع كثرة العمليات.
+level: "intermediate"
+topic: "budget"
 ---
 
 # مراجعة الميزانية: النظام الأسبوعي الذي يحافظ على التوازن

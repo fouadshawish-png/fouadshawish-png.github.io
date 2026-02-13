@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "ابنِ نموذج مصاريف شهرية واضح خلال 30 يومًا (طريقة)"
-description: "دليل عملي: ابنِ نموذج مصاريف شهرية واضح خلال 30 يومًا (طريقة). يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /typical-monthly-expenses-model/
-canonical: https://fouadshawish-png.github.io/typical-monthly-expenses-model/
-image: /assets/images/posts/typical-monthly-expenses-model-cover.jpg
-image_alt: "ابنِ نموذج مصاريف شهرية واضح خلال 30 يومًا (طريقة)"
-topic: expense-tracking
-level: intermediate
+description: "ابنِ نموذج مصاريف شهرية واضح خلال 30 يومًا: محتوى عملي يقدّم خطوات واضحة ومؤشرات متابعة تساعدك على تحسين النتيجة خلال أسابيع."
 categories:
   - المصاريف
 tags:
   - تنظيم المصاريف
   - تنظيم المصاريف
   - الميزانية
+permalink: "/typical-monthly-expenses-model/"
+canonical: "https://fouadshawish-png.github.io/typical-monthly-expenses-model/"
+image: "/assets/images/posts/typical-monthly-expenses-model-cover.jpg"
+image_alt: "ابنِ نموذج مصاريف شهرية واضح خلال 30 يومًا (طريقة)"
 faq:
-  - question: "ما أول خطوة عملية للبدء؟"
-    answer: "ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على التوقع."
-  - question: "كم مرة أراجع الخطة؟"
-    answer: "مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا مع كثرة العمليات."
+  - question: ما أول خطوة عملية للبدء؟
+    answer: ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على
+      التوقع.
+  - question: كم مرة أراجع الخطة؟
+    answer: مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا
+      مع كثرة العمليات.
+level: "intermediate"
+topic: "expense-tracking"
 ---
 
 # مصاريف شهرية نموذجية: كيف تبني نموذجًا يناسب واقعك

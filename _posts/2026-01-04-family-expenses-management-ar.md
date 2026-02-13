@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "نظّم مصاريف الأسرة وقلّل الهدر خلال 30 يومًا (خطة)"
-description: "دليل عملي: نظّم مصاريف الأسرة وقلّل الهدر خلال 30 يومًا (خطة). يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /family-expenses-management-ar/
-canonical: https://fouadshawish-png.github.io/family-expenses-management-ar/
-image: /assets/images/posts/family-expenses-management-ar-cover.jpg
-image_alt: "نظّم مصاريف الأسرة وقلّل الهدر خلال 30 يومًا (خطة)"
-topic: expense-tracking
-level: intermediate
+description: "نظّم مصاريف الأسرة وقلّل الهدر خلال 30 يومًا: خطة تنفيذ عملية تربط بين التتبع والقرار والمراجعة الأسبوعية دون تعقيد."
 categories:
   - المصاريف
 tags:
   - تنظيم المصاريف
   - تنظيم المصاريف
   - الميزانية
+permalink: "/family-expenses-management-ar/"
+canonical: "https://fouadshawish-png.github.io/family-expenses-management-ar/"
+image: "/assets/images/posts/family-expenses-management-ar-cover.jpg"
+image_alt: "نظّم مصاريف الأسرة وقلّل الهدر خلال 30 يومًا (خطة)"
 faq:
-  - question: "ما أول خطوة عملية للبدء؟"
-    answer: "ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على التوقع."
-  - question: "كم مرة أراجع الخطة؟"
-    answer: "مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا مع كثرة العمليات."
+  - question: ما أول خطوة عملية للبدء؟
+    answer: ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على
+      التوقع.
+  - question: كم مرة أراجع الخطة؟
+    answer: مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا
+      مع كثرة العمليات.
+level: "intermediate"
+topic: "expense-tracking"
 ---
 
 # مصاريف الأسرة: نظام واضح لضبط إنفاق البيت خطوة بخطوة

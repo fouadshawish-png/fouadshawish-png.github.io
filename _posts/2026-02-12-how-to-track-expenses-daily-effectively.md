@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "تتبّع المصاريف يوميًا وقلّل الهدر خلال 30 يومًا (دليل)"
-description: "دليل عملي: تتبّع المصاريف يوميًا وقلّل الهدر خلال 30 يومًا (دليل). يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
+description: "تتبّع المصاريف يوميًا وقلّل الهدر خلال 30 يومًا: تفصيل منهجي يساعدك على تحويل النصائح العامة إلى خطوات تنفيذية تقاس بالنتائج."
 categories:
   - تتبع المصاريف
 tags:
   - تتبع المصاريف
   - تنظيم المصاريف
   - expense manager
-permalink: /how-to-track-expenses-daily-effectively/
-canonical: https://fouadshawish-png.github.io/how-to-track-expenses-daily-effectively/
-image: /assets/images/posts/how-to-track-expenses-daily-effectively-cover.jpg
+permalink: "/how-to-track-expenses-daily-effectively/"
+canonical: "https://fouadshawish-png.github.io/how-to-track-expenses-daily-effectively/"
+image: "/assets/images/posts/how-to-track-expenses-daily-effectively-cover.jpg"
 image_alt: "تتبّع المصاريف يوميًا وقلّل الهدر خلال 30 يومًا (دليل)"
 faq:
-  - question: "كم دقيقة يحتاج تتبع المصاريف يوميًا؟"
-    answer: "في المتوسط من 3 إلى 7 دقائق يوميًا إذا كان التصنيف واضحًا وطريقة التسجيل ثابتة."
-  - question: "هل يجب تسجيل كل عملية حتى الصغيرة؟"
-    answer: "نعم في أول 30 يومًا على الأقل، لأن المصاريف الصغيرة المتكررة تكشف مصدر الهدر الحقيقي."
-  - question: "ما أفضل وقت للمراجعة اليومية؟"
-    answer: "أفضل وقت هو نهاية اليوم أو بعد كل عملية مباشرة، حسب نمط يومك ومدى انشغالك."
+  - question: كم دقيقة يحتاج تتبع المصاريف يوميًا؟
+    answer: في المتوسط من 3 إلى 7 دقائق يوميًا إذا كان التصنيف واضحًا وطريقة التسجيل
+      ثابتة.
+  - question: هل يجب تسجيل كل عملية حتى الصغيرة؟
+    answer: نعم في أول 30 يومًا على الأقل، لأن المصاريف الصغيرة المتكررة تكشف مصدر الهدر
+      الحقيقي.
+  - question: ما أفضل وقت للمراجعة اليومية؟
+    answer: أفضل وقت هو نهاية اليوم أو بعد كل عملية مباشرة، حسب نمط يومك ومدى انشغالك.
 editor_note: "أقصر طريق لنجاح التتبع اليومي هو تقليل الاحتكاك: إدخال سريع وفئة واضحة. أي تعقيد إضافي يجعل المستخدم يتوقف خلال أيام."
-last_modified_at: 2026-02-12
+last_modified_at: "2026-02-12"
 ---
 
 # أفضل طريقة لتتبع المصاريف يوميًا بدون ملل
@@ -264,5 +266,4 @@ A simple 30-day system can reduce invisible spending and improve financial clari
 أفضل وقت هو نهاية اليوم أو بعد كل عملية مباشرة، حسب نمط يومك ومدى انشغالك.
 
 ---
-
 إذا طبقت ما سبق 30 يومًا، ستنتقل من "تخمين مالي" إلى "قرارات مالية واعية". وهذا وحده يغير طريقة تعاملك مع المال بالكامل.

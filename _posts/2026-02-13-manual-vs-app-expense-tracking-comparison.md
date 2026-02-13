@@ -1,26 +1,29 @@
 ---
-layout: post
+layout: "post"
 title: "تسجيل المصاريف يدويًا أم عبر تطبيق؟"
-description: "تسجيل المصاريف يدويًا أم بالتطبيق؟ تعرّف على مقارنة عملية في الدقة والسرعة والالتزام. اختر الطريقة الأنسب لميزانيتك وإدارة أموالك."
-permalink: /manual-vs-app-expense-tracking-comparison/
-canonical: https://fouadshawish-png.github.io/manual-vs-app-expense-tracking-comparison/
-image: /assets/images/posts/manual-vs-app-expense-tracking-comparison-cover.jpeg
-image_alt: "تسجيل المصاريف يدويًا أم عبر تطبيق؟"
-topic: expense-tracking
-level: intermediate
+description: "تسجيل المصاريف يدويًا أم عبر تطبيق؟: دليل عملي مختصر يركز على ما يجب فعله فعليًا، مع أمثلة واقعية تساعدك على الالتزام."
 categories:
   - المصاريف
 tags:
   - المصاريف
   - الميزانية
   - إدارة الأموال
+permalink: "/manual-vs-app-expense-tracking-comparison/"
+canonical: "https://fouadshawish-png.github.io/manual-vs-app-expense-tracking-comparison/"
+image: "/assets/images/posts/manual-vs-app-expense-tracking-comparison-cover.jpeg"
+image_alt: "تسجيل المصاريف يدويًا أم عبر تطبيق؟"
 faq:
-  - question: "ما أول خطوة عملية أبدأ بها اليوم؟"
-    answer: "ابدأ بتسجيل مصاريف 7 أيام متتالية، ثم راجع بندًا واحدًا مرتفعًا وطبّق تعديلًا أسبوعيًا واضحًا."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يساعدك على تتبع المصاريف بدقة واستخراج تقارير سريعة لتحسين الميزانية."
-  - question: "متى أرى نتيجة حقيقية؟"
-    answer: "غالبًا خلال 3 إلى 6 أسابيع إذا التزمت بالمراجعة الأسبوعية واتخذت قرارات تصحيحية صغيرة مستمرة."
+  - question: ما أول خطوة عملية أبدأ بها اليوم؟
+    answer: ابدأ بتسجيل مصاريف 7 أيام متتالية، ثم راجع بندًا واحدًا مرتفعًا وطبّق تعديلًا
+      أسبوعيًا واضحًا.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يساعدك على تتبع المصاريف بدقة واستخراج تقارير
+      سريعة لتحسين الميزانية.
+  - question: متى أرى نتيجة حقيقية؟
+    answer: غالبًا خلال 3 إلى 6 أسابيع إذا التزمت بالمراجعة الأسبوعية واتخذت قرارات
+      تصحيحية صغيرة مستمرة.
+level: "intermediate"
+topic: "expense-tracking"
 ---
 
 # تسجيل المصاريف يدويًا أم عبر تطبيق؟

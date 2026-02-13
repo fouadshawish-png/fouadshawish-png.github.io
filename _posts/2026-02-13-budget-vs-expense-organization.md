@@ -1,25 +1,26 @@
 ---
-layout: post
+layout: "post"
 title: "الفرق بين الميزانية وتنظيم المصاريف"
-description: "شرح واضح للفارق بين الميزانية وتنظيم المصاريف وكيف يكمّل كل منهما الآخر لبناء نظام مالي فعال."
-permalink: /difference-between-budget-and-expense-organization/
-canonical: https://fouadshawish-png.github.io/difference-between-budget-and-expense-organization/
+description: "الفرق بين الميزانية وتنظيم المصاريف: شرح من واقع التطبيق يركز على القرارات الأعلى أثرًا بدل التشتت في التفاصيل."
 categories:
   - الميزانية
 tags:
   - تنظيم المصاريف
   - بناء ميزانية شهرية
   - إدارة الأموال الشخصية
-topic: budget
-level: beginner
-sitemap_priority: 0.7
+permalink: "/difference-between-budget-and-expense-organization/"
+canonical: "https://fouadshawish-png.github.io/difference-between-budget-and-expense-organization/"
 faq:
-  - question: "هل أبدأ بالميزانية أم بتتبع المصاريف؟"
-    answer: "ابدأ بالتتبع القصير أولًا لفهم الواقع، ثم ابنِ ميزانية مبنية على بيانات فعلية."
-  - question: "لماذا لا تكفي الميزانية وحدها؟"
-    answer: "لأنها خطة مسبقة، وتحتاج تتبعًا ومراجعة لتتأكد أن التنفيذ يسير حسب الخطة."
-  - question: "هل تنظيم المصاريف يغني عن الميزانية؟"
-    answer: "لا، لأنه يشرح ما حدث لكنه لا يحدد توزيع الدخل مسبقًا مثل الميزانية."
+  - question: هل أبدأ بالميزانية أم بتتبع المصاريف؟
+    answer: ابدأ بالتتبع القصير أولًا لفهم الواقع، ثم ابنِ ميزانية مبنية على بيانات
+      فعلية.
+  - question: لماذا لا تكفي الميزانية وحدها؟
+    answer: لأنها خطة مسبقة، وتحتاج تتبعًا ومراجعة لتتأكد أن التنفيذ يسير حسب الخطة.
+  - question: هل تنظيم المصاريف يغني عن الميزانية؟
+    answer: لا، لأنه يشرح ما حدث لكنه لا يحدد توزيع الدخل مسبقًا مثل الميزانية.
+level: "beginner"
+sitemap_priority: "0.7"
+topic: "budget"
 ---
 
 هل الميزانية هي نفسها تنظيم المصاريف، أم أن كل واحد منهما يؤدي وظيفة مختلفة؟ هذا السؤال يحدد جودة نظامك المالي بالكامل، لأن الخلط بين المفهومين يجعل الناس يظنون أنهم يطبقون الخطة بينما هم فقط يسجلون الأرقام.

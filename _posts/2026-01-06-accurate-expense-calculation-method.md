@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "احسب المصاريف بدقة وتجنب العجز خلال 30 يومًا"
-description: "دليل عملي: احسب المصاريف بدقة وتجنب العجز خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /accurate-expense-calculation-method/
-canonical: https://fouadshawish-png.github.io/accurate-expense-calculation-method/
-image: /assets/images/posts/accurate-expense-calculation-method-cover.jpeg
-image_alt: "احسب المصاريف بدقة وتجنب العجز خلال 30 يومًا"
-topic: expense-tracking
-level: intermediate
+description: "احسب المصاريف بدقة وتجنب العجز خلال 30 يومًا: طريقة واقعية لبناء نظام مالي منضبط عبر خطوات قصيرة قابلة للتطبيق في الحياة اليومية."
 categories:
   - المصاريف
 tags:
   - تنظيم المصاريف
   - تنظيم المصاريف
   - الميزانية
+permalink: "/accurate-expense-calculation-method/"
+canonical: "https://fouadshawish-png.github.io/accurate-expense-calculation-method/"
+image: "/assets/images/posts/accurate-expense-calculation-method-cover.jpeg"
+image_alt: "احسب المصاريف بدقة وتجنب العجز خلال 30 يومًا"
 faq:
-  - question: "ما أول خطوة عملية للبدء؟"
-    answer: "ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على التوقع."
-  - question: "كم مرة أراجع الخطة؟"
-    answer: "مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا مع كثرة العمليات."
+  - question: ما أول خطوة عملية للبدء؟
+    answer: ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على
+      التوقع.
+  - question: كم مرة أراجع الخطة؟
+    answer: مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا
+      مع كثرة العمليات.
+level: "intermediate"
+topic: "expense-tracking"
 ---
 
 # حساب المصاريف بدقة: طريقة عملية تمنع مفاجآت نهاية الشهر

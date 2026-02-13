@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "ابنِ ميزانية شخصية واضحة وقلّل الهدر خلال 30 يومًا"
-description: "دليل عملي: ابنِ ميزانية شخصية واضحة وقلّل الهدر خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /personal-budget-system-guide/
-canonical: https://fouadshawish-png.github.io/personal-budget-system-guide/
-image: /assets/images/posts/personal-budget-system-guide-cover.jpg
-image_alt: "ابنِ ميزانية شخصية واضحة وقلّل الهدر خلال 30 يومًا"
-topic: budget
-level: intermediate
+description: "ابنِ ميزانية شخصية واضحة وقلّل الهدر خلال 30 يومًا: عرض عملي يوازن بين الانضباط والمرونة حتى تستمر الخطة بدون ضغط مبالغ فيه."
 categories:
   - الميزانية
 tags:
   - الميزانية الشهرية
   - تنظيم المصاريف
   - الميزانية
+permalink: "/personal-budget-system-guide/"
+canonical: "https://fouadshawish-png.github.io/personal-budget-system-guide/"
+image: "/assets/images/posts/personal-budget-system-guide-cover.jpg"
+image_alt: "ابنِ ميزانية شخصية واضحة وقلّل الهدر خلال 30 يومًا"
 faq:
-  - question: "ما أول خطوة عملية للبدء؟"
-    answer: "ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على التوقع."
-  - question: "كم مرة أراجع الخطة؟"
-    answer: "مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا مع كثرة العمليات."
+  - question: ما أول خطوة عملية للبدء؟
+    answer: ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على
+      التوقع.
+  - question: كم مرة أراجع الخطة؟
+    answer: مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا
+      مع كثرة العمليات.
+level: "intermediate"
+topic: "budget"
 ---
 
 # ميزانية شخصية عملية: بناء نظام مالي يومي للفرد

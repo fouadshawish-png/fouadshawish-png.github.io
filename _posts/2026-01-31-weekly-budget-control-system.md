@@ -1,19 +1,19 @@
 ---
-layout: post
+layout: "post"
 title: "اضبط الميزانية أسبوعيًا وامنع الانهيار في 10 دقائق"
-description: "اضبط الميزانية أسبوعيًا وامنع الانهيار في 10 دقائق — تحليل تطبيقي بخطوات عملية وأمثلة مالية واقعية تساعدك على اتخاذ قرارات أفضل وبناء نظام إنفاق مستقر."
+description: "اضبط الميزانية أسبوعيًا وامنع الانهيار في 10 دقائق: عرض عملي يوازن بين الانضباط والمرونة حتى تستمر الخطة بدون ضغط مبالغ فيه."
 categories:
   - الميزانية
 tags:
   - مراجعة أسبوعية
   - ميزانية شهرية
   - تتبع المصاريف
-permalink: /weekly-budget-control-system/
-canonical: https://fouadshawish-png.github.io/weekly-budget-control-system/
-image: /assets/images/posts/weekly-budget-control-system-cover.jpeg
+permalink: "/weekly-budget-control-system/"
+canonical: "https://fouadshawish-png.github.io/weekly-budget-control-system/"
+image: "/assets/images/posts/weekly-budget-control-system-cover.jpeg"
 image_alt: "اضبط الميزانية أسبوعيًا وامنع الانهيار في 10 دقائق"
 editor_note: "أكثر نقطة حسنت الالتزام هي تحديد سؤال أسبوعي ثابت: ما بند التجاوز الرئيسي هذا الأسبوع؟ هذا السؤال وحده يوجه القرار التالي."
-last_modified_at: 2026-01-31
+last_modified_at: "2026-01-31"
 ---
 
 # مراجعة الميزانية الأسبوعية: النظام الذي يمنع الانهيار
@@ -37,7 +37,6 @@ last_modified_at: 2026-01-31
 9. [FAQ](#faq)
 
 ---
-
 ## <a id="weekly-vs-monthly"></a>لماذا المراجعة الأسبوعية أهم من المراجعة الشهرية؟
 
 المراجعة الشهرية مفيدة للتقييم النهائي، لكن الأسبوعية مهمة للتصحيح المبكر. عندما تنتظر نهاية الشهر، تكون التجاوزات قد تراكمت وصار علاجها أصعب.

@@ -1,26 +1,28 @@
 ---
-layout: post
+layout: "post"
 title: "أنشئ ميزانية شهرية ناجحة في 5 خطوات خلال 30 يومًا"
-description: "دليل عملي: أنشئ ميزانية شهرية ناجحة في 5 خطوات خلال 30 يومًا. يقدّم خطوات تنفيذية وأمثلة واقعية تساعدك على تحسين القرار المالي وتقليل الهدر بدون تعقيد."
-permalink: /how-to-create-budget-step-by-step/
-canonical: https://fouadshawish-png.github.io/how-to-create-budget-step-by-step/
-image: /assets/images/posts/how-to-create-budget-step-by-step-cover.jpg
-image_alt: "أنشئ ميزانية شهرية ناجحة في 5 خطوات خلال 30 يومًا"
-topic: budget
-level: intermediate
+description: "أنشئ ميزانية شهرية ناجحة في 5 خطوات خلال 30 يومًا: تحليل واضح للأخطاء الشائعة ثم طريقة التصحيح بأسلوب بسيط وقابل للاستمرار."
 categories:
   - الميزانية
 tags:
   - الميزانية الشهرية
   - تنظيم المصاريف
   - الميزانية
+permalink: "/how-to-create-budget-step-by-step/"
+canonical: "https://fouadshawish-png.github.io/how-to-create-budget-step-by-step/"
+image: "/assets/images/posts/how-to-create-budget-step-by-step-cover.jpg"
+image_alt: "أنشئ ميزانية شهرية ناجحة في 5 خطوات خلال 30 يومًا"
 faq:
-  - question: "ما أول خطوة عملية للبدء؟"
-    answer: "ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على التوقع."
-  - question: "كم مرة أراجع الخطة؟"
-    answer: "مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود."
-  - question: "هل أحتاج تطبيقًا من البداية؟"
-    answer: "يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا مع كثرة العمليات."
+  - question: ما أول خطوة عملية للبدء؟
+    answer: ابدأ بتسجيل الواقع المالي لمدة أسبوعين، ثم ابْنِ قرارك على البيانات لا على
+      التوقع.
+  - question: كم مرة أراجع الخطة؟
+    answer: مرة أسبوعيًا كحد أدنى، مع مراجعة شهرية أشمل لضبط السقوف وتحديث البنود.
+  - question: هل أحتاج تطبيقًا من البداية؟
+    answer: يمكن البدء يدويًا، لكن التطبيق يختصر وقت التحليل ويزيد الاستمرارية خصوصًا
+      مع كثرة العمليات.
+level: "intermediate"
+topic: "budget"
 ---
 
 # كيفية إعداد ميزانية خطوة بخطوة بطريقة عملية واضحة
