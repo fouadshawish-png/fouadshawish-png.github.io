@@ -18,6 +18,12 @@
 {% endif %}
 {% assign default_og_image = '/assets/images/og-default.jpg' | absolute_url %}
 {% assign page_og_image = page.og_image | default: page.image | default: '/assets/images/og-default.jpg' | absolute_url %}
+{% assign og_image_type = 'image/jpeg' %}
+{% if page_og_image contains '.png' %}
+  {% assign og_image_type = 'image/png' %}
+{% elsif page_og_image contains '.webp' %}
+  {% assign og_image_type = 'image/webp' %}
+{% endif %}
 {% assign og_type = page.og_type | default: 'website' %}
 
 <title>{{ page_title | strip }}</title>
@@ -61,6 +67,7 @@
 <meta property="og:url" content="{{ canonical_url }}">
 <meta property="og:image" content="{{ page_og_image }}">
 <meta property="og:image:secure_url" content="{{ page_og_image }}">
+<meta property="og:image:type" content="{{ og_image_type }}">
 <meta property="og:image:alt" content="{{ page.image_alt | default: page.title | default: site.title }}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:locale" content="{{ site.locale | default: 'ar_AR' }}">
@@ -73,6 +80,7 @@
 <meta name="twitter:title" content="{{ page_title }}">
 <meta name="twitter:description" content="{{ page_description }}">
 <meta name="twitter:image" content="{{ page_og_image }}">
+<meta name="twitter:image:alt" content="{{ page.image_alt | default: page.title | default: site.title }}">
 <meta name="twitter:url" content="{{ canonical_url }}">
 {% else %}
 <!-- Open Graph: Website -->
@@ -82,6 +90,7 @@
 <meta property="og:url" content="{{ canonical_url }}">
 <meta property="og:image" content="{{ page_og_image | default: default_og_image }}">
 <meta property="og:image:secure_url" content="{{ page_og_image | default: default_og_image }}">
+<meta property="og:image:type" content="{{ og_image_type }}">
 <meta property="og:image:alt" content="{{ page.image_alt | default: page.title | default: site.title }}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:locale" content="{{ site.locale | default: 'ar_AR' }}">
@@ -91,6 +100,7 @@
 <meta name="twitter:title" content="{{ page_title }}">
 <meta name="twitter:description" content="{{ page_description }}">
 <meta name="twitter:image" content="{{ page_og_image | default: default_og_image }}">
+<meta name="twitter:image:alt" content="{{ page.image_alt | default: page.title | default: site.title }}">
 <meta name="twitter:url" content="{{ canonical_url }}">
 {% endif %}
 
