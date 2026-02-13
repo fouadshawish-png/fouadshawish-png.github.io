@@ -319,5 +319,18 @@
       })();
     </script>
     {% endunless %}
+    <script>
+    document.addEventListener("click", function(e) {
+      var link = e.target.closest("a");
+      if (!link) return;
+
+      if (link.href.includes("play.google.com")) {
+        gtag('event', 'download_click', {
+          event_category: 'conversion',
+          event_label: link.href
+        });
+      }
+    });
+    </script>
   </body>
 </html>
