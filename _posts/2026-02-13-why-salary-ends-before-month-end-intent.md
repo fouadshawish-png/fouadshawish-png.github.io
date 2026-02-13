@@ -10,6 +10,8 @@ tags:
   - إدارة الأموال
 permalink: "/why-salary-ends-before-month-end/"
 canonical: "https://fouadshawish-png.github.io/why-salary-ends-before-month-end/"
+image: "/assets/images/posts/2.webp"
+image_alt: "لماذا ينتهي الراتب قبل نهاية الشهر؟"
 faq:
   - question: كيف أبدأ ميزانية إذا كان دخلي متغير؟
     answer: ابدأ بدخل أساسي محافظ، ثم وزّع المصاريف الضرورية أولًا، واجعل البنود المرنة

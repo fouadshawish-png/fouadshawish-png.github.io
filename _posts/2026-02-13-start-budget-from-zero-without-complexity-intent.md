@@ -10,6 +10,8 @@ tags:
   - إدارة الأموال
 permalink: "/start-budget-from-zero-without-complexity/"
 canonical: "https://fouadshawish-png.github.io/start-budget-from-zero-without-complexity/"
+image: "/assets/images/posts/19.jpeg"
+image_alt: "كيف تبدأ ميزانية من الصفر بدون تعقيد خلال 15 دقيقة؟"
 faq:
   - question: كيف أبني ميزانية إذا كان راتبي يدخل على دفعات؟
     answer: قسّم الميزانية على دفعات الدخل، وابدأ دائمًا بتغطية الضروريات ثم سداد الالتزامات

@@ -10,6 +10,8 @@ tags:
   - بناء ميزانية شهرية
 permalink: "/fast-debt-repayment-method-intent/"
 canonical: "https://fouadshawish-png.github.io/fast-debt-repayment-method-intent/"
+image: "/assets/images/posts/15.jpeg"
+image_alt: "طريقة سداد الديون بسرعة"
 faq:
   - question: ما أفضل طريقة لسداد أكثر من دين؟
     answer: رتّب الديون حسب الأولوية والتكلفة، وثبّت دفعة شهرية واضحة مع عدم إنشاء ديون

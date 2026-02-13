@@ -10,6 +10,8 @@ tags:
   - مراجعة الميزانية
 permalink: "/review-expenses-weekly/"
 canonical: "https://fouadshawish-png.github.io/review-expenses-weekly/"
+image: "/assets/images/posts/18.jpeg"
+image_alt: "كيف أراجع مصاريفي أسبوعيًا؟"
 faq:
   - question: كم تستغرق المراجعة الأسبوعية؟
     answer: غالبًا بين 10 و15 دقيقة إذا كانت البيانات مسجلة بشكل جيد يوميًا.

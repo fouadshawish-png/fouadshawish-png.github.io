@@ -10,6 +10,8 @@ tags:
   - إدارة الأموال الشخصية
 permalink: "/reduce-expenses-without-deprivation-intent/"
 canonical: "https://fouadshawish-png.github.io/reduce-expenses-without-deprivation-intent/"
+image: "/assets/images/posts/17.jpeg"
+image_alt: "كيف تقلل المصاريف بدون حرمان خلال 30 يومًا؟"
 faq:
   - question: هل التقليل يعني إلغاء كل المصاريف الترفيهية؟
     answer: لا، الهدف هو ضبط البنود عالية التأثير وليس منع كل المصروفات.

@@ -10,6 +10,8 @@ tags:
   - إدارة الأموال الشخصية
 permalink: "/difference-between-budget-and-expense-organization/"
 canonical: "https://fouadshawish-png.github.io/difference-between-budget-and-expense-organization/"
+image: "/assets/images/posts/12.jpg"
+image_alt: "الفرق بين الميزانية وتنظيم المصاريف في 10 دقائق"
 faq:
   - question: هل أبدأ بالميزانية أم بتتبع المصاريف؟
     answer: ابدأ بالتتبع القصير أولًا لفهم الواقع، ثم ابنِ ميزانية مبنية على بيانات

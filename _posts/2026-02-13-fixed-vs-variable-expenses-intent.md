@@ -10,6 +10,8 @@ tags:
   - تتبع المصاريف
 permalink: "/fixed-vs-variable-expenses/"
 canonical: "https://fouadshawish-png.github.io/fixed-vs-variable-expenses/"
+image: "/assets/images/posts/16.jpeg"
+image_alt: "الفرق بين المصاريف الثابتة والمتغيرة (طريقة تصنيف عملية)"
 faq:
   - question: كيف أحدد إن كان المصروف ثابتًا أو متغيرًا؟
     answer: إذا كان يتكرر بقيمة شبه ثابتة وفي موعد متقارب فهو غالبًا ثابت، وما يتغير

@@ -10,6 +10,8 @@ tags:
   - إدارة الأموال الشخصية
 permalink: "/budget-from-3000-salary/"
 canonical: "https://fouadshawish-png.github.io/budget-from-3000-salary/"
+image: "/assets/images/posts/10.jpeg"
+image_alt: "كيف أبدأ ميزانية من راتب 3000؟"
 faq:
   - question: هل يمكن الادخار فعلًا من راتب 3000؟
     answer: نعم، إذا بُنيت الميزانية على الأولويات وحدود أسبوعية واضحة، ولو بادخار صغير

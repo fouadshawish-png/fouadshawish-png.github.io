@@ -10,6 +10,8 @@ tags:
   - تنظيم المصاريف
 permalink: "/best-way-to-split-salary-monthly/"
 canonical: "https://fouadshawish-png.github.io/best-way-to-split-salary-monthly/"
+image: "/assets/images/posts/1.jpeg"
+image_alt: "أفضل طريقة لتقسيم الراتب شهريًا"
 faq:
   - question: ما أول نسبة يجب تحديدها عند تقسيم الراتب؟
     answer: ابدأ بتغطية الضروريات أولًا قبل أي نسب أخرى، ثم خصص نسبة للالتزامات والادخار

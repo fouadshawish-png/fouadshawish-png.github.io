@@ -10,6 +10,8 @@ tags:
   - مقارنة
 permalink: "/expense-app-vs-excel/"
 canonical: "https://fouadshawish-png.github.io/expense-app-vs-excel/"
+image: "/assets/images/posts/14.jpg"
+image_alt: "هل تطبيق المصاريف أفضل من Excel؟ مقارنة عملية في 7 نقاط"
 faq:
   - question: متى يكون Excel كافيًا لإدارة المصاريف؟
     answer: عندما يكون عدد العمليات قليلًا ولديك انضباط إدخال قوي، مع استعداد لقضاء

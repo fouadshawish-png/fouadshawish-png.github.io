@@ -10,6 +10,8 @@ tags:
   - إدارة الأموال الشخصية
 permalink: "/control-daily-expenses/"
 canonical: "https://fouadshawish-png.github.io/control-daily-expenses/"
+image: "/assets/images/posts/13.jpeg"
+image_alt: "كيف أتحكم بالمصاريف اليومية؟"
 faq:
   - question: ما أسرع طريقة للسيطرة على المصاريف اليومية؟
     answer: التسجيل الفوري لكل عملية مع حد يومي بسيط ومراجعة أسبوعية قصيرة.

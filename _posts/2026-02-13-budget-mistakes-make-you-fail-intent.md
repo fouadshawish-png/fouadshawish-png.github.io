@@ -10,6 +10,8 @@ tags:
   - إدارة الأموال الشخصية
 permalink: "/budget-mistakes-make-you-fail/"
 canonical: "https://fouadshawish-png.github.io/budget-mistakes-make-you-fail/"
+image: "/assets/images/posts/11.jpeg"
+image_alt: "7 أخطاء في الميزانية تجعلك تفشل كل شهر (وحلها العملي)"
 faq:
   - question: ما أكثر خطأ يدمر الميزانية بسرعة؟
     answer: بناء ميزانية مثالية لا تعكس الواقع الفعلي للمصاريف اليومية.
