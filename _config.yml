@@ -38,6 +38,10 @@ featured_posts:
 
 defaults:
   - scope:
+      type: "posts"
+    values:
+      sitemap_priority: 0.7
+  - scope:
       path: "all_transactions.html"
     values:
       sitemap: false
@@ -92,3 +96,19 @@ defaults:
     values:
       sitemap: false
       robots: "noindex,follow"
+  - scope:
+      path: "_posts/2026-02-12-organize-monthly-expenses-step-by-step.md"
+    values:
+      sitemap_priority: 0.9
+  - scope:
+      path: "_posts/2026-02-12-ultimate-guide-personal-finance-arabic.md"
+    values:
+      sitemap_priority: 0.9
+  - scope:
+      path: "budget-monthly-step-by-step.html"
+    values:
+      sitemap_priority: 0.9
+  - scope:
+      path: "master-expense-budget-guide.html"
+    values:
+      sitemap_priority: 0.9
