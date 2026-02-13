@@ -113,9 +113,10 @@ permalink: /sitemap/
 <h2>أدلة تنظيم المصاريف</h2>
 <ul>
   <li><a href="/expense-guides/">كل أدلة تنظيم المصاريف</a></li>
-  {% assign expense_guides = site.pages | where_exp: 'p', 'p.url contains "/expense-guides/" and p.url != "/expense-guides/"' | sort: 'title' %}
-  {% for guide in expense_guides %}
-    <li><a href="{{ guide.url | relative_url }}">{{ guide.title }}</a></li>
+  {% for guide in site.pages %}
+    {% if guide.url contains "/expense-guides/" and guide.url != "/expense-guides/" %}
+      <li><a href="{{ guide.url | relative_url }}">{{ guide.title }}</a></li>
+    {% endif %}
   {% endfor %}
 </ul>
 

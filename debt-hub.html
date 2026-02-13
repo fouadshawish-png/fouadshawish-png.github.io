@@ -20,9 +20,15 @@ canonical: https://fouadshawish-png.github.io/الديون/
     <li><a href="/how-to-pay-off-debt-strategically/">استراتيجية عملية لسداد الديون بدون ضغط نفسي</a></li>
     <li><a href="/?route=debt_ledger">افتح دفتر الديون داخل التطبيق</a></li>
     <li><a href="/?route=budgets">اربط السداد بميزانيتك الشهرية</a></li>
-    {% assign debt_posts = site.posts | where_exp: "p", "p.topic == 'debt' or p.categories contains 'الديون'" %}
-    {% for post in debt_posts limit: 8 %}
-    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% assign debt_count = 0 %}
+    {% for post in site.posts %}
+      {% if post.topic == 'debt' or post.categories contains 'الديون' %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% assign debt_count = debt_count | plus: 1 %}
+      {% endif %}
+      {% if debt_count >= 8 %}
+        {% break %}
+      {% endif %}
     {% endfor %}
   </ul>
 </section>
@@ -36,4 +42,3 @@ canonical: https://fouadshawish-png.github.io/الديون/
   "url": "{{ page.url | absolute_url }}"
 }
 </script>
-

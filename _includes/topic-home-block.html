@@ -4,32 +4,41 @@
 {%- assign hub = include.hub -%}
 {%- assign deep = include.deep -%}
 
-{%- case key -%}
-  {%- when 'budget' -%}
-    {%- assign block_posts = site.posts | where_exp: 'p', "p.topic == 'budget' or p.categories contains 'الميزانية'" -%}
-  {%- when 'debt' -%}
-    {%- assign block_posts = site.posts | where_exp: 'p', "p.topic == 'debt' or p.categories contains 'الديون'" -%}
-  {%- when 'saving' -%}
-    {%- assign block_posts = site.posts | where_exp: 'p', "p.topic == 'saving' or p.categories contains 'الادخار'" -%}
-  {%- when 'spending-psychology' -%}
-    {%- assign block_posts = site.posts | where_exp: 'p', "p.topic == 'spending-psychology' or p.categories contains 'أخطاء مالية شائعة' or p.title contains 'نفسي'" -%}
-  {%- when 'reports' -%}
-    {%- assign block_posts = site.posts | where_exp: 'p', "p.topic == 'reports' or p.tags contains 'تقارير' or p.title contains 'تقرير'" -%}
-  {%- else -%}
-    {%- assign block_posts = site.posts | where_exp: 'p', "p.topic == 'expense-tracking' or p.topic == nil or p.categories contains 'تتبع المصاريف' or p.categories contains 'تنظيم المصاريف'" -%}
-{%- endcase -%}
-
-{%- if block_posts.size == 0 -%}
-  {%- assign block_posts = site.posts -%}
-{%- endif -%}
+{%- assign block_limit = 3 -%}
 
 <article class="card topic-block">
   <h3>{{ title }}</h3>
   <p>{{ desc }}</p>
   <ul class="topic-block__list">
-    {% for post in block_posts limit:3 %}
-    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-    {% endfor %}
+    {%- assign shown = 0 -%}
+    {%- for post in site.posts -%}
+      {%- assign match = false -%}
+      {%- case key -%}
+        {%- when 'budget' -%}
+          {%- if post.topic == 'budget' or post.categories contains 'الميزانية' -%}{%- assign match = true -%}{%- endif -%}
+        {%- when 'debt' -%}
+          {%- if post.topic == 'debt' or post.categories contains 'الديون' -%}{%- assign match = true -%}{%- endif -%}
+        {%- when 'saving' -%}
+          {%- if post.topic == 'saving' or post.categories contains 'الادخار' -%}{%- assign match = true -%}{%- endif -%}
+        {%- when 'spending-psychology' -%}
+          {%- if post.topic == 'spending-psychology' or post.categories contains 'أخطاء مالية شائعة' or post.title contains 'نفسي' -%}{%- assign match = true -%}{%- endif -%}
+        {%- when 'reports' -%}
+          {%- if post.topic == 'reports' or post.tags contains 'تقارير' or post.title contains 'تقرير' -%}{%- assign match = true -%}{%- endif -%}
+        {%- else -%}
+          {%- if post.topic == 'expense-tracking' or post.topic == nil or post.categories contains 'تتبع المصاريف' or post.categories contains 'تنظيم المصاريف' -%}{%- assign match = true -%}{%- endif -%}
+      {%- endcase -%}
+      {%- if match -%}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {%- assign shown = shown | plus: 1 -%}
+      {%- endif -%}
+      {%- if shown >= block_limit -%}{%- break -%}{%- endif -%}
+    {%- endfor -%}
+
+    {%- if shown == 0 -%}
+      {%- for post in site.posts limit:3 -%}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {%- endfor -%}
+    {%- endif -%}
   </ul>
   <div class="tools-actions">
     <a class="btn-accent" href="{{ hub | relative_url }}">عرض دليل الموضوع</a>

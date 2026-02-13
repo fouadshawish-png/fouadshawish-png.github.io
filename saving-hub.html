@@ -20,9 +20,15 @@ canonical: https://fouadshawish-png.github.io/الادخار/
     <li><a href="/how-to-save-from-my-salary/">كيف أوفر من راتبي بخطة عملية</a></li>
     <li><a href="/?route=goals">ابدأ هدف ادخار داخل التطبيق</a></li>
     <li><a href="/goals_root/">راجع أهدافك المالية</a></li>
-    {% assign saving_posts = site.posts | where_exp: "p", "p.topic == 'saving' or p.categories contains 'الادخار'" %}
-    {% for post in saving_posts limit: 8 %}
-    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% assign saving_count = 0 %}
+    {% for post in site.posts %}
+      {% if post.topic == 'saving' or post.categories contains 'الادخار' %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% assign saving_count = saving_count | plus: 1 %}
+      {% endif %}
+      {% if saving_count >= 8 %}
+        {% break %}
+      {% endif %}
     {% endfor %}
   </ul>
 </section>
@@ -36,4 +42,3 @@ canonical: https://fouadshawish-png.github.io/الادخار/
   "url": "{{ page.url | absolute_url }}"
 }
 </script>
-

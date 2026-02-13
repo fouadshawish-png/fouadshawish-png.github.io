@@ -20,9 +20,15 @@ canonical: https://fouadshawish-png.github.io/إدارة-المصاريف/
     <li><a href="/organize-monthly-expenses-step-by-step/">كيف تنظم مصاريفك الشهرية خطوة بخطوة</a></li>
     <li><a href="/how-it-works.html">كيف يعمل النظام داخل التطبيق</a></li>
     <li><a href="/?route=all_transactions">ابدأ تسجيل العمليات الآن</a></li>
-    {% assign expense_posts = site.posts | where_exp: "p", "p.topic == 'expense-tracking' or p.topic == nil or p.categories contains 'تنظيم المصاريف'" %}
-    {% for post in expense_posts limit: 8 %}
-    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% assign expense_count = 0 %}
+    {% for post in site.posts %}
+      {% if post.topic == 'expense-tracking' or post.topic == nil or post.categories contains 'تنظيم المصاريف' %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% assign expense_count = expense_count | plus: 1 %}
+      {% endif %}
+      {% if expense_count >= 8 %}
+        {% break %}
+      {% endif %}
     {% endfor %}
   </ul>
 </section>
@@ -36,4 +42,3 @@ canonical: https://fouadshawish-png.github.io/إدارة-المصاريف/
   "url": "{{ page.url | absolute_url }}"
 }
 </script>
-

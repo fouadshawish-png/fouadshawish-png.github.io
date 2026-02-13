@@ -7,11 +7,6 @@ canonical: https://fouadshawish-png.github.io/النظام-المالي/
 ---
 
 {%- assign all_posts = site.posts | sort: "date" | reverse -%}
-{%- assign guide_pages = site.pages | where_exp: "p", "p.url contains '/expense-guides/' and p.url != '/expense-guides/'" | sort: "title" -%}
-{%- assign beginner_posts = all_posts | where_exp: "post", "post.level == 'beginner' or post.level == nil" -%}
-{%- assign practical_posts = all_posts | where_exp: "post", "post.level == 'intermediate' or post.topic == 'expense-tracking' or post.topic == 'budget'" -%}
-{%- assign advanced_posts = all_posts | where_exp: "post", "post.level == 'advanced' or post.topic == 'reports' or post.topic == 'saving' or post.topic == 'debt'" -%}
-{%- assign problem_posts = all_posts | where_exp: "post", "post.title contains 'لماذا' or post.title contains 'راتبي' or post.title contains 'أين يذهب' or post.title contains 'أخطاء'" -%}
 
 <section class="section">
   <h1>نظام إدارة المصاريف والميزانية الكامل</h1>
@@ -77,8 +72,13 @@ canonical: https://fouadshawish-png.github.io/النظام-المالي/
   <h2>🔹 البداية (للمبتدئين)</h2>
   <p>هذه المقالات تضع أساس تتبع المصاريف وفهم الميزانية بأسلوب عملي مناسب للبداية.</p>
   <ul class="topic-block__list">
-    {%- for post in beginner_posts limit:12 -%}
-    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {%- assign beginner_count = 0 -%}
+    {%- for post in all_posts -%}
+      {%- if post.level == 'beginner' or post.level == nil -%}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {%- assign beginner_count = beginner_count | plus: 1 -%}
+      {%- endif -%}
+      {%- if beginner_count >= 12 -%}{%- break -%}{%- endif -%}
     {%- endfor -%}
   </ul>
 </section>
@@ -87,8 +87,13 @@ canonical: https://fouadshawish-png.github.io/النظام-المالي/
   <h2>🔹 التنفيذ العملي</h2>
   <p>هذا المسار مخصص للتطبيق: توزيع البنود، مراجعة الميزانية، وضبط المصاريف أسبوعيًا.</p>
   <ul class="topic-block__list">
-    {%- for post in practical_posts limit:12 -%}
-    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {%- assign practical_count = 0 -%}
+    {%- for post in all_posts -%}
+      {%- if post.level == 'intermediate' or post.topic == 'expense-tracking' or post.topic == 'budget' -%}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {%- assign practical_count = practical_count | plus: 1 -%}
+      {%- endif -%}
+      {%- if practical_count >= 12 -%}{%- break -%}{%- endif -%}
     {%- endfor -%}
   </ul>
 </section>
@@ -97,8 +102,13 @@ canonical: https://fouadshawish-png.github.io/النظام-المالي/
   <h2>🔹 حل المشكلات</h2>
   <p>إذا كانت النتائج ضعيفة، هذا المسار يقدّم تشخيصًا واضحًا وحلولًا قابلة للتنفيذ.</p>
   <ul class="topic-block__list">
-    {%- for post in problem_posts limit:12 -%}
-    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {%- assign problem_count = 0 -%}
+    {%- for post in all_posts -%}
+      {%- if post.title contains 'لماذا' or post.title contains 'راتبي' or post.title contains 'أين يذهب' or post.title contains 'أخطاء' -%}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {%- assign problem_count = problem_count | plus: 1 -%}
+      {%- endif -%}
+      {%- if problem_count >= 12 -%}{%- break -%}{%- endif -%}
     {%- endfor -%}
   </ul>
 </section>
@@ -107,8 +117,13 @@ canonical: https://fouadshawish-png.github.io/النظام-المالي/
   <h2>🔹 المستوى المتقدم</h2>
   <p>يركز على بناء نظام مالي متكامل يربط المصاريف، الميزانية، الادخار، والديون.</p>
   <ul class="topic-block__list">
-    {%- for post in advanced_posts limit:12 -%}
-    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {%- assign advanced_count = 0 -%}
+    {%- for post in all_posts -%}
+      {%- if post.level == 'advanced' or post.topic == 'reports' or post.topic == 'saving' or post.topic == 'debt' -%}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {%- assign advanced_count = advanced_count | plus: 1 -%}
+      {%- endif -%}
+      {%- if advanced_count >= 12 -%}{%- break -%}{%- endif -%}
     {%- endfor -%}
   </ul>
 </section>
@@ -142,8 +157,10 @@ canonical: https://fouadshawish-png.github.io/النظام-المالي/
       {%- for post in all_posts -%}
       <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
       {%- endfor -%}
-      {%- for guide in guide_pages -%}
-      <li><a href="{{ guide.url | relative_url }}">{{ guide.title }}</a></li>
+      {%- for guide in site.pages -%}
+        {%- if guide.url contains '/expense-guides/' and guide.url != '/expense-guides/' -%}
+        <li><a href="{{ guide.url | relative_url }}">{{ guide.title }}</a></li>
+        {%- endif -%}
       {%- endfor -%}
     </ul>
   </div>

@@ -20,9 +20,15 @@ canonical: https://fouadshawish-png.github.io/تتبع-المصاريف/
     <li><a href="/best-way-organize-expenses/">أفضل طريقة لتنظيم المصاريف</a></li>
     <li><a href="/?route=all_transactions">سجل المصروفات مباشرة</a></li>
     <li><a href="/?route=reports">راجع أثر الإنفاق عبر التقارير</a></li>
-    {% assign tracking_posts = site.posts | where_exp: "p", "p.topic == 'expense-tracking' or p.tags contains 'تتبع المصاريف'" %}
-    {% for post in tracking_posts limit: 8 %}
-    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% assign tracking_count = 0 %}
+    {% for post in site.posts %}
+      {% if post.topic == 'expense-tracking' or post.tags contains 'تتبع المصاريف' %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% assign tracking_count = tracking_count | plus: 1 %}
+      {% endif %}
+      {% if tracking_count >= 8 %}
+        {% break %}
+      {% endif %}
     {% endfor %}
   </ul>
 </section>
@@ -36,4 +42,3 @@ canonical: https://fouadshawish-png.github.io/تتبع-المصاريف/
   "url": "{{ page.url | absolute_url }}"
 }
 </script>
-

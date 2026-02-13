@@ -3,38 +3,88 @@
 {%- assign topic_description = include.description | default: '' -%}
 {%- assign topic_deep_route = include.deep_route | default: 'all_transactions' -%}
 
-{%- case topic_key -%}
-  {%- when 'budget' -%}
-    {%- assign topic_posts = site.posts | where_exp: 'p', "p.topic == 'budget' or p.categories contains 'الميزانية'" -%}
-  {%- when 'debt' -%}
-    {%- assign topic_posts = site.posts | where_exp: 'p', "p.topic == 'debt' or p.categories contains 'الديون'" -%}
-  {%- when 'saving' -%}
-    {%- assign topic_posts = site.posts | where_exp: 'p', "p.topic == 'saving' or p.categories contains 'الادخار'" -%}
-  {%- when 'spending-psychology' -%}
-    {%- assign topic_posts = site.posts | where_exp: 'p', "p.topic == 'spending-psychology' or p.categories contains 'أخطاء مالية شائعة' or p.title contains 'نفسي'" -%}
-  {%- when 'reports' -%}
-    {%- assign topic_posts = site.posts | where_exp: 'p', "p.topic == 'reports' or p.tags contains 'تقارير' or p.title contains 'تقرير'" -%}
-  {%- else -%}
-    {%- assign topic_posts = site.posts | where_exp: 'p', "p.topic == 'expense-tracking' or p.topic == nil or p.categories contains 'تتبع المصاريف' or p.categories contains 'تنظيم المصاريف'" -%}
-{%- endcase -%}
+{%- assign beginner_url = '' -%}
+{%- assign beginner_title = '' -%}
+{%- assign intermediate_url = '' -%}
+{%- assign intermediate_title = '' -%}
+{%- assign advanced_url = '' -%}
+{%- assign advanced_title = '' -%}
+{%- assign first_url = '' -%}
+{%- assign first_title = '' -%}
+{%- assign second_url = '' -%}
+{%- assign second_title = '' -%}
+{%- assign third_url = '' -%}
+{%- assign third_title = '' -%}
 
-{%- if topic_posts.size == 0 -%}
-  {%- assign topic_posts = site.posts | limit: 6 -%}
+{%- for post in site.posts -%}
+  {%- assign match = false -%}
+  {%- case topic_key -%}
+    {%- when 'budget' -%}
+      {%- if post.topic == 'budget' or post.categories contains 'الميزانية' -%}{%- assign match = true -%}{%- endif -%}
+    {%- when 'debt' -%}
+      {%- if post.topic == 'debt' or post.categories contains 'الديون' -%}{%- assign match = true -%}{%- endif -%}
+    {%- when 'saving' -%}
+      {%- if post.topic == 'saving' or post.categories contains 'الادخار' -%}{%- assign match = true -%}{%- endif -%}
+    {%- when 'spending-psychology' -%}
+      {%- if post.topic == 'spending-psychology' or post.categories contains 'أخطاء مالية شائعة' or post.title contains 'نفسي' -%}{%- assign match = true -%}{%- endif -%}
+    {%- when 'reports' -%}
+      {%- if post.topic == 'reports' or post.tags contains 'تقارير' or post.title contains 'تقرير' -%}{%- assign match = true -%}{%- endif -%}
+    {%- else -%}
+      {%- if post.topic == 'expense-tracking' or post.topic == nil or post.categories contains 'تتبع المصاريف' or post.categories contains 'تنظيم المصاريف' -%}{%- assign match = true -%}{%- endif -%}
+  {%- endcase -%}
+
+  {%- if match -%}
+    {%- if first_url == '' -%}
+      {%- assign first_url = post.url -%}
+      {%- assign first_title = post.title -%}
+    {%- elsif second_url == '' -%}
+      {%- assign second_url = post.url -%}
+      {%- assign second_title = post.title -%}
+    {%- elsif third_url == '' -%}
+      {%- assign third_url = post.url -%}
+      {%- assign third_title = post.title -%}
+    {%- endif -%}
+
+    {%- if post.level == 'beginner' and beginner_url == '' -%}
+      {%- assign beginner_url = post.url -%}
+      {%- assign beginner_title = post.title -%}
+    {%- endif -%}
+    {%- if post.level == 'intermediate' and intermediate_url == '' -%}
+      {%- assign intermediate_url = post.url -%}
+      {%- assign intermediate_title = post.title -%}
+    {%- endif -%}
+    {%- if post.level == 'advanced' and advanced_url == '' -%}
+      {%- assign advanced_url = post.url -%}
+      {%- assign advanced_title = post.title -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if beginner_url == '' -%}
+  {%- assign beginner_url = first_url -%}
+  {%- assign beginner_title = first_title -%}
 {%- endif -%}
-
-{%- assign beginner_post = topic_posts | where_exp: 'p', "p.level == 'beginner'" | first -%}
-{%- assign intermediate_post = topic_posts | where_exp: 'p', "p.level == 'intermediate'" | first -%}
-{%- assign advanced_post = topic_posts | where_exp: 'p', "p.level == 'advanced'" | first -%}
-
-{%- unless beginner_post -%}
-  {%- assign beginner_post = topic_posts[0] -%}
-{%- endunless -%}
-{%- unless intermediate_post -%}
-  {%- assign intermediate_post = topic_posts[1] | default: topic_posts[0] -%}
-{%- endunless -%}
-{%- unless advanced_post -%}
-  {%- assign advanced_post = topic_posts[2] | default: topic_posts[1] | default: topic_posts[0] -%}
-{%- endunless -%}
+{%- if intermediate_url == '' -%}
+  {%- if second_url != '' -%}
+    {%- assign intermediate_url = second_url -%}
+    {%- assign intermediate_title = second_title -%}
+  {%- else -%}
+    {%- assign intermediate_url = first_url -%}
+    {%- assign intermediate_title = first_title -%}
+  {%- endif -%}
+{%- endif -%}
+{%- if advanced_url == '' -%}
+  {%- if third_url != '' -%}
+    {%- assign advanced_url = third_url -%}
+    {%- assign advanced_title = third_title -%}
+  {%- elsif second_url != '' -%}
+    {%- assign advanced_url = second_url -%}
+    {%- assign advanced_title = second_title -%}
+  {%- else -%}
+    {%- assign advanced_url = first_url -%}
+    {%- assign advanced_title = first_title -%}
+  {%- endif -%}
+{%- endif -%}
 
 <section class="section topic-hub">
   <h1 class="section-title">{{ topic_title }}</h1>
@@ -48,24 +98,24 @@
   <div class="grid-3">
     <article class="card">
       <h3>مقال تمهيدي</h3>
-      {% if beginner_post %}
-      <p><a href="{{ beginner_post.url | relative_url }}">{{ beginner_post.title }}</a></p>
+      {% if beginner_url != '' %}
+      <p><a href="{{ beginner_url | relative_url }}">{{ beginner_title }}</a></p>
       {% else %}
       <p>سيتم إضافة مقال تمهيدي قريبًا.</p>
       {% endif %}
     </article>
     <article class="card">
       <h3>مقال متوسط</h3>
-      {% if intermediate_post %}
-      <p><a href="{{ intermediate_post.url | relative_url }}">{{ intermediate_post.title }}</a></p>
+      {% if intermediate_url != '' %}
+      <p><a href="{{ intermediate_url | relative_url }}">{{ intermediate_title }}</a></p>
       {% else %}
       <p>سيتم إضافة مقال متوسط قريبًا.</p>
       {% endif %}
     </article>
     <article class="card">
       <h3>مقال متقدم</h3>
-      {% if advanced_post %}
-      <p><a href="{{ advanced_post.url | relative_url }}">{{ advanced_post.title }}</a></p>
+      {% if advanced_url != '' %}
+      <p><a href="{{ advanced_url | relative_url }}">{{ advanced_title }}</a></p>
       {% else %}
       <p>سيتم إضافة مقال متقدم قريبًا.</p>
       {% endif %}
@@ -76,18 +126,39 @@
 <section class="section">
   <h2>آخر المقالات ضمن الموضوع</h2>
   <div class="post-related-grid">
-    {% for post in topic_posts limit:6 %}
-    <article class="related-card">
-      {% if post.image %}
-      <a class="related-card__thumb" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
-        <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy" width="1200" height="630">
-      </a>
+    {%- assign topic_shown = 0 -%}
+    {% for post in site.posts %}
+      {%- assign match = false -%}
+      {%- case topic_key -%}
+        {%- when 'budget' -%}
+          {%- if post.topic == 'budget' or post.categories contains 'الميزانية' -%}{%- assign match = true -%}{%- endif -%}
+        {%- when 'debt' -%}
+          {%- if post.topic == 'debt' or post.categories contains 'الديون' -%}{%- assign match = true -%}{%- endif -%}
+        {%- when 'saving' -%}
+          {%- if post.topic == 'saving' or post.categories contains 'الادخار' -%}{%- assign match = true -%}{%- endif -%}
+        {%- when 'spending-psychology' -%}
+          {%- if post.topic == 'spending-psychology' or post.categories contains 'أخطاء مالية شائعة' or post.title contains 'نفسي' -%}{%- assign match = true -%}{%- endif -%}
+        {%- when 'reports' -%}
+          {%- if post.topic == 'reports' or post.tags contains 'تقارير' or post.title contains 'تقرير' -%}{%- assign match = true -%}{%- endif -%}
+        {%- else -%}
+          {%- if post.topic == 'expense-tracking' or post.topic == nil or post.categories contains 'تتبع المصاريف' or post.categories contains 'تنظيم المصاريف' -%}{%- assign match = true -%}{%- endif -%}
+      {%- endcase -%}
+
+      {% if match %}
+      <article class="related-card">
+        {% if post.image %}
+        <a class="related-card__thumb" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
+          <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy" width="1200" height="630">
+        </a>
+        {% endif %}
+        <div class="related-card__body">
+          <h3 class="related-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p class="related-card__desc">{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 130 }}</p>
+        </div>
+      </article>
+      {%- assign topic_shown = topic_shown | plus: 1 -%}
       {% endif %}
-      <div class="related-card__body">
-        <h3 class="related-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p class="related-card__desc">{{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 130 }}</p>
-      </div>
-    </article>
+      {% if topic_shown >= 6 %}{% break %}{% endif %}
     {% endfor %}
   </div>
 
