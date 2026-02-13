@@ -6,6 +6,33 @@ layout: default
 {%- assign fallback_posts = site.posts -%}
 {%- assign reading_minutes = content | strip_html | number_of_words | plus: 199 | divided_by: 200 -%}
 {%- assign last_updated = page.dateModified | default: page.last_modified_at | default: page.date -%}
+{%- assign reading_complement_url = '/build-realistic-monthly-budget/' -%}
+{%- assign reading_complement_title = 'كيف تبني ميزانية واقعية' -%}
+{%- assign reading_advanced_url = '/weekly-budget-review/' -%}
+{%- assign reading_advanced_title = 'كيف تراجع ميزانيتك أسبوعيًا' -%}
+{%- assign reading_cornerstone_url = '/organize-monthly-expenses-step-by-step/' -%}
+{%- assign reading_cornerstone_title = 'الدليل الأساسي لتنظيم المصاريف' -%}
+{%- if primary_category == 'الميزانية' -%}
+  {%- assign reading_complement_url = '/weekly-budget-review/' -%}
+  {%- assign reading_complement_title = 'مراجعة الميزانية الأسبوعية' -%}
+  {%- assign reading_advanced_url = '/how-to-save-from-my-salary/' -%}
+  {%- assign reading_advanced_title = 'ربط الميزانية بالأهداف والادخار' -%}
+{%- elsif primary_category == 'الديون' -%}
+  {%- assign reading_complement_url = '/build-emergency-fund-fast/' -%}
+  {%- assign reading_complement_title = 'بناء صندوق طوارئ يحميك من العودة للدين' -%}
+  {%- assign reading_advanced_url = '/where-does-my-salary-go/' -%}
+  {%- assign reading_advanced_title = 'تحليل الإنفاق قبل تسريع السداد' -%}
+{%- elsif primary_category == 'الادخار' -%}
+  {%- assign reading_complement_url = '/build-realistic-monthly-budget/' -%}
+  {%- assign reading_complement_title = 'بناء ميزانية تدعم الادخار' -%}
+  {%- assign reading_advanced_url = '/manage-personal-debt-step-by-step/' -%}
+  {%- assign reading_advanced_title = 'تنظيم الديون مع خطة الادخار' -%}
+{%- elsif primary_category == 'تنظيم المصاريف' -%}
+  {%- assign reading_complement_url = '/weekly-budget-review/' -%}
+  {%- assign reading_complement_title = 'مراجعة أسبوعية تمنع الانهيار' -%}
+  {%- assign reading_advanced_url = '/where-does-my-salary-go/' -%}
+  {%- assign reading_advanced_title = 'تحليل أين يذهب الراتب عمليًا' -%}
+{%- endif -%}
 
 <article class="post">
   <style>
@@ -60,17 +87,17 @@ layout: default
 
   <section class="post-top-cta card" aria-label="تنفيذ سريع">
     <div class="tools-actions">
-      <a class="btn-accent" href="{{ '/reports_root/' | relative_url }}">افتح التقارير الآن (ويب)</a>
-      <a class="btn-primary" href="{{ '/?route=reports' | relative_url }}">افتح التقارير الآن (داخل التطبيق)</a>
+      <a class="btn-accent" href="{{ '/reports_root/' | relative_url }}" data-engagement="true">افتح التقارير الآن (ويب)</a>
+      <a class="btn-primary" href="{{ '/?route=reports' | relative_url }}" data-engagement="true">افتح التقارير الآن (داخل التطبيق)</a>
     </div>
   </section>
 
   <section class="post-quick-funnel card" aria-label="روابط التنفيذ السريع">
     <h2>روابط التنفيذ السريع</h2>
     <ul>
-      <li><a href="{{ '/?route=budgets' | relative_url }}">ابدأ ميزانيتك الآن</a></li>
-      <li><a href="{{ '/?route=reports' | relative_url }}">راجع تقاريرك أولًا بأول</a></li>
-      <li><a href="{{ '/?route=goals' | relative_url }}">ثبّت هدفك المالي القادم</a></li>
+      <li><a href="{{ '/?route=budgets' | relative_url }}" data-engagement="true">ابدأ ميزانيتك الآن</a></li>
+      <li><a href="{{ '/?route=reports' | relative_url }}" data-engagement="true">راجع تقاريرك أولًا بأول</a></li>
+      <li><a href="{{ '/?route=goals' | relative_url }}" data-engagement="true">ثبّت هدفك المالي القادم</a></li>
     </ul>
   </section>
 
@@ -101,7 +128,7 @@ layout: default
     <section class="conversion-card card" aria-label="CTA Soft">
       <h3>هل تريد تطبيق هذه الخطوات عمليًا؟ جرّب تسجيل أول عملية الآن.</h3>
       <div class="tools-actions">
-        <a class="btn-primary" href="{{ '/?route=all_transactions' | relative_url }}" data-cta="soft">ابدأ تسجيل أول عملية</a>
+        <a class="btn-primary" href="{{ '/?route=all_transactions' | relative_url }}" data-cta="soft" data-engagement="true">ابدأ تسجيل أول عملية</a>
       </div>
     </section>
   </template>
@@ -110,7 +137,22 @@ layout: default
     <section class="conversion-card card" aria-label="CTA Medium">
       <h3>أنشئ ميزانيتك الأولى خلال دقيقتين.</h3>
       <div class="tools-actions">
-        <a class="btn-primary" href="{{ '/?route=budgets' | relative_url }}" data-cta="medium">افتح الميزانيات الآن</a>
+        <a class="btn-primary" href="{{ '/?route=budgets' | relative_url }}" data-cta="medium" data-engagement="true">افتح الميزانيات الآن</a>
+      </div>
+    </section>
+  </template>
+
+  <template id="habitHookTemplate">
+    <section class="conversion-card card" aria-label="قاعدة 7 أيام">
+      <h3>قاعدة 7 أيام</h3>
+      <p>جرّب تسجيل كل عملية لمدة 7 أيام فقط. ثم قيّم الفرق في وضوح القرار.</p>
+      <ul>
+        <li><a href="{{ '/build-realistic-monthly-budget/' | relative_url }}">كيف تبني ميزانية واقعية</a></li>
+        <li><a href="{{ '/manage-personal-debt-step-by-step/' | relative_url }}">كيف تسدد ديونك بسرعة</a></li>
+        <li><a href="{{ '/weekly-budget-review/' | relative_url }}">كيف تراجع ميزانيتك أسبوعيًا</a></li>
+      </ul>
+      <div class="tools-actions">
+        <a class="btn-primary" href="{{ '/?route=all_transactions' | relative_url }}" data-engagement="true">ابدأ تسجيل 7 أيام</a>
       </div>
     </section>
   </template>
@@ -223,11 +265,41 @@ layout: default
       <h2>ابدأ إدارة مصاريفك باحتراف اليوم.</h2>
       <p>ابدأ من صفحة التحميل، ثم أكمل التنفيذ من الميزانيات والتقارير والأهداف داخل التطبيق.</p>
       <div class="tools-actions">
-        <a class="btn-primary" href="{{ '/download.html' | relative_url }}" data-cta="strong">تحميل التطبيق</a>
-        <a class="btn-accent" href="{{ '/?route=budgets' | relative_url }}">الميزانيات</a>
-        <a class="btn-accent" href="{{ '/?route=reports' | relative_url }}">التقارير</a>
-        <a class="btn-accent" href="{{ '/?route=goals' | relative_url }}">الأهداف</a>
+        <a class="btn-primary" href="{{ '/download.html' | relative_url }}" data-cta="strong" data-engagement="true">تحميل التطبيق</a>
+        <a class="btn-accent" href="{{ '/?route=budgets' | relative_url }}" data-engagement="true">الميزانيات</a>
+        <a class="btn-accent" href="{{ '/?route=reports' | relative_url }}" data-engagement="true">التقارير</a>
+        <a class="btn-accent" href="{{ '/?route=goals' | relative_url }}" data-engagement="true">الأهداف</a>
       </div>
+    </div>
+  </section>
+
+  <section class="section" aria-label="اقرأ التالي">
+    <div class="card">
+      <h2>اقرأ التالي</h2>
+      <ul class="free-tools-links">
+        <li><a href="{{ reading_complement_url | relative_url }}" data-engagement="true">{{ reading_complement_title }}</a></li>
+        <li><a href="{{ reading_advanced_url | relative_url }}" data-engagement="true">{{ reading_advanced_title }}</a></li>
+        <li><a href="{{ reading_cornerstone_url | relative_url }}" data-engagement="true">{{ reading_cornerstone_title }}</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-label="تذكير أسبوعي">
+    <div class="card">
+      <h2>تذكير أسبوعي</h2>
+      <p>خصص 10 دقائق كل أسبوع لمراجعة أرقامك.</p>
+      <p>افتح التقارير الآن: <a href="{{ '/?route=reports' | relative_url }}" data-engagement="true">/?route=reports</a></p>
+    </div>
+  </section>
+
+  <section class="section" aria-label="خطة أسبوعية مجانية">
+    <div class="card">
+      <h2>احصل على خطة أسبوعية مجانية</h2>
+      <p>أدخل بريدك لنرسل لك نموذج مراجعة أسبوعية عملي (يمكن ربطه تقنيًا لاحقًا).</p>
+      <form class="footer-newsletter__form" action="{{ '/' | relative_url }}" method="get" onsubmit="return false;">
+        <input name="email" type="email" placeholder="البريد الإلكتروني" autocomplete="email">
+        <button type="submit" data-engagement="true">احصل على الخطة</button>
+      </form>
     </div>
   </section>
 
@@ -242,7 +314,7 @@ layout: default
   </section>
 </article>
 
-<a class="floating-start-btn" href="{{ '/download.html' | relative_url }}" data-cta="strong" aria-label="ابدأ الآن">
+<a class="floating-start-btn" href="{{ '/download.html' | relative_url }}" data-cta="strong" data-engagement="true" aria-label="ابدأ الآن">
   ابدأ الآن
 </a>
 
@@ -251,11 +323,27 @@ layout: default
     <h3 id="exitIntentTitle">قبل أن تغادر — هل ترغب في تجربة النظام عمليًا؟</h3>
     <p>ابدأ بخطوة بسيطة اليوم، وسترى فرقًا واضحًا خلال أسابيع.</p>
     <div class="exit-intent-actions">
-      <a class="btn-primary" href="{{ '/download.html' | relative_url }}" data-cta="strong">تحميل التطبيق</a>
+      <a class="btn-primary" href="{{ '/download.html' | relative_url }}" data-cta="strong" data-engagement="true">تحميل التطبيق</a>
       <button class="exit-intent-close" id="exitIntentClose" type="button">إغلاق</button>
     </div>
   </div>
 </div>
+
+<script>
+(function () {
+  var content = document.getElementById('postContent');
+  var habitTemplate = document.getElementById('habitHookTemplate');
+  if (!content || !habitTemplate) return;
+
+  var blocks = content.querySelectorAll('p, h2, h3, ul, ol, table');
+  if (!blocks.length) return;
+
+  var habitIndex = Math.max(2, Math.floor(blocks.length * 0.45));
+  habitIndex = Math.min(habitIndex, blocks.length - 1);
+  var habitNode = habitTemplate.content.firstElementChild.cloneNode(true);
+  blocks[habitIndex].insertAdjacentElement('afterend', habitNode);
+})();
+</script>
 
 <script>
 (function () {
