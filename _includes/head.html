@@ -16,8 +16,12 @@
   {% assign page_title = page.meta_title | default: generated_post_title %}
   {% assign page_description = page.meta_description | default: generated_post_description %}
 {% endif %}
-{% assign default_og_image = '/assets/images/og-default.jpg' | absolute_url %}
-{% assign page_og_image = page.og_image | default: page.image | default: '/assets/images/og-default.jpg' | absolute_url %}
+{% assign default_og_image = '/assets/images/og-default.jpg' %}
+{% assign selected_og_image = page.og_image | default: page.image | default: default_og_image %}
+{% if is_post and page.og_image == nil and page.image %}
+  {% assign selected_og_image = page.image | replace: '/assets/images/posts/', '/assets/images/posts/og/' | replace: '.jpeg', '.jpg' | replace: '.png', '.jpg' | replace: '.webp', '.jpg' %}
+{% endif %}
+{% assign page_og_image = selected_og_image | absolute_url %}
 {% assign og_image_type = 'image/jpeg' %}
 {% if page_og_image contains '.png' %}
   {% assign og_image_type = 'image/png' %}
