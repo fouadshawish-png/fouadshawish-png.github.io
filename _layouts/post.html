@@ -25,7 +25,7 @@ layout: default
   </p>
   {% if last_updated %}
   <p class="post-reading-time post-reading-time--secondary">
-    آخر تحديث: <time datetime="{{ last_updated | date_to_xmlschema }}">{{ last_updated | date: "%Y-%m-%d" }}</time>
+    آخر تحديث: <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %B %Y" }}</time>
   </p>
   {% endif %}
 
@@ -264,9 +264,8 @@ layout: default
     <div class="author-box__content">
       <p class="author-box__label">عن الكاتب</p>
       <h3>فؤاد شاويش</h3>
-      <p>مطور تطبيق محترف المصاريف</p>
-      <p>مختص في تنظيم المصاريف وإدارة الميزانيات الرقمية</p>
-      <a href="{{ '/about/' | relative_url }}">اقرأ المزيد عن الكاتب</a>
+      <p>فؤاد شاويش — مطور تطبيق محترف المصاريف ومتخصص في أنظمة إدارة المصاريف الرقمية.</p>
+      <a href="{{ '/about-author/' | relative_url }}">اقرأ المزيد عن الكاتب</a>
     </div>
   </section>
 </article>
