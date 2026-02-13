@@ -10,8 +10,8 @@ tags:
   - expense manager
 permalink: /how-to-track-expenses-daily-effectively/
 canonical: https://fouadshawish-png.github.io/how-to-track-expenses-daily-effectively/
-image: /assets/images/posts/benefits-of-tracking-expenses.jpg
-image_alt: "أفضل طريقة لتتبع المصاريف يوميًا"
+image: /assets/images/posts/how-to-track-expenses-daily-effectively-cover.jpg
+image_alt: "تتبّع المصاريف يوميًا وقلّل الهدر خلال 30 يومًا (دليل)"
 faq:
   - question: "كم دقيقة يحتاج تتبع المصاريف يوميًا؟"
     answer: "في المتوسط من 3 إلى 7 دقائق يوميًا إذا كان التصنيف واضحًا وطريقة التسجيل ثابتة."

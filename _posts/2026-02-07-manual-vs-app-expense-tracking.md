@@ -10,8 +10,8 @@ tags:
   - تتبع المصاريف
 permalink: /manual-vs-app-expense-tracking/
 canonical: https://fouadshawish-png.github.io/manual-vs-app-expense-tracking/
-image: /assets/images/posts/daily-expense-tracking-mistakes.jpg
-image_alt: "مقارنة بين التسجيل اليدوي وتطبيق إدارة المصاريف"
+image: /assets/images/posts/manual-vs-app-expense-tracking-cover.jpg
+image_alt: "قارن تطبيق المصاريف بالتسجيل اليدوي خلال 10 دقائق"
 faq:
   - question: "هل التسجيل اليدوي كافٍ لإدارة المصاريف؟"
     answer: "يمكن أن يكون كافيًا إذا كنت ملتزمًا يوميًا، لكنه غالبًا أبطأ في التحليل والمتابعة من التطبيق." 

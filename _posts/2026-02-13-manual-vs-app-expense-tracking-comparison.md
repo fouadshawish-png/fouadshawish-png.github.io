@@ -4,7 +4,7 @@ title: "تسجيل المصاريف يدويًا أم عبر تطبيق؟"
 description: "تسجيل المصاريف يدويًا أم بالتطبيق؟ تعرّف على مقارنة عملية في الدقة والسرعة والالتزام. اختر الطريقة الأنسب لميزانيتك وإدارة أموالك."
 permalink: /manual-vs-app-expense-tracking-comparison/
 canonical: https://fouadshawish-png.github.io/manual-vs-app-expense-tracking-comparison/
-image: /assets/images/posts/manual-vs-app-expense-tracking-comparison-app-screen.webp
+image: /assets/images/posts/manual-vs-app-expense-tracking-comparison-cover.jpeg
 image_alt: "تسجيل المصاريف يدويًا أم عبر تطبيق؟"
 topic: expense-tracking
 level: intermediate

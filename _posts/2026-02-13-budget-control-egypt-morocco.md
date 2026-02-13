@@ -7,8 +7,8 @@ permalink: /تنظيم-المصاريف-في-مصر-والمغرب/
 canonical: "https://fouadshawish-png.github.io/تنظيم-المصاريف-في-مصر-والمغرب/"
 og_type: article
 og_image: /assets/images/posts/budget-templates-not-for-all.jpg
-image: /assets/images/posts/budget-templates-not-for-all.jpg
-image_alt: "ضبط الميزانية حسب البلد والدخل"
+image: /assets/images/posts/budget-control-egypt-morocco-cover.jpeg
+image_alt: "اضبط ميزانيتك في مصر والمغرب خلال 30 يومًا (خطة)"
 date: 2026-02-13
 last_modified_at: 2026-02-13
 topic: budget

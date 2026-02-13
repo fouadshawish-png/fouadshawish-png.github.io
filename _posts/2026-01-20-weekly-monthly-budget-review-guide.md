@@ -4,7 +4,7 @@ title: "راجع الميزانية أسبوعيًا في 10 دقائق (خطة 
 description: "لا تعرف أين يتسرّب المال أسبوعيًا؟ تعلّم طريقة عملية لمراجعة الميزانية وتتبع المصاريف. ابدأ خطة سريعة تحسّن إدارة الأموال في 10 دقائق."
 permalink: /weekly-monthly-budget-review-guide/
 canonical: https://fouadshawish-png.github.io/weekly-monthly-budget-review-guide/
-image: /assets/images/posts/weekly-monthly-budget-review-guide-app-screen.webp
+image: /assets/images/posts/weekly-monthly-budget-review-guide-cover.jpeg
 image_alt: "راجع الميزانية أسبوعيًا في 10 دقائق (خطة شهرية)"
 topic: budget
 level: intermediate

@@ -3,15 +3,21 @@ layout: default
 ---
 
 {%- assign primary_category = page.categories | first | default: 'تنظيم المصاريف' -%}
-{%- assign primary_tag = page.tags | first -%}
 {%- assign fallback_posts = site.posts -%}
+{%- assign reading_minutes = content | strip_html | number_of_words | plus: 199 | divided_by: 200 -%}
+{%- assign last_updated = page.dateModified | default: page.last_modified_at | default: page.date -%}
 
 <article class="post">
   {% include breadcrumb.html %}
 
   <p class="post-reading-time">
-    ⏱ وقت القراءة: {{ content | strip_html | number_of_words | plus: 179 | divided_by: 180 }} دقائق
+    ⏱ وقت القراءة: {{ reading_minutes }} دقيقة
   </p>
+  {% if last_updated %}
+  <p class="post-reading-time post-reading-time--secondary">
+    آخر تحديث: <time datetime="{{ last_updated | date_to_xmlschema }}">{{ last_updated | date: "%Y-%m-%d" }}</time>
+  </p>
+  {% endif %}
 
   <h1>{{ page.title }}</h1>
 
@@ -21,6 +27,10 @@ layout: default
     · <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
     {% endif %}
   </p>
+
+  <section class="post-top-cta card" aria-label="تنفيذ سريع">
+    <a class="btn-accent" href="{{ '/?route=reports' | relative_url }}">افتح التقارير الآن</a>
+  </section>
 
   {% if page.image %}
   <img
@@ -42,58 +52,39 @@ layout: default
     {{ content }}
   </div>
 
-  <section class="section">
-    <div class="card">
-      <h2>جاهز تطبّق الآن؟</h2>
-      <p>ابدأ بخطوة واحدة عملية داخل التطبيق.</p>
-      <div class="tools-actions">
-        <a class="btn-primary" href="{{ '/?route=reports' | relative_url }}">مراجعة الميزانية الأسبوعية</a>
-        <a class="btn-accent" href="{{ '/?route=budgets' | relative_url }}">احسب ميزانيتك الآن</a>
-        <a class="btn-primary" href="{{ '/download.html?utm_source=blog&utm_medium=content&utm_campaign=demand_engine' | relative_url }}">ابدأ نظامك المالي الآن</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section post-guide-read-more" aria-label="اقرأ أيضًا ضمن دليل إدارة المصاريف">
-    <div class="card">
-      <h2>اقرأ أيضًا ضمن دليل إدارة المصاريف</h2>
+  <template id="readAlsoBurstTemplate">
+    <aside class="inline-cta inline-read-also" aria-label="اقرأ أيضًا">
+      <h3>اقرأ أيضًا</h3>
       <ul class="topic-block__list">
-        <li><a href="{{ '/دليل-إدارة-المصاريف-والميزانية/' | relative_url }}">تنظيم المصاريف الشهرية</a></li>
-        <li><a href="{{ '/weekly-budget-review-system/' | relative_url }}">مراجعة الميزانية الأسبوعية</a></li>
-        <li><a href="{{ '/تتبع-المصاريف-اليومية/' | relative_url }}">تتبع المصاريف اليومية</a></li>
-        <li><a href="{{ '/build-realistic-monthly-budget/' | relative_url }}">أفضل طريقة لبناء ميزانية</a></li>
-        <li><a href="{{ '/how-it-works.html' | relative_url }}">كيف يعمل</a></li>
-        <li><a href="{{ '/download.html' | relative_url }}">صفحة التحميل</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="post-related post-related--dynamic" aria-label="مقالات ذات صلة">
-    <h2 class="section-title">مقالات ذات صلة</h2>
-    <div class="card">
-      <ul class="topic-block__list">
-        {% assign shown = 0 %}
-        {% assign shown_urls = "|" %}
+        {% assign burst_shown = 0 %}
+        {% assign burst_urls = "|" %}
 
         {% for rel in fallback_posts %}
           {% assign rel_token = rel.url | append: "|" %}
-          {% if rel.url != page.url and rel.categories contains primary_category and shown < 4 %}
-            {% unless shown_urls contains rel_token %}
+          {% if rel.url != page.url and rel.categories contains primary_category and rel.title and rel.description and burst_shown < 3 %}
+            {% unless burst_urls contains rel_token %}
               <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
-              {% assign shown = shown | plus: 1 %}
-              {% assign shown_urls = shown_urls | append: rel_token %}
+              {% assign burst_shown = burst_shown | plus: 1 %}
+              {% assign burst_urls = burst_urls | append: rel_token %}
             {% endunless %}
           {% endif %}
         {% endfor %}
 
-        {% if primary_tag %}
+        {% if page.tags %}
           {% for rel in fallback_posts %}
             {% assign rel_token = rel.url | append: "|" %}
-            {% if rel.url != page.url and rel.tags contains primary_tag and shown < 4 %}
-              {% unless shown_urls contains rel_token %}
+            {% assign tag_match = false %}
+            {% for t in page.tags %}
+              {% if rel.tags contains t %}
+                {% assign tag_match = true %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+            {% if rel.url != page.url and tag_match and rel.title and rel.description and burst_shown < 3 %}
+              {% unless burst_urls contains rel_token %}
                 <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
-                {% assign shown = shown | plus: 1 %}
-                {% assign shown_urls = shown_urls | append: rel_token %}
+                {% assign burst_shown = burst_shown | plus: 1 %}
+                {% assign burst_urls = burst_urls | append: rel_token %}
               {% endunless %}
             {% endif %}
           {% endfor %}
@@ -101,45 +92,112 @@ layout: default
 
         {% for rel in fallback_posts %}
           {% assign rel_token = rel.url | append: "|" %}
-          {% if rel.url != page.url and shown < 4 %}
-            {% unless shown_urls contains rel_token %}
+          {% if rel.url != page.url and rel.title and rel.description and burst_shown < 3 %}
+            {% unless burst_urls contains rel_token %}
               <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
-              {% assign shown = shown | plus: 1 %}
-              {% assign shown_urls = shown_urls | append: rel_token %}
+              {% assign burst_shown = burst_shown | plus: 1 %}
+              {% assign burst_urls = burst_urls | append: rel_token %}
             {% endunless %}
           {% endif %}
         {% endfor %}
       </ul>
+    </aside>
+  </template>
+
+  <section class="post-related post-related--dynamic" aria-label="مقالات ذات صلة">
+    <h2 class="section-title">مقالات ذات صلة</h2>
+    <div class="post-related-grid">
+      {% assign shown = 0 %}
+      {% assign shown_urls = "|" %}
+
+      {% for rel in fallback_posts %}
+        {% assign rel_token = rel.url | append: "|" %}
+        {% if rel.url != page.url and rel.categories contains primary_category and rel.title and rel.description and shown < 4 %}
+          {% unless shown_urls contains rel_token %}
+          <article class="related-card">
+            {% if rel.image %}
+            <a class="related-card__thumb" href="{{ rel.url | relative_url }}" aria-label="{{ rel.title }}">
+              <img src="{{ rel.image | relative_url }}" alt="{{ rel.image_alt | default: rel.title }}" loading="lazy" width="1200" height="630">
+            </a>
+            {% endif %}
+            <div class="related-card__body">
+              <h3 class="related-card__title"><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></h3>
+              <p class="related-card__desc">{{ rel.description | strip_html | strip_newlines | truncate: 130 }}</p>
+            </div>
+          </article>
+          {% assign shown = shown | plus: 1 %}
+          {% assign shown_urls = shown_urls | append: rel_token %}
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+
+      {% if page.tags %}
+        {% for rel in fallback_posts %}
+          {% assign rel_token = rel.url | append: "|" %}
+          {% assign tag_match = false %}
+          {% for t in page.tags %}
+            {% if rel.tags contains t %}
+              {% assign tag_match = true %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+          {% if rel.url != page.url and tag_match and rel.title and rel.description and shown < 4 %}
+            {% unless shown_urls contains rel_token %}
+            <article class="related-card">
+              {% if rel.image %}
+              <a class="related-card__thumb" href="{{ rel.url | relative_url }}" aria-label="{{ rel.title }}">
+                <img src="{{ rel.image | relative_url }}" alt="{{ rel.image_alt | default: rel.title }}" loading="lazy" width="1200" height="630">
+              </a>
+              {% endif %}
+              <div class="related-card__body">
+                <h3 class="related-card__title"><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></h3>
+                <p class="related-card__desc">{{ rel.description | strip_html | strip_newlines | truncate: 130 }}</p>
+              </div>
+            </article>
+            {% assign shown = shown | plus: 1 %}
+            {% assign shown_urls = shown_urls | append: rel_token %}
+            {% endunless %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      {% for rel in fallback_posts %}
+        {% assign rel_token = rel.url | append: "|" %}
+        {% if rel.url != page.url and rel.title and rel.description and shown < 4 %}
+          {% unless shown_urls contains rel_token %}
+          <article class="related-card">
+            {% if rel.image %}
+            <a class="related-card__thumb" href="{{ rel.url | relative_url }}" aria-label="{{ rel.title }}">
+              <img src="{{ rel.image | relative_url }}" alt="{{ rel.image_alt | default: rel.title }}" loading="lazy" width="1200" height="630">
+            </a>
+            {% endif %}
+            <div class="related-card__body">
+              <h3 class="related-card__title"><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></h3>
+              <p class="related-card__desc">{{ rel.description | strip_html | strip_newlines | truncate: 130 }}</p>
+            </div>
+          </article>
+          {% assign shown = shown | plus: 1 %}
+          {% assign shown_urls = shown_urls | append: rel_token %}
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
     </div>
   </section>
 
-  <section class="section">
-    <div class="card engagement-loop">
-      <h2>سؤال الأسبوع</h2>
-      <p>قبل الانتقال للمقال التالي، جاوب بوضوح:</p>
-      <ul class="topic-block__list">
-        <li>ما أكبر بند يرهقك حاليًا في تنظيم المصاريف الشهرية؟</li>
-        <li>ما هدف ادخار واحد ستلتزم به خلال هذا الأسبوع؟</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="card micro-faq">
-      <h2>أسئلة سريعة</h2>
-      <details>
-        <summary>كم مرة أراجع الميزانية لتحقيق نتيجة فعلية؟</summary>
-        <p>مرة أسبوعيًا تكفي كبداية، المهم أن تكون المراجعة مبنية على أرقام فعلية من التقرير لا على التقدير.</p>
-      </details>
-      <details>
-        <summary>ما أول خطوة عملية إذا أردت تتبع المصاريف اليومية؟</summary>
-        <p>ابدأ بتسجيل جميع العمليات 7 أيام متتالية، ثم راجع أعلى 3 بنود صرف وحدد بندًا واحدًا لتقليله.</p>
-      </details>
+  <section class="section post-bottom-cta" aria-label="تنفيذ داخل التطبيق">
+    <div class="card">
+      <h2>كيف تطبّق هذا داخل التطبيق؟</h2>
+      <p>اختر الإجراء المناسب الآن وابدأ التنفيذ مباشرة.</p>
+      <div class="tools-actions">
+        <a class="btn-accent" href="{{ '/?route=budgets' | relative_url }}">ابدأ ميزانيتك</a>
+        <a class="btn-primary" href="{{ '/?route=all_transactions' | relative_url }}">عرض كل العمليات</a>
+        <a class="btn-primary" href="{{ '/?route=debt_ledger' | relative_url }}">دفتر الديون</a>
+      </div>
     </div>
   </section>
 
   <section class="author-box" aria-label="نبذة الكاتب">
-    <img class="author-box__avatar" src="{{ '/assets/images/authors/fouad-shawish-placeholder.svg' | relative_url }}" alt="صورة الكاتب فؤاد شاويش" loading="lazy" width="96" height="96">
+    <img class="author-box__avatar" src="{{ '/assets/images/authors/fouad-shawish.jpg' | relative_url }}" alt="صورة الكاتب فؤاد شاويش" loading="lazy" width="96" height="96">
     <div class="author-box__content">
       <p class="author-box__label">عن الكاتب</p>
       <h3>فؤاد شاويش</h3>
@@ -152,51 +210,30 @@ layout: default
 <script>
 (function () {
   var content = document.getElementById('postContent');
-  if (!content) return;
+  var template = document.getElementById('readAlsoBurstTemplate');
+  if (!content || !template) return;
+
+  var block = template.content.firstElementChild ? template.content.firstElementChild.cloneNode(true) : null;
+  if (!block) return;
+
   var h2 = content.querySelector('h2');
-  if (!h2) return;
-
-  var box = document.createElement('aside');
-  box.className = 'inline-cta inline-cta--single';
-  box.innerHTML =
-    "<h3>حوّل هذه الخطوة إلى تطبيق عملي الآن</h3>" +
-    "<p>جرّب تنفيذ الفكرة مباشرة داخل التطبيق بدون تعقيد.</p>" +
-    "<a class='cta-button' href='{{ '/?route=reports' | relative_url }}'>جرّب الآن مراجعة ميزانيتك من هنا</a>";
-  h2.insertAdjacentElement('afterend', box);
-})();
-</script>
-<div class="scroll-cta" id="scrollCta60" hidden>
-  <span>هل تريد تنفيذ هذه الخطوات داخل التطبيق؟</span>
-  <a class="btn-accent" href="{{ '/?route=budgets' | relative_url }}">احسب ميزانيتك الآن</a>
-  <button type="button" id="scrollCtaClose" aria-label="إغلاق">×</button>
-</div>
-<script>
-(function () {
-  var cta = document.getElementById('scrollCta60');
-  var closeBtn = document.getElementById('scrollCtaClose');
-  if (!cta || !closeBtn) return;
-  var dismissed = false;
-
-  function depth() {
-    var doc = document.documentElement;
-    var scrollable = doc.scrollHeight - window.innerHeight;
-    if (scrollable <= 0) return 0;
-    return (window.scrollY / scrollable) * 100;
+  if (h2) {
+    h2.insertAdjacentElement('afterend', block);
+    return;
   }
 
-  function toggleCta() {
-    if (dismissed) return;
-    if (depth() >= 60) cta.hidden = false;
+  var paragraphs = content.querySelectorAll('p');
+  if (paragraphs.length) {
+    var idx = Math.max(0, Math.floor(paragraphs.length * 0.25) - 1);
+    paragraphs[idx].insertAdjacentElement('afterend', block);
+  } else {
+    content.insertBefore(block, content.firstChild);
   }
-
-  window.addEventListener('scroll', toggleCta, { passive: true });
-  window.addEventListener('load', toggleCta);
-  closeBtn.addEventListener('click', function() {
-    dismissed = true;
-    cta.hidden = true;
-  });
 })();
 </script>
+
+{% include scroll-cta.html %}
+
 <script>
 (function () {
   var content = document.getElementById('postContent');

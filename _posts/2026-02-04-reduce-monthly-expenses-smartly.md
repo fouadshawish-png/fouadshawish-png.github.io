@@ -10,8 +10,8 @@ tags:
   - ميزانية شهرية
 permalink: /reduce-monthly-expenses-smartly/
 canonical: https://fouadshawish-png.github.io/reduce-monthly-expenses-smartly/
-image: /assets/images/posts/expenses-vs-deprivation.jpg
-image_alt: "تقليل المصاريف الشهرية بذكاء بدون حرمان"
+image: /assets/images/posts/reduce-monthly-expenses-smartly-cover.jpg
+image_alt: "قلّل المصاريف الشهرية بذكاء ووفّر 20% خلال 30 يومًا"
 last_modified_at: 2026-02-04
 ---
 

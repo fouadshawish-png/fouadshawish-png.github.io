@@ -4,7 +4,7 @@ title: "الفرق بين إدارة المصاريف وإدارة الثروة"
 description: "ما الفرق بين إدارة المصاريف وإدارة الثروة؟ تعرّف على الفارق العملي بين الانضباط اليومي والنمو طويل المدى. ابدأ من قاعدة مالية متينة أولًا."
 permalink: /difference-between-expense-management-and-wealth-management/
 canonical: https://fouadshawish-png.github.io/difference-between-expense-management-and-wealth-management/
-image: /assets/images/posts/expense-management-vs-wealth-management-app-screen.webp
+image: /assets/images/posts/expense-management-vs-wealth-management-cover.jpeg
 image_alt: "الفرق بين إدارة المصاريف وإدارة الثروة"
 topic: budget
 level: intermediate

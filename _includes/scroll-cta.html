@@ -1,0 +1,51 @@
+<div class="scroll-cta-toast" id="scrollCtaToast" hidden>
+  <button type="button" class="scroll-cta-toast__close" id="scrollCtaToastClose" aria-label="إغلاق">×</button>
+  <p>تحب تطبقها داخل التطبيق؟</p>
+  <a class="btn-accent" href="{{ '/?route=budgets' | relative_url }}">افتح الميزانيات</a>
+</div>
+
+<script>
+(function () {
+  var toast = document.getElementById('scrollCtaToast');
+  var closeBtn = document.getElementById('scrollCtaToastClose');
+  if (!toast || !closeBtn) return;
+
+  var storageKey = 'scrollCtaToastDismissedAt';
+  var hideWindowMs = 7 * 24 * 60 * 60 * 1000;
+  var dismissed = false;
+  var shown = false;
+
+  try {
+    var dismissedAt = parseInt(localStorage.getItem(storageKey) || '0', 10);
+    if (dismissedAt && (Date.now() - dismissedAt) < hideWindowMs) {
+      dismissed = true;
+    }
+  } catch (e) {}
+
+  function getDepth() {
+    var doc = document.documentElement;
+    var scrollable = doc.scrollHeight - window.innerHeight;
+    if (scrollable <= 0) return 0;
+    return (window.scrollY / scrollable) * 100;
+  }
+
+  function maybeShow() {
+    if (dismissed || shown) return;
+    if (getDepth() >= 60) {
+      shown = true;
+      toast.hidden = false;
+    }
+  }
+
+  closeBtn.addEventListener('click', function () {
+    toast.hidden = true;
+    dismissed = true;
+    try {
+      localStorage.setItem(storageKey, String(Date.now()));
+    } catch (e) {}
+  });
+
+  window.addEventListener('scroll', maybeShow, { passive: true });
+  window.addEventListener('load', maybeShow);
+})();
+</script>

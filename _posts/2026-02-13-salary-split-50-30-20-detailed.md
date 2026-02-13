@@ -4,7 +4,7 @@ title: "طريقة تقسيم الراتب بطريقة 50/30/20 بالتفصي�
 description: "لا تعرف كيف تقسّم الراتب بوضوح؟ تعلّم تطبيق 50/30/20 بالتفصيل مع ضبط المصاريف والميزانية. ابدأ خطة عملية قابلة للتنفيذ اليوم."
 permalink: /salary-split-50-30-20-detailed/
 canonical: https://fouadshawish-png.github.io/salary-split-50-30-20-detailed/
-image: /assets/images/posts/salary-split-50-30-20-detailed-app-screen.webp
+image: /assets/images/posts/salary-split-50-30-20-detailed-cover.jpeg
 image_alt: "طريقة تقسيم الراتب بطريقة 50/30/20 بالتفصيل"
 topic: budget
 level: intermediate

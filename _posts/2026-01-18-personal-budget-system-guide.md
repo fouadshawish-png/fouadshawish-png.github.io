@@ -4,7 +4,7 @@ title: "ابنِ ميزانية شخصية واضحة وقلّل الهدر خل
 description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /personal-budget-system-guide/
 canonical: https://fouadshawish-png.github.io/personal-budget-system-guide/
-image: /assets/images/posts/personal-budget-system-guide-app-screen.webp
+image: /assets/images/posts/personal-budget-system-guide-cover.jpg
 image_alt: "ابنِ ميزانية شخصية واضحة وقلّل الهدر خلال 30 يومًا"
 topic: budget
 level: intermediate

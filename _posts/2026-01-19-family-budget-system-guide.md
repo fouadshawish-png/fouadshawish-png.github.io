@@ -4,7 +4,7 @@ title: "طبّق ميزانية الأسرة بذكاء ووفّر خلال 4 أ
 description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /family-budget-system-guide/
 canonical: https://fouadshawish-png.github.io/family-budget-system-guide/
-image: /assets/images/posts/family-budget-system-guide-app-screen.webp
+image: /assets/images/posts/family-budget-system-guide-cover.jpeg
 image_alt: "طبّق ميزانية الأسرة بذكاء ووفّر خلال 4 أسابيع"
 topic: budget
 level: intermediate

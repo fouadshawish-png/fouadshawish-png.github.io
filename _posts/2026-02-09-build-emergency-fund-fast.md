@@ -10,8 +10,8 @@ tags:
   - التخطيط المالي
 permalink: /build-emergency-fund-fast/
 canonical: https://fouadshawish-png.github.io/build-emergency-fund-fast/
-image: /assets/images/posts/build-emergency-fund-6-months.jpg
-image_alt: "بناء صندوق طوارئ خلال 6 أشهر"
+image: /assets/images/posts/build-emergency-fund-fast-cover.jpg
+image_alt: "ابنِ صندوق طوارئ يحمي الميزانية خلال 6 أشهر (دليل)"
 faq:
   - question: "ما الحد الأدنى المناسب لصندوق الطوارئ؟"
     answer: "المرحلة الأولى تبدأ عادة بمبلغ يغطي ظرفًا عاجلًا صغيرًا، مثل 1000 إلى 2000 حسب واقعك." 

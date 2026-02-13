@@ -7,8 +7,8 @@ permalink: /تقليل-المصاريف-الشهرية/
 canonical: "https://fouadshawish-png.github.io/تقليل-المصاريف-الشهرية/"
 og_type: article
 og_image: /assets/images/posts/spending-control-vs-deprivation.jpg
-image: /assets/images/posts/spending-control-vs-deprivation.jpg
-image_alt: "تقليل المصاريف الشهرية بطريقة متوازنة"
+image: /assets/images/posts/reduce-monthly-expenses-without-deprivation-cover.jpg
+image_alt: "خفّض المصاريف الشهرية دون حرمان خلال 30 يومًا (طريقة)"
 date: 2026-02-13
 last_modified_at: 2026-02-13
 topic: spending-psychology

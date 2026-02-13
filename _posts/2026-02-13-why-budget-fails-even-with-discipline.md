@@ -4,7 +4,7 @@ title: "لماذا تفشل الميزانية رغم أنني ألتزم بها
 description: "تلتزم بالميزانية لكن النتائج لا تتحسن؟ اكتشف الأسباب الحقيقية لفشل الميزانية وكيف تربطها بتتبع المصاريف. ابدأ خطة تصحيح عملية هذا الأسبوع."
 permalink: /why-budget-fails-even-with-discipline/
 canonical: https://fouadshawish-png.github.io/why-budget-fails-even-with-discipline/
-image: /assets/images/posts/why-budget-fails-even-with-discipline-app-screen.webp
+image: /assets/images/posts/why-budget-fails-even-with-discipline-cover.jpeg
 image_alt: "لماذا تفشل الميزانية رغم أنني ألتزم بها؟"
 topic: budget
 level: intermediate

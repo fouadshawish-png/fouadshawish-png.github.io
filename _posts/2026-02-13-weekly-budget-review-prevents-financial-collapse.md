@@ -4,7 +4,7 @@ title: "امنع انهيار الميزانية بمراجعة أسبوعية �
 description: "لا تعرف أين يتسرّب المال أسبوعيًا؟ تعلّم طريقة عملية لمراجعة الميزانية وتتبع المصاريف. ابدأ خطة سريعة تحسّن إدارة الأموال في 10 دقائق."
 permalink: /weekly-budget-review-prevents-financial-collapse/
 canonical: https://fouadshawish-png.github.io/weekly-budget-review-prevents-financial-collapse/
-image: /assets/images/posts/weekly-budget-review-prevents-financial-collapse-app-screen.webp
+image: /assets/images/posts/weekly-budget-review-prevents-financial-collapse-cover.jpg
 image_alt: "امنع انهيار الميزانية بمراجعة أسبوعية في 10 دقائق"
 categories:
   - الميزانية

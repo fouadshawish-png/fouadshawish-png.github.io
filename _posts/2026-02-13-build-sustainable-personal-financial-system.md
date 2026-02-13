@@ -4,7 +4,7 @@ title: "كيف تبني نظامًا ماليًا شخصيًا مستدامًا�
 description: "تريد نظامًا ماليًا يستمر لسنوات؟ تعلّم طريقة عملية تربط المصاريف والميزانية والادخار والديون. ابدأ خطة مرحلية لبناء إدارة أموال مستقرة."
 permalink: /build-sustainable-personal-financial-system/
 canonical: https://fouadshawish-png.github.io/build-sustainable-personal-financial-system/
-image: /assets/images/posts/build-sustainable-personal-financial-system-app-screen.webp
+image: /assets/images/posts/build-sustainable-personal-financial-system-cover.jpeg
 image_alt: "كيف تبني نظامًا ماليًا شخصيًا مستدامًا؟"
 topic: budget
 level: intermediate

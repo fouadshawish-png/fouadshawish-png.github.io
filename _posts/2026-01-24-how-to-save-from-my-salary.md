@@ -10,8 +10,8 @@ tags:
   - إدارة الأموال
 permalink: /how-to-save-from-my-salary/
 canonical: https://fouadshawish-png.github.io/how-to-save-from-my-salary/
-image: /assets/images/posts/set-realistic-financial-goals.jpg
-image_alt: "استراتيجية التوفير من الراتب بشكل واقعي"
+image: /assets/images/posts/how-to-save-from-my-salary-cover.jpg
+image_alt: "وفّر من الراتب بذكاء وحسّن الميزانية خلال 30 يومًا"
 last_modified_at: 2026-01-24
 ---
 

@@ -10,8 +10,8 @@ tags:
   - تتبع المصاريف
 permalink: /weekly-budget-control-system/
 canonical: https://fouadshawish-png.github.io/weekly-budget-control-system/
-image: /assets/images/posts/weekly-budget-review-10-minutes.jpg
-image_alt: "نظام مراجعة الميزانية الأسبوعية لمنع الانهيار المالي"
+image: /assets/images/posts/weekly-budget-control-system-cover.jpeg
+image_alt: "اضبط الميزانية أسبوعيًا وامنع الانهيار في 10 دقائق"
 last_modified_at: 2026-01-31
 ---
 

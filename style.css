@@ -324,6 +324,19 @@ main.page {
     font-weight: 700;
 }
 
+.post-reading-time--secondary {
+    margin-top: -2px;
+}
+
+.post-top-cta {
+    margin: 12px 0 16px;
+    padding: 12px 14px;
+}
+
+.post-top-cta .btn-accent {
+    display: inline-flex;
+}
+
 .post-summary {
     margin: 0 0 18px;
     padding: 14px 16px;
@@ -709,6 +722,15 @@ main.page {
     text-decoration: none;
 }
 
+.inline-read-also {
+    border-color: rgba(0,106,78,0.24);
+    background: linear-gradient(145deg, rgba(0,106,78,0.08), rgba(72,214,160,0.06));
+}
+
+.inline-read-also h3 {
+    margin-bottom: 10px;
+}
+
 .template-download-box {
     margin: 16px 0 22px;
     padding: 18px;
@@ -767,6 +789,61 @@ main.page {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+}
+
+.post-bottom-cta .card {
+    margin-top: 10px;
+}
+
+.scroll-cta-toast {
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    z-index: 1100;
+    width: min(340px, calc(100vw - 32px));
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 12px 12px 10px;
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    display: grid;
+    gap: 10px;
+}
+
+.dark .scroll-cta-toast {
+    background: linear-gradient(145deg, rgba(19,45,38,0.95), rgba(10,25,21,0.95));
+    border-color: rgba(72,214,160,0.28);
+    backdrop-filter: blur(6px);
+}
+
+.scroll-cta-toast p {
+    margin: 0;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.scroll-cta-toast .btn-accent {
+    justify-content: center;
+}
+
+.scroll-cta-toast__close {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 28px;
+    height: 28px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.scroll-cta-toast__close:hover {
+    background: var(--surface-soft);
+    color: var(--text-primary);
 }
 
 .micro-faq-toggle {

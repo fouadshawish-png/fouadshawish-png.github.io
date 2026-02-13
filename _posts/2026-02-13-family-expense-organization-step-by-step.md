@@ -7,8 +7,8 @@ permalink: /تنظيم-مصاريف-الاسرة/
 canonical: "https://fouadshawish-png.github.io/تنظيم-مصاريف-الاسرة/"
 og_type: article
 og_image: /assets/images/posts/money-and-family-avoid-conflicts.jpg
-image: /assets/images/posts/money-and-family-avoid-conflicts.jpg
-image_alt: "تنظيم مصاريف الأسرة بطريقة عملية"
+image: /assets/images/posts/family-expense-organization-step-by-step-cover.jpeg
+image_alt: "نظّم مصاريف الأسرة خطوة بخطوة خلال 30 يومًا"
 date: 2026-02-13
 last_modified_at: 2026-02-13
 topic: budget

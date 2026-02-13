@@ -4,7 +4,7 @@ title: "احسب المصاريف بدقة وتجنب العجز خلال 30 ي�
 description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /accurate-expense-calculation-method/
 canonical: https://fouadshawish-png.github.io/accurate-expense-calculation-method/
-image: /assets/images/posts/accurate-expense-calculation-method-app-screen.webp
+image: /assets/images/posts/accurate-expense-calculation-method-cover.jpeg
 image_alt: "احسب المصاريف بدقة وتجنب العجز خلال 30 يومًا"
 topic: expense-tracking
 level: intermediate

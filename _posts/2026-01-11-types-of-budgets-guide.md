@@ -4,7 +4,7 @@ title: "اختر نوع الميزانية المناسب ووفر 20% خلال 
 description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /types-of-budgets-guide/
 canonical: https://fouadshawish-png.github.io/types-of-budgets-guide/
-image: /assets/images/posts/types-of-budgets-guide-app-screen.webp
+image: /assets/images/posts/types-of-budgets-guide-cover.jpg
 image_alt: "اختر نوع الميزانية المناسب ووفر 20% خلال 30 يومًا"
 topic: budget
 level: intermediate

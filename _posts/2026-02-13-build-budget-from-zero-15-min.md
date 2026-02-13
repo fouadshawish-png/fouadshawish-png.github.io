@@ -4,7 +4,7 @@ title: "كيف تبني ميزانية شهرية من الصفر في 15 دقي
 description: "تريد ميزانية شهرية سريعة وواضحة؟ تعلّم طريقة عملية لبناء الميزانية من الصفر في 15 دقيقة. ابدأ تطبيقها فورًا مع تتبع المصاريف."
 permalink: /build-monthly-budget-from-zero-15-min/
 canonical: https://fouadshawish-png.github.io/build-monthly-budget-from-zero-15-min/
-image: /assets/images/posts/build-budget-from-zero-15-min-app-screen.webp
+image: /assets/images/posts/build-budget-from-zero-15-min-cover.jpeg
 image_alt: "كيف تبني ميزانية شهرية من الصفر في 15 دقيقة؟"
 topic: budget
 level: intermediate

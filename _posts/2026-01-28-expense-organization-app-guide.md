@@ -10,8 +10,8 @@ tags:
   - إدارة الأموال
 permalink: /expense-organization-app-guide/
 canonical: https://fouadshawish-png.github.io/expense-organization-app-guide/
-image: /assets/images/posts/benefits-of-tracking-expenses.jpg
-image_alt: "اختيار تطبيق لتنظيم المصاريف بطريقة عملية"
+image: /assets/images/posts/expense-organization-app-guide-cover.jpeg
+image_alt: "اختر تطبيق تنظيم المصاريف المناسب خلال 7 أيام"
 last_modified_at: 2026-01-28
 ---
 

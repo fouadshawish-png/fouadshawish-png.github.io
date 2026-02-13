@@ -7,8 +7,8 @@ permalink: /حساب-المصاريف-الشهرية/
 canonical: "https://fouadshawish-png.github.io/حساب-المصاريف-الشهرية/"
 og_type: article
 og_image: /assets/images/posts/where-salary-goes-monthly.jpg
-image: /assets/images/posts/where-salary-goes-monthly.jpg
-image_alt: "حساب المصاريف الشهرية بدقة"
+image: /assets/images/posts/calculate-monthly-expenses-variable-income-cover.jpg
+image_alt: "احسب مصاريفك الشهرية بدقة مع دخل متغير خلال 30 يومًا"
 date: 2026-02-13
 last_modified_at: 2026-02-13
 topic: budget

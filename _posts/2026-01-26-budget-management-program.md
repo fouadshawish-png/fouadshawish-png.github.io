@@ -10,8 +10,8 @@ tags:
   - التخطيط المالي
 permalink: /budget-management-program/
 canonical: https://fouadshawish-png.github.io/budget-management-program/
-image: /assets/images/posts/budget-50-30-20.jpg
-image_alt: "استخدام برنامج إدارة ميزانية بخطة شهرية واقعية"
+image: /assets/images/posts/budget-management-program-cover.jpeg
+image_alt: "اختر برنامج إدارة الميزانية وارفع الالتزام خلال 30 يومًا"
 last_modified_at: 2026-01-26
 ---
 

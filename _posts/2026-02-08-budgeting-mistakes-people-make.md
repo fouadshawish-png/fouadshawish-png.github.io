@@ -10,8 +10,8 @@ tags:
   - إدارة الأموال
 permalink: /budgeting-mistakes-people-make/
 canonical: https://fouadshawish-png.github.io/budgeting-mistakes-people-make/
-image: /assets/images/posts/common-monthly-budget-mistakes.jpg
-image_alt: "أخطاء الميزانية المتكررة"
+image: /assets/images/posts/budgeting-mistakes-people-make-cover.jpeg
+image_alt: "اكتشف أخطاء الميزانية المتكررة وصحّحها خلال 4 أسابيع"
 faq:
   - question: "لماذا أكرر نفس خطأ الميزانية كل شهر؟"
     answer: "غالبًا لأن الخطة لا تتضمن مراجعة أسبوعية وقرارات تصحيح مبكرة." 

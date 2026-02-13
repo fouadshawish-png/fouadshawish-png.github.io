@@ -10,8 +10,8 @@ tags:
   - إدارة الأموال
 permalink: /where-does-my-salary-go/
 canonical: https://fouadshawish-png.github.io/where-does-my-salary-go/
-image: /assets/images/posts/where-salary-goes-monthly.jpg
-image_alt: "تحليل أين يذهب الراتب كل شهر"
+image: /assets/images/posts/where-does-my-salary-go-cover.jpg
+image_alt: "اكتشف أين يضيع راتبك ونظّم المصاريف خلال 30 يومًا"
 last_modified_at: 2026-02-13
 ---
 

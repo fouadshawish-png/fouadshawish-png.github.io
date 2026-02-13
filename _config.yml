@@ -27,3 +27,11 @@ sitemap:
   priority: 0.8
 
 last_modified_at: true
+
+featured_posts:
+  - /organize-monthly-expenses-step-by-step/
+  - /ultimate-guide-personal-finance-arabic/
+  - /weekly-budget-review-system/
+  - /build-realistic-monthly-budget/
+  - /manage-personal-debt-step-by-step/
+  - /how-to-track-expenses-daily-effectively/

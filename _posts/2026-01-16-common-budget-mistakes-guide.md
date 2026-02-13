@@ -4,7 +4,7 @@ title: "تجنّب أخطاء الميزانية ووفّر 15% خلال 30 يو
 description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /common-budget-mistakes-guide/
 canonical: https://fouadshawish-png.github.io/common-budget-mistakes-guide/
-image: /assets/images/posts/common-budget-mistakes-guide-app-screen.webp
+image: /assets/images/posts/common-budget-mistakes-guide-cover.jpg
 image_alt: "تجنّب أخطاء الميزانية ووفّر 15% خلال 30 يومًا (دليل)"
 topic: budget
 level: intermediate

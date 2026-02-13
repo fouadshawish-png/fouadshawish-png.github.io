@@ -4,7 +4,7 @@ title: "افهم أنواع المصاريف وقلّل الهدر خلال 30 �
 description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /types-of-expenses-ar/
 canonical: https://fouadshawish-png.github.io/types-of-expenses-ar/
-image: /assets/images/posts/types-of-expenses-ar-app-screen.webp
+image: /assets/images/posts/types-of-expenses-ar-cover.jpg
 image_alt: "افهم أنواع المصاريف وقلّل الهدر خلال 30 يومًا (دليل)"
 topic: expense-tracking
 level: intermediate

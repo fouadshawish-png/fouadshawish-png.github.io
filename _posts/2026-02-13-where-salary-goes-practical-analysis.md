@@ -4,7 +4,7 @@ title: "أين يذهب راتبي؟ تحليل عملي للأخطاء الشا
 description: "لا تعرف أين يذهب الراتب كل شهر؟ تعلّم تحليلًا عمليًا لأخطاء المصاريف والميزانية. ابدأ نظام تتبع واضحًا يحسن إدارة الأموال بسرعة."
 permalink: /where-does-my-salary-go-practical-analysis/
 canonical: https://fouadshawish-png.github.io/where-does-my-salary-go-practical-analysis/
-image: /assets/images/posts/where-salary-goes-practical-analysis-app-screen.webp
+image: /assets/images/posts/where-salary-goes-practical-analysis-cover.jpeg
 image_alt: "أين يذهب راتبي؟ تحليل عملي للأخطاء الشائعة"
 topic: expense-tracking
 level: intermediate

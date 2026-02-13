@@ -4,7 +4,7 @@ title: "كيف تتابع مصاريفك يوميًا بدون تعقيد؟"
 description: "تريد متابعة المصاريف يوميًا بدون ملل؟ تعلّم طريقة بسيطة لتتبع المصاريف وضبط الميزانية. ابدأ نظامًا عمليًا واضحًا خلال 7 أيام."
 permalink: /track-expenses-daily-without-complexity-action/
 canonical: https://fouadshawish-png.github.io/track-expenses-daily-without-complexity-action/
-image: /assets/images/posts/track-expenses-daily-without-complexity-action-app-screen.webp
+image: /assets/images/posts/track-expenses-daily-without-complexity-action-cover.jpg
 image_alt: "كيف تتابع مصاريفك يوميًا بدون تعقيد؟"
 topic: expense-tracking
 level: intermediate

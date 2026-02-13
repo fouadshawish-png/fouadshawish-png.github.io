@@ -10,8 +10,8 @@ tags:
   - تنظيم المصاريف
 permalink: /build-realistic-monthly-budget/
 canonical: https://fouadshawish-png.github.io/build-realistic-monthly-budget/
-image: /assets/images/posts/budget-templates-not-for-all.jpg
-image_alt: "بناء ميزانية شهرية واقعية تناسب الدخل الحقيقي"
+image: /assets/images/posts/build-realistic-monthly-budget-cover.jpg
+image_alt: "ابنِ ميزانية شهرية واقعية ووفّر خلال 30 يومًا"
 last_modified_at: 2026-02-03
 ---
 

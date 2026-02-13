@@ -4,7 +4,7 @@ title: "أفضل طريقة لتتبع المصاريف في 2026"
 description: "تبحث عن أفضل طريقة لتتبع المصاريف في 2026؟ تعلّم نظامًا عمليًا يجمع بين التتبع اليومي والمراجعة الأسبوعية والميزانية. ابدأ بخطة واضحة الآن."
 permalink: /best-way-track-expenses-2026/
 canonical: https://fouadshawish-png.github.io/best-way-track-expenses-2026/
-image: /assets/images/posts/best-way-track-expenses-2026-app-screen.webp
+image: /assets/images/posts/best-way-track-expenses-2026-cover.jpeg
 image_alt: "أفضل طريقة لتتبع المصاريف في 2026"
 topic: expense-tracking
 level: intermediate

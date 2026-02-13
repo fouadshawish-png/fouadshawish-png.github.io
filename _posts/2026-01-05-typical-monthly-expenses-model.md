@@ -4,7 +4,7 @@ title: "ابنِ نموذج مصاريف شهرية واضح خلال 30 يوم�
 description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /typical-monthly-expenses-model/
 canonical: https://fouadshawish-png.github.io/typical-monthly-expenses-model/
-image: /assets/images/posts/typical-monthly-expenses-model-app-screen.webp
+image: /assets/images/posts/typical-monthly-expenses-model-cover.jpg
 image_alt: "ابنِ نموذج مصاريف شهرية واضح خلال 30 يومًا (طريقة)"
 topic: expense-tracking
 level: intermediate

@@ -4,7 +4,7 @@ title: "افهم تتبع المصاريف وإدارة الأموال خلال 
 description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /expense-tracking-vs-money-management/
 canonical: https://fouadshawish-png.github.io/expense-tracking-vs-money-management/
-image: /assets/images/posts/expense-tracking-vs-money-management-app-screen.webp
+image: /assets/images/posts/expense-tracking-vs-money-management-cover.jpeg
 image_alt: "افهم تتبع المصاريف وإدارة الأموال خلال 10 دقائق"
 categories:
   - تنظيم المصاريف

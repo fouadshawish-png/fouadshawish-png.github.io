@@ -10,8 +10,8 @@ tags:
   - مراجعة الميزانية
   - التقارير المالية
   - إدارة الأموال
-image: /assets/images/posts/weekly-budget-review-10-minutes.jpg
-image_alt: "مراجعة الميزانية الأسبوعية خلال عشر دقائق بخطوات عملية"
+image: /assets/images/posts/weekly-budget-review-cover.jpeg
+image_alt: "راجع ميزانيتك في 10 دقائق وارفع التحكم خلال 30 يومًا"
 last_modified_at: 2026-02-12
 ---
 

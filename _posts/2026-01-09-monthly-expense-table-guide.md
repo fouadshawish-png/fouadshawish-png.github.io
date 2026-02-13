@@ -4,7 +4,7 @@ title: "استخدم جدول مصاريف عمليًا وقلّل الهدر خ
 description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /monthly-expense-table-guide/
 canonical: https://fouadshawish-png.github.io/monthly-expense-table-guide/
-image: /assets/images/posts/monthly-expense-table-guide-app-screen.webp
+image: /assets/images/posts/monthly-expense-table-guide-cover.jpeg
 image_alt: "استخدم جدول مصاريف عمليًا وقلّل الهدر خلال 30 يومًا"
 topic: expense-tracking
 level: intermediate

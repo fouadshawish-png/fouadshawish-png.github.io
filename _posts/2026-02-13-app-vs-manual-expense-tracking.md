@@ -7,8 +7,8 @@ permalink: /تطبيق-مصاريف-ام-دفتر/
 canonical: "https://fouadshawish-png.github.io/تطبيق-مصاريف-ام-دفتر/"
 og_type: article
 og_image: /assets/images/posts/benefits-of-tracking-expenses.jpg
-image: /assets/images/posts/benefits-of-tracking-expenses.jpg
-image_alt: "مقارنة تطبيق مصاريف مع الدفتر اليدوي"
+image: /assets/images/posts/app-vs-manual-expense-tracking-cover.jpg
+image_alt: "اختر بين تطبيق مصاريف أو دفتر يدوي في 7 أيام"
 date: 2026-02-13
 last_modified_at: 2026-02-13
 topic: expense-tracking

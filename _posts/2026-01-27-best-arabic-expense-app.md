@@ -10,8 +10,8 @@ tags:
   - إدارة الميزانية
 permalink: /best-arabic-expense-app/
 canonical: https://fouadshawish-png.github.io/best-arabic-expense-app/
-image: /assets/images/posts/why-salary-disappears-early.jpg
-image_alt: "اختيار أفضل تطبيق مصاريف عربي"
+image: /assets/images/posts/best-arabic-expense-app-cover.jpeg
+image_alt: "اختر أفضل تطبيق مصاريف عربي خلال 7 أيام (دليل)"
 last_modified_at: 2026-01-27
 ---
 

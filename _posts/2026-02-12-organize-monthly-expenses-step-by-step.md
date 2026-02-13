@@ -10,8 +10,8 @@ tags:
   - إدارة الأموال
 permalink: /organize-monthly-expenses-step-by-step/
 canonical: https://fouadshawish-png.github.io/organize-monthly-expenses-step-by-step/
-image: /assets/images/posts/organize-monthly-expenses-step-by-step.jpg
-image_alt: "خطوات عملية لتنظيم المصاريف الشهرية وإدارة الأموال"
+image: /assets/images/posts/organize-monthly-expenses-step-by-step-cover.jpg
+image_alt: "نظّم مصاريفك الشهرية ووفّر 20% خلال 30 يومًا (دليل)"
 is_pillar: true
 faq:
   - question: "كم أحتاج وقتًا لرؤية نتيجة؟"

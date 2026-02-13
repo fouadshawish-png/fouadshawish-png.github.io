@@ -10,8 +10,8 @@ tags:
   - التخطيط المالي
 permalink: /fast-debt-repayment-method/
 canonical: https://fouadshawish-png.github.io/fast-debt-repayment-method/
-image: /assets/images/posts/manage-personal-debt-smartly.jpg
-image_alt: "طريقة تسديد الديون بسرعة بخطة منظمة"
+image: /assets/images/posts/fast-debt-repayment-method-cover.jpg
+image_alt: "سدّد الديون بسرعة وحرّر الميزانية خلال 90 يومًا (خطة)"
 last_modified_at: 2026-01-23
 ---
 

@@ -10,8 +10,8 @@ tags:
   - ميزانية شهرية
   - أخطاء الميزانية
   - تنظيم المصاريف
-image: /assets/images/posts/why-monthly-budget-fails.jpg
-image_alt: "أسباب فشل الميزانية الشهرية وكيفية تنظيم المصاريف"
+image: /assets/images/posts/why-monthly-budget-fails-cover.jpg
+image_alt: "تجنّب فشل الميزانية الشهرية بخطة عملية خلال 30 يومًا"
 last_modified_at: 2026-01-29
 ---
 

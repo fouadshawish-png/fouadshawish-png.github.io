@@ -10,8 +10,8 @@ tags:
   - التخطيط المالي
 permalink: /how-to-pay-off-debt-strategically/
 canonical: https://fouadshawish-png.github.io/how-to-pay-off-debt-strategically/
-image: /assets/images/posts/manage-personal-debt-smartly.jpg
-image_alt: "استراتيجية عملية لسداد الديون"
+image: /assets/images/posts/how-to-pay-off-debt-strategically-cover.jpg
+image_alt: "رتّب سداد الديون بذكاء وخفّف الضغط خلال 12 أسبوعًا"
 faq:
   - question: "هل أركز على أصغر دين أم أعلى تكلفة؟"
     answer: "إذا احتجت دافعًا نفسيًا سريعًا ابدأ بالأصغر، وإذا أردت تقليل التكلفة ابدأ بالأعلى كلفة."

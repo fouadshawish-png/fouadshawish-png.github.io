@@ -10,8 +10,8 @@ tags:
   - تتبع المصاريف
 permalink: /weekly-budget-review-system/
 canonical: https://fouadshawish-png.github.io/weekly-budget-review-system/
-image: /assets/images/posts/weekly-budget-review-10-minutes.jpg
-image_alt: "نظام مراجعة الميزانية الأسبوعي"
+image: /assets/images/posts/weekly-budget-review-system-cover.jpg
+image_alt: "طبّق مراجعة الميزانية الأسبوعية وقلّل الهدر خلال شهر"
 faq:
   - question: "كم مرة يجب مراجعة الميزانية؟"
     answer: "الأفضل مراجعة أسبوعية ثابتة، مع مراجعة شهرية أكبر لتحديث الخطة." 

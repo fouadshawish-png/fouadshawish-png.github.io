@@ -63,7 +63,7 @@
   <section class="footer-newsletter" aria-label="الاشتراك في تحديثات محترف المصاريف">
     <h3>انضم لقائمة تطوير محترف المصاريف</h3>
     <p>نرسل تحديثات عملية فقط — بدون إزعاج</p>
-    <form class="footer-newsletter__form" action="#" method="post">
+    <form class="footer-newsletter__form" action="{{ '/' | relative_url }}" method="get" onsubmit="return false;" data-newsletter-form>
       <label class="sr-only" for="newsletterEmail">البريد الإلكتروني</label>
       <input id="newsletterEmail" name="email" type="email" placeholder="أدخل بريدك الإلكتروني" autocomplete="email">
       <button type="submit">اشترك</button>

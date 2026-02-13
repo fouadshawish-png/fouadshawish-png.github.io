@@ -10,8 +10,8 @@ tags:
   - إدارة الأموال
 permalink: /how-to-control-my-spending/
 canonical: https://fouadshawish-png.github.io/how-to-control-my-spending/
-image: /assets/images/posts/spending-control-vs-deprivation.jpg
-image_alt: "خطة عملية للتحكم في المصروف بدون تعقيد"
+image: /assets/images/posts/how-to-control-my-spending-cover.jpg
+image_alt: "تحكّم في المصاريف وقلّل الهدر خلال 30 يومًا (طريقة)"
 last_modified_at: 2026-01-25
 ---
 

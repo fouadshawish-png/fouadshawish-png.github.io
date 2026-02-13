@@ -9,8 +9,8 @@ tags:
   - إدارة الديون
   - الادخار
   - الميزانية الشهرية
-image: /assets/images/posts/salary-disappears-expense-tracking.jpg
-image_alt: "مرجع عملي لإدارة المصاريف الشخصية والميزانية في 2026"
+image: /assets/images/posts/ultimate-guide-personal-finance-arabic-cover.jpg
+image_alt: "أتقن إدارة الأموال الشخصية بخطة عملية خلال 90 يومًا"
 permalink: /ultimate-guide-personal-finance-arabic/
 canonical: https://fouadshawish-png.github.io/ultimate-guide-personal-finance-arabic/
 is_pillar: true

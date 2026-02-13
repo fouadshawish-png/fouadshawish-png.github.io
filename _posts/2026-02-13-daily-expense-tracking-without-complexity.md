@@ -7,8 +7,8 @@ permalink: /تتبع-المصاريف-اليومية/
 canonical: "https://fouadshawish-png.github.io/تتبع-المصاريف-اليومية/"
 og_type: article
 og_image: /assets/images/posts/daily-expense-tracking-mistakes.jpg
-image: /assets/images/posts/daily-expense-tracking-mistakes.jpg
-image_alt: "تتبع المصاريف اليومية بطريقة بسيطة"
+image: /assets/images/posts/daily-expense-tracking-without-complexity-cover.jpg
+image_alt: "ابدأ تتبع المصاريف اليومية بسهولة في 10 دقائق"
 date: 2026-02-13
 last_modified_at: 2026-02-13
 topic: expense-tracking

@@ -4,7 +4,7 @@ title: "قسّم الراتب بذكاء واضبط المصاريف خلال 24
 description: "راتبك ينتهي بسرعة كل شهر؟ اكتشف طريقة عملية لتتبع المصاريف وتوزيع الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 24 ساعة."
 permalink: /split-salary-first-24-hours/
 canonical: https://fouadshawish-png.github.io/split-salary-first-24-hours/
-image: /assets/images/posts/split-salary-first-24-hours-app-screen.webp
+image: /assets/images/posts/split-salary-first-24-hours-cover.jpeg
 image_alt: "قسّم الراتب بذكاء واضبط المصاريف خلال 24 ساعة"
 categories:
   - الميزانية

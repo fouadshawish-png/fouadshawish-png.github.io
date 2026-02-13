@@ -33,6 +33,57 @@ permalink: /blog/
 </section>
 {% endif %}
 
+<section class="section" aria-label="الأكثر قراءة">
+  <h2 class="section-title">الأكثر قراءة</h2>
+  <div class="post-related-grid">
+    {% assign featured_shown = 0 %}
+    {% assign featured_urls = "|" %}
+
+    {% for fp in site.featured_posts %}
+      {% assign item = site.posts | where: "url", fp | first %}
+      {% if item and item.title and item.description and featured_shown < 6 %}
+        {% assign item_token = item.url | append: "|" %}
+        {% unless featured_urls contains item_token %}
+        <article class="related-card">
+          {% if item.image %}
+          <a class="related-card__thumb" href="{{ item.url | relative_url }}" aria-label="{{ item.title }}">
+            <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title }}" loading="lazy" width="1200" height="630">
+          </a>
+          {% endif %}
+          <div class="related-card__body">
+            <h3 class="related-card__title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+            <p class="related-card__desc">{{ item.description | strip_html | strip_newlines | truncate: 130 }}</p>
+          </div>
+        </article>
+        {% assign featured_shown = featured_shown | plus: 1 %}
+        {% assign featured_urls = featured_urls | append: item_token %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+
+    {% for item in site.posts %}
+      {% assign item_token = item.url | append: "|" %}
+      {% if item.title and item.description and featured_shown < 6 %}
+        {% unless featured_urls contains item_token %}
+        <article class="related-card">
+          {% if item.image %}
+          <a class="related-card__thumb" href="{{ item.url | relative_url }}" aria-label="{{ item.title }}">
+            <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: item.title }}" loading="lazy" width="1200" height="630">
+          </a>
+          {% endif %}
+          <div class="related-card__body">
+            <h3 class="related-card__title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+            <p class="related-card__desc">{{ item.description | strip_html | strip_newlines | truncate: 130 }}</p>
+          </div>
+        </article>
+        {% assign featured_shown = featured_shown | plus: 1 %}
+        {% assign featured_urls = featured_urls | append: item_token %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
 {%- assign categories = "تنظيم المصاريف|الميزانية|الديون|العادات المالية" | split: "|" -%}
 {%- for category in categories -%}
 <section class="blog-category section">

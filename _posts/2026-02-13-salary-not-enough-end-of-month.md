@@ -4,7 +4,7 @@ title: "راتبي لا يكفيني لنهاية الشهر: ماذا أفعل�
 description: "راتبك ينتهي قبل نهاية الشهر؟ تعلّم خطة عملية لضبط المصاريف والميزانية خطوة بخطوة. ابدأ نظامًا واضحًا لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /salary-not-enough-end-of-month/
 canonical: https://fouadshawish-png.github.io/salary-not-enough-end-of-month/
-image: /assets/images/posts/salary-not-enough-end-of-month-app-screen.webp
+image: /assets/images/posts/salary-not-enough-end-of-month-cover.jpeg
 image_alt: "راتبي لا يكفيني لنهاية الشهر: ماذا أفعل؟"
 topic: expense-tracking
 level: intermediate

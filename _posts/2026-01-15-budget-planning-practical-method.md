@@ -4,7 +4,7 @@ title: "خطّط الميزانية بوضوح وقلّل العشوائية خ�
 description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /budget-planning-practical-method/
 canonical: https://fouadshawish-png.github.io/budget-planning-practical-method/
-image: /assets/images/posts/budget-planning-practical-method-app-screen.webp
+image: /assets/images/posts/budget-planning-practical-method-cover.jpeg
 image_alt: "خطّط الميزانية بوضوح وقلّل العشوائية خلال 30 يومًا"
 topic: budget
 level: intermediate
