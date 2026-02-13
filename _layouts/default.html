@@ -519,5 +519,21 @@
       }, { passive: true });
     })();
     </script>
+    <script>
+    (function() {
+      var articleTitle = document.title;
+      var articlePath = window.location.pathname;
+
+      gtag('event', 'content_context', {
+        article_title: articleTitle,
+        article_path: articlePath
+      });
+
+      window.siteContext = {
+        article_title: articleTitle,
+        article_path: articlePath
+      };
+    })();
+    </script>
   </body>
 </html>
