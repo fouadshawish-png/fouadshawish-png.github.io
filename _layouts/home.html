@@ -49,5 +49,47 @@
         });
       })();
     </script>
+    <script>
+      (function() {
+        window.dataLayer = window.dataLayer || [];
+        if (typeof window.gtag !== "function") {
+          window.gtag = function(){ window.dataLayer.push(arguments); };
+        }
+      })();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let scroll50Sent = false;
+        let scroll90Sent = false;
+
+        window.addEventListener("scroll", function () {
+          const scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight * 100;
+
+          if (scrollPercent > 50 && !scroll50Sent) {
+            gtag('event', 'scroll_50', { event_category: 'engagement' });
+            scroll50Sent = true;
+          }
+
+          if (scrollPercent > 90 && !scroll90Sent) {
+            gtag('event', 'scroll_90', { event_category: 'engagement' });
+            scroll90Sent = true;
+          }
+        }, { passive: true });
+
+        var startBtn = document.querySelector(".cta-start");
+        if (startBtn) {
+          startBtn.addEventListener("click", function () {
+            gtag('event', 'click_cta_home', { event_category: 'engagement' });
+          });
+        }
+
+        var playBtn = document.querySelector(".play-store-btn");
+        if (playBtn) {
+          playBtn.addEventListener("click", function () {
+            gtag('event', 'click_google_play', { event_category: 'conversion' });
+          });
+        }
+      });
+    </script>
   </body>
 </html>

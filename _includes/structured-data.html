@@ -97,7 +97,7 @@
       },
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "{{ site.url }}/search?q={search_term_string}",
+        "target": "{{ '/blog/' | absolute_url }}?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
@@ -130,36 +130,12 @@
   },
   "publisher": {
     "@id": "{{ site_url }}#organization"
-  }
+  },
   "datePublished": "{{ guide_published | date_to_xmlschema }}",
   "dateModified": "{{ guide_modified | date_to_xmlschema }}"
 }
 </script>
 {%- endif -%}
-
-{% if page.layout == "post" %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "{{ page.title | escape }}",
-  "description": "{{ page.description | default: site.description | escape }}",
-  "image": "{{ page.image | default: '/assets/images/og-default.jpg' | absolute_url }}",
-  "author": {
-    "@id": "{{ author_url }}#person"
-  },
-  "publisher": {
-    "@id": "{{ site_url }}#organization"
-  },
-  "datePublished": "{{ page.date | default: site.time | date_to_xmlschema }}",
-  "dateModified": "{{ page.last_modified_at | default: page.date | default: site.time | date_to_xmlschema }}",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ page.canonical | default: page.url | absolute_url }}"
-  }
-}
-</script>
-{% endif %}
 
 {% if page.url == "/topics/" %}
 <script type="application/ld+json">
