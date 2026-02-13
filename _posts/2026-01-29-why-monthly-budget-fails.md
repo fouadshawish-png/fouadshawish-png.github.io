@@ -2,6 +2,8 @@
 layout: post
 title: "تجنّب فشل الميزانية الشهرية بخطة عملية خلال 30 يومًا"
 description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
+permalink: /why-monthly-budget-fails/
+canonical: https://fouadshawish-png.github.io/why-monthly-budget-fails/
 categories:
   - الميزانية
 tags:
@@ -130,7 +132,7 @@ last_modified_at: 2026-01-29
 ## اقرأ أيضًا
 
 - [الدليل الشامل لإدارة المصاريف الشخصية في 2026](/ultimate-guide-personal-finance-arabic/)
-- [قاعدة 50/30/20: هل تناسب دخلك فعلًا؟ شرح عملي وتطبيق ذكي](/2026/02/05/50-30-20-rule-explained.html)
+- [قاعدة 50/30/20: هل تناسب دخلك فعلًا؟ شرح عملي وتطبيق ذكي](/50-30-20-rule-explained/)
 - [نظام مراجعة الميزانية الأسبوعي الذي يمنع الانهيار المالي](/weekly-budget-review-system/)
 
 ## تصنيف المقال

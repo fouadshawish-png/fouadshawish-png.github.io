@@ -4,6 +4,8 @@ title: "طبّق ميزانية 50/30/20 ووازن المصاريف خلال 30
 description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /budget-50-30-20-arabic-guide/
 canonical: https://fouadshawish-png.github.io/budget-50-30-20-arabic-guide/
+image: /assets/images/posts/budget-50-30-20-arabic-guide-app-screen.webp
+image_alt: "طبّق ميزانية 50/30/20 ووازن المصاريف خلال 30 يومًا"
 topic: budget
 level: intermediate
 categories:

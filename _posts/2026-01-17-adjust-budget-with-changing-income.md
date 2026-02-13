@@ -4,6 +4,8 @@ title: "عدّل الميزانية مع تغير الدخل خلال 30 يوم�
 description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /adjust-budget-with-changing-income/
 canonical: https://fouadshawish-png.github.io/adjust-budget-with-changing-income/
+image: /assets/images/posts/adjust-budget-with-changing-income-app-screen.webp
+image_alt: "عدّل الميزانية مع تغير الدخل خلال 30 يومًا (خطة)"
 topic: budget
 level: intermediate
 categories:

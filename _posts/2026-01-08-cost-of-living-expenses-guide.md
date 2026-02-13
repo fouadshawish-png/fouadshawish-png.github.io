@@ -4,6 +4,8 @@ title: "خطّط مصاريف المعيشة بذكاء خلال 30 يومًا (
 description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /cost-of-living-expenses-guide/
 canonical: https://fouadshawish-png.github.io/cost-of-living-expenses-guide/
+image: /assets/images/posts/cost-of-living-expenses-guide-app-screen.webp
+image_alt: "خطّط مصاريف المعيشة بذكاء خلال 30 يومًا (دليل)"
 topic: expense-tracking
 level: intermediate
 categories:

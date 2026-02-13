@@ -2,6 +2,8 @@
 layout: post
 title: "راجع ميزانيتك في 10 دقائق وارفع التحكم خلال 30 يومًا"
 description: "لا تعرف أين يتسرّب المال أسبوعيًا؟ تعلّم طريقة عملية لمراجعة الميزانية وتتبع المصاريف. ابدأ خطة سريعة تحسّن إدارة الأموال في 10 دقائق."
+permalink: /weekly-budget-review/
+canonical: https://fouadshawish-png.github.io/weekly-budget-review/
 categories:
   - الميزانية
 tags:

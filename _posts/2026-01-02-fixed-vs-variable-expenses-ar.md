@@ -4,6 +4,8 @@ title: "فرّق المصاريف الثابتة والمتغيرة ووفّر �
 description: "المصاريف تتجاوز خطتك كل شهر؟ تعلّم طريقة عملية لتتبع المصاريف وبناء الميزانية. ابدأ خطة واضحة لتحسين إدارة الأموال خلال 30 يومًا."
 permalink: /fixed-vs-variable-expenses-ar/
 canonical: https://fouadshawish-png.github.io/fixed-vs-variable-expenses-ar/
+image: /assets/images/posts/fixed-vs-variable-expenses-ar-app-screen.webp
+image_alt: "فرّق المصاريف الثابتة والمتغيرة ووفّر خلال 30 يومًا"
 topic: expense-tracking
 level: intermediate
 categories:
