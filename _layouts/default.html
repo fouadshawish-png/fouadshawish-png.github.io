@@ -403,5 +403,25 @@
       }
     })();
     </script>
+    <script>
+    (function() {
+      var path = window.location.pathname;
+
+      var pageType = "other";
+
+      if (path === "/" || path.includes("index")) {
+        pageType = "home";
+      } else if (path.includes("blog") || path.includes("/20")) {
+        pageType = "article";
+      } else if (path.includes("start") || path.includes("download")) {
+        pageType = "conversion_page";
+      }
+
+      gtag('event', 'page_type', {
+        page_type: pageType,
+        page_path: path
+      });
+    })();
+    </script>
   </body>
 </html>
