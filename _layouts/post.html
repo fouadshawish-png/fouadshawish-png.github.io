@@ -61,7 +61,7 @@ layout: default
 
         {% for rel in fallback_posts %}
           {% assign rel_token = rel.url | append: "|" %}
-          {% if rel.url != page.url and rel.categories contains primary_category and rel.title and rel.description and burst_shown < 3 %}
+          {% if rel.url != page.url and rel.categories contains primary_category and rel.title and rel.description and burst_shown < 2 %}
             {% unless burst_urls contains rel_token %}
               <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
               {% assign burst_shown = burst_shown | plus: 1 %}
@@ -80,7 +80,7 @@ layout: default
                 {% break %}
               {% endif %}
             {% endfor %}
-            {% if rel.url != page.url and tag_match and rel.title and rel.description and burst_shown < 3 %}
+            {% if rel.url != page.url and tag_match and rel.title and rel.description and burst_shown < 2 %}
               {% unless burst_urls contains rel_token %}
                 <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
                 {% assign burst_shown = burst_shown | plus: 1 %}
@@ -92,7 +92,7 @@ layout: default
 
         {% for rel in fallback_posts %}
           {% assign rel_token = rel.url | append: "|" %}
-          {% if rel.url != page.url and rel.title and rel.description and burst_shown < 3 %}
+          {% if rel.url != page.url and rel.title and rel.description and burst_shown < 2 %}
             {% unless burst_urls contains rel_token %}
               <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>
               {% assign burst_shown = burst_shown | plus: 1 %}
@@ -216,19 +216,19 @@ layout: default
   var block = template.content.firstElementChild ? template.content.firstElementChild.cloneNode(true) : null;
   if (!block) return;
 
+  var paragraphs = content.querySelectorAll('p');
+  if (paragraphs.length >= 3) {
+    paragraphs[2].insertAdjacentElement('afterend', block);
+    return;
+  }
+
   var h2 = content.querySelector('h2');
   if (h2) {
     h2.insertAdjacentElement('afterend', block);
     return;
   }
 
-  var paragraphs = content.querySelectorAll('p');
-  if (paragraphs.length) {
-    var idx = Math.max(0, Math.floor(paragraphs.length * 0.25) - 1);
-    paragraphs[idx].insertAdjacentElement('afterend', block);
-  } else {
-    content.insertBefore(block, content.firstChild);
-  }
+  content.insertBefore(block, content.firstChild);
 })();
 </script>
 
