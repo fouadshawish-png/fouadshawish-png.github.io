@@ -75,7 +75,7 @@ layout: default
   {%- assign next_level = 'advanced' -%}
 {%- endif -%}
 
-{%- assign next_step_post = same_topic_posts | where_exp: 'p', "p.level == next_level" | first -%}
+{%- assign next_step_post = same_topic_posts | where: 'level', next_level | first -%}
 {%- unless next_step_post -%}
   {%- assign next_step_post = same_topic_posts | first -%}
 {%- endunless -%}
@@ -312,10 +312,12 @@ layout: default
 
   <ul id="coreInlineCandidates" hidden>
     {%- for slug in site.data.internal-links.core -%}
-      {%- assign candidate = site.posts | where_exp: 'p', "p.url contains slug and p.url != page.url" | first -%}
-      {%- if candidate -%}
-      <li data-url="{{ candidate.url | relative_url }}" data-title="{{ candidate.title | escape }}"></li>
-      {%- endif -%}
+      {%- for candidate in site.posts -%}
+        {%- if candidate.url != page.url and candidate.url contains slug -%}
+        <li data-url="{{ candidate.url | relative_url }}" data-title="{{ candidate.title | escape }}"></li>
+        {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
     {%- endfor -%}
   </ul>
 
@@ -560,15 +562,17 @@ layout: default
           {%- elsif slug == 'difference-between-budget-and-expenses' -%}
             {%- assign lookup_slug = 'expense-tracking-vs-money-management' -%}
           {%- endif -%}
-          {%- assign candidate = base_related | where_exp: 'p', "p.url contains lookup_slug" | first -%}
-          {%- if candidate -%}
-            {%- capture marker -%}|{{ candidate.url }}|{%- endcapture -%}
-            {%- unless shown_urls contains marker -%}
-            <li><a href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a></li>
-            {%- assign core_added = core_added | plus: 1 -%}
-            {%- assign shown_urls = shown_urls | append: candidate.url | append: '|' -%}
-            {%- endunless -%}
-          {%- endif -%}
+          {%- for candidate in base_related -%}
+            {%- if candidate.url contains lookup_slug -%}
+              {%- capture marker -%}|{{ candidate.url }}|{%- endcapture -%}
+              {%- unless shown_urls contains marker -%}
+              <li><a href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a></li>
+              {%- assign core_added = core_added | plus: 1 -%}
+              {%- assign shown_urls = shown_urls | append: candidate.url | append: '|' -%}
+              {%- endunless -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
         {%- endif -%}
       {%- endfor -%}
 
@@ -587,15 +591,17 @@ layout: default
 
       {%- for slug in site.data.internal-links.support -%}
         {%- if support_added < 1 -%}
-          {%- assign candidate = base_related | where_exp: 'p', "p.url contains slug" | first -%}
-          {%- if candidate -%}
-            {%- capture marker -%}|{{ candidate.url }}|{%- endcapture -%}
-            {%- unless shown_urls contains marker -%}
-            <li><a href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a></li>
-            {%- assign support_added = support_added | plus: 1 -%}
-            {%- assign shown_urls = shown_urls | append: candidate.url | append: '|' -%}
-            {%- endunless -%}
-          {%- endif -%}
+          {%- for candidate in base_related -%}
+            {%- if candidate.url contains slug -%}
+              {%- capture marker -%}|{{ candidate.url }}|{%- endcapture -%}
+              {%- unless shown_urls contains marker -%}
+              <li><a href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a></li>
+              {%- assign support_added = support_added | plus: 1 -%}
+              {%- assign shown_urls = shown_urls | append: candidate.url | append: '|' -%}
+              {%- endunless -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
         {%- endif -%}
       {%- endfor -%}
 
@@ -615,15 +621,17 @@ layout: default
 
       {%- for slug in site.data.internal-links.countries -%}
         {%- if countries_added < 1 -%}
-          {%- assign candidate = base_related | where_exp: 'p', "p.url contains slug" | first -%}
-          {%- if candidate -%}
-            {%- capture marker -%}|{{ candidate.url }}|{%- endcapture -%}
-            {%- unless shown_urls contains marker -%}
-            <li><a href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a></li>
-            {%- assign countries_added = countries_added | plus: 1 -%}
-            {%- assign shown_urls = shown_urls | append: candidate.url | append: '|' -%}
-            {%- endunless -%}
-          {%- endif -%}
+          {%- for candidate in base_related -%}
+            {%- if candidate.url contains slug -%}
+              {%- capture marker -%}|{{ candidate.url }}|{%- endcapture -%}
+              {%- unless shown_urls contains marker -%}
+              <li><a href="{{ candidate.url | relative_url }}">{{ candidate.title }}</a></li>
+              {%- assign countries_added = countries_added | plus: 1 -%}
+              {%- assign shown_urls = shown_urls | append: candidate.url | append: '|' -%}
+              {%- endunless -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
         {%- endif -%}
       {%- endfor -%}
 
@@ -722,9 +730,9 @@ layout: default
   <div class="card">
     <h2>مقالات مرتبطة من نفس السلسلة</h2>
     <ul class="topic-block__list">
-      {%- assign series_posts = site.posts | where_exp: 'p', "p.url != page.url and page.series and p.series == page.series" -%}
-      {%- if series_posts.size == 0 -%}
-        {%- assign series_posts = same_topic_posts -%}
+      {%- assign series_posts = same_topic_posts -%}
+      {%- if page.series -%}
+        {%- assign series_posts = site.posts | where: 'series', page.series | where_exp: 'p', "p.url != page.url" -%}
       {%- endif -%}
       {%- for rel in series_posts limit:5 -%}
       <li><a href="{{ rel.url | relative_url }}">{{ rel.title }}</a></li>

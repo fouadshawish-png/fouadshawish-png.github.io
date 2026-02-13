@@ -14,11 +14,19 @@ layout: default
     <p class="post-excerpt">{{ page.description }}</p>
   {% endif %}
 
-  {% assign category_posts = site.posts | where_exp: "post", "post.categories contains page.category_key" %}
+  {% assign category_posts = site.posts %}
+  {% assign category_has_posts = false %}
+  {% for post in category_posts %}
+    {% if post.categories contains page.category_key %}
+      {% assign category_has_posts = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
 
-  {% if category_posts.size > 0 %}
+  {% if category_has_posts %}
     <ul class="post-list">
       {% for post in category_posts %}
+      {% if post.categories contains page.category_key %}
       <li class="post-item">
         {% if post.image %}
           <a class="post-thumb" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
@@ -33,6 +41,7 @@ layout: default
           {% endif %}
         </div>
       </li>
+      {% endif %}
       {% endfor %}
     </ul>
   {% else %}

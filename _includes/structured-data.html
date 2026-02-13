@@ -193,7 +193,6 @@
 {% endif %}
 
 {% if page.layout == "category" %}
-{%- assign category_posts = site.posts | where_exp: "post", "post.categories contains page.category_key" -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -204,13 +203,18 @@
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [
-      {% for post in category_posts %}
+      {% assign category_position = 0 %}
+      {% for post in site.posts %}
+      {% if post.categories contains page.category_key %}
+      {% assign category_position = category_position | plus: 1 %}
+      {% if category_position > 1 %},{% endif %}
       {
         "@type": "ListItem",
-        "position": {{ forloop.index }},
+        "position": {{ category_position }},
         "url": "{{ post.url | absolute_url }}",
         "name": "{{ post.title | escape }}"
-      }{% unless forloop.last %},{% endunless %}
+      }
+      {% endif %}
       {% endfor %}
     ]
   }
