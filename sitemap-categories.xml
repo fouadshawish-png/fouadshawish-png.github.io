@@ -1,0 +1,15 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% assign category_hubs = "/إدارة-المصاريف/,/الميزانية/,/تتبع-المصاريف/,/الديون/,/الادخار/" | split: "," %}
+  {% for hub_url in category_hubs %}
+  <url>
+    <loc>{{ hub_url | absolute_url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  {% endfor %}
+</urlset>

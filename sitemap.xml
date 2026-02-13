@@ -2,52 +2,17 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>{{ '/دليل-إدارة-المصاريف-والميزانية/' | absolute_url }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>{{ '/منهج-إدارة-المصاريف/' | absolute_url }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>{{ '/خريطة-إدارة-المصاريف/' | absolute_url }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>{{ '/money-management-guide/' | absolute_url }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ '/organize-monthly-expenses-step-by-step/' | absolute_url }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ '/الميزانية-الشهرية-خطوة-بخطوة/' | absolute_url }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ '/how-it-works.html' | absolute_url }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>{{ '/download.html' | absolute_url }}</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <priority>0.8</priority>
-  </url>
-  {% for post in site.posts %}
-  <url>
-    <loc>{{ post.url | absolute_url }}</loc>
-    <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
-    <priority>0.8</priority>
-  </url>
-  {% endfor %}
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>{{ '/sitemap-posts.xml' | absolute_url }}</loc>
+  </sitemap>
+  <sitemap>
+    <loc>{{ '/sitemap-pages.xml' | absolute_url }}</loc>
+  </sitemap>
+  <sitemap>
+    <loc>{{ '/sitemap-categories.xml' | absolute_url }}</loc>
+  </sitemap>
+  <sitemap>
+    <loc>{{ '/sitemap-geo.xml' | absolute_url }}</loc>
+  </sitemap>
+</sitemapindex>
