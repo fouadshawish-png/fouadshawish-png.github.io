@@ -39,8 +39,8 @@
   --hero-subtitle-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
   --showcase-bg: linear-gradient(180deg, #f2faf6 0%, #e7f4ee 100%);
   --compare-bg: #edf7f1;
-  --phone-shell: #111;
-  --phone-screen-bg: #0b0f0d;
+  --phone-shell: linear-gradient(155deg, #2c3136 0%, #15191d 55%, #08090b 100%);
+  --phone-screen-bg: #0f1418;
   --section-radius: 16px;
   --radius: 12px;
   --transition: 0.25s ease;
@@ -94,8 +94,8 @@ html.dark {
   --hero-subtitle-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
   --showcase-bg: linear-gradient(180deg, #0d1b16, #08110d);
   --compare-bg: #0d1d17;
-  --phone-shell: #0c1613;
-  --phone-screen-bg: #102019;
+  --phone-shell: linear-gradient(155deg, #24332d 0%, #111a16 55%, #070d0a 100%);
+  --phone-screen-bg: #0f1a15;
 }
 
 body {
@@ -1914,11 +1914,13 @@ html.dark .finance-card {
 }
 
 .phone-mockup {
-  width: 320px;
-  padding: 16px;
-  border-radius: 36px;
+  width: 308px;
+  padding: 10px;
+  border-radius: 34px;
   background: var(--phone-shell);
-  box-shadow: 0 28px 60px rgba(0, 66, 50, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  box-shadow: 0 20px 46px rgba(0, 66, 50, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.32), inset 0 -1px 0 rgba(0, 0, 0, 0.42);
+  position: relative;
   transition: 0.4s ease;
   overflow: hidden;
 }
@@ -1927,9 +1929,32 @@ html.dark .finance-card {
   position: relative;
   width: 100%;
   aspect-ratio: 9 / 19.5;
-  border-radius: 24px;
+  border-radius: 28px;
   overflow: hidden;
   background: var(--phone-screen-bg);
+}
+
+.phone-mockup::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.phone-mockup::after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 76px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(8, 10, 12, 0.72);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.22);
+  pointer-events: none;
 }
 
 .phone-screen {
@@ -1938,7 +1963,7 @@ html.dark .finance-card {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 24px;
+  border-radius: 28px;
   opacity: 0;
   transition: opacity 0.45s ease, filter 0.45s ease;
   filter: saturate(0.95);
@@ -2891,7 +2916,7 @@ body.dark .nav-dropdown__menu a:hover {
   }
 
   .phone-mockup {
-    width: min(320px, 88vw);
+    width: min(308px, 86vw);
   }
 
   .before-after {
