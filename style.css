@@ -37,8 +37,8 @@
   --hero-glow: radial-gradient(circle, rgba(72,214,160,0.35), transparent 70%);
   --hero-subtitle-color: #F3FFF9;
   --hero-subtitle-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
-  --showcase-bg: linear-gradient(180deg, #0e1e18, #07120e);
-  --compare-bg: #06140f;
+  --showcase-bg: linear-gradient(180deg, #f2faf6 0%, #e7f4ee 100%);
+  --compare-bg: #edf7f1;
   --phone-shell: #111;
   --phone-screen-bg: #0b0f0d;
   --section-radius: 16px;
@@ -1902,7 +1902,7 @@ html.dark .finance-card {
 .app-showcase {
   padding: 120px 20px;
   background: var(--showcase-bg);
-  color: var(--white);
+  color: var(--text-primary);
 }
 
 .showcase-container {
@@ -1918,7 +1918,7 @@ html.dark .finance-card {
   padding: 16px;
   border-radius: 36px;
   background: var(--phone-shell);
-  box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+  box-shadow: 0 28px 60px rgba(0, 66, 50, 0.28);
   transition: 0.4s ease;
   overflow: hidden;
 }
@@ -1987,14 +1987,14 @@ html.dark .finance-card {
   margin-top: 24px;
   padding: 12px 24px;
   border-radius: 50px;
-  border: 1px solid var(--accent);
-  color: var(--accent);
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary);
   text-decoration: none;
   transition: 0.3s;
 }
 
 .cta-secondary:hover {
-  background: var(--accent);
+  background: var(--accent-primary);
   color: var(--button-text);
 }
 
@@ -2014,10 +2014,11 @@ html.dark .finance-card {
   width: 320px;
   padding: 30px;
   border-radius: 24px;
-  backdrop-filter: blur(16px);
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  color: var(--white);
+  backdrop-filter: blur(8px);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-primary);
+  box-shadow: var(--card-shadow);
 }
 
 .ba-card h3 {
