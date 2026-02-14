@@ -22,6 +22,12 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
+  - category/
+  - topics/
+  - blog/
+  - share/
+  - ping/
+  - sitemap.html
 
 sitemap:
   priority: 0.8
@@ -38,8 +44,14 @@ featured_posts:
 
 defaults:
   - scope:
+      path: ""
+    values:
+      sitemap: false
+  - scope:
+      path: "_posts"
       type: "posts"
     values:
+      sitemap: true
       sitemap_priority: 0.7
   - scope:
       path: "all_transactions.html"
