@@ -16,6 +16,9 @@ plugins:
   - jekyll-feed
   - jekyll-last-modified-at
 
+include:
+  - .well-known
+
 exclude:
   - README.md
   - Gemfile
