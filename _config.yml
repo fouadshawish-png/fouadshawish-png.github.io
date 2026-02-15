@@ -26,9 +26,7 @@ exclude:
   - node_modules
   - vendor
   - category/
-  - topics/
   - blog/
-  - share/
   - ping/
   - sitemap.html
 
