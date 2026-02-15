@@ -12,7 +12,7 @@ tags:
   - انضباط مالي
 permalink: "/daily-expense-tracking-habit-14-days/"
 canonical: "https://fouadshawish-png.github.io/daily-expense-tracking-habit-14-days/"
-image: "/assets/images/posts/track-expenses-daily-without-complexity-action-cover.jpg"
+image: "/assets/images/posts/how-to-track-expenses-daily-effectively-cover.jpg"
 image_alt: "كيف تبني عادة تسجيل المصاريف يوميًا في أقل من 3 دقائق؟"
 faq:
   - question: كم يوم أحتاج لتثبيت عادة تسجيل المصاريف؟

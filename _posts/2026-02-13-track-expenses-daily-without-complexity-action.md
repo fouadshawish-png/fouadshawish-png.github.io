@@ -10,7 +10,7 @@ tags:
   - إدارة الأموال
 permalink: "/track-expenses-daily-without-complexity-action/"
 canonical: "https://fouadshawish-png.github.io/track-expenses-daily-without-complexity-action/"
-image: "/assets/images/posts/track-expenses-daily-without-complexity-action-cover.jpg"
+image: "/assets/images/posts/how-to-track-expenses-daily-effectively-cover.jpg"
 image_alt: "كيف تتابع مصاريفك يوميًا بدون تعقيد؟"
 faq:
   - question: ما أول خطوة عملية أبدأ بها اليوم؟
